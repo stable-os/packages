@@ -14,6 +14,14 @@ jobs:
             submodules: recursive
         - run: sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
         - run: sudo apt-get install -y libssl-dev
+
+        - name: Cache
+          id: cache-pkg-builder-target
+          uses: actions/cache@v3
+          with:
+            path: util/pkg-builder/target/
+            key: ${{ runner.os }}-pkg-builder-target
+
         - run: cargo build --release
           working-directory: util/pkg-builder
         # upload the binary as an artifact
@@ -39,7 +47,7 @@ jobs:
           with:
             name: pkg-builder
             path: pkg-builder
-            
+
         - run: ls -l pkg-builder
 
         - run: ../../pkg-builder $PACKAGE.toml ../../out.tar.gz
