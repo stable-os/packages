@@ -1,0 +1,30 @@
+[package]
+name = 'coreutils'
+version = '9.4'
+description = 'The GNU Coreutils'
+license = 'GPL-3.0-or-later'
+
+[[source]]
+source = 'https://git.savannah.gnu.org/git/coreutils.git'
+git_ref = 'v9.4'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+mkdir -v build
+cd build
+
+./configure --prefix=/usr                     \
+            --build=$(build-aux/config.guess) \
+            --enable-install-program=hostname,su \
+            gl_cv_macro_MB_CUR_MAX_good=y
+
+make
+make DESTDIR=$OUT install
+
+mv -v $OUT/usr/bin/chroot              $OUT/usr/sbin
+mkdir -pv $OUT/usr/share/man/man8
+mv -v $OUT/usr/share/man/man1/chroot.1 $OUT/usr/share/man/man8/chroot.8
+sed -i 's/"1"/"8"/'                    $OUT/usr/share/man/man8/chroot.8
+'''
