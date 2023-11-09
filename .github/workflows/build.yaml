@@ -48,7 +48,7 @@ jobs:
             name: pkg-builder
             path: pkg-builder
 
-        - run: ls -l pkg-builder
+        - run: chmod +x pkg-builder/pkg-builder
 
         - run: ../../pkg-builder/pkg-builder $PACKAGE.toml ../../out.tar.gz
           working-directory: packages/${{ matrix.package }}
