@@ -50,7 +50,7 @@ jobs:
 
         - run: ls -l pkg-builder
 
-        - run: ../../pkg-builder $PACKAGE.toml ../../out.tar.gz
+        - run: ../../pkg-builder/pkg-builder $PACKAGE.toml ../../out.tar.gz
           working-directory: packages/${{ matrix.package }}
           env:
               PACKAGE: ${{ matrix.package }}
