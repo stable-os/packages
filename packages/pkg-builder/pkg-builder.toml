@@ -9,7 +9,7 @@ source = 'https://github.com/stable-os/pkg-builder.git'
 
 [build]
 script = '''
-set -euxo pipefail
+set -eux # o pipefail
 
 cargo build --release
 mkdir -p $OUT/bin
