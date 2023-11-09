@@ -36,7 +36,7 @@ jobs:
 
         strategy:
             matrix:
-                package: ['pkg-builder', 'bash']
+                package: ${{ split('\n', trim(run: 'find packages -type d -printf "%f\n"')) }}
             # limit to 3 parallel jobs as this is just for testing, don't want to use up all the parallel jobs
             max-parallel: 3
 
