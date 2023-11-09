@@ -5,7 +5,7 @@ description = 'The Bourne Again SHell'
 license = 'GPL-3.0-or-later'
 
 [[source]]
-source = 'https://git.savannah.gnu.org/cgit/bash.git'
+source = 'https://git.savannah.gnu.org/git/bash.git'
 git_ref = 'master'
 
 [build]
