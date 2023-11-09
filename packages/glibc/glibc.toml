@@ -6,7 +6,7 @@ license = 'GPL-3.0-or-later'
 
 [[source]]
 source = 'https://sourceware.org/git/glibc.git'
-git_ref = 'glibc-2.38'
+git_ref = 'release/2.38/master'
 
 [build]
 script = '''
@@ -21,7 +21,6 @@ echo "rootsbindir=/usr/sbin" > configparms
       --prefix=/usr                      \
       --build=$(../scripts/config.guess) \
       --enable-kernel=4.14               \
-      --with-headers=$OUT/usr/include    \
       libc_cv_slibdir=/usr/lib
 
 make
