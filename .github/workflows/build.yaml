@@ -48,6 +48,9 @@ jobs:
             name: pkg-builder
             path: pkg-builder
 
+        - name: Install dependencies
+          run: sudo apt-get update && sudo apt-get install -y linux-headers-$(uname -r)
+
         - run: chmod +x pkg-builder/pkg-builder
 
         - run: ../../pkg-builder/pkg-builder $PACKAGE.toml ../../out.tar.gz

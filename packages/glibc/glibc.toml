@@ -6,7 +6,7 @@ license = 'GPL-3.0-or-later'
 
 [[source]]
 source = 'https://sourceware.org/git/glibc.git'
-git_ref = 'origin/glibc-2.38'
+git_ref = 'glibc-2.38'
 
 [build]
 script = '''
