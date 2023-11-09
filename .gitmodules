@@ -1,0 +1,3 @@
+[submodule "util/pkg-builder"]
+	path = util/pkg-builder
+	url = https://github.com/stable-os/pkg-builder.git

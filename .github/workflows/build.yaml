@@ -1,0 +1,43 @@
+name: Node.js CI
+
+on:
+    push:
+    schedule:
+        # every day
+        - cron: '0 0 * * *'
+jobs:
+    build_pkg_builder:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+          with:
+            submodules: recursive
+        - run: sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+        - run: sudo apt-get install -y libssl-dev
+        - run: cd pkg-builder && cargo build --release
+        # upload the binary as an artifact
+        - uses: actions/upload-artifact@v2
+          with:
+            name: pkg-builder
+            path: pkg-builder/target/release/pkg-builder
+
+    build:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                package: ['pkg-builder']
+            # limit to 3 parallel jobs as this is just for testing, don't want to use up all the parallel jobs
+            max-parallel: 3
+
+        steps:
+        - uses: actions/checkout@v2
+        # download the pkg-builder binary from the previous job
+        - uses: actions/download-artifact@v2
+          with:
+            name: pkg-builder
+            path: pkg-builder
+        - run: ../../pkg-builder $PACKAGE.toml ../../out.tar.gz
+          working-directory: packages/${{ matrix.package }}
+          env:
+              PACKAGE: ${{ matrix.package }}
