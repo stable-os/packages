@@ -1,0 +1,29 @@
+[package]
+name = 'glibc'
+version = '2.38'
+description = 'The GNU C Library'
+license = 'GPL-3.0-or-later'
+
+[[source]]
+source = 'https://sourceware.org/git/glibc.git'
+git_ref = 'origin/glibc-2.38'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+mkdir -v build
+cd build
+
+echo "rootsbindir=/usr/sbin" > configparms
+
+../configure                             \
+      --prefix=/usr                      \
+      --build=$(../scripts/config.guess) \
+      --enable-kernel=4.14               \
+      --with-headers=$OUT/usr/include    \
+      libc_cv_slibdir=/usr/lib
+
+make
+make DESTDIR=$OUT install
+'''
