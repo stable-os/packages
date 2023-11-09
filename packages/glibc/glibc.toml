@@ -23,6 +23,6 @@ echo "rootsbindir=/usr/sbin" > configparms
       --enable-kernel=4.14               \
       libc_cv_slibdir=/usr/lib
 
-make
+make -j$(nproc)
 make DESTDIR=$OUT install
 '''
