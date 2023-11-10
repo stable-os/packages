@@ -1,0 +1,40 @@
+[package]
+name = 'systemd'
+version = '2.38'
+description = 'System and Service Manager'
+license = 'GPL-2.0'
+
+[[source]]
+source = 'https://github.com/systemd/systemd-stable.git'
+git_ref = 'v254-stable'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+sed -i -e 's/GROUP="render"/GROUP="video"/' \
+       -e 's/GROUP="sgx", //' rules.d/50-udev-default.rules.in
+
+meson setup build/            \
+      --prefix=/usr           \
+      --buildtype=release     \
+      -Ddefault-dnssec=no     \
+      -Dinstall-tests=false   \
+      -Dldconfig=false        \
+      -Dman=auto              \
+      -Dsysusers=false        \
+      -Drpmmacrosdir=no       \
+      -Dhomed=false           \
+      -Duserdb=false          \
+      -Dmode=release          \
+      -Dpam=true              \
+      -Dpamconfdir=/etc/pam.d \
+      -Ddev-kvm-mode=0660     \
+      -Dnobody-group=nogroup  \
+      -Ddocdir=/usr/share/doc/systemd-254
+
+ninja -C build -v x86_64-pc-linux-gnu
+meson test -C build/
+# sudo meson install -C build/ --no-rebuild
+DESTDIR=$OUT meson install -C build/
+'''
