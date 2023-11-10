@@ -20,7 +20,7 @@ cd build
             --enable-install-program=hostname,su \
             gl_cv_macro_MB_CUR_MAX_good=y
 
-make
+make -j$(nproc)
 make DESTDIR=$OUT install
 
 mv -v $OUT/usr/bin/chroot              $OUT/usr/sbin

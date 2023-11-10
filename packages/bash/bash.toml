@@ -16,6 +16,6 @@ set -eux # o pipefail
             --build=$(sh support/config.guess) \
             --without-bash-malloc
 
-make
+make -j$(nproc)
 make DESTDIR=$OUT install
 '''
