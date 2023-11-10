@@ -36,7 +36,7 @@ jobs:
 
         strategy:
             matrix:
-                package: ['pkg-builder', 'bash', 'glibc', 'coreutils']
+                package: ['pkg-builder', 'bash', 'glibc', 'coreutils', 'systemd']
             # limit to 3 parallel jobs as this is just for testing, don't want to use up all the parallel jobs
             max-parallel: 3
 
