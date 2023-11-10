@@ -18,4 +18,5 @@ set -eux # o pipefail
 
 make -j$(nproc)
 make DESTDIR=$OUT install
+ln -sv bash $OUT/bin/sh
 '''
