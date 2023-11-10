@@ -6,7 +6,7 @@ license = 'GPL-3.0-or-later'
 
 [[source]]
 source = 'https://git.savannah.gnu.org/git/bash.git'
-git_ref = 'origin/master'
+git_ref = 'master'
 
 [build]
 script = '''
