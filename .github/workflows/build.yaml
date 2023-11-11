@@ -73,7 +73,7 @@ jobs:
 
         steps:
         - name: Install dependencies
-          run: apt-get update && apt-get install -y linux-headers-6.5.0-9-generic meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential
+          run: apt-get update && apt-get install -y linux-headers-6.5.0-9-generic meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl
         - name: Install Docker
           run: curl -fsSL https://get.docker.com | sh
 
