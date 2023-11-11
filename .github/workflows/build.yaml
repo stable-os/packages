@@ -13,8 +13,8 @@ jobs:
 
         steps:
 
-        - run: sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-        - run: sudo apt-get install -y libssl-dev ostree libostree-1-1 libostree-dev git
+        - run: apt-get install -y libssl-dev ostree libostree-1-1 libostree-dev git curl
+        - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
         - uses: actions/checkout@v2
           with:
@@ -62,7 +62,7 @@ jobs:
 
         steps:
         - name: Install dependencies
-          run: sudo apt-get update && sudo apt-get install -y linux-headers-$(uname -r) meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git
+          run: apt-get update && sudo apt-get install -y linux-headers-$(uname -r) meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git
         - uses: actions/checkout@v2
         # download the pkg-builder binary from the previous job
         - uses: actions/download-artifact@v2
