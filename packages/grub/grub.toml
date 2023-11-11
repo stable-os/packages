@@ -1,0 +1,25 @@
+[package]
+name = 'grub'
+version = '2.06'
+description = 'GRand Unified Bootloader'
+license = 'GPL-3.0-or-later'
+
+[[source]]
+source = 'https://git.savannah.gnu.org/git/grub.git'
+git_ref = 'grub-2.06'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+./configure --prefix=/usr          \
+            --sysconfdir=/etc      \
+            --disable-efiemu       \
+            --disable-werror
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+mkdir -p $OUT/usr/share/bash-completion/
+mv -v $OUT/etc/bash_completion.d/grub $OUT/usr/share/bash-completion/completions
+'''

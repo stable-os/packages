@@ -75,7 +75,7 @@ jobs:
 
         strategy:
           matrix:
-            package: ['pkg-builder', 'bash', 'glibc', 'coreutils', 'systemd']
+            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd']
 
         steps:
         - name: Install dependencies
