@@ -73,9 +73,10 @@ jobs:
 
         steps:
         - name: Install dependencies
-          run: apt-get update && apt-get install -y linux-headers-6.5.0-9-generic gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl
+          run: apt-get update && apt-get install -y linux-headers-6.5.0-9-generic skopeo gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl
         - name: Install Docker
           run: curl -fsSL https://get.docker.com | sh
+        - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
         - uses: actions/checkout@v2
 
@@ -110,7 +111,7 @@ jobs:
           run: ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/${{ matrix.package }} --tree=tar=out.tar.gz
 
         - name: Export as OCI image
-          run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo  stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
+          run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
 
         - name: Push OCI image
           run: docker push ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
