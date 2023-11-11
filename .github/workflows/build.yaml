@@ -18,7 +18,7 @@ jobs:
             path: 'ostree-rs-ext'
 
         - run: sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-        - run: sudo apt-get install -y libssl-dev
+        - run: sudo apt-get install -y libssl-dev ostree
 
         - name: Cache
           id: cache-pkg-builder-target
@@ -67,7 +67,7 @@ jobs:
             path: ostree-ext-cli
 
         - name: Install dependencies
-          run: sudo apt-get update && sudo apt-get install -y linux-headers-$(uname -r) meson ninja-build gperf libcap-dev autopoint
+          run: sudo apt-get update && sudo apt-get install -y linux-headers-$(uname -r) meson ninja-build gperf libcap-dev autopoint ostree
 
         - run: chmod +x pkg-builder/pkg-builder
 
