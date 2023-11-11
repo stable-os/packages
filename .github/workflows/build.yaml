@@ -110,7 +110,7 @@ jobs:
           run: ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/${{ matrix.package }} --tree=tar=out.tar.gz
 
         - name: Export as OCI image
-          run: ostree-ext-cli container encapsulate --repo=/tmp/build-repo  stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
+          run: ./ostree-ext-cli container encapsulate --repo=/tmp/build-repo  stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
 
         - name: Push OCI image
           run: docker push ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
