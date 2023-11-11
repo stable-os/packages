@@ -12,6 +12,9 @@ git_ref = 'master'
 script = '''
 set -eux # o pipefail
 
+./linguas.sh
+./bootstrap
+
 ./configure --prefix=/usr                      \
             --build=$(sh support/config.guess) \
             --without-bash-malloc
