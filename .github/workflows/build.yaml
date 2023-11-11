@@ -30,8 +30,15 @@ jobs:
           with:
             path: util/pkg-builder/target/
             key: ${{ runner.os }}-pkg-builder-target
+        
+        - name: Cache
+          id: cache-ostree-rs-ext-target
+          uses: actions/cache@v3
+          with:
+            path: ostree-rs-ext/target/
+            key: ${{ runner.os }}-ostree-rs-ext-target
 
-        - run: cargo build --release
+        - run: $HOME/.cargo/bin/cargo build --release
           working-directory: util/pkg-builder
         # upload the binary as an artifact
         - uses: actions/upload-artifact@v2
@@ -39,7 +46,7 @@ jobs:
             name: pkg-builder
             path: util/pkg-builder/target/release/pkg-builder
 
-        - run: cargo build --release
+        - run: $HOME/.cargo/bin/cargo build --release
           working-directory: ostree-rs-ext
         - run: ls ostree-rs-ext/target/release
         # upload the binary as an artifact
