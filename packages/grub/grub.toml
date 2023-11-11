@@ -12,6 +12,9 @@ git_ref = 'grub-2.06'
 script = '''
 set -eux # o pipefail
 
+./linguas.sh
+./bootstrap
+
 ./configure --prefix=/usr          \
             --sysconfdir=/etc      \
             --disable-efiemu       \
