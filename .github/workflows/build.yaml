@@ -6,12 +6,17 @@ on:
         # every day
         - cron: '0 0 * * *'
 jobs:
-    build_pkg_builder:
+    build_tools:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v2
           with:
             submodules: recursive
+        - uses: actions/checkout@v2
+          with:
+            repository: 'ostreedev/ostree-rs-ext'
+            path: 'ostree-rs-ext'
+
         - run: sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
         - run: sudo apt-get install -y libssl-dev
 
@@ -30,14 +35,23 @@ jobs:
             name: pkg-builder
             path: util/pkg-builder/target/release/pkg-builder
 
+        - run: cargo build --release
+          working-directory: ostree-rs-ext
+        - run: ls ostree-rs-ext/target/release
+        # upload the binary as an artifact
+        - uses: actions/upload-artifact@v2
+          with:
+            name: ostree-ext-cli
+            path: ostree-rs-ext/target/release/ostree-ext-cli
+
     build:
         runs-on: ubuntu-latest
-        needs: build_pkg_builder
+        needs: build_tools
 
         strategy:
             matrix:
                 package: ['pkg-builder', 'bash', 'glibc', 'coreutils', 'systemd']
-            # limit to 3 parallel jobs as this is just for testing, don't want to use up all the parallel jobs
+            # limit to 3 parallel jobs as this is currently just for testing, don't want to use up all the parallel jobs
             max-parallel: 3
 
         steps:
@@ -47,6 +61,10 @@ jobs:
           with:
             name: pkg-builder
             path: pkg-builder
+        - uses: actions/download-artifact@v2
+          with:
+            name: ostree-ext-cli
+            path: ostree-ext-cli
 
         - name: Install dependencies
           run: sudo apt-get update && sudo apt-get install -y linux-headers-$(uname -r) meson ninja-build gperf libcap-dev autopoint
