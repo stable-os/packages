@@ -12,6 +12,10 @@ jobs:
         container: ubuntu:rolling
 
         steps:
+
+        - run: sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+        - run: sudo apt-get install -y libssl-dev ostree libostree-1-1 libostree-dev git
+
         - uses: actions/checkout@v2
           with:
             submodules: recursive
@@ -19,9 +23,6 @@ jobs:
           with:
             repository: 'ostreedev/ostree-rs-ext'
             path: 'ostree-rs-ext'
-
-        - run: sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-        - run: sudo apt-get install -y libssl-dev ostree libostree-1-1 libostree-dev
 
         - name: Cache
           id: cache-pkg-builder-target
@@ -60,6 +61,8 @@ jobs:
             max-parallel: 3
 
         steps:
+        - name: Install dependencies
+          run: sudo apt-get update && sudo apt-get install -y linux-headers-$(uname -r) meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git
         - uses: actions/checkout@v2
         # download the pkg-builder binary from the previous job
         - uses: actions/download-artifact@v2
@@ -70,9 +73,6 @@ jobs:
           with:
             name: ostree-ext-cli
             path: ostree-ext-cli
-
-        - name: Install dependencies
-          run: sudo apt-get update && sudo apt-get install -y linux-headers-$(uname -r) meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev
 
         - run: chmod +x pkg-builder/pkg-builder
 
