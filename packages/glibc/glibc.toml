@@ -18,7 +18,7 @@ cd build
 echo "rootsbindir=/usr/sbin" > configparms
 
 ../configure                             \
-      --prefix=/usr                  \
+      --prefix=/lib/x86_64-linux-gnu     \
       --build=$(../scripts/config.guess) \
       --enable-kernel=4.14               \
       libc_cv_slibdir=/usr/lib
@@ -29,18 +29,18 @@ make DESTDIR=$OUT install
 case $(uname -m) in
     i?86)   ln -sfv ld-linux.so.2 $OUT/lib/ld-lsb.so.3
     ;;
-    x86_64) ln -sfv $OUT/lib/ld-linux-x86-64.so.2 $OUT/lib64
-            ln -sfv $OUT/lib/ld-linux-x86-64.so.2 $OUT/lib64/ld-lsb-x86-64.so.3
-            ln -sfv $OUT/lib/ld-linux-x86-64.so.2 $OUT/lib/ld-linux.so.2
-            ln -sfv $OUT/lib/ld-linux-x86-64.so.2 $OUT/lib/ld.so
+    x86_64) ln -sfv $OUT/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 $OUT/lib64
+            ln -sfv $OUT/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 $OUT/lib64/ld-lsb-x86-64.so.3
+            ln -sfv $OUT/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 $OUT/lib/ld-linux.so.2
+            ln -sfv $OUT/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 $OUT/lib/ld.so
     ;;
 esac
 
 cat > $OUT/etc/ld.so.conf << "EOF"
 # Begin /etc/ld.so.conf
-/usr/lib
-/usr/local/lib
-/opt/lib
+/usr/local/lib/x86_64-linux-gnu
+/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu
 
 EOF
 '''
