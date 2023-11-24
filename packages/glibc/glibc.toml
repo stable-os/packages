@@ -18,7 +18,7 @@ cd build
 echo "rootsbindir=/usr/sbin" > configparms
 
 ../configure                             \
-      --prefix=/usr                      \
+      --prefix=$OUT/usr                  \
       --build=$(../scripts/config.guess) \
       --enable-kernel=4.14               \
       libc_cv_slibdir=/usr/lib
@@ -26,11 +26,18 @@ echo "rootsbindir=/usr/sbin" > configparms
 make -j$(nproc)
 make DESTDIR=$OUT install
 
-case $(uname -m) in
-    i?86)   ln -sfv ld-linux.so.2 $OUT/lib/ld-lsb.so.3
-    ;;
-    x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 $OUT/lib64
-            ln -sfv ../lib/ld-linux-x86-64.so.2 $OUT/lib64/ld-lsb-x86-64.so.3
-    ;;
-esac
+# case $(uname -m) in
+#     i?86)   ln -sfv ld-linux.so.2 $OUT/lib/ld-lsb.so.3
+#     ;;
+#     x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 $OUT/lib64
+#             ln -sfv ../lib/ld-linux-x86-64.so.2 $OUT/lib64/ld-lsb-x86-64.so.3
+#     ;;
+# esac
+
+cat > $OUT/etc/ld.so.conf << "EOF"
+# Begin /etc/ld.so.conf
+/usr/local/lib
+/opt/lib
+
+EOF
 '''
