@@ -26,13 +26,15 @@ echo "rootsbindir=/usr/sbin" > configparms
 make -j$(nproc)
 make DESTDIR=$OUT install
 
-# case $(uname -m) in
-#     i?86)   ln -sfv ld-linux.so.2 $OUT/lib/ld-lsb.so.3
-#     ;;
-#     x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 $OUT/lib64
-#             ln -sfv ../lib/ld-linux-x86-64.so.2 $OUT/lib64/ld-lsb-x86-64.so.3
-#     ;;
-# esac
+case $(uname -m) in
+    i?86)   ln -sfv ld-linux.so.2 $OUT/lib/ld-lsb.so.3
+    ;;
+    x86_64) ln -sfv $OUT/lib/ld-linux-x86-64.so.2 $OUT/lib64
+            ln -sfv $OUT/lib/ld-linux-x86-64.so.2 $OUT/lib64/ld-lsb-x86-64.so.3
+            ln -sfv $OUT/lib/ld-linux-x86-64.so.2 $OUT/lib/ld-linux.so.2
+            ln -sfv $OUT/lib/ld-linux-x86-64.so.2 $OUT/lib/ld.so
+    ;;
+esac
 
 cat > $OUT/etc/ld.so.conf << "EOF"
 # Begin /etc/ld.so.conf
