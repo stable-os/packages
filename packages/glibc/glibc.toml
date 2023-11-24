@@ -26,7 +26,7 @@ echo "rootsbindir=/usr/sbin" > configparms
 make -j$(nproc)
 make DESTDIR=$OUT install
 
-mkdir -pv $OUT/lib64
+mkdir -pv $OUT/lib64 $OUT/usr/bin
 
 case $(uname -m) in
     i?86)   ln -sfv ld-linux.so.2 $OUT/lib/ld-lsb.so.3
