@@ -36,6 +36,7 @@ make DESTDIR=$OUT install
 
 cat > $OUT/etc/ld.so.conf << "EOF"
 # Begin /etc/ld.so.conf
+/usr/lib
 /usr/local/lib
 /opt/lib
 
