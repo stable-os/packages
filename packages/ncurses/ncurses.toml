@@ -25,6 +25,8 @@ cd ncurses-6.4
 make
 make DESTDIR=$OUT install
 
+mkdir -p $OUT/lib $OUT/usr/lib $OUT/usr/lib/pkgconfig $OUT/usr/share/doc
+
 mv -v $OUT/usr/lib/libncursesw.so.6* $OUT/lib
 ln -sfv /lib/$(readlink $OUT/usr/lib/libncursesw.so) $OUT/usr/lib/libncursesw.so
 
