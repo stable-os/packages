@@ -31,11 +31,11 @@ mkdir -pv $OUT/lib64 $OUT/usr/bin $OUT/etc
 case $(uname -m) in
     i?86)   ln -sfv ld-linux.so.2 $OUT/lib/ld-lsb.so.3
     ;;
-    x86_64) ln -sfv /lib/ld-linux-x86-64.so.2 $OUT/lib64/ld-linux-x86-64.so.2
-            ln -sfv /lib/ld-linux-x86-64.so.2 $OUT/lib64/ld-lsb-x86-64.so.3
-            ln -sfv /lib/ld-linux-x86-64.so.2 $OUT/lib/ld-linux.so.2
-            ln -sfv /lib/ld-linux-x86-64.so.2 $OUT/lib/ld.so
-            ln -sfv /lib/ld-linux-x86-64.so.2 $OUT/usr/bin/ld.so
+    x86_64) ln -sfv /usr/lib/ld-linux-x86-64.so.2 $OUT/lib64/ld-linux-x86-64.so.2
+            ln -sfv /usr/lib/ld-linux-x86-64.so.2 $OUT/lib64/ld-lsb-x86-64.so.3
+            ln -sfv /usr/lib/ld-linux-x86-64.so.2 $OUT/lib/ld-linux.so.2
+            ln -sfv /usr/lib/ld-linux-x86-64.so.2 $OUT/lib/ld.so
+            ln -sfv /usr/lib/ld-linux-x86-64.so.2 $OUT/usr/bin/ld.so
     ;;
 esac
 
