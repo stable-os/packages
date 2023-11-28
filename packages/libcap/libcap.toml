@@ -1,0 +1,19 @@
+[package]
+name = 'libcap'
+version = '1.2.69'
+description = 'libcap2'
+license = ''
+
+[[source]]
+source = 'https://git.kernel.org/pub/scm/libs/libcap/libcap.git'
+git_ref = 'v1.2.69'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+make lib=lib
+make DESTDIR=$OUT lib=lib install
+
+chmod -v 755 $OUT/lib/libcap.so.2.69
+'''

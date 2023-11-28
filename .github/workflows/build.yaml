@@ -77,7 +77,7 @@ jobs:
 
         strategy:
           matrix:
-            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux']
+            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux', 'libcap']
 
         steps:
         - name: Install dependencies
