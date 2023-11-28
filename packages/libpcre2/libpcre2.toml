@@ -5,14 +5,11 @@ description = 'libpcre2'
 license = ''
 
 [[source]]
-source = 'https://github.com/PCRE2Project/pcre2.git'
-git_ref = 'pcre2-10.42'
+source = 'https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.bz2'
 
 [build]
 script = '''
 set -eux # o pipefail
-
-autoreconf -fiv
 
 ./configure --prefix=/usr                       \
             --docdir=/usr/share/doc/pcre2-10.42 \
