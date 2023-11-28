@@ -18,7 +18,7 @@ cd build
 echo "rootsbindir=/usr/sbin" > configparms
 
 ../configure                             \
-      --prefix=/lib     \
+      --prefix=/                         \
       --build=$(../scripts/config.guess) \
       --enable-kernel=4.14               \
       libc_cv_slibdir=/usr/lib
