@@ -78,7 +78,7 @@ jobs:
         strategy:
           fail-fast: false
           matrix:
-            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux', 'libcap', 'libpcre2']
+            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux', 'libcap', 'libpcre2', 'ncurses']
 
         steps:
         - name: Install dependencies

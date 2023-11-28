@@ -1,0 +1,43 @@
+[package]
+name = 'ncurses'
+version = '6.4'
+description = 'ncurses'
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/ncurses/ncurses-6.4.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd ncurses-6.4
+
+./configure --prefix=/usr           \
+            --mandir=/usr/share/man \
+            --with-shared           \
+            --without-debug         \
+            --without-normal        \
+            --enable-pc-files       \
+            --enable-widec
+
+make
+make DESTDIR=$OUT install
+
+mv -v $OUT/usr/lib/libncursesw.so.6* $OUT/lib
+ln -sfv /lib/$(readlink $OUT/usr/lib/libncursesw.so) $OUT/usr/lib/libncursesw.so
+
+for lib in ncurses form panel menu ; do
+    rm -vf                    $OUT/usr/lib/lib${lib}.so
+    echo "INPUT(-l${lib}w)" > $OUT/usr/lib/lib${lib}.so
+    ln -sfv ${lib}w.pc        $OUT/usr/lib/pkgconfig/${lib}.pc
+done
+
+rm -vf                     $OUT/usr/lib/libcursesw.so
+echo "INPUT(-lncursesw)" > $OUT/usr/lib/libcursesw.so
+ln -sfv libncurses.so      $OUT/usr/lib/libcurses.so
+
+mkdir -v       $OUT/usr/share/doc/ncurses-6.2
+cp -v -R doc/* $OUT/usr/share/doc/ncurses-6.2
+'''
