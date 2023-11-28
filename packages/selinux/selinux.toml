@@ -1,0 +1,16 @@
+[package]
+name = 'selinux'
+version = '3.5'
+description = 'SELinux Userspace'
+license = ''
+
+[[source]]
+source = 'https://github.com/SELinuxProject/selinux.git'
+git_ref = '3.5'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+make DESTDIR=$OUT install
+'''
