@@ -17,6 +17,8 @@ cd ncurses-6.4
 ./configure --prefix=/usr           \
             --mandir=/usr/share/man \
             --with-shared           \
+            --with-termlib          \
+            --with-ticlib           \
             --without-debug         \
             --without-normal        \
             --enable-pc-files       \
