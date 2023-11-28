@@ -12,6 +12,8 @@ git_ref = 'pcre2-10.42'
 script = '''
 set -eux # o pipefail
 
+autoreconf -fiv
+
 ./configure --prefix=/usr                       \
             --docdir=/usr/share/doc/pcre2-10.42 \
             --enable-unicode                    \
