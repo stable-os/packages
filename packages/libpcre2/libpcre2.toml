@@ -11,6 +11,8 @@ source = 'https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pc
 script = '''
 set -eux # o pipefail
 
+ls -lh
+
 ./configure --prefix=/usr                       \
             --docdir=/usr/share/doc/pcre2-10.42 \
             --enable-unicode                    \
