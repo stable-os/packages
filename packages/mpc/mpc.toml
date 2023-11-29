@@ -1,0 +1,24 @@
+[package]
+name = 'mpfr'
+version = '4.2.1'
+description = 'mpfr'
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd mpfr-4.2.1
+
+./configure --prefix=/usr        \
+            --disable-static     \
+            --enable-thread-safe \
+            --docdir=/usr/share/doc/mpfr-4.2.1
+
+make
+make DESTDIR=$OUT install
+'''
