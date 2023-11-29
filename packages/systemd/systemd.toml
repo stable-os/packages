@@ -33,7 +33,7 @@ meson setup build/            \
       -Dnobody-group=nogroup  \
       -Ddocdir=/usr/share/doc/systemd-254
 
-ninja -C build -v x86_64-pc-linux-gnu
+ninja -C build #-v x86_64-pc-linux-gnu
 meson test -C build/
 # sudo meson install -C build/ --no-rebuild
 DESTDIR=$OUT meson install -C build/
