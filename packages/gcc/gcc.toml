@@ -44,9 +44,9 @@ cd       build
 make -j$(nproc)
 make DESTDIR=$OUT install
 
-ln -svr /usr/bin/cpp /usr/lib
-ln -sv gcc.1 /usr/share/man/man1/cc.1
+ln -svr /usr/bin/cpp /usr/lib || true
+ln -sv gcc.1 /usr/share/man/man1/cc.1 || true
 
 ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/13.2.0/liblto_plugin.so \
-        /usr/lib/bfd-plugins/
+        /usr/lib/bfd-plugins/ || true
 '''
