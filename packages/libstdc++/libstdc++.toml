@@ -24,6 +24,6 @@ cd       build
     --disable-nls                   \
     --disable-libstdcxx-pch         
 
-CXXFLAGS="-std=gnu++11" make
+CXXFLAGS="-std=gnu++20" make
 make DESTDIR=$OUT install
 '''
