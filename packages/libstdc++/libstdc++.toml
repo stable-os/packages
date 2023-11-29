@@ -1,0 +1,29 @@
+[package]
+name = 'libstdc++'
+version = '13.2.0'
+description = 'libstdc++'
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/gcc/gcc-13.2.0/gcc-13.2.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd gcc-13.2.0
+
+mkdir -v build
+cd       build
+
+../libstdc++-v3/configure           \
+    --build=$(../config.guess)      \
+    --prefix=/usr                   \
+    --disable-multilib              \
+    --disable-nls                   \
+    --disable-libstdcxx-pch         
+
+make
+make DESTDIR=$OUT install
+'''
