@@ -12,7 +12,7 @@ git_ref = 'main'
 script = '''
 set -eux # o pipefail
 
-cargo build --release
+$HOME/.cargo/bin/cargo build --release
 mkdir -p $OUT/bin
 cp target/release/pkg-builder $OUT/bin
 '''
