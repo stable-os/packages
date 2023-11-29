@@ -1,23 +1,22 @@
 [package]
-name = 'mpfr'
+name = 'mpc'
 version = '4.2.1'
-description = 'mpfr'
+description = 'mpc'
 license = ''
 
 [[source]]
-source = 'https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.1.tar.gz'
+source = 'https://ftp.gnu.org/gnu/mpc/mpc-1.3.1.tar.gz'
 
 [build]
 script = '''
 set -eux # o pipefail
 
 ls
-cd mpfr-4.2.1
+cd mpc-1.3.1
 
-./configure --prefix=/usr        \
-            --disable-static     \
-            --enable-thread-safe \
-            --docdir=/usr/share/doc/mpfr-4.2.1
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/mpc-1.3.1
 
 make
 make DESTDIR=$OUT install
