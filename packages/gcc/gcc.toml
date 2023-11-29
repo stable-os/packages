@@ -41,7 +41,7 @@ cd       build
              --disable-fixincludes    \
              --with-system-zlib
 
-make
+make -j$(nproc)
 make DESTDIR=$OUT install
 
 ln -svr /usr/bin/cpp /usr/lib
