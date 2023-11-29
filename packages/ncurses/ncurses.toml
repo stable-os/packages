@@ -20,6 +20,7 @@ cd ncurses-6.4
             --with-termlib          \
             --with-ticlib           \
             --without-debug         \
+            --without-normal        \
             --enable-pc-files       \
             --enable-widec
 
