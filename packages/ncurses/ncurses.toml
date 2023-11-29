@@ -44,4 +44,6 @@ ln -sfv libncurses.so      $OUT/usr/lib/libcurses.so
 
 mkdir -v       $OUT/usr/share/doc/ncurses-6.2
 cp -v -R doc/* $OUT/usr/share/doc/ncurses-6.2
+
+ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/lib/libtinfo.so.6
 '''
