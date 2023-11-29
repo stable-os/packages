@@ -69,7 +69,7 @@ jobs:
         runs-on: ubuntu-latest
         needs: [build_pkg_builder, build_ostree_ext_cli]
         # needs to run in the most recent version of Ubuntu to ensure that the ostree version is new enough
-        container: ubuntu:rolling
+        container: ${{ matrix.container }}
 
         permissions:
           packages: write
@@ -79,13 +79,17 @@ jobs:
           fail-fast: false
           matrix:
             package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux', 'libcap', 'libpcre2', 'ncurses']
+            container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
         - name: Install dependencies
           run: apt-get update && apt-get install -y linux-headers-6.5.0-9-generic skopeo gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl autoconf automake gettext texinfo wget libpam0g-dev libpam0g python3-jinja2 python3-pip file libghc-bzlib-dev libreadline-dev
+          if: matrix.container == 'ubuntu:rolling'
         - name: Install Docker
           run: curl -fsSL https://get.docker.com | sh
+          if: matrix.container == 'ubuntu:rolling'
         - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+          if: matrix.container == 'ubuntu:rolling'
 
         - uses: actions/checkout@v2
 
@@ -121,3 +125,4 @@ jobs:
 
         - name: Export as OCI image and push to GitHub Container Registry
           run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
+          if: matrix.container == 'ubuntu:rolling'
