@@ -39,5 +39,6 @@ ln -sfv /usr/libexec/p11-kit/trust-extract-compat \
 
 ln -sfv ./pkcs11/p11-kit-trust.so $OUT/usr/lib/libnssckbi.so
 
+find ./ -executable
 find $OUT
 '''
