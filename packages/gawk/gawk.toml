@@ -12,7 +12,7 @@ script = '''
 set -eux # o pipefail
 
 ls
-cd grep-3.11
+cd gawk-5.3.0
 
 sed -i 's/extras//' Makefile.in
 
