@@ -83,7 +83,7 @@ jobs:
 
         steps:
         - name: Install dependencies
-          run: apt-get update && apt-get install -y linux-headers-6.5.0-9-generic skopeo gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl autoconf automake gettext texinfo wget libpam0g-dev libpam0g python3-jinja2 python3-pip file libghc-bzlib-dev libreadline-dev libmpfr-dev libmpc-dev libssl-dev
+          run: apt-get update && apt-get install -y linux-headers-6.5.0-9-generic skopeo gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl autoconf automake gettext texinfo wget libpam0g-dev libpam0g python3-jinja2 python3-pip file libghc-bzlib-dev libreadline-dev libmpfr-dev libmpc-dev libssl-dev libcurl4-openssl-dev
           if: matrix.container == 'ubuntu:rolling'
         - name: Install Docker
           run: curl -fsSL https://get.docker.com | sh
