@@ -78,7 +78,7 @@ jobs:
         strategy:
           fail-fast: false
           matrix:
-            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux', 'libcap', 'libpcre2', 'ncurses', 'gcc', 'gmp', 'mpc', 'mpfr', 'git']
+            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux', 'libcap', 'libpcre2', 'ncurses', 'gcc', 'gmp', 'mpc', 'mpfr', 'git', 'tar']
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:

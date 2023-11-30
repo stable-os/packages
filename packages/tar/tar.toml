@@ -1,0 +1,21 @@
+[package]
+name = 'tar'
+version = '1.35'
+description = 'tar'
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/tar/tar-1.35.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd tar-1.35
+
+./configure --prefix=/usr                     \
+            --build=$(build-aux/config.guess)
+make
+make DESTDIR=$OUT install
+'''
