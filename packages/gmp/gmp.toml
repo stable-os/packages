@@ -19,6 +19,6 @@ cd gmp-6.3.0
             --disable-static \
             --docdir=/usr/share/doc/gmp-6.3.0
 
-make
+make -j$(nproc)
 make DESTDIR=$OUT install
 '''

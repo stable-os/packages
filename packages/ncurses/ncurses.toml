@@ -24,7 +24,7 @@ cd ncurses-6.4
             --enable-pc-files       \
             --enable-widec
 
-make
+make -j$(nproc)
 make DESTDIR=$OUT install
 
 mkdir -p $OUT/lib $OUT/usr/lib $OUT/usr/lib/pkgconfig $OUT/usr/share/doc

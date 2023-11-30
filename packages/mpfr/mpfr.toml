@@ -19,6 +19,6 @@ cd mpfr-4.2.1
             --enable-thread-safe \
             --docdir=/usr/share/doc/mpfr-4.2.1
 
-make
+make -j$(nproc)
 make DESTDIR=$OUT install
 '''
