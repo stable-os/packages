@@ -16,18 +16,20 @@ set -eux # o pipefail
 ls
 cd make-ca-1.13
 
-make install &&
-install -vdm755 /etc/ssl/local
-/usr/sbin/make-ca -g
+make DESTDIR=$OUT install &&
+install -vdm755 $OUT/etc/ssl/local
 
-cat > /etc/cron.weekly/update-pki.sh << "EOF" &&
+# run make-ca -g to generate the certificates inside of chroot to prevent messing up the host
+chroot $OUT /usr/sbin/make-ca -g
+
+cat > $OUT/etc/cron.weekly/update-pki.sh << "EOF" &&
 #!/bin/bash
 /usr/sbin/make-ca -g
 EOF
-chmod 754 /etc/cron.weekly/update-pki.sh
+chmod 754 $OUT/etc/cron.weekly/update-pki.sh
 
-mkdir -pv /etc/profile.d &&
-cat > /etc/profile.d/pythoncerts.sh << "EOF"
+mkdir -pv $OUT/etc/profile.d &&
+cat > $OUT/etc/profile.d/pythoncerts.sh << "EOF"
 # Begin /etc/profile.d/pythoncerts.sh
 
 export _PIP_STANDALONE_CERT=/etc/pki/tls/certs/ca-bundle.crt
