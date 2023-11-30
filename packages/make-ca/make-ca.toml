@@ -20,7 +20,7 @@ make DESTDIR=$OUT install &&
 install -vdm755 $OUT/etc/ssl/local
 
 # run make-ca -g to generate the certificates inside of chroot to prevent messing up the host
-chroot $OUT /usr/libexec/make-ca -g
+chroot $OUT /usr/bin/bash -c "chmod +x /usr/libexec/make-ca && /usr/libexec/make-ca -g"
 
 cat > $OUT/etc/cron.weekly/update-pki.sh << "EOF" &&
 #!/bin/bash
