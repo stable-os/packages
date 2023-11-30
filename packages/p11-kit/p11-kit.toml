@@ -1,0 +1,41 @@
+[package]
+name = 'p11-kit'
+version = '0.25.3'
+description = 'p11-kit'
+license = ''
+
+[[source]]
+source = 'https://github.com/p11-glue/p11-kit/releases/download/0.25.3/p11-kit-0.25.3.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd p11-kit-0.25.3
+
+sed '20,$ d' -i trust/trust-extract-compat &&
+
+cat >> trust/trust-extract-compat << "EOF"
+# Copy existing anchor modifications to /etc/ssl/local
+/usr/libexec/make-ca/copy-trust-modifications
+
+# Update trust stores
+/usr/sbin/make-ca -r
+EOF
+
+mkdir p11-build &&
+cd    p11-build &&
+
+meson setup ..            \
+      --prefix=/usr       \
+      --buildtype=release \
+      -Dtrust_paths=/etc/pki/anchors &&
+ninja
+
+ninja DESTDIR=$OUT install &&
+ln -sfv /usr/libexec/p11-kit/trust-extract-compat \
+        /usr/bin/update-ca-certificates
+
+find $OUT
+'''
