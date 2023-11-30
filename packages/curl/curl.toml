@@ -1,0 +1,25 @@
+[package]
+name = 'curl'
+version = '8.2.1'
+description = 'curl'
+license = ''
+
+[[source]]
+source = 'https://curl.se/download/curl-8.2.1.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd curl-8.2.1
+
+./configure --prefix=/usr                           \
+            --disable-static                        \
+            --with-openssl                          \
+            --enable-threaded-resolver              \
+            --with-ca-path=/etc/ssl/certs
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
