@@ -30,6 +30,7 @@ cd    p11-build &&
 meson setup ..            \
       --prefix=/usr       \
       --buildtype=release \
+      -Dtrust_module=true \
       -Dtrust_paths=/etc/pki/anchors &&
 ninja
 
