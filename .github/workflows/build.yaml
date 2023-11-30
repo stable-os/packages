@@ -78,7 +78,7 @@ jobs:
         strategy:
           fail-fast: false
           matrix:
-            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux', 'libcap', 'libpcre2', 'ncurses', 'gcc', 'gmp', 'mpc', 'mpfr', 'git', 'tar', 'zlib', 'gzip', 'curl', 'openssl', 'p11-kit', 'make-ca', 'sed', 'grep', 'gawk']
+            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux', 'libcap', 'libpcre2', 'ncurses', 'gcc', 'gmp', 'mpc', 'mpfr', 'git', 'tar', 'zlib', 'gzip', 'curl', 'openssl', 'p11-kit', 'make-ca', 'sed', 'grep', 'gawk', 'readline']
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
@@ -90,6 +90,10 @@ jobs:
           if: matrix.container == 'ubuntu:rolling'
         - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
           if: matrix.container == 'ubuntu:rolling'
+
+        - name: Download CA certificates
+          run: /usr/sbin/make-ca -g
+          if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest'
 
         - uses: actions/checkout@v2
 
