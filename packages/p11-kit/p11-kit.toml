@@ -31,9 +31,9 @@ meson setup ..            \
       --prefix=/usr       \
       --buildtype=release \
       -Dtrust_paths=/etc/pki/anchors &&
-ninja
-
-DESTDIR=$OUT ninja install &&
+# ninja
+meson compile -C build
+meson install -C build --destdir "$OUT" &&
 ln -sfv /usr/libexec/p11-kit/trust-extract-compat \
         $OUT/usr/bin/update-ca-certificates
 
