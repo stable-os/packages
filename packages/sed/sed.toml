@@ -1,0 +1,25 @@
+[package]
+name = 'sed'
+version = '4.9.0'
+description = 'sed'
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/sed/sed-4.9.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd sed-4.9
+
+./configure --prefix=/usr
+
+make
+make html
+
+make DESTDIR=$OUT install
+install -d -m755           $OUT/usr/share/doc/sed-4.9
+install -m644 doc/sed.html $OUT/usr/share/doc/sed-4.9
+'''
