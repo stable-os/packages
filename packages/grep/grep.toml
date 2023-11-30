@@ -1,0 +1,21 @@
+[package]
+name = 'grep'
+version = '3.11.0'
+description = 'grep'
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/grep/grep-3.11.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd grep-3.11
+
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
