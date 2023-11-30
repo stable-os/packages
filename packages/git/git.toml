@@ -1,0 +1,17 @@
+[package]
+name = 'git'
+version = '2.43.0'
+description = 'git'
+license = ''
+
+[[source]]
+source = 'https://github.com/git/git.git'
+git_ref = 'v2.43.0'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+make prefix=/usr all doc info
+make DESTDIR=$OUT prefix=/usr install install-doc install-html install-info
+'''
