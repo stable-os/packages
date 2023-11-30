@@ -16,12 +16,17 @@ set -eux # o pipefail
 ls
 cd make-ca-1.13
 
+mkdir $OUT/tmp
+
 make DESTDIR=$OUT install &&
 install -vdm755 $OUT/etc/ssl/local
 
+# replace #!/bin/bash with #!/bin/sh
+sed -i 's|#!/bin/bash|#!/bin/sh|' $OUT/usr/sbin/make-ca
+
 # run make-ca -g to generate the certificates inside of chroot to prevent messing up the host
 # chmod +x $OUT/usr/libexec/make-ca
-# chroot $OUT /usr/libexec/make-ca -g
+chroot $OUT /usr/libexec/make-ca -g || true
 
 cat > $OUT/etc/cron.weekly/update-pki.sh << "EOF" &&
 #!/bin/bash
