@@ -1,0 +1,28 @@
+[package]
+name = 'openssl'
+version = '3.2.0'
+description = 'openssl'
+license = ''
+
+[[source]]
+source = 'https://www.openssl.org/source/openssl-3.2.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd openssl-3.2.0
+
+./config --prefix=/usr         \
+         --openssldir=/etc/ssl \
+         --libdir=lib          \
+         shared                \
+         zlib-dynamic
+
+make -j$(nproc)
+
+sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile
+
+make DESTDIR=$OUT install
+'''
