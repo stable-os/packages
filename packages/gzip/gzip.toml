@@ -1,0 +1,21 @@
+[package]
+name = 'gzip'
+version = '1.13'
+description = 'gzip'
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/gzip/gzip-1.13.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd gzip-1.13
+
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
