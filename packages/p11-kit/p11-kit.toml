@@ -24,10 +24,10 @@ cat >> trust/trust-extract-compat << "EOF"
 /usr/sbin/make-ca -r
 EOF
 
-mkdir p11-build &&
-cd    p11-build &&
+# mkdir p11-build &&
+# cd    p11-build &&
 
-meson setup ..            \
+meson setup build ..            \
       --prefix=/usr       \
       --buildtype=release \
       -Dtrust_paths=/etc/pki/anchors &&
