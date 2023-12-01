@@ -1,0 +1,21 @@
+[package]
+name = 'linux-api-headers'
+version = '6.4.12'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.4.12.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+make mrproper
+
+make headers
+find usr/include -type f ! -name '*.h' -delete
+cp -rv usr/include $OUT/usr
+'''
