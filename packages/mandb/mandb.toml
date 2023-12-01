@@ -1,0 +1,29 @@
+[package]
+name = 'mandb'
+version = ''
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.savannah.gnu.org/releases/man-db/man-db-2.11.2.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr                         \
+            --docdir=/usr/share/doc/man-db-2.11.2 \
+            --sysconfdir=/etc                     \
+            --disable-setuid                      \
+            --enable-cache-owner=bin              \
+            --with-browser=/usr/bin/lynx          \
+            --with-vgrind=/usr/bin/vgrind         \
+            --with-grap=/usr/bin/grap             \
+            --with-systemdtmpfilesdir=            \
+            --with-systemdsystemunitdir=
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

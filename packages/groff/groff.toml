@@ -1,0 +1,18 @@
+[package]
+name = 'groff'
+version = '1.23.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/groff/groff-1.23.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

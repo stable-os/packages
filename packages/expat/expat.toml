@@ -1,0 +1,24 @@
+[package]
+name = 'expat'
+version = '2.5.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://prdownloads.sourceforge.net/expat/expat-2.5.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/expat-2.5.0
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+install -v -m644 doc/*.{html,css} $OUT/usr/share/doc/expat-2.5.0
+'''

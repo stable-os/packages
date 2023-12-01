@@ -1,0 +1,24 @@
+[package]
+name = 'iproute2'
+version = '6.4.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.4.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+sed -i /ARPD/d Makefile
+rm -fv man/man8/arpd.8
+
+make -j$(nproc) NETNS_RUN_DIR=/run/netns
+make DESTDIR=$OUT SBINDIR=/usr/sbin install
+
+mkdir -pv             $OUT/usr/share/doc/iproute2-6.4.0
+cp -v COPYING README* $OUT/usr/share/doc/iproute2-6.4.0
+'''

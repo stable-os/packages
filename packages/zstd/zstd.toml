@@ -1,0 +1,19 @@
+[package]
+name = 'zstd'
+version = '1.5.5'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/facebook/zstd/releases/download/v1.5.5/zstd-1.5.5.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+make -j$(nproc) prefix=/usr
+make DESTDIR=$OUT prefix=/usr install
+rm -v $OUT/usr/lib/libzstd.a
+'''

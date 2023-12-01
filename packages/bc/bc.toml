@@ -1,0 +1,20 @@
+[package]
+name = 'bc'
+version = '6.6.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/gavinhoward/bc/releases/download/6.6.0/bc-6.6.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+CC=gcc ./configure --prefix=/usr -G -O3 -r
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

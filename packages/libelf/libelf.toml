@@ -1,0 +1,25 @@
+[package]
+name = 'libelf'
+version = '0.189.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://sourceware.org/ftp/elfutils/0.189/elfutils-0.189.tar.bz2'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr                \
+            --disable-debuginfod         \
+            --enable-libdebuginfod=dummy
+
+make -j$(nproc)
+make DESTDIR=$OUT -C libelf install
+
+install -vm644 config/libelf.pc /usr/lib/pkgconfig
+rm /usr/lib/libelf.a
+'''

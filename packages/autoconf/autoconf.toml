@@ -1,0 +1,24 @@
+[package]
+name = 'autoconf'
+version = '2.71.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/autoconf/autoconf-2.71.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+sed -e 's/SECONDS|/&SHLVL|/'               \
+    -e '/BASH_ARGV=/a\        /^SHLVL=/ d' \
+    -i.orig tests/local.at
+
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

@@ -1,0 +1,28 @@
+[package]
+name = 'dejagnu'
+version = '1.6.3'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/dejagnu/dejagnu-1.6.3.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir -v build
+cd       build
+
+../configure --prefix=/usr
+makeinfo --html --no-split -o doc/dejagnu.html ../doc/dejagnu.texi
+makeinfo --plaintext       -o doc/dejagnu.txt  ../doc/dejagnu.texi
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+install -v -dm755  $OUT/usr/share/doc/dejagnu-1.6.3
+install -v -m644   doc/dejagnu.{html,txt} $OUT/usr/share/doc/dejagnu-1.6.3
+'''

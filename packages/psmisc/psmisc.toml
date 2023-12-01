@@ -1,0 +1,20 @@
+[package]
+name = 'psmisc'
+version = '23.6'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.6.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

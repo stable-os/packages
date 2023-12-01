@@ -1,0 +1,26 @@
+[package]
+name = 'expect'
+version = '5.45.4'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://prdownloads.sourceforge.net/expect/expect5.45.4.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr           \
+            --with-tcl=/usr/lib     \
+            --enable-shared         \
+            --mandir=/usr/share/man \
+            --with-tclinclude=/usr/include
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+ln -svf expect5.45.4/libexpect5.45.4.so $OUT/usr/lib
+'''

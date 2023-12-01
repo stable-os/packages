@@ -1,0 +1,20 @@
+[package]
+name = 'check'
+version = '0.15.2'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/libcheck/check/releases/download/0.15.2/check-0.15.2.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr --disable-static
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

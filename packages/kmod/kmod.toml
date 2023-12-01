@@ -1,0 +1,31 @@
+[package]
+name = 'kmod'
+version = '30'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-30.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr          \
+            --sysconfdir=/etc      \
+            --with-openssl         \
+            --with-xz              \
+            --with-zstd            \
+            --with-zlib
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+for target in depmod insmod modinfo modprobe rmmod; do
+  ln -sfv ../bin/kmod $OUT/usr/sbin/$target
+done
+
+ln -sfv kmod $OUT/usr/bin/lsmod
+'''

@@ -1,0 +1,18 @@
+[package]
+name = 'timezonedata'
+version = '2023c'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.iana.org/time-zones/repository/releases/tzdata2023c.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

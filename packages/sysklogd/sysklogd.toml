@@ -1,0 +1,21 @@
+[package]
+name = 'sysklogd'
+version = '1.5.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.infodrom.org/projects/sysklogd/download/sysklogd-1.5.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c
+sed -i 's/union wait/int/' syslogd.c
+
+make -j$(nproc)
+make DESTDIR=$OUT BINDIR=/sbin install
+'''

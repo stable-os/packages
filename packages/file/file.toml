@@ -1,0 +1,20 @@
+[package]
+name = 'file'
+version = '5.45'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://astron.com/pub/file/file-5.45.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

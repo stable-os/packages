@@ -1,0 +1,20 @@
+[package]
+name = 'xmlparser'
+version = '2.46'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.46.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+perl Makefile.PL
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

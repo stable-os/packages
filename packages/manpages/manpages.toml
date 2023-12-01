@@ -1,0 +1,19 @@
+[package]
+name = 'manpages'
+version = '6.05.01'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.05.01.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+rm -v man3/crypt*
+
+make DESTDIR=$OUT prefix=/usr install
+'''

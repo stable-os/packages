@@ -1,0 +1,47 @@
+[package]
+name = 'tcl'
+version = '8.6.13'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://downloads.sourceforge.net/tcl/tcl8.6.13-src.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+SRCDIR=$(pwd)
+cd unix
+./configure --prefix=/usr           \
+            --mandir=/usr/share/man
+
+make -j$(nproc)
+
+sed -e "s|$SRCDIR/unix|/usr/lib|" \
+    -e "s|$SRCDIR|/usr/include|"  \
+    -i tclConfig.sh
+
+sed -e "s|$SRCDIR/unix/pkgs/tdbc1.1.5|/usr/lib/tdbc1.1.5|" \
+    -e "s|$SRCDIR/pkgs/tdbc1.1.5/generic|/usr/include|"    \
+    -e "s|$SRCDIR/pkgs/tdbc1.1.5/library|/usr/lib/tcl8.6|" \
+    -e "s|$SRCDIR/pkgs/tdbc1.1.5|/usr/include|"            \
+    -i pkgs/tdbc1.1.5/tdbcConfig.sh
+
+sed -e "s|$SRCDIR/unix/pkgs/itcl4.2.3|/usr/lib/itcl4.2.3|" \
+    -e "s|$SRCDIR/pkgs/itcl4.2.3/generic|/usr/include|"    \
+    -e "s|$SRCDIR/pkgs/itcl4.2.3|/usr/include|"            \
+    -i pkgs/itcl4.2.3/itclConfig.sh
+
+unset SRCDIR
+
+make DESTDIR=$OUT install
+make DESTDIR=$OUT install-private-headers
+
+chmod -v u+w $OUT/usr/lib/libtcl8.6.so
+ln -sfv tclsh8.6 $OUT/usr/bin/tclsh
+mv $OUT/usr/share/man/man3/{Thread,Tcl_Thread}.3
+
+'''

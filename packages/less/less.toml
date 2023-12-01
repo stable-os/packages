@@ -1,0 +1,20 @@
+[package]
+name = 'less'
+version = '643'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.greenwoodsoftware.com/less/less-643.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr --sysconfdir=/etc
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

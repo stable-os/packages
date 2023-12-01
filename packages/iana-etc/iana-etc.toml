@@ -1,0 +1,17 @@
+[package]
+name = 'iana-etc'
+version = '20230810'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/Mic92/iana-etc/releases/download/20230810/iana-etc-20230810.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+cp services protocols $OUT/etc
+'''

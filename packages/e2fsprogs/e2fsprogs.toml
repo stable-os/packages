@@ -1,0 +1,35 @@
+[package]
+name = 'e2fsprogs'
+version = '1.47.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.0/e2fsprogs-1.47.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir -v build
+cd       build
+
+../configure --prefix=/usr           \
+             --sysconfdir=/etc       \
+             --enable-elf-shlibs     \
+             --disable-libblkid      \
+             --disable-libuuid       \
+             --disable-uuidd
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+rm -fv $OUT/usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
+
+gunzip -v $OUT/usr/share/info/libext2fs.info.gz
+install-info --dir-file=$OUT/usr/share/info/dir $OUT/usr/share/info/libext2fs.info
+
+find $OUT
+'''

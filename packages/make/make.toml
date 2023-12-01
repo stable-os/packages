@@ -1,0 +1,20 @@
+[package]
+name = 'make'
+version = '4.4.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
