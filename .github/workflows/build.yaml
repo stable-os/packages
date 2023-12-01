@@ -103,7 +103,7 @@ jobs:
             registry: ghcr.io
             username: ${{ github.actor }}
             password: ${{ secrets.GITHUB_TOKEN }}
-          if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest'
+          if: matrix.container == 'ubuntu:rolling'
 
         # download the pkg-builder binary from the previous job
         - uses: actions/download-artifact@v2
