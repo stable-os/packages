@@ -50,5 +50,7 @@ ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/lib/libtinfow.so.6
 # THIS CAUSES ISSUES AND SHOULD BE REMOVED THE MOMENT WE SWITCH TO BUILDING WITHOUT UBUNTU
 ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/lib/libtinfo.so.6.4
 ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/lib/libtinfo.so.6
+ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/usr/lib/libtinfo.so.6.4
+ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/usr/lib/libtinfo.so.6
 
 '''
