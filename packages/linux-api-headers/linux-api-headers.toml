@@ -20,5 +20,5 @@ find usr/include -type f ! -name '*.h' -delete
 
 mkdir -p $OUT/usr/include
 
-cp -rv usr/include $OUT/usr/include
+cp -rv usr/include $OUT/usr
 '''
