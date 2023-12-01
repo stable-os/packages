@@ -1,0 +1,23 @@
+[package]
+name = 'findutils'
+version = '4.9.0'
+description = 'findutils'
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/findutils/findutils-4.9.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd findutils-4.9.0
+
+./configure --prefix=/usr --localstatedir=/var/lib/locate
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+find $OUT
+'''
