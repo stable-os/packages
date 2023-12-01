@@ -1,0 +1,33 @@
+[package]
+name = 'bzip2'
+version = '1.0.8'
+description = 'bzip2'
+license = ''
+
+[[source]]
+source = 'https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd bzip2-1.0.8
+
+sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
+
+make -f Makefile-libbz2_so
+make clean
+make -j$(nproc)
+make PREFIX=/usr DESTDIR=$OUT install
+
+cp -av libbz2.so.* $OUT/usr/lib
+ln -sv libbz2.so.1.0.8 $OUT/usr/lib/libbz2.so
+
+cp -v bzip2-shared $OUT/usr/bin/bzip2
+for i in $OUT/usr/bin/{bzcat,bunzip2}; do
+  ln -sfv bzip2 $i
+done
+
+rm -fv $OUT/usr/lib/libbz2.a
+'''
