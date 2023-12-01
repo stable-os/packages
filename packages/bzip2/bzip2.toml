@@ -21,6 +21,8 @@ make clean
 make -j$(nproc)
 make PREFIX=/usr DESTDIR=$OUT install
 
+mkdir -pv $OUT/usr/{lib,bin}
+
 cp -av libbz2.so.* $OUT/usr/lib
 ln -sv libbz2.so.1.0.8 $OUT/usr/lib/libbz2.so
 
