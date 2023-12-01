@@ -18,6 +18,4 @@ cd findutils-4.9.0
 
 make -j$(nproc)
 make DESTDIR=$OUT install
-
-find $OUT
 '''

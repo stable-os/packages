@@ -18,6 +18,4 @@ cd libtasn1-4.19.0
 
 make -j$(nproc)
 make DESTDIR=$OUT install
-
-find $OUT
 '''

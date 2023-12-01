@@ -20,6 +20,4 @@ cd xz-5.4.4
 
 make -j$(nproc)
 make DESTDIR=$OUT install
-
-find $OUT
 '''

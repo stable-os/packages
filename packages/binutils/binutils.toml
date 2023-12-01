@@ -37,6 +37,4 @@ make -j$(nproc)
 make DESTDIR=$OUT install
 
 rm -fv $OUT/usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a
-
-find $OUT
 '''

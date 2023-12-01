@@ -28,6 +28,4 @@ make -j$(nproc)
 make DESTDIR=$OUT install
 
 mv -v $OUT/usr/{,s}bin/ifconfig
-
-find $OUT
 '''

@@ -122,6 +122,9 @@ jobs:
           env:
               PACKAGE: ${{ matrix.package }}
 
+        - name: List files in the package
+          run: tar -tvf out.tar.gz
+
         - name: Prepare OSTree repository
           run: mkdir /tmp/build-repo && ostree --repo=/tmp/build-repo init --mode=bare-user
 

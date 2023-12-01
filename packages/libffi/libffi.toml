@@ -19,6 +19,4 @@ cd libffi-3.4.4
 
 make -j$(nproc)
 make DESTDIR=$OUT install
-
-find $OUT
 '''
