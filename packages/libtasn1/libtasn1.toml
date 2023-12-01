@@ -1,0 +1,23 @@
+[package]
+name = 'libtasn1'
+version = '4.19.0'
+description = 'libtasn1'
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.19.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd libtasn1-4.19.0
+
+./configure --prefix=/usr --disable-static
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+find $OUT
+'''
