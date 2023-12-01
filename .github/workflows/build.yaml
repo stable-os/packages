@@ -78,7 +78,7 @@ jobs:
         strategy:
           fail-fast: false
           matrix:
-            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux', 'libcap', 'libpcre2', 'ncurses', 'gcc', 'gmp', 'mpc', 'mpfr', 'git', 'tar', 'zlib', 'gzip', 'curl', 'openssl', 'p11-kit', 'make-ca', 'sed', 'grep', 'gawk', 'readline', 'libffi', 'libtasn1', 'findutils', 'bzip2', 'xz']
+            package: ['pkg-builder', 'grub', 'bash', 'glibc', 'coreutils', 'systemd', 'selinux', 'libcap', 'libpcre2', 'ncurses', 'gcc', 'gmp', 'mpc', 'mpfr', 'git', 'tar', 'zlib', 'gzip', 'curl', 'openssl', 'p11-kit', 'make-ca', 'sed', 'grep', 'gawk', 'readline', 'libffi', 'libtasn1', 'findutils', 'bzip2', 'xz', 'binutils']
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:

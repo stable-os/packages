@@ -1,0 +1,37 @@
+[package]
+name = 'binutils'
+version = '2.41.0'
+description = 'binutils'
+license = ''
+
+[[source]]
+source = 'https://sourceware.org/pub/binutils/releases/binutils-2.41.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd binutils-2.41
+
+mkdir -v build
+cd       build
+
+../configure --prefix=/usr       \
+             --sysconfdir=/etc   \
+             --enable-gold       \
+             --enable-ld=default \
+             --enable-plugins    \
+             --enable-shared     \
+             --disable-werror    \
+             --enable-64-bit-bfd \
+             --with-system-zlib
+
+make -j$(nproc)
+make -k check
+make DESTDIR=$OUT install
+
+rm -fv $OUT/usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a
+
+find $OUT
+'''
