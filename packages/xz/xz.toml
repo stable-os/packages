@@ -1,0 +1,25 @@
+[package]
+name = 'xz'
+version = '5.4.4'
+description = 'xz'
+license = ''
+
+[[source]]
+source = 'https://tukaani.org/xz/xz-5.4.4.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd xz-5.4.4
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/xz-5.4.4
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+find $OUT
+'''
