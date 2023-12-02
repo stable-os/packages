@@ -81,88 +81,88 @@ jobs:
             package:
               - ostree
               - which
-              # - linux-api-headers
-              # - pkg-builder
-              # - grub
+              - linux-api-headers
+              - pkg-builder
+              - grub
               - bash
-              # - glibc
-              # - coreutils
-              # - systemd
-              # - selinux
-              # - libcap
-              # - libpcre2
-              # - ncurses
-              # - gcc
-              # - gmp
-              # - mpc
-              # - mpfr
-              # - git
-              # - tar
-              # - zlib
-              # - gzip
-              # - curl
-              # - openssl
-              # - p11-kit
-              # - make-ca
-              # - sed
-              # - grep
-              # - gawk
-              # - readline
-              # - libffi
-              # - libtasn1
-              # - findutils
-              # - bzip2
-              # - xz
-              # - binutils
-              # - acl
-              # - attr
-              # - autoconf
-              # - automake
-              # - bc
-              # - bison
-              # - check
-              # - dejagnu
-              # - diffutils
-              # - e2fsprogs
-              # - expat
-              # - expect
-              # - file
-              # - flex
-              # - gdbm
-              # - gettext
-              # - gperf
-              # - groff
-              # - ianaetc'
-              # - inetutils
-              # - intltool
-              # - iproute2
-              # - kbd
-              # - kmod
-              # - less
-              # - libelf
-              # - libpipeline
-              # - libtool
-              # - libxcrypt
-              # - linux
-              # - m4
-              # - make
-              # - mandb
-              # - manpages
-              # - patch
-              # - perl
-              # - pkgconf
-              # - procps
-              # - psmisc
-              # - python3
-              # - shadow
-              # - sysklogd
-              # - tcl
-              # - texinfo
-              # - timezonedata
-              # - utillinux
-              # - vim
-              # - xmlparser
-              # - zstd
+              - glibc
+              - coreutils
+              - systemd
+              - selinux
+              - libcap
+              - libpcre2
+              - ncurses
+              - gcc
+              - gmp
+              - mpc
+              - mpfr
+              - git
+              - tar
+              - zlib
+              - gzip
+              - curl
+              - openssl
+              - p11-kit
+              - make-ca
+              - sed
+              - grep
+              - gawk
+              - readline
+              - libffi
+              - libtasn1
+              - findutils
+              - bzip2
+              - xz
+              - binutils
+              - acl
+              - attr
+              - autoconf
+              - automake
+              - bc
+              - bison
+              - check
+              - dejagnu
+              - diffutils
+              - e2fsprogs
+              - expat
+              - expect
+              - file
+              - flex
+              - gdbm
+              - gettext
+              - gperf
+              - groff
+              - ianaetc'
+              - inetutils
+              - intltool
+              - iproute2
+              - kbd
+              - kmod
+              - less
+              - libelf
+              - libpipeline
+              - libtool
+              - libxcrypt
+              - linux
+              - m4
+              - make
+              - mandb
+              - manpages
+              - patch
+              - perl
+              - pkgconf
+              - procps
+              - psmisc
+              - python3
+              - shadow
+              - sysklogd
+              - tcl
+              - texinfo
+              - timezonedata
+              - utillinux
+              - vim
+              - xmlparser
+              - zstd
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
@@ -220,3 +220,7 @@ jobs:
         - name: Export as OCI image and push to GitHub Container Registry
           run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
           if: matrix.container == 'ubuntu:rolling'
+
+        - name: Export as OCI image and push to GitHub Container Registry
+          run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m)-builtonstableos:latest
+          if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest'
