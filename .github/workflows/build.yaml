@@ -163,6 +163,7 @@ jobs:
               # - vim
               # - xmlparser
               # - zstd
+              - glib
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
