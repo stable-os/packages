@@ -1,0 +1,22 @@
+[package]
+name = 'libgpg-error'
+version = '1.47'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.47.tar.bz2'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+install -v -m644 -D README $OUT/usr/share/doc/libgpg-error-1.47/README
+'''
