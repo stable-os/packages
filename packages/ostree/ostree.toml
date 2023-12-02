@@ -1,0 +1,20 @@
+[package]
+name = 'ostree'
+version = '2023.7'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/ostreedev/ostree.git'
+git_ref = 'v2023.7'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+git submodule update --init
+env NOCONFIGURE=1 ./autogen.sh
+./configure --prefix=/usr
+make
+make install DESTDIR=$OUT
+'''
