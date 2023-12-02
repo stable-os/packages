@@ -15,5 +15,5 @@ cd glib-*
 
 meson _build
 ninja -C _build
-ninja -C _build DESTDIR=$OUT install
+DESTDIR=$OUT ninja -C _build install
 '''
