@@ -32,9 +32,9 @@ EOF
 
 install -v -dm755 $OUT/usr/share/doc/python-3.11.4/html
 
-tar --strip-components=1  \
-    --no-same-owner       \
-    --no-same-permissions \
-    -C $OUT/usr/share/doc/python-3.11.4/html \
-    -xvf ../python-3.11.4-docs-html.tar.bz2
+#tar --strip-components=1  \
+#   --no-same-owner       \
+#   --no-same-permissions \
+#   -C $OUT/usr/share/doc/python-3.11.4/html \
+#   -xvf ../python-3.11.4-docs-html.tar.bz2
 '''
