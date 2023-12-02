@@ -17,4 +17,6 @@ env NOCONFIGURE=1 ./autogen.sh
 ./configure --prefix=/usr --sysconfdir=/etc
 make sysconfdir=/etc
 make install DESTDIR=$OUT sysconfdir=/etc
+
+mv $OUT/lib/* $OUT/usr/lib
 '''
