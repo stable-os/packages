@@ -53,4 +53,6 @@ ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/13.2.0/liblto_plugin.so \
         $OUT/usr/lib/bfd-plugins/ || true
 
 ln -sv gcc $OUT/usr/bin/cc
+
+chmod +x $OUT/usr/bin/cc
 '''
