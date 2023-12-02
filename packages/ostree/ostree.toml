@@ -15,6 +15,6 @@ set -eux # o pipefail
 git submodule update --init
 env NOCONFIGURE=1 ./autogen.sh
 ./configure --prefix=/usr --sysconfdir=/etc
-make
-make install DESTDIR=$OUT
+make sysconfdir=/etc
+make install DESTDIR=$OUT sysconfdir=/etc
 '''
