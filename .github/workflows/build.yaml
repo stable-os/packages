@@ -167,6 +167,7 @@ jobs:
               - libarchive
               - libpgpme
               - libgpg-error
+              - avahi
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
