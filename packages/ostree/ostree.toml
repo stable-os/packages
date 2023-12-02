@@ -19,4 +19,5 @@ make sysconfdir=/etc
 make install DESTDIR=$OUT sysconfdir=/etc
 
 mv $OUT/lib/* $OUT/usr/lib
+rmdir $OUT/lib
 '''
