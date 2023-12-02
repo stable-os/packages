@@ -25,6 +25,8 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
     --disable-qt3                  \
     --disable-qt4                  \
     --disable-qt5                  \
+    --disable-gtk                  \
+    --disable-gtk3                 \
     --enable-core-docs             \
     --with-distro=none             \
     --with-systemdsystemunitdir=no \
