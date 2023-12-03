@@ -30,5 +30,5 @@ make distclean
             --disable-static             \
             --disable-failure-tokens
 make -j$(nproc)
-cp -av .libs/libcrypt.so.1* /usr/lib
+cp -av .libs/libcrypt.so.1* $OUT/usr/lib
 '''
