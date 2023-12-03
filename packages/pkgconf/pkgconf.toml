@@ -20,6 +20,6 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 make -j$(nproc)
 make DESTDIR=$OUT install
 
-ln -sv pkgconf   /usr/bin/pkg-config || true
-ln -sv pkgconf.1 /usr/share/man/man1/pkg-config.1 || true
+ln -sv pkgconf   $OUT/usr/bin/pkg-config || true
+ln -sv pkgconf.1 $OUT/usr/share/man/man1/pkg-config.1 || true
 '''
