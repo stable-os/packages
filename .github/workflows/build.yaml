@@ -163,11 +163,12 @@ jobs:
               # - vim
               # - xmlparser
               # - zstd
-              - glib
-              - libarchive
-              - libpgpme
-              - libgpg-error
+            #   - glib
+            #   - libarchive
+            #   - libpgpme
+            #   - libgpg-error
               - avahi
+              - dbus
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:

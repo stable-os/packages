@@ -1,0 +1,47 @@
+[package]
+name = 'dbus'
+version = '1.14.8'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://dbus.freedesktop.org/releases/dbus/dbus-1.14.8.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr                        \
+            --sysconfdir=/etc                    \
+            --localstatedir=/var                 \
+            --runstatedir=/run                   \
+            --disable-doxygen-docs               \
+            --disable-xml-docs                   \
+            --disable-static                     \
+            --with-systemduserunitdir=no         \
+            --with-systemdsystemunitdir=no       \
+            --docdir=/usr/share/doc/dbus-1.14.8  \
+            --with-system-socket=/run/dbus/system_bus_socket
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+chown -v root:messagebus $OUT/usr/libexec/dbus-daemon-launch-helper &&
+chmod -v      4750       $OUT/usr/libexec/dbus-daemon-launch-helper
+
+ln -sfv /var/lib/dbus/machine-id $OUT/etc
+
+cat > $OUT/etc/dbus-1/session-local.conf << "EOF"
+<!DOCTYPE busconfig PUBLIC
+ "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig>
+
+  <!-- Search for .service files in /usr/local -->
+  <servicedir>/usr/local/share/dbus-1/services</servicedir>
+
+</busconfig>
+EOF
+'''
