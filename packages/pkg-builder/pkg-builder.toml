@@ -13,6 +13,6 @@ script = '''
 set -eux # o pipefail
 
 $HOME/.cargo/bin/cargo build --release
-mkdir -p $OUT/bin
-cp target/release/pkg-builder $OUT/bin
+mkdir -p $OUT/usr/bin
+cp target/release/pkg-builder $OUT/usr/bin
 '''
