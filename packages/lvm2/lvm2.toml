@@ -21,5 +21,5 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 make -j$(nproc)
 make DESTDIR=$OUT install
 
-ln -s /usr/lib/libdevmapper.so.1.02 /usr/lib/libdevmapper.so.1.02.1
+ln -s /usr/lib/libdevmapper.so.1.02 $OUT/usr/lib/libdevmapper.so.1.02.1
 '''
