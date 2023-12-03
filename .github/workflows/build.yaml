@@ -200,6 +200,10 @@ jobs:
             password: ${{ secrets.GITHUB_TOKEN }}
           if: matrix.container == 'ubuntu:rolling'
 
+        - name: Login to GitHub Container Registry with Skopeo
+          run: echo ${{ secrets.GITHUB_TOKEN }} | skopeo login ghcr.io --username ${{ github.actor }} --password-stdin
+          if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest'
+
         # download the pkg-builder binary from the previous job
         - uses: actions/download-artifact@v2
           with:
