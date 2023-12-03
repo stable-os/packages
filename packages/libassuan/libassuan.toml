@@ -1,0 +1,19 @@
+[package]
+name = 'libassuan'
+version = '2.5.6'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.6.tar.bz2'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd libassuan-*
+
+./configure --prefix=/usr
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
