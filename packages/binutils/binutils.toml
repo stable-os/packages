@@ -27,9 +27,6 @@ cd       build
              --enable-64-bit-bfd \
              --with-system-zlib || true
 
-cat config.log
-exit 1
-
 make -j$(nproc)
 
 # NOT TESTING THIS IS A BAD IDEA, TESTS FAIL FOR UNKNOWN REASON SO THIS IS TEMPORARY
