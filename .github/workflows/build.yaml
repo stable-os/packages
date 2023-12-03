@@ -184,7 +184,6 @@ jobs:
           run: curl -fsSL https://get.docker.com | sh
           if: matrix.container == 'ubuntu:rolling'
         - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-          if: matrix.container == 'ubuntu:rolling'
 
         - name: Download CA certificates
           run: /usr/sbin/make-ca -g
