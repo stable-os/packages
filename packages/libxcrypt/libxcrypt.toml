@@ -21,4 +21,14 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 make -j$(nproc)
 make DESTDIR=$OUT install
+
+# Legacy compatibility
+make distclean
+./configure --prefix=/usr                \
+            --enable-hashes=strong,glibc \
+            --enable-obsolete-api=glibc  \
+            --disable-static             \
+            --disable-failure-tokens
+make -j$(nproc)
+cp -av .libs/libcrypt.so.1* /usr/lib
 '''
