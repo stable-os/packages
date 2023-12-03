@@ -167,10 +167,11 @@ jobs:
               # - libarchive
               # - libpgpme
               # - libgpg-error
-              - avahi
-              - dbus
-              - libassuan
+              # - avahi
+              # - dbus
+              # - libassuan
               - skopeo
+              - lvm2
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:

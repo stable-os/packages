@@ -1,0 +1,23 @@
+[package]
+name = 'lvm2'
+version = '2.03.22'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://sourceware.org/ftp/lvm2/LVM2.2.03.22.tgz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr       \
+            --enable-cmdlib     \
+            --enable-pkgconfig  \
+            --enable-udev_sync
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

@@ -7,6 +7,8 @@ license = ''
 [[source]]
 source = 'https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.4.12.tar.xz'
 
+# should also do the kernel options for LVM2!
+
 [build]
 script = '''
 set -eux # o pipefail
