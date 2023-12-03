@@ -87,7 +87,7 @@ jobs:
               - bash
               # - glibc
               # - coreutils
-              # - systemd
+              - systemd
               # - selinux
               # - libcap
               # - libpcre2
@@ -163,10 +163,10 @@ jobs:
               # - vim
               # - xmlparser
               # - zstd
-            #   - glib
-            #   - libarchive
-            #   - libpgpme
-            #   - libgpg-error
+              # - glib
+              # - libarchive
+              # - libpgpme
+              # - libgpg-error
               - avahi
               - dbus
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
