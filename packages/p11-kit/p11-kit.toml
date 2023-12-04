@@ -34,6 +34,8 @@ meson setup ..               \
       -Dtrust_paths=/etc/pki/anchors &&
 ninja
 
+mkdir -pv $OUT/usr/lib/
+
 DESTDIR=$OUT ninja install &&
 ln -sfv /usr/libexec/p11-kit/trust-extract-compat \
         $OUT/usr/bin/update-ca-certificates
