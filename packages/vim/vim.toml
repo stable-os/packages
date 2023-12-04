@@ -20,6 +20,8 @@ echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
 make -j$(nproc)
 make DESTDIR=$OUT install
 
+mkdir -pv $OUT/usr/share/doc/ $OUT/usr/share/man/ $OUT/usr/bin/
+
 ln -sv vim $OUT/usr/bin/vi
 for L in  $OUT/usr/share/man/{,*/}man1/vim.1; do
     ln -sv vim.1 $(dirname $L)/vi.1
