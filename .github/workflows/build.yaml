@@ -79,6 +79,7 @@ jobs:
           fail-fast: false
           matrix:
             package:
+              - ninja
               - meson
               - asciidoc
               - ostree
@@ -182,7 +183,7 @@ jobs:
         - name: Download CA certificates
           run: /usr/sbin/make-ca -g
           if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest'
-          
+
         - name: Install dependencies
           run: sed -i 's/^# deb-src/deb-src/' /etc/apt/sources.list && apt-get update && apt-get install -y linux-headers-6.5.0-9-generic skopeo gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl autoconf automake gettext texinfo wget libpam0g-dev libpam0g python3-jinja2 python3-pip file libghc-bzlib-dev libreadline-dev libmpfr-dev libmpc-dev libssl-dev libcurl4-openssl-dev asciidoc docbook2x p11-kit libtasn1-6-dev cmake libtasn1-bin dejagnu libtool libtool-bin liblzma-dev liblzma5 libgpg-error-dev libassuan-dev libgdbm-dev libdaemon-dev dbus libdbus-1-dev libbtrfs-dev libdevmapper-dev libgpgme-dev go-md2man libaio-dev
           if: matrix.container == 'ubuntu:rolling'

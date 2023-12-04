@@ -1,0 +1,21 @@
+[package]
+name = 'ninja'
+version = '1.11.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/bison/bison-3.8.2.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+python3 configure.py --bootstrap
+
+install -vm755 ninja $OUT/usr/bin/
+install -vDm644 misc/bash-completion $OUT/usr/share/bash-completion/completions/ninja
+install -vDm644 misc/zsh-completion  $OUT/usr/share/zsh/site-functions/_ninja
+'''
