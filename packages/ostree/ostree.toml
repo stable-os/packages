@@ -12,11 +12,18 @@ git_ref = 'v2023.7'
 script = '''
 set -eux # o pipefail
 
+# check if the folder /usr/local/share/aclocal/ exists
+if [ ! -d /usr/local/share/aclocal/ ]; then
+    acl_dir=/usr/share/aclocal/
+else
+    acl_dir=/usr/local/share/aclocal/
+fi
+
 git submodule update --init
-env NOCONFIGURE=1 ./autogen.sh
-./configure --prefix=/usr --sysconfdir=/etc
-make sysconfdir=/etc
-make install DESTDIR=$OUT sysconfdir=/etc
+ACLOCAL_PATH=$acl_dir env NOCONFIGURE=1 ./autogen.sh
+ACLOCAL_PATH=$acl_dir ./configure --prefix=/usr --sysconfdir=/etc
+ACLOCAL_PATH=$acl_dir make sysconfdir=/etc
+ACLOCAL_PATH=$acl_dir make install DESTDIR=$OUT sysconfdir=/etc
 
 mv $OUT/lib/* $OUT/usr/lib
 rmdir $OUT/lib
