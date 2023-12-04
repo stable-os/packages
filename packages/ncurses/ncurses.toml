@@ -21,29 +21,21 @@ cd ncurses-6.4
             --with-ticlib           \
             --without-debug         \
             --without-normal        \
-            --enable-pc-files       #\
-            # --enable-widec
+            --enable-pc-files       \
+            --enable-widec
 
 make -j$(nproc)
 make DESTDIR=$OUT install
 
 mkdir -p $OUT/lib $OUT/usr/lib $OUT/usr/lib/pkgconfig $OUT/usr/share/doc
 
-# with wide
-# mv -v $OUT/usr/lib/libncursesw.so.6* $OUT/lib
-# ln -sfv /lib/$(readlink $OUT/usr/lib/libncursesw.so) $OUT/usr/lib/libncursesw.so
-# without wide
-mv -v $OUT/usr/lib/libncurses.so.6* $OUT/lib
-ln -sfv /lib/$(readlink $OUT/usr/lib/libncurses.so) $OUT/usr/lib/libncurses.so
+mv -v $OUT/usr/lib/libncursesw.so.6* $OUT/lib
+ln -sfv /lib/$(readlink $OUT/usr/lib/libncursesw.so) $OUT/usr/lib/libncursesw.so
 
 for lib in ncurses form panel menu ; do
     rm -vf                    $OUT/usr/lib/lib${lib}.so
-    # wide
-    # echo "INPUT(-l${lib}w)" > $OUT/usr/lib/lib${lib}.so
-    # ln -sfv ${lib}w.pc        $OUT/usr/lib/pkgconfig/${lib}.pc
-    # without wide
-    echo "INPUT(-l${lib})" > $OUT/usr/lib/lib${lib}.so
-    ln -sfv ${lib}.pc        $OUT/usr/lib/pkgconfig/${lib}.pc
+    echo "INPUT(-l${lib}w)" > $OUT/usr/lib/lib${lib}.so
+    ln -sfv ${lib}w.pc        $OUT/usr/lib/pkgconfig/${lib}.pc
 done
 
 rm -vf                     $OUT/usr/lib/libcursesw.so
@@ -53,16 +45,12 @@ ln -sfv libncurses.so      $OUT/usr/lib/libcurses.so
 mkdir -v       $OUT/usr/share/doc/ncurses-6.2
 cp -v -R doc/* $OUT/usr/share/doc/ncurses-6.2
 
-ln -sfv /usr/lib/libtinfo.so.6.4 $OUT/usr/lib/libtinfo.so.6
-
-# ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/lib/libtinfow.so.6
+ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/lib/libtinfow.so.6
 
 # THIS CAUSES ISSUES AND SHOULD BE REMOVED THE MOMENT WE SWITCH TO BUILDING WITHOUT UBUNTU
-# ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/lib/libtinfo.so.6.4
-# ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/lib/libtinfo.so.6
-# ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/usr/lib/libtinfo.so.6.4
-# ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/usr/lib/libtinfo.so.6
-
-
+ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/lib/libtinfo.so.6.4
+ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/lib/libtinfo.so.6
+ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/usr/lib/libtinfo.so.6.4
+ln -sfv /usr/lib/libtinfow.so.6.4 $OUT/usr/lib/libtinfo.so.6
 
 '''
