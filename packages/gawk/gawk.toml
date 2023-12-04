@@ -16,10 +16,14 @@ cd gawk-5.3.0
 
 sed -i 's/extras//' Makefile.in
 
+mv /usr/lib/libtinfo.so.6 /usr/lib/_libtinfo.so.6
+
 ./configure --prefix=/usr
 
 make -j$(nproc)
 make DESTDIR=$OUT install
+
+mv /usr/lib/_libtinfo.so.6 /usr/lib/libtinfo.so.6
 
 ln -sv gawk.1 /usr/share/man/man1/awk.1
 
