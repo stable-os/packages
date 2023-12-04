@@ -28,6 +28,6 @@ make DESTDIR=$OUT install
 
 rm -fv $OUT/usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
 
-gunzip -v $OUT/usr/share/info/libext2fs.info.gz
-install-info --dir-file=$OUT/usr/share/info/dir $OUT/usr/share/info/libext2fs.info
+gunzip -v $OUT/usr/share/info/libext2fs.info.gz || true
+install-info --dir-file=$OUT/usr/share/info/dir $OUT/usr/share/info/libext2fs.info || true
 '''
