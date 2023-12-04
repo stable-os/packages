@@ -1,11 +1,11 @@
 [package]
 name = 'perl'
-version = '5.39.5'
+version = '5.38.0'
 description = ''
 license = ''
 
 [[source]]
-source = 'https://www.cpan.org/src/5.0/perl-5.39.5.tar.xz'
+source = 'https://www.cpan.org/src/5.0/perl-5.38.0.tar.xz'
 
 [build]
 script = '''
@@ -19,12 +19,12 @@ export BUILD_BZIP2=0
 sh Configure -des                                         \
              -Dprefix=/usr                                \
              -Dvendorprefix=/usr                          \
-             -Dprivlib=/usr/lib/perl5/5.39.5/core_perl      \
-             -Darchlib=/usr/lib/perl5/5.39.5/core_perl      \
-             -Dsitelib=/usr/lib/perl5/5.39.5/site_perl      \
-             -Dsitearch=/usr/lib/perl5/5.39.5/site_perl     \
-             -Dvendorlib=/usr/lib/perl5/5.39.5/vendor_perl  \
-             -Dvendorarch=/usr/lib/perl5/5.39.5/vendor_perl \
+             -Dprivlib=/usr/lib/perl5/5.38.0/core_perl      \
+             -Darchlib=/usr/lib/perl5/5.38.0/core_perl      \
+             -Dsitelib=/usr/lib/perl5/5.38.0/site_perl      \
+             -Dsitearch=/usr/lib/perl5/5.38.0/site_perl     \
+             -Dvendorlib=/usr/lib/perl5/5.38.0/vendor_perl  \
+             -Dvendorarch=/usr/lib/perl5/5.38.0/vendor_perl \
              -Dman1dir=/usr/share/man/man1                \
              -Dman3dir=/usr/share/man/man3                \
              -Dpager="/usr/bin/less -isR"                 \
