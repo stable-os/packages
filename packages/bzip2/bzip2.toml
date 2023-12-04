@@ -31,5 +31,7 @@ for i in $OUT/usr/bin/{bzcat,bunzip2}; do
   ln -sfv bzip2 $i
 done
 
+install -v -m644 -D bzlib.h $OUT/usr/include
+
 rm -fv $OUT/usr/lib/libbz2.a
 '''
