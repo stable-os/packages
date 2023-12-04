@@ -29,13 +29,21 @@ make DESTDIR=$OUT install
 
 mkdir -p $OUT/lib $OUT/usr/lib $OUT/usr/lib/pkgconfig $OUT/usr/share/doc
 
-mv -v $OUT/usr/lib/libncursesw.so.6* $OUT/lib
-ln -sfv /lib/$(readlink $OUT/usr/lib/libncursesw.so) $OUT/usr/lib/libncursesw.so
+# with wide
+# mv -v $OUT/usr/lib/libncursesw.so.6* $OUT/lib
+# ln -sfv /lib/$(readlink $OUT/usr/lib/libncursesw.so) $OUT/usr/lib/libncursesw.so
+# without wide
+mv -v $OUT/usr/lib/libncurses.so.6* $OUT/lib
+ln -sfv /lib/$(readlink $OUT/usr/lib/libncurses.so) $OUT/usr/lib/libncurses.so
 
 for lib in ncurses form panel menu ; do
     rm -vf                    $OUT/usr/lib/lib${lib}.so
-    echo "INPUT(-l${lib}w)" > $OUT/usr/lib/lib${lib}.so
-    ln -sfv ${lib}w.pc        $OUT/usr/lib/pkgconfig/${lib}.pc
+    # wide
+    # echo "INPUT(-l${lib}w)" > $OUT/usr/lib/lib${lib}.so
+    # ln -sfv ${lib}w.pc        $OUT/usr/lib/pkgconfig/${lib}.pc
+    # without wide
+    echo "INPUT(-l${lib})" > $OUT/usr/lib/lib${lib}.so
+    ln -sfv ${lib}.pc        $OUT/usr/lib/pkgconfig/${lib}.pc
 done
 
 rm -vf                     $OUT/usr/lib/libcursesw.so
