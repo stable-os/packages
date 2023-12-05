@@ -137,7 +137,7 @@ jobs:
               - gettext
               - gperf
               - groff
-              - ianaetc'
+              - iana-etc
               - inetutils
               - intltool
               - iproute2
