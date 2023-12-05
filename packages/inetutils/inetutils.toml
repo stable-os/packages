@@ -27,5 +27,7 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 make -j$(nproc)
 make DESTDIR=$OUT install
 
+mkdir -pv $OUT/usr/{,s}bin
+
 mv -v $OUT/usr/{,s}bin/ifconfig
 '''
