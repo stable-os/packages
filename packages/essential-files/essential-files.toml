@@ -59,7 +59,7 @@ nogroup:x:65534:
 EOF
 
 touch $OUT/var/log/{btmp,lastlog,faillog,wtmp}
-chgrp -v utmp $OUT/var/log/lastlog
+# chgrp -v utmp $OUT/var/log/lastlog
 chmod -v 664  $OUT/var/log/lastlog
 chmod -v 600  $OUT/var/log/btmp
 '''
