@@ -20,4 +20,14 @@ make -j$(nproc)
 make DESTDIR=$OUT install
 
 ln -sv /usr/bin/bash $OUT/usr/bin/sh
+
+cat > $OUT/root/.bashrc << "EOF"
+set +h
+umask 022
+
+PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/x86_64-pc-linux-gnu/bin/:/usr/lib/python3.11/site-packages/bin/:/usr/local/bin/
+PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig/:/usr/share/pkgconfig/
+export PKG_CONFIG_PATH
+
+EOF
 '''

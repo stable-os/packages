@@ -178,6 +178,7 @@ jobs:
               - skopeo
               - lvm2
               - wget
+              - essential-files
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
