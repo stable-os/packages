@@ -194,6 +194,8 @@ jobs:
           if: matrix.container == 'ubuntu:rolling'
         - run: apt-get build-dep ostree -y
           if: matrix.container == 'ubuntu:rolling' && matrix.package == 'ostree'
+        - run: apt-get install -y --no-install-recommends --no-install-suggests bison flex gawk gcc gettext make libaudit-dev libbz2-dev libcap-dev libcap-ng-dev libcunit1-dev libglib2.0-dev libpcre2-dev pkgconf python3 systemd xmlto
+          if: matrix.container == 'ubuntu:rolling' && matrix.package == 'selinux'
         - name: Install Docker
           run: curl -fsSL https://get.docker.com | sh
           if: matrix.container == 'ubuntu:rolling'
