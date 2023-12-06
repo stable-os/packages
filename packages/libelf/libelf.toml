@@ -20,6 +20,8 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 make -j$(nproc)
 make DESTDIR=$OUT -C libelf install
 
+mkdir -pv $OUT/usr/lib/pkgconfig
+
 install -vm644 config/libelf.pc $OUT/usr/lib/pkgconfig
-rm /usr/lib/libelf.a || true
+rm $OUT/usr/lib/libelf.a || true
 '''

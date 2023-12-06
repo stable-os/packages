@@ -144,7 +144,7 @@ jobs:
               # - kbd
               - kmod
               # - less
-              # - libelf
+              - libelf
               # - libpipeline
               # - libtool
               # - libxcrypt
