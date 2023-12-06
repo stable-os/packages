@@ -23,6 +23,8 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 make -j$(nproc)
 make DESTDIR=$OUT install
 
+mkdir -pv $OUT/usr/{s,}bin
+
 for target in depmod insmod modinfo modprobe rmmod; do
   ln -sfv ../bin/kmod $OUT/usr/sbin/$target
 done
