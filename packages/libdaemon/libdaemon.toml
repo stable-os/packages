@@ -1,0 +1,20 @@
+[package]
+name = 'libdaemon'
+version = '0.14'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://0pointer.de/lennart/projects/libdaemon/libdaemon-0.14.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr --disable-static
+
+make -j$(nproc)
+make DESTDIR=$OUT docdir=$OUT/usr/share/doc/libdaemon-0.14 install
+'''

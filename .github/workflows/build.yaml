@@ -179,6 +179,7 @@ jobs:
               - lvm2
               - wget
               - essential-files
+              - libdaemon
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
