@@ -95,90 +95,90 @@ jobs:
               - systemd
               - selinux
               - libcap
-              # - libpcre2
-              # - ncurses
+              - libpcre2
+              - ncurses
               - gcc
-              # - gmp
-              # - mpc
-              # - mpfr
+              - gmp
+              - mpc
+              - mpfr
               - git
-              # - tar
-              # - zlib
-              # - gzip
-              # - curl
-              # - openssl
-              # - p11-kit
-              # - make-ca
+              - tar
+              - zlib
+              - gzip
+              - curl
+              - openssl
+              - p11-kit
+              - make-ca
               - sed
-              # - grep
-              # - gawk
-              # - readline
-              # - libffi
-              # - libtasn1
-              # - findutils
-              # - bzip2
-              # - xz
+              - grep
+              - gawk
+              - readline
+              - libffi
+              - libtasn1
+              - findutils
+              - bzip2
+              - xz
               - binutils
               - acl
               - attr
-              # - autoconf
-              # - automake
-              # - bc
-              # - bison
-              # - check
+              - autoconf
+              - automake
+              - bc
+              - bison
+              - check
               - dejagnu
-              # - diffutils
-              # - e2fsprogs
-              # - expat
+              - diffutils
+              - e2fsprogs
+              - expat
               - expect
-              # - file
-              # - flex
-              # - gdbm
-              # - gettext
-              # - gperf
-              # - groff
-              # - iana-etc
+              - file
+              - flex
+              - gdbm
+              - gettext
+              - gperf
+              - groff
+              - iana-etc
               - inetutils
               - intltool
               - iproute2
-              # - kbd
+              - kbd
               - kmod
-              # - less
+              - less
               - libelf
-              # - libpipeline
-              # - libtool
-              # - libxcrypt
+              - libpipeline
+              - libtool
+              - libxcrypt
               - linux
-              # - m4
-              # - make
+              - m4
+              - make
               - mandb
-              # - manpages
-              # - patch
-              # - perl
-              # - pkgconf
-              # - procps
+              - manpages
+              - patch
+              - perl
+              - pkgconf
+              - procps
               - psmisc
-              # - python3
-              # - shadow
-              # - sysklogd
-              # - tcl
-              # - texinfo
-              # - timezonedata
-              # - utillinux
+              - python3
+              - shadow
+              - sysklogd
+              - tcl
+              - texinfo
+              - timezonedata
+              - utillinux
               - vim
-              # - xmlparser
-              # - zstd
-              # - glib
-              # - libarchive
-              # - libpgpme
-              # - libgpg-error
-              # - avahi
-              # - dbus
-              # - libassuan
+              - xmlparser
+              - zstd
+              - glib
+              - libarchive
+              - libpgpme
+              - libgpg-error
+              - avahi
+              - dbus
+              - libassuan
               - skopeo
               - lvm2
-              # - wget
-              # - essential-files
+              - wget
+              - essential-files
               - libdaemon
               - libaio
               - libxslt
