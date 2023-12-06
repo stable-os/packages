@@ -1,0 +1,21 @@
+[package]
+name = 'libaio'
+version = '0.3.113'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://pagure.io/libaio/archive/libaio-0.3.113/libaio-0.3.113.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+ls
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+sed -i '/install.*libaio.a/s/^/#/' src/Makefile
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

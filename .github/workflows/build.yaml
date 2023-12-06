@@ -180,6 +180,7 @@ jobs:
               - wget
               - essential-files
               - libdaemon
+              - libaio
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
