@@ -94,7 +94,7 @@ jobs:
               - coreutils
               - systemd
               - selinux
-              # - libcap
+              - libcap
               # - libpcre2
               # - ncurses
               - gcc

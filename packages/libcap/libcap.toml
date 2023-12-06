@@ -12,8 +12,8 @@ git_ref = 'v1.2.69'
 script = '''
 set -eux # o pipefail
 
-make lib=lib -j$(nproc)
-make DESTDIR=$OUT lib=lib install
+make lib=usr/lib -j$(nproc)
+make DESTDIR=$OUT lib=usr/lib install
 
-chmod -v 755 $OUT/lib/libcap.so.2.69
+chmod -v 755 $OUT/usr/lib/libcap.so.2.69
 '''
