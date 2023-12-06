@@ -31,6 +31,7 @@ disable-pip-version-check = true
 EOF
 
 install -v -dm755 $OUT/usr/share/doc/python-3.11.4/html
+ln -sfv /usr/bin/python3.11 $OUT/usr/bin/python
 
 #tar --strip-components=1  \
 #   --no-same-owner       \
