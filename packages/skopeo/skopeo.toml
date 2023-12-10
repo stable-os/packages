@@ -20,6 +20,9 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=/usr/local/go
 export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig/:/usr/share/pkgconfig/
 
+# required for skopeo documentation
+go install github.com/cpuguy83/go-md2man@latest
+
 git clone https://github.com/containers/skopeo $GOPATH/src/github.com/containers/skopeo
 cd $GOPATH/src/github.com/containers/skopeo && make bin/skopeo && make DESTDIR=$OUT install
 '''
