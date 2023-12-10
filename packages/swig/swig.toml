@@ -1,0 +1,22 @@
+[package]
+name = 'swig'
+version = '4.1.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://downloads.sourceforge.net/swig/swig-4.1.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr                      \
+            --without-javascript               \
+            --without-maximum-compile-warnings
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

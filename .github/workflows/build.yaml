@@ -184,6 +184,7 @@ jobs:
               # - libxslt
               # - libxml2
               - audit
+              - swig
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
