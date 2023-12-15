@@ -27,6 +27,7 @@ DESTDIR=$OUT ninja install
 chmod u+s $OUT/usr/bin/fusermount3
 
 cd ..
+mkdir -pv $OUT/usr/share/doc/fuse-3.16.1
 cp -Rv doc/html -T $OUT/usr/share/doc/fuse-3.16.1
 install -v -m644   doc/{README.NFS,kernel.txt} \
                    $OUT/usr/share/doc/fuse-3.16.1
