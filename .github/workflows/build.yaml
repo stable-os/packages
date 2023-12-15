@@ -185,8 +185,9 @@ jobs:
               # - libxml2
               # - audit
               # - swig
-              - fuse
-              - pam
+              # - fuse
+              # - pam
+              - jinja2
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
