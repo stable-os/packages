@@ -1,0 +1,33 @@
+[package]
+name = 'fuse'
+version = '3.16.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/libfuse/libfuse/releases/download/fuse-3.16.1/fuse-3.16.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+# fuse support must be enabled in the kernel settings!
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+sed -i '/^udev/,$ s/^/#/' util/meson.build &&
+
+mkdir build &&
+cd    build &&
+
+meson setup --prefix=/usr --buildtype=release ..
+ninja
+
+DESTDIR=$OUT ninja install
+chmod u+s $OUT/usr/bin/fusermount3
+
+cd ..
+cp -Rv doc/html -T $OUT/usr/share/doc/fuse-3.16.1
+install -v -m644   doc/{README.NFS,kernel.txt} \
+                   $OUT/usr/share/doc/fuse-3.16.1
+'''

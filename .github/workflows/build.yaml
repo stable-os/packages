@@ -172,7 +172,7 @@ jobs:
               # - libarchive
               # - libpgpme
               # - libgpg-error
-              - avahi
+              # - avahi
               # - dbus
               # - libassuan
               # - skopeo
@@ -185,6 +185,7 @@ jobs:
               # - libxml2
               # - audit
               # - swig
+              - fuse
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
