@@ -1,0 +1,37 @@
+[package]
+name = 'pam'
+version = '1.5.3'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/linux-pam/linux-pam/releases/download/v1.5.3/Linux-PAM-1.5.3.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+sed -e /service_DATA/d \
+    -i modules/pam_namespace/Makefile.am &&
+autoreconf
+
+./configure --prefix=/usr                        \
+            --sbindir=/usr/sbin                  \
+            --sysconfdir=/etc                    \
+            --libdir=/usr/lib                    \
+            --enable-securedir=/usr/lib/security \
+            --docdir=/usr/share/doc/Linux-PAM-1.5.3
+
+install -v -m755 -d $OUT/etc/pam.d &&
+cat > $OUT/etc/pam.d/other << "EOF"
+auth     required       pam_deny.so
+account  required       pam_deny.so
+password required       pam_deny.so
+session  required       pam_deny.so
+EOF
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
