@@ -30,7 +30,7 @@ make DESTDIR=$OUT install
 mkdir -p $OUT/usr/lib $OUT/usr/lib/pkgconfig $OUT/usr/share/doc
 
 # mv -v $OUT/usr/lib/libncursesw.so.6* $OUT/lib
-ln -sfv /lib/$(readlink $OUT/usr/lib/libncursesw.so) $OUT/usr/lib/libncursesw.so
+ln -sfv /usr/lib/$(readlink $OUT/usr/lib/libncursesw.so) $OUT/usr/lib/libncursesw.so
 
 for lib in ncurses form panel menu ; do
     rm -vf                    $OUT/usr/lib/lib${lib}.so
