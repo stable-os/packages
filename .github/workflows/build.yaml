@@ -96,7 +96,7 @@ jobs:
               - selinux
               # - libcap
               # - libpcre2
-              # - ncurses
+              - ncurses
               # - gcc
               # - gmp
               # - mpc
@@ -187,8 +187,8 @@ jobs:
               # - swig
               # - fuse
               # - pam
-              - jinja2
-              - markupsafe
+              # - jinja2
+              # - markupsafe
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
