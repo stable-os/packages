@@ -189,6 +189,7 @@ jobs:
               # - pam
               # - jinja2
               # - markupsafe
+              - xmlto
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:

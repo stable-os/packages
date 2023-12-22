@@ -1,0 +1,21 @@
+[package]
+name = 'xmlto'
+version = '0.0.28'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://releases.pagure.org/xmlto/xmlto-0.0.28.tar.bz2'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+LINKS="/usr/bin/links" \
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
