@@ -1,0 +1,20 @@
+[package]
+name = 'xmlsax'
+version = '1.02'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://cpan.metacpan.org/authors/id/G/GR/GRANTM/XML-SAX-1.02.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+perl Makefile.PL
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

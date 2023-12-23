@@ -80,7 +80,7 @@ jobs:
           matrix:
             package:
               # - flit-core
-              - wheel
+              # - wheel
               # - ninja
               # - meson
               # - asciidoc
@@ -92,8 +92,8 @@ jobs:
               - bash
               # - glibc
               # - coreutils
-              - systemd
-              - selinux
+              # - systemd
+              # - selinux
               # - libcap
               # - libpcre2
               - ncurses
@@ -112,7 +112,7 @@ jobs:
               # - sed
               # - grep
               # - gawk
-              - readline
+              # - readline
               # - libffi
               # - libtasn1
               # - findutils
@@ -156,7 +156,7 @@ jobs:
               # - patch
               # - perl
               # - pkgconf
-              - procps
+              # - procps
               - psmisc
               # - python3
               # - shadow
@@ -164,7 +164,7 @@ jobs:
               # - tcl
               # - texinfo
               # - timezonedata
-              - utillinux
+              # - utillinux
               - vim
               # - xmlparser
               # - zstd
@@ -190,11 +190,12 @@ jobs:
               # - jinja2
               # - markupsafe
               # - xmlto
-              - docbook-xml
+              # - docbook-xml
               # - unzip
-              - docbook-xsl-nons
-              - libcap-ng
-              - docbook2x
+              # - docbook-xsl-nons
+              # - libcap-ng
+              # - docbook2x
+              - xmlsax
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
