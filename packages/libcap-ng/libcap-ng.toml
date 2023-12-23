@@ -1,0 +1,21 @@
+[package]
+name = 'libcap-ng'
+version = '0.8.4'
+description = 'libcap-ng'
+license = ''
+
+[[source]]
+source = 'https://people.redhat.com/sgrubb/libcap-ng/libcap-ng-0.8.4.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+
+./configure --prefix=/usr --disable-static
+
+make lib=usr/lib -j$(nproc)
+make DESTDIR=$OUT lib=usr/lib install
+'''
