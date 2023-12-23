@@ -20,6 +20,9 @@ destination = '/5-1'
 script = '''
 set -eux # o pipefail
 
+# It expects the folder /usr/bin to exist, if there is none it will just create a file called bin
+mkdir -pv $OUT/usr/bin
+
 # DOCBOOK 4.5
 
 cd 4-5

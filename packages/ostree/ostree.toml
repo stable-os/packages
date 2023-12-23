@@ -13,7 +13,7 @@ script = '''
 set -eux # o pipefail
 
 # check if the folder /usr/local/share/aclocal/ exists
-if [ ! -d /usr/local/share/aclocal/ ]; then
+if [ ! -d $OUT/usr/local/share/aclocal/ ]; then
     acl_dir=/usr/share/aclocal/
 else
     acl_dir=/usr/local/share/aclocal/
