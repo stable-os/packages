@@ -191,6 +191,7 @@ jobs:
               # - markupsafe
               - xmlto
               - docbook-xml
+              - unzip
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
