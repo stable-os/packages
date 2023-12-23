@@ -190,7 +190,7 @@ jobs:
               # - jinja2
               # - markupsafe
               # - xmlto
-              # - docbook-xml
+              - docbook-xml
               # - unzip
               - docbook-xsl-nons
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
