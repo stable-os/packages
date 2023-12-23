@@ -434,4 +434,51 @@ xmlcatalog --noout --add "delegateURI" \
   "http://docbook.org/xml/5.1/xsd/"  \
   "file:///usr/share/xml/docbook/schema/xsd/5.1/catalog.xml" \
   $OUT/etc/xml/catalog
+
+cd ..
+
+
+
+
+# UPDATE CATALOGS FOR DOCBOOK-XSL-NONS
+
+xmlcatalog --noout --add "rewriteSystem" \
+           "https://cdn.docbook.org/release/xsl-nons/1.79.2" \
+           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+    $OUT/etc/xml/catalog
+
+xmlcatalog --noout --add "rewriteURI" \
+           "https://cdn.docbook.org/release/xsl-nons/1.79.2" \
+           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+    $OUT/etc/xml/catalog
+
+xmlcatalog --noout --add "rewriteSystem" \
+           "https://cdn.docbook.org/release/xsl-nons/current" \
+           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+    $OUT/etc/xml/catalog
+
+xmlcatalog --noout --add "rewriteURI" \
+           "https://cdn.docbook.org/release/xsl-nons/current" \
+           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+    $OUT/etc/xml/catalog
+
+xmlcatalog --noout --add "rewriteSystem" \
+           "http://docbook.sourceforge.net/release/xsl/current" \
+           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+    $OUT/etc/xml/catalog
+
+xmlcatalog --noout --add "rewriteURI" \
+           "http://docbook.sourceforge.net/release/xsl/current" \
+           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+    $OUT/etc/xml/catalog
+
+xmlcatalog --noout --add "rewriteSystem" \
+           "http://docbook.sourceforge.net/release/xsl/<version>" \
+           "/usr/share/xml/docbook/xsl-stylesheets-<version>" \
+    $OUT/etc/xml/catalog
+
+xmlcatalog --noout --add "rewriteURI" \
+           "http://docbook.sourceforge.net/release/xsl/<version>" \
+           "/usr/share/xml/docbook/xsl-stylesheets-<version>" \
+    $OUT/etc/xml/catalog
 '''
