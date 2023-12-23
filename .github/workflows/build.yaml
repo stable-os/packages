@@ -189,9 +189,10 @@ jobs:
               # - pam
               # - jinja2
               # - markupsafe
-              - xmlto
-              - docbook-xml
-              - unzip
+              # - xmlto
+              # - docbook-xml
+              # - unzip
+              - docbook-xsl-nons
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
