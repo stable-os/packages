@@ -194,7 +194,7 @@ jobs:
               # - unzip
               # - docbook-xsl-nons
               # - libcap-ng
-              # - docbook2x
+              - docbook2x
               - xmlsax
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
