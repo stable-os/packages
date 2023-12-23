@@ -15,6 +15,6 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 make -f unix/Makefile generic
 
-make prefix=/usr MANDIR=/usr/share/man/man1 DESTDIR=$OUT \
+make prefix=$OUT/usr MANDIR=$OUT/usr/share/man/man1 DESTDIR=$OUT \
  -f unix/Makefile install
 '''
