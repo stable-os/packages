@@ -1,0 +1,20 @@
+[package]
+name = 'docbook2x'
+version = '0.8.8'
+description = 'docbook2x'
+license = ''
+
+[[source]]
+source = 'http://downloads.sourceforge.net/docbook2x/docbook2X-0.8.8.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr
+
+make lib=usr/lib -j$(nproc)
+make DESTDIR=$OUT lib=usr/lib install
+'''

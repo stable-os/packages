@@ -1,3 +1,5 @@
+# ! patches to lower capabilities of other programs can be found at https://people.redhat.com/sgrubb/libcap-ng/index.html
+
 [package]
 name = 'libcap-ng'
 version = '0.8.4'
@@ -12,7 +14,6 @@ script = '''
 set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
-
 
 ./configure --prefix=/usr --disable-static
 
