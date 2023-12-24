@@ -196,6 +196,7 @@ jobs:
               # - libcap-ng
               - docbook2x
               - xmlsax
+              - xmlsaxbase
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
