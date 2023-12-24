@@ -15,7 +15,7 @@ cd glib-*
 
 export PATH=$PATH:/usr/lib/python3.11/site-packages/bin
 
-meson _build
+meson _build --prefix /usr
 ninja -C _build
 DESTDIR=$OUT ninja -C _build install
 '''
