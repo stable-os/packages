@@ -25,7 +25,12 @@ ACLOCAL_PATH=$acl_dir ./configure --prefix=/usr --sysconfdir=/etc
 ACLOCAL_PATH=$acl_dir make sysconfdir=/etc
 ACLOCAL_PATH=$acl_dir make install DESTDIR=$OUT sysconfdir=/etc
 
-mkdir -pv $OUT/usr/lib $OUT/lib
+# check if $OUT/lib exists
+if [ ! -d $OUT/lib ]; then
+    exit 0
+fi
+
+mkdir -pv $OUT/usr/lib
 mv $OUT/lib/* $OUT/usr/lib
 rmdir $OUT/lib
 '''
