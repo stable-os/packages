@@ -18,5 +18,5 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 make lib=usr/lib -j$(nproc)
 make DESTDIR=$OUT lib=usr/lib install
 
-ln -s docbook2xtexi $OUT/usr/bin/docbook2x-texi
+ln -s docbook2texi $OUT/usr/bin/docbook2x-texi
 '''
