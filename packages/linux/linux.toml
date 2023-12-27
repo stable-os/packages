@@ -7,9 +7,10 @@ license = ''
 [[source]]
 source = 'https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.4.12.tar.xz'
 
-[[source]]
-source = 'https://github.com/stable-os/packages.git'
-destination = '/packaging_repo_data'
+# TODO: Why doesn't this work?
+# [[source]]
+# source = 'https://github.com/stable-os/packages.git'
+# destination = '/packaging_repo_data'
 
 # should also do the kernel options for LVM2!
 
@@ -19,6 +20,7 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
+git clone --depth 1 https://github.com/stable-os/packages.git ../packaging_repo_data
 find ../packaging_repo_data
 cp ../packaging_repo_data/packages/linux/x86_64.config .config
 
