@@ -24,7 +24,7 @@ git clone --depth 1 https://github.com/stable-os/packages.git ../packaging_repo_
 find ../packaging_repo_data
 cp ../packaging_repo_data/packages/linux/x86_64.config .config
 
-make mrproper
+# make mrproper
 
 make -j$(nproc)
 make DESTDIR=$OUT modules_install
