@@ -7,6 +7,10 @@ license = ''
 [[source]]
 source = 'https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.4.12.tar.xz'
 
+[[source]]
+source = 'https://github.com/stable-os/packages.git'
+destination = '/packaging_repo_data'
+
 # should also do the kernel options for LVM2!
 
 [build]
@@ -14,6 +18,9 @@ script = '''
 set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+find ../packaging_repo_data
+cp ../packaging_repo_data/packages/linux/x86_64.config .config
 
 make mrproper
 
