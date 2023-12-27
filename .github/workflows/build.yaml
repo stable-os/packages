@@ -195,7 +195,7 @@ jobs:
               # - docbook-xsl-nons
               # - libcap-ng
               # - docbook2x
-              # - xmlsax
+              - xmlsax
               # - xmlsaxbase
               - xmlnamespacesupport
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
