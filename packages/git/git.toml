@@ -13,5 +13,5 @@ script = '''
 set -eux # o pipefail
 
 make prefix=/usr all # doc info
-make DESTDIR=$OUT prefix=/usr install install-doc install-html install-info
+make DESTDIR=$OUT prefix=/usr install # install-doc install-html install-info
 '''
