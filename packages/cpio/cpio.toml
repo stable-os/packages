@@ -1,0 +1,27 @@
+[package]
+name = 'cpio'
+version = '2.14'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://ftp.gnu.org/gnu/cpio/cpio-2.14.tar.bz2'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr \
+            --enable-mt   \
+            --with-rmt=/usr/libexec/rmt
+
+make -j$(nproc)
+
+makeinfo --html            -o doc/html      doc/cpio.texi
+makeinfo --html --no-split -o doc/cpio.html doc/cpio.texi
+makeinfo --plaintext       -o doc/cpio.txt  doc/cpio.texi
+
+make DESTDIR=$OUT install
+'''
