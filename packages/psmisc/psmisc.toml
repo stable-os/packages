@@ -13,7 +13,7 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
-./configure --prefix=/usr # LIBS=-lncursesw TERMCAP_LIB=-lncursesw
+./configure --prefix=/usr LIBS=-ltinfow TERMCAP_LIB=-lncursesw
 
 make -j$(nproc)
 make DESTDIR=$OUT install

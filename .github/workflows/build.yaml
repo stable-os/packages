@@ -96,7 +96,7 @@ jobs:
               - selinux
               # - libcap
               # - libpcre2
-              # - ncurses
+              - ncurses
               # - gcc
               # - gmp
               # - mpc
