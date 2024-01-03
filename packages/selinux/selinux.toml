@@ -12,5 +12,5 @@ git_ref = '3.5'
 script = '''
 set -eux # o pipefail
 
-make DESTDIR=$OUT install
+make DESTDIR=$OUT PREFIX=/usr install
 '''
