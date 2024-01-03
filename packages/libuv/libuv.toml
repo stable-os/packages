@@ -1,0 +1,22 @@
+[package]
+name = 'libuv'
+version = '1.46.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://dist.libuv.org/dist/v1.46.0/libuv-v1.46.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+sh autogen.sh
+
+./configure --prefix=/usr --disable-static
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

@@ -199,6 +199,9 @@ jobs:
               # - xmlnamespacesupport
               - cpio
               - dwarves
+              - cmake
+              - libuv
+              - nghttp2
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
