@@ -138,7 +138,6 @@ jobs:
               - gperf
               - groff
               - iana-etc
-              - inetutils
               - intltool
               - iproute2
               - kbd
