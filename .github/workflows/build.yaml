@@ -202,6 +202,7 @@ jobs:
               - cmake
               - libuv
               - nghttp2
+              - elfutils
             container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
