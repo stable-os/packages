@@ -79,124 +79,124 @@ jobs:
           fail-fast: false
           matrix:
             package:
-              # - flit-core
-              # - wheel
-              # - ninja
-              # - meson
-              # - asciidoc
-              # - ostree
-              # - which
-              # - linux-api-headers
-              # - pkg-builder
+              - flit-core
+              - wheel
+              - ninja
+              - meson
+              - asciidoc
+              - ostree
+              - which
+              - linux-api-headers
+              - pkg-builder
               - grub
-              # - bash
-              # - glibc
-              # - coreutils
-              # - systemd
+              - bash
+              - glibc
+              - coreutils
+              - systemd
               - selinux
-              # - libcap
-              # - libpcre2
+              - libcap
+              - libpcre2
               - ncurses
-              # - gcc
-              # - gmp
-              # - mpc
-              # - mpfr
+              - gcc
+              - gmp
+              - mpc
+              - mpfr
               - git
-              # - tar
-              # - zlib
-              # - gzip
-              # - curl
-              # - openssl
-              # - p11-kit
-              # - make-ca
-              # - sed
-              # - grep
-              # - gawk
-              # - readline
-              # - libffi
-              # - libtasn1
-              # - findutils
-              # - bzip2
-              # - xz
-              # - binutils
-              # - acl
-              # - attr
-              # - autoconf
-              # - automake
-              # - bc
-              # - bison
-              # - check
-              # - dejagnu
-              # - diffutils
-              # - e2fsprogs
-              # - expat
-              # - expect
-              # - file
-              # - flex
-              # - gdbm
-              # - gettext
-              # - gperf
-              # - groff
-              # - iana-etc
-              # - intltool
-              # - iproute2
-              # - kbd
-              # - kmod
-              # - less
-              # - libelf
-              # - libpipeline
-              # - libtool
-              # - libxcrypt
+              - tar
+              - zlib
+              - gzip
+              - curl
+              - openssl
+              - p11-kit
+              - make-ca
+              - sed
+              - grep
+              - gawk
+              - readline
+              - libffi
+              - libtasn1
+              - findutils
+              - bzip2
+              - xz
+              - binutils
+              - acl
+              - attr
+              - autoconf
+              - automake
+              - bc
+              - bison
+              - check
+              - dejagnu
+              - diffutils
+              - e2fsprogs
+              - expat
+              - expect
+              - file
+              - flex
+              - gdbm
+              - gettext
+              - gperf
+              - groff
+              - iana-etc
+              - intltool
+              - iproute2
+              - kbd
+              - kmod
+              - less
+              - libelf
+              - libpipeline
+              - libtool
+              - libxcrypt
               - linux
-              # - m4
-              # - make
-              # - mandb
-              # - manpages
-              # - patch
-              # - perl
-              # - pkgconf
-              # - procps
+              - m4
+              - make
+              - mandb
+              - manpages
+              - patch
+              - perl
+              - pkgconf
+              - procps
               - psmisc
-              # - python3
-              # - shadow
-              # - sysklogd
-              # - tcl
-              # - texinfo
-              # - timezonedata
-              # - utillinux
+              - python3
+              - shadow
+              - sysklogd
+              - tcl
+              - texinfo
+              - timezonedata
+              - utillinux
               - vim
-              # - xmlparser
-              # - zstd
-              # - glib
-              # - libarchive
-              # - libpgpme
-              # - libgpg-error
-              # - avahi
-              # - dbus
-              # - libassuan
-              # - skopeo
-              # - lvm2
-              # - wget
-              # - essential-files
-              # - libdaemon
-              # - libaio
-              # - libxslt
-              # - libxml2
-              # - audit
-              # - swig
-              # - fuse
-              # - pam
-              # - jinja2
-              # - markupsafe
-              # - xmlto
-              # - docbook-xml
-              # - unzip
-              # - docbook-xsl-nons
-              # - libcap-ng
-              # - docbook2x
-              # - xmlsax
-              # - xmlsaxbase
-              # - xmlnamespacesupport
+              - xmlparser
+              - zstd
+              - glib
+              - libarchive
+              - libpgpme
+              - libgpg-error
+              - avahi
+              - dbus
+              - libassuan
+              - skopeo
+              - lvm2
+              - wget
+              - essential-files
+              - libdaemon
+              - libaio
+              - libxslt
+              - libxml2
+              - audit
+              - swig
+              - fuse
+              - pam
+              - jinja2
+              - markupsafe
+              - xmlto
+              - docbook-xml
+              - unzip
+              - docbook-xsl-nons
+              - libcap-ng
+              - docbook2x
+              - xmlsax
+              - xmlsaxbase
+              - xmlnamespacesupport
               - cpio
               - dwarves
               - cmake
@@ -216,6 +216,7 @@ jobs:
         
         - name: x86_64 level
           run: git clone https://github.com/HenrikBengtsson/x86-64-level.git && ./x86-64-level/x86-64-level
+          if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest'
 
         - name: Install dependencies
           run: sed -i 's/^# deb-src/deb-src/' /etc/apt/sources.list && apt-get update && apt-get install -y linux-headers-6.5.0-9-generic skopeo gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl autoconf automake gettext texinfo wget libpam0g-dev libpam0g python3-jinja2 python3-pip file libghc-bzlib-dev libreadline-dev libmpfr-dev libmpc-dev libssl-dev libcurl4-openssl-dev asciidoc docbook2x p11-kit libtasn1-6-dev cmake libtasn1-bin dejagnu libtool libtool-bin liblzma-dev liblzma5 libgpg-error-dev libassuan-dev libgdbm-dev libdaemon-dev dbus libdbus-1-dev libbtrfs-dev libdevmapper-dev libgpgme-dev go-md2man libaio-dev flit flex tcl-dev
