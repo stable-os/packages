@@ -93,7 +93,7 @@ jobs:
               # - glibc
               # - coreutils
               # - systemd
-              # - selinux
+              - selinux
               # - libcap
               # - libpcre2
               # - ncurses
