@@ -6,7 +6,7 @@ license = ''
 
 [[source]]
 source = 'https://github.com/ostreedev/ostree-rs-ext.git'
-git_ref = 'master'
+git_ref = 'main'
 
 [build]
 script = '''
