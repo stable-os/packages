@@ -12,7 +12,7 @@ git_ref = '059'
 script = '''
 set -eux # o pipefail
 
-./configure --prefix=/usr
+./configure --prefix=/usr --sysconfdir=/etc
 
 make -j$(nproc)
 make DESTDIR=$OUT install
