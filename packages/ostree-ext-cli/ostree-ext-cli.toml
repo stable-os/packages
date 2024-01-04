@@ -1,0 +1,19 @@
+[package]
+name = 'ostree-ext-cli'
+version = ''
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/ostreedev/ostree-rs-ext.git'
+git_ref = 'master'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cargo build --release
+
+mkdir -pv $OUT/usr/bin
+cp -v target/release/ostree-ext-cli $OUT/usr/bin
+'''
