@@ -203,7 +203,7 @@ jobs:
               - libuv
               - nghttp2
               - elfutils
-            container: ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
+            container: ['ghcr.io/stable-os/stable-os-buildkit:latest'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
 
