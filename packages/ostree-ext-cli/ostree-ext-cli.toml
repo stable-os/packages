@@ -12,7 +12,7 @@ git_ref = 'master'
 script = '''
 set -eux # o pipefail
 
-find / | grep cargo
+ls
 
 /github/home/.cargo/bin/cargo build --release
 
