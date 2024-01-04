@@ -204,46 +204,46 @@ jobs:
               # - nghttp2
               # - elfutils
               - dracut
-            container: ['ghcr.io/stable-os/stable-os-buildkit:latest'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
+            container: ['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
 
         - name: Download CA certificates
           run: /usr/sbin/make-ca -g
-          if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+          # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
         - name: Install pip
           run: python -m ensurepip
-          if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+          # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
         
         - name: x86_64 level
           run: git clone https://github.com/HenrikBengtsson/x86-64-level.git && ./x86-64-level/x86-64-level
-          if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+          # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
 
-        - name: Install dependencies
-          run: sed -i 's/^# deb-src/deb-src/' /etc/apt/sources.list && apt-get update && apt-get install -y linux-headers-6.5.0-9-generic skopeo gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl autoconf automake gettext texinfo wget libpam0g-dev libpam0g python3-jinja2 python3-pip file libghc-bzlib-dev libreadline-dev libmpfr-dev libmpc-dev libssl-dev libcurl4-openssl-dev asciidoc docbook2x p11-kit libtasn1-6-dev cmake libtasn1-bin dejagnu libtool libtool-bin liblzma-dev liblzma5 libgpg-error-dev libassuan-dev libgdbm-dev libdaemon-dev dbus libdbus-1-dev libbtrfs-dev libdevmapper-dev libgpgme-dev go-md2man libaio-dev flit flex tcl-dev
-          if: matrix.container == 'ubuntu:rolling'
-        - run: apt-get build-dep ostree -y
-          if: matrix.container == 'ubuntu:rolling' && matrix.package == 'ostree'
-        - run: apt-get install -y --no-install-recommends --no-install-suggests bison flex gawk gcc gettext make libaudit-dev libbz2-dev libcap-dev libcap-ng-dev libcunit1-dev libglib2.0-dev libpcre2-dev pkgconf python3 systemd xmlto
-          if: matrix.container == 'ubuntu:rolling' && matrix.package == 'selinux'
-        - name: Install Docker
-          run: curl -fsSL https://get.docker.com | sh
-          if: matrix.container == 'ubuntu:rolling'
+        # - name: Install dependencies
+        #   run: sed -i 's/^# deb-src/deb-src/' /etc/apt/sources.list && apt-get update && apt-get install -y linux-headers-6.5.0-9-generic skopeo gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl autoconf automake gettext texinfo wget libpam0g-dev libpam0g python3-jinja2 python3-pip file libghc-bzlib-dev libreadline-dev libmpfr-dev libmpc-dev libssl-dev libcurl4-openssl-dev asciidoc docbook2x p11-kit libtasn1-6-dev cmake libtasn1-bin dejagnu libtool libtool-bin liblzma-dev liblzma5 libgpg-error-dev libassuan-dev libgdbm-dev libdaemon-dev dbus libdbus-1-dev libbtrfs-dev libdevmapper-dev libgpgme-dev go-md2man libaio-dev flit flex tcl-dev
+        #   if: matrix.container == 'ubuntu:rolling'
+        # - run: apt-get build-dep ostree -y
+        #   if: matrix.container == 'ubuntu:rolling' && matrix.package == 'ostree'
+        # - run: apt-get install -y --no-install-recommends --no-install-suggests bison flex gawk gcc gettext make libaudit-dev libbz2-dev libcap-dev libcap-ng-dev libcunit1-dev libglib2.0-dev libpcre2-dev pkgconf python3 systemd xmlto
+        #   if: matrix.container == 'ubuntu:rolling' && matrix.package == 'selinux'
+        # - name: Install Docker
+        #   run: curl -fsSL https://get.docker.com | sh
+        #   if: matrix.container == 'ubuntu:rolling'
         - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
         - uses: actions/checkout@v2
 
-        - name: Login to GitHub Container Registry
-          uses: docker/login-action@v1
-          with:
-            registry: ghcr.io
-            username: ${{ github.actor }}
-            password: ${{ secrets.GITHUB_TOKEN }}
-          if: matrix.container == 'ubuntu:rolling'
+        # - name: Login to GitHub Container Registry
+        #   uses: docker/login-action@v1
+        #   with:
+        #     registry: ghcr.io
+        #     username: ${{ github.actor }}
+        #     password: ${{ secrets.GITHUB_TOKEN }}
+        #   if: matrix.container == 'ubuntu:rolling'
 
         - name: Login to GitHub Container Registry with Skopeo
           run: echo ${{ secrets.GITHUB_TOKEN }} | skopeo login ghcr.io --username ${{ github.actor }} --password-stdin
-          if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+          # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
 
         # download the pkg-builder binary from the previous job
         - uses: actions/download-artifact@v2
@@ -271,10 +271,10 @@ jobs:
         - name: Import package
           run: ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/${{ matrix.package }} --tree=tar=out.tar.gz
 
-        - name: Export as OCI image and push to GitHub Container Registry
-          run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
-          if: matrix.container == 'ubuntu:rolling'
+        # - name: Export as OCI image and push to GitHub Container Registry
+        #   run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
+        #   if: matrix.container == 'ubuntu:rolling'
 
         - name: Export as OCI image and push to GitHub Container Registry
           run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m)-builtonstableos:latest
-          if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+          # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
