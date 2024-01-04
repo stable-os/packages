@@ -14,7 +14,7 @@ set -eux # o pipefail
 
 find / | grep cargo
 
-/root/.cargo/bin/cargo build --release
+/github/home/.cargo/bin/cargo build --release
 
 mkdir -pv $OUT/usr/bin
 cp -v target/release/ostree-ext-cli $OUT/usr/bin
