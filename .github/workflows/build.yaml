@@ -328,7 +328,7 @@ jobs:
 
               echo Imported package, exporting as OCI image
 
-              ostree container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/test_package_delete_me docker://ghcr.io/${{ github.repository_owner }}/package-test_package_delete_me-$(uname -m)-builtonstableos:latest
+              ostree --repo=/tmp/build-repo container encapsulate stable-os/$(uname -m)/test_package_delete_me docker://ghcr.io/${{ github.repository_owner }}/package-test_package_delete_me-$(uname -m)-builtonstableos:latest
 
         - name: List files in the package
           run: tar -tvf /containertmpdir/out.tar.gz
