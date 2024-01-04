@@ -320,7 +320,7 @@ jobs:
 
               mkdir /tmp/build-repo && ostree --repo=/tmp/build-repo init --mode=bare-user
 
-              ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/test_package_delete_me --tree=tar=out.tar.gz
+              ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/test_package_delete_me --tree=tar=/tmp/out.tar.gz
 
               ostree container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/test_package_delete_me docker://ghcr.io/${{ github.repository_owner }}/package-test_package_delete_me-$(uname -m)-builtonstableos:latest
 
