@@ -147,7 +147,7 @@ jobs:
               # - libpipeline
               # - libtool
               # - libxcrypt
-              - linux
+              # - linux
               # - m4
               # - make
               # - mandb
@@ -278,3 +278,51 @@ jobs:
         - name: Export as OCI image and push to GitHub Container Registry
           run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m)-builtonstableos:latest
           # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+
+    build_kernel:
+        runs-on: ubuntu-latest
+        needs: [build_pkg_builder, build_ostree_ext_cli]
+
+        permissions:
+          packages: write
+          contents: read
+
+        steps:
+
+        - name: Maximize build space
+          uses: easimon/maximize-build-space@master
+          with:
+            root-reserve-mb: 512
+            swap-size-mb: 1024
+            remove-dotnet: 'true'
+            remove-android: 'true'
+            remove-haskell: 'true'
+            remove-codeql: 'true'
+            build-mount-path: '/containertmpdir'
+
+        - name: Run the build process with Docker
+          uses: addnab/docker-run-action@v3
+          with:
+            image: ghcr.io/stable-os/stable-os-build:latest
+            options: -v /containertmpdir:/tmp
+            run: |
+              /usr/sbin/make-ca -g
+              python -m ensurepip
+              curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+              
+              echo ${{ secrets.GITHUB_TOKEN }} | skopeo login ghcr.io --username ${{ github.actor }} --password-stdin
+
+              mkdir /tmp/packages && git clone https://github.com/stable-os/packages.git /tmp/packages
+              cd /tmp/packages
+
+              # THIS IS A TEST!
+              pkg-builder packages/attr/attr.toml /tmp/out.tar.gz
+
+              mkdir /tmp/build-repo && ostree --repo=/tmp/build-repo init --mode=bare-user
+
+              ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/test_package_delete_me --tree=tar=out.tar.gz
+
+              ostree container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/test_package_delete_me docker://ghcr.io/${{ github.repository_owner }}/package-test_package_delete_me-$(uname -m)-builtonstableos:latest
+
+        - name: List files in the package
+          run: tar -tvf /containertmpdir/out.tar.gz
