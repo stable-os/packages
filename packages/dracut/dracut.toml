@@ -1,0 +1,19 @@
+[package]
+name = 'dracut'
+version = '059'
+description = 'The Bourne Again SHell'
+license = 'GPL-3.0-or-later'
+
+[[source]]
+source = 'https://github.com/dracutdevs/dracut.git'
+git_ref = '059'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

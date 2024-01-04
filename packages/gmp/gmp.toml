@@ -14,9 +14,10 @@ set -eux # o pipefail
 ls
 cd gmp-6.3.0
 
-./configure --prefix=/usr    \
-            --enable-cxx     \
-            --disable-static \
+./configure --prefix=/usr            \
+            --enable-cxx             \
+            --disable-static         \
+            --build=x86_64-linux-gnu \
             --docdir=/usr/share/doc/gmp-6.3.0
 
 make -j$(nproc)
