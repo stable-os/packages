@@ -311,7 +311,7 @@ jobs:
 
         - run: journalctl -xeu docker.service
 
-        - run: ls /containertmpdir
+        - run: sudo ls /containertmpdir
 
         - name: Run the build process with Docker
           uses: addnab/docker-run-action@v3
