@@ -36,6 +36,10 @@ cp -iv System.map $OUT/boot/System.map-6.4.12
 cp -iv .config $OUT/boot/config-6.4.12
 cp -r Documentation -T $OUT/usr/share/doc/linux-6.4.12
 
+# need to delete the generated files before finish packaging to avoid
+# running out of disk space
+make mrproper
+
 install -v -m755 -d $OUT/etc/modprobe.d
 cat > $OUT/etc/modprobe.d/usb.conf << "EOF"
 # Begin /etc/modprobe.d/usb.conf

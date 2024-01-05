@@ -7,7 +7,6 @@ echo $GHCRTOKEN | skopeo login ghcr.io --username $ACTOR --password-stdin
 mkdir /tmp/packages && git clone https://github.com/stable-os/packages.git /tmp/packages
 cd /tmp/packages
 
-# THIS IS A TEST!
 pkg-builder packages/linux/linux.toml /tmp/out.tar.gz
 
 echo Created package, creating build repository
