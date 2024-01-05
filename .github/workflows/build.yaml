@@ -281,7 +281,7 @@ jobs:
           # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
 
     build_kernel:
-        runs-on: ubuntu-latest
+        runs-on: big
         # needs: [build_pkg_builder, build_ostree_ext_cli]
 
         permissions:
@@ -290,16 +290,16 @@ jobs:
 
         steps:
 
-        - name: Maximize build space
-          uses: easimon/maximize-build-space@master
-          with:
-            root-reserve-mb: 4112
-            swap-size-mb: 1024
-            remove-dotnet: 'true'
-            remove-android: 'true'
-            remove-haskell: 'true'
-            remove-codeql: 'true'
-            build-mount-path: '/containertmpdir'
+        # - name: Maximize build space
+        #   uses: easimon/maximize-build-space@master
+        #   with:
+        #     root-reserve-mb: 4112
+        #     swap-size-mb: 1024
+        #     remove-dotnet: 'true'
+        #     remove-android: 'true'
+        #     remove-haskell: 'true'
+        #     remove-codeql: 'true'
+        #     build-mount-path: '/containertmpdir'
 
         - name: Run the build process with Docker
           uses: addnab/docker-run-action@v3
