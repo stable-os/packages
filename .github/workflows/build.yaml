@@ -304,8 +304,12 @@ jobs:
         - name: Tell Docker to use the container directory
           run: "echo \"{ \\\"data-root\\\": \\\"/containertmpdir\\\" }\" | sudo tee /etc/docker/daemon.json"
         
+        - run: cat /etc/docker/daemon.json
+        
         - name: Restart Docker
-          run: sudo systemctl restart docker || journalctl -xeu docker.service || cat /etc/docker/daemon.json
+          run: sudo systemctl restart docker 
+
+        - run: journalctl -xeu docker.service
 
         - run: ls /containertmpdir
 
