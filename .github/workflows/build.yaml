@@ -317,7 +317,7 @@ jobs:
               cd /tmp/packages
 
               # THIS IS A TEST!
-              pkg-builder packages/attr/attr.toml /tmp/out.tar.gz
+              pkg-builder packages/linux/linux.toml /tmp/out.tar.gz
 
               echo Created package, creating build repository
 
@@ -325,11 +325,11 @@ jobs:
 
               echo Created build repository, importing package
 
-              ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/test_package_delete_me --tree=tar=/tmp/out.tar.gz
+              ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/linux --tree=tar=/tmp/out.tar.gz
 
               echo Imported package, exporting as OCI image
 
-              ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/test_package_delete_me docker://ghcr.io/${{ github.repository_owner }}/package-test_package_delete_me-$(uname -m)-builtonstableos:latest
+              ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/linux docker://ghcr.io/${{ github.repository_owner }}/package-linux-$(uname -m)-builtonstableos:latest
 
         - name: List files in the package
           run: tar -tvf /containertmpdir/out.tar.gz
