@@ -305,7 +305,7 @@ jobs:
           uses: addnab/docker-run-action@v3
           with:
             image: ghcr.io/stable-os/stable-os-build:latest
-            options: -v /containertmpdir:/tmp
+            # options: -v /containertmpdir:/tmp
             run: |
               /usr/sbin/make-ca -g
               python -m ensurepip
@@ -331,5 +331,5 @@ jobs:
 
               ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/linux docker://ghcr.io/${{ github.repository_owner }}/package-linux-$(uname -m)-builtonstableos:latest
 
-        - name: List files in the package
-          run: tar -tvf /containertmpdir/out.tar.gz
+        # - name: List files in the package
+        #   run: tar -tvf /containertmpdir/out.tar.gz
