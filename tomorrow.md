@@ -1,4 +1,3 @@
 # Tomorrow
 
-## 4 december 2023
-- Symlink /usr/{bin,lib...} to /{bin,lib...}
+check if compiling dracut works on the hetzner box (x86_64-v2). gh actions is x86_64-v3.
