@@ -278,7 +278,7 @@ jobs:
         #   if: matrix.container == 'ubuntu:rolling'
 
         - name: Export as OCI image and push to GitHub Container Registry
-          run: ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m)-builtonstableos:latest
+          run: /usr/bin/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m)-builtonstableos:latest
           # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
 
     build_kernel:
