@@ -317,7 +317,7 @@ jobs:
 
         - run: chmod +x build_kernel.sh
 
-        - run: sudo docker run --rm -v ./build_kernel.sh:/build_kernel.sh ghcr.io/stable-os/stable-os-build:latest bash -c "chmod +x /build_kernel.sh && /build_kernel.sh"
+        - run: sudo docker run --rm -e GHCRTOKEN=${{ secrets.GITHUB_TOKEN }} -e ACTOR=${{ github.actor }} -v ./build_kernel.sh:/build_kernel.sh ghcr.io/stable-os/stable-os-build:latest bash -c "chmod +x /build_kernel.sh && /build_kernel.sh"
 
         # - name: List files in the package
         #   run: tar -tvf /containertmpdir/out.tar.gz
