@@ -8,66 +8,66 @@ on:
     workflow_dispatch: 
 
 jobs:
-    build_pkg_builder:
-        runs-on: ubuntu-latest
+    # build_pkg_builder:
+    #     runs-on: ubuntu-latest
 
-        steps:
-        - run: sudo apt-get update && sudo apt-get install -y libssl-dev
-        - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    #     steps:
+    #     - run: sudo apt-get update && sudo apt-get install -y libssl-dev
+    #     - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-        - uses: actions/checkout@v2
-          with:
-            submodules: recursive
+    #     - uses: actions/checkout@v2
+    #       with:
+    #         submodules: recursive
 
-        - name: Cache
-          id: cache-pkg-builder-target
-          uses: actions/cache@v3
-          with:
-            path: util/pkg-builder/target/
-            key: ${{ runner.os }}-pkg-builder-target
+    #     - name: Cache
+    #       id: cache-pkg-builder-target
+    #       uses: actions/cache@v3
+    #       with:
+    #         path: util/pkg-builder/target/
+    #         key: ${{ runner.os }}-pkg-builder-target
 
-        - run: $HOME/.cargo/bin/cargo build --release
-          working-directory: util/pkg-builder
-        # upload the binary as an artifact
-        - uses: actions/upload-artifact@v2
-          with:
-            name: pkg-builder
-            path: util/pkg-builder/target/release/pkg-builder
+    #     - run: $HOME/.cargo/bin/cargo build --release
+    #       working-directory: util/pkg-builder
+    #     # upload the binary as an artifact
+    #     - uses: actions/upload-artifact@v2
+    #       with:
+    #         name: pkg-builder
+    #         path: util/pkg-builder/target/release/pkg-builder
     
-    build_ostree_ext_cli:
-        runs-on: ubuntu-latest
-        # needs to run in the most recent version of Ubuntu to ensure that the ostree version is new enough
-        container: ubuntu:rolling
+    # build_ostree_ext_cli:
+    #     runs-on: ubuntu-latest
+    #     # needs to run in the most recent version of Ubuntu to ensure that the ostree version is new enough
+    #     container: ubuntu:rolling
 
-        steps:
+    #     steps:
 
-        - run: apt-get update && apt-get install -y libssl-dev ostree libostree-1-1 libostree-dev git curl build-essential
-        - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    #     - run: apt-get update && apt-get install -y libssl-dev ostree libostree-1-1 libostree-dev git curl build-essential
+    #     - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-        - uses: actions/checkout@v2
-          with:
-            repository: 'ostreedev/ostree-rs-ext'
-            path: 'ostree-rs-ext'
+    #     - uses: actions/checkout@v2
+    #       with:
+    #         repository: 'ostreedev/ostree-rs-ext'
+    #         path: 'ostree-rs-ext'
         
-        - name: Cache
-          id: cache-ostree-rs-ext-target
-          uses: actions/cache@v3
-          with:
-            path: ostree-rs-ext/target/
-            key: ${{ runner.os }}-ostree-rs-ext-target
+    #     - name: Cache
+    #       id: cache-ostree-rs-ext-target
+    #       uses: actions/cache@v3
+    #       with:
+    #         path: ostree-rs-ext/target/
+    #         key: ${{ runner.os }}-ostree-rs-ext-target
 
-        - run: $HOME/.cargo/bin/cargo build --release
-          working-directory: ostree-rs-ext
-        - run: ls ostree-rs-ext/target/release
-        # upload the binary as an artifact
-        - uses: actions/upload-artifact@v2
-          with:
-            name: ostree-ext-cli
-            path: ostree-rs-ext/target/release/ostree-ext-cli
+    #     - run: $HOME/.cargo/bin/cargo build --release
+    #       working-directory: ostree-rs-ext
+    #     - run: ls ostree-rs-ext/target/release
+    #     # upload the binary as an artifact
+    #     - uses: actions/upload-artifact@v2
+    #       with:
+    #         name: ostree-ext-cli
+    #         path: ostree-rs-ext/target/release/ostree-ext-cli
 
     build:
         runs-on: ubuntu-latest
-        needs: [build_pkg_builder, build_ostree_ext_cli]
+        # needs: [build_pkg_builder, build_ostree_ext_cli]
         # needs to run in the most recent version of Ubuntu to ensure that the ostree version is new enough
         container: ${{ matrix.container }}
 
@@ -248,18 +248,18 @@ jobs:
           # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
 
         # download the pkg-builder binary from the previous job
-        - uses: actions/download-artifact@v2
-          with:
-            name: pkg-builder
-            path: pkg-builder
-        - uses: actions/download-artifact@v2
-          with:
-            name: ostree-ext-cli
-            path: ostree-ext-cli
+        # - uses: actions/download-artifact@v2
+        #   with:
+        #     name: pkg-builder
+        #     path: pkg-builder
+        # - uses: actions/download-artifact@v2
+        #   with:
+        #     name: ostree-ext-cli
+        #     path: ostree-ext-cli
 
-        - run: chmod +x pkg-builder/pkg-builder ./ostree-ext-cli/ostree-ext-cli
+        # - run: chmod +x pkg-builder/pkg-builder ./ostree-ext-cli/ostree-ext-cli
 
-        - run: ../../pkg-builder/pkg-builder $PACKAGE.toml ../../out.tar.gz
+        - run: pkg-builder $PACKAGE.toml ../../out.tar.gz
           working-directory: packages/${{ matrix.package }}
           env:
               PACKAGE: ${{ matrix.package }}
@@ -278,7 +278,7 @@ jobs:
         #   if: matrix.container == 'ubuntu:rolling'
 
         - name: Export as OCI image and push to GitHub Container Registry
-          run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m)-builtonstableos:latest
+          run: ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m)-builtonstableos:latest
           # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
 
     build_kernel:
