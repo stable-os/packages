@@ -1,0 +1,23 @@
+[package]
+name = 'rsync'
+version = '3.2.7'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.samba.org/ftp/rsync/src/rsync-3.2.7.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr    \
+            --disable-lz4    \
+            --disable-xxhash \
+            --without-included-zlib
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
