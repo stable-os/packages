@@ -27,7 +27,7 @@ cp ../packaging_repo_data/packages/linux/x86_64.config .config
 # make mrproper
 
 make -j$(nproc)
-make DESTDIR=$OUT modules_install
+make DESTDIR=$OUT INSTALL_MOD_PATH=$OUT modules_install
 
 cp -iv arch/x86/boot/bzImage $OUT/boot/vmlinuz-6.4.12-lfs-12.0
 cp -iv System.map $OUT/boot/System.map-6.4.12
