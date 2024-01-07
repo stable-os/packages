@@ -203,12 +203,13 @@ jobs:
               # - libuv
               # - nghttp2
               # - elfutils
-              - dracut
-              - ostree-ext-cli
-              - rsync
-              - libisoburn
-              - libisofs
-              - libburn
+              # - dracut
+              # - ostree-ext-cli
+              # - rsync
+              # - libisoburn
+              # - libisofs
+              # - libburn
+              - squashfs-tools
             container: ['ghcr.io/stable-os/stable-os-build:latest'] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:
