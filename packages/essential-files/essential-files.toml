@@ -58,6 +58,14 @@ users:x:999:
 nogroup:x:65534:
 EOF
 
+cat > $OUT/etc/os-release << "EOF"
+NAME="from os-release file"
+VERSION="0"
+ID=lfs
+PRETTY_NAME="from os-release file"
+VERSION_CODENAME="from-os-release-file"
+EOF
+
 touch $OUT/var/log/{btmp,lastlog,faillog,wtmp}
 # chgrp -v utmp $OUT/var/log/lastlog
 chmod -v 664  $OUT/var/log/lastlog
