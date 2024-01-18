@@ -66,4 +66,6 @@ Description=D-Bus System Message Bus Socket
 
 [Socket]
 ListenStream=/run/dbus/system_bus_socket
+EOF
+
 '''
