@@ -46,6 +46,8 @@ cat > $OUT/etc/dbus-1/session-local.conf << "EOF"
 </busconfig>
 EOF
 
+mkdir -pv $OUT/etc/systemd/system/
+
 cat > $OUT/etc/systemd/system/dbus.service << "EOF"
 [Unit]
 Description=D-Bus System Message Bus
