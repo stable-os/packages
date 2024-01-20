@@ -1,0 +1,19 @@
+[package]
+name = 'netplan'
+version = '0.107.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/canonical/netplan/archive/refs/tags/0.107.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+meson setup build --prefix=/usr
+meson compile -C build
+meson install -C build --destdir $OUT
+'''
