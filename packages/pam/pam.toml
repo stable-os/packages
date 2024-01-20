@@ -24,8 +24,8 @@ autoreconf
             --enable-securedir=/usr/lib/security \
             --docdir=/usr/share/doc/Linux-PAM-1.5.3
 
-install -vdm755 /etc/pam.d
-cat > /etc/pam.d/system-account << "EOF"
+install -vdm755 $OUT/etc/pam.d
+cat > $OUT/etc/pam.d/system-account << "EOF"
 # Begin /etc/pam.d/system-account
 
 account   required    pam_unix.so
@@ -33,7 +33,7 @@ account   required    pam_unix.so
 # End /etc/pam.d/system-account
 EOF
 
-cat > /etc/pam.d/system-auth << "EOF"
+cat > $OUT/etc/pam.d/system-auth << "EOF"
 # Begin /etc/pam.d/system-auth
 
 auth      required    pam_unix.so
@@ -41,7 +41,7 @@ auth      required    pam_unix.so
 # End /etc/pam.d/system-auth
 EOF
 
-cat > /etc/pam.d/system-session << "EOF"
+cat > $OUT/etc/pam.d/system-session << "EOF"
 # Begin /etc/pam.d/system-session
 
 session   required    pam_unix.so
@@ -49,7 +49,7 @@ session   required    pam_unix.so
 # End /etc/pam.d/system-session
 EOF
 
-cat > /etc/pam.d/system-password << "EOF"
+cat > $OUT/etc/pam.d/system-password << "EOF"
 # Begin /etc/pam.d/system-password
 
 # use yescrypt hash for encryption, use shadow, and try to use any
@@ -60,7 +60,7 @@ password  required    pam_unix.so       yescrypt shadow try_first_pass
 # End /etc/pam.d/system-password
 EOF
 
-cat > /etc/pam.d/other << "EOF"
+cat > $OUT/etc/pam.d/other << "EOF"
 # Begin /etc/pam.d/other
 
 auth        required        pam_warn.so
@@ -76,7 +76,7 @@ session     required        pam_deny.so
 EOF
 
 # basic unix auth
-cat > /etc/pam.d/login << "EOF"
+cat > $OUT/etc/pam.d/login << "EOF"
 auth            required        pam_unix.so
 account         required        pam_access.so
 password        required        pam_unix.so
