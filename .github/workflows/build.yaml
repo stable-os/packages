@@ -89,7 +89,7 @@ jobs:
               # - linux-api-headers
               # - pkg-builder
               # - grub
-              # - bash
+              - bash
               # - glibc
               # - coreutils
               # - systemd
