@@ -1,0 +1,22 @@
+[package]
+name = 'pathspec'
+version = '0.21.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://files.pythonhosted.org/packages/ca/bc/f35b8446f4531a7cb215605d100cd88b7ac6f44ab3fc94870c120ab3adbf/pathspec-0.12.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+ls -l
+
+mkdir -pv $OUT/usr/lib/python3.11/site-packages
+
+pip3 wheel -w dist --no-build-isolation --no-deps $PWD
+pip3 install --no-index --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist pathspec
+'''
