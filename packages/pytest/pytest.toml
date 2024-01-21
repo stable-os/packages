@@ -5,7 +5,7 @@ description = ''
 license = ''
 
 [[source]]
-source = 'https://pypi.org/packages/source/w/pytest/wheel-7.4.4.tar.gz'
+source = 'https://pypi.org/packages/source/w/pytest/pytest-7.4.4.tar.gz'
 
 [build]
 script = '''
