@@ -1,0 +1,22 @@
+[package]
+name = 'trove-classifiers'
+version = '2024.1.8'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://files.pythonhosted.org/packages/44/e4/9de7cda4a03a996758fbdb7ddacc071b4c62fdcd645e0a1192a22e8c55c0/trove-classifiers-2024.1.8.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+ls -l
+
+mkdir -pv $OUT/usr/lib/python3.11/site-packages
+
+pip3 wheel -w dist --no-build-isolation --no-deps $PWD
+pip3 install --no-index --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist trove-classifiers
+'''
