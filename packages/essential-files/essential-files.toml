@@ -83,6 +83,7 @@ export PKG_CONFIG_PATH PATH ACLOCAL_PATH
 
 EOF
 
+mkdir -pv $OUT/root/
 cat > $OUT/root/.bashrc << "EOF"
 set +h
 umask 022
