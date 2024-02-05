@@ -1,0 +1,21 @@
+[package]
+name = 'cmocka'
+version = '1.1.5'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/clibs/cmocka.git'
+git_ref = 'cmocka-1.1.5'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+mkdir -v build && cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
+
+make
+make DESTDIR=$OUT install
+'''
