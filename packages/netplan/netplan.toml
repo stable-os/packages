@@ -13,7 +13,7 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
-meson setup build --prefix=/usr
+(set -e; meson setup build --prefix=/usr; cat build/meson-logs/meson-log.txt)
 meson compile -C build
 meson install -C build --destdir $OUT
 '''
