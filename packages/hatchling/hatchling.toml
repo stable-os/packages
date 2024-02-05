@@ -21,7 +21,7 @@ mkdir -pv $OUT/usr/lib/python3.11/site-packages
 #pip3 wheel -w dist --no-build-isolation --no-deps $PWD
 
 pip3 wheel -w dist --no-build-isolation $PWD
-pip3 install --no-index --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist hatchling
+pip3 install --no-dependencies --no-index --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist hatchling
 
 # remove unrelated packages
 rm -rf $OUT/usr/lib/python3.11/site-packages/editable*
