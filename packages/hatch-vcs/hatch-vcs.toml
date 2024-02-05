@@ -1,0 +1,22 @@
+[package]
+name = 'hatch-vcs'
+version = '0.4.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://files.pythonhosted.org/packages/f5/c9/54bb4fa27b4e4a014ef3bb17710cdf692b3aa2cbc7953da885f1bf7e06ea/hatch_vcs-0.4.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+ls -l
+
+mkdir -pv $OUT/usr/lib/python3.11/site-packages
+
+pip3 wheel -w dist --no-build-isolation --no-deps $PWD
+pip3 install --no-index --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist hatch-vcs
+'''
