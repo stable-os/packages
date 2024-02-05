@@ -19,4 +19,6 @@ mkdir -pv $OUT/usr/lib/python3.11/site-packages
 
 pip3 wheel -w dist --no-build-isolation --no-deps $PWD
 pip3 install --no-dependencies --no-index --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist pytest
+
+ln -s pytest $OUT/usr/lib/python3.11/site-packages/bin/pytest3
 '''
