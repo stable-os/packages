@@ -1,0 +1,24 @@
+[package]
+name = 'pycodestyle'
+version = '2.11.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://files.pythonhosted.org/packages/34/8f/fa09ae2acc737b9507b5734a9aec9a2b35fa73409982f57db1b42f8c3c65/pycodestyle-2.11.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+ls -l
+
+mkdir -pv $OUT/usr/lib/python3.11/site-packages
+
+pip3 wheel -w dist --no-build-isolation --no-deps $PWD
+pip3 install --no-dependencies --no-index --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist pycodestyle
+
+ln -s pycodestyle $OUT/usr/lib/python3.11/site-packages/bin/pycodestyle-3
+'''
