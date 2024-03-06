@@ -171,7 +171,7 @@ jobs:
               # - libpgpme
               # - libgpg-error
               # - avahi
-              - dbus
+              # - dbus
               # - libassuan
               # - skopeo
               # - lvm2
@@ -184,7 +184,7 @@ jobs:
               # - audit
               # - swig
               # - fuse
-              - pam
+              # - pam
               # - jinja2
               # - markupsafe
               # - xmlto
@@ -209,7 +209,7 @@ jobs:
               # - libisofs
               # - libburn
               # - squashfs-tools
-              - netplan
+              # - netplan
               # - libyaml
               # - bash-completion
               # - pytest
@@ -223,11 +223,12 @@ jobs:
               # - hatch-vcs
               # - setuptools-scm
               # - coverage
-              - cffi
-              - pycparser
-              - cmocka
-              - pycodestyle
-              - pyflakes
+              # - cffi
+              # - pycparser
+              # - cmocka
+              # - pycodestyle
+              # - pyflakes
+              - bootc
             container: ['ghcr.io/stable-os/stable-os-build:latest'] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:

@@ -1,0 +1,20 @@
+[package]
+name = 'bootc'
+version = '0.1.7'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/containers/bootc/archive/refs/tags/v0.1.7.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+cargo build --release
+
+find target/release/ -executable -type f
+
+'''
