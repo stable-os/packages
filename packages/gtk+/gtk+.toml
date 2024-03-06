@@ -1,0 +1,31 @@
+[package]
+name = 'gtk+'
+version = '3.24.38'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/gtk+/3.24/gtk+-3.24.38.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd    build
+
+meson setup --prefix=/usr           \
+            --buildtype=release     \
+            -Dman=true              \
+            -Dbroadway_backend=true \
+            ..
+ninja
+DESTDIR=$OUT ninja install
+'''
+
+#! IMPORTANT
+#! Some important files do not get installed if DESTDIR is used, because of this the following commands must be ran in a chroot:
+#!  gtk-query-immodules-3.0 --update-cache
+#!  glib-compile-schemas /usr/share/glib-2.0/schemas
