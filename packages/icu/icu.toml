@@ -21,6 +21,9 @@ cd source
 
 ls
 
+# replace #! /bin/sh with #! /bin/bash in configure
+sed -i '1s/#! \/bin\/sh/#! \/bin\/bash/' configure
+
 ./configure --prefix=/usr
 
 make -j$(nproc)
