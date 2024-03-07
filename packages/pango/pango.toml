@@ -21,6 +21,6 @@ meson setup --prefix=/usr          \
             --wrap-mode=nofallback \
             ..
 
-nina
+ninja
 DESTDIR=$OUT ninja install
 '''
