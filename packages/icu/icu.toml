@@ -11,9 +11,15 @@ source = 'https://github.com/unicode-org/icu/releases/download/release-74-2/icu4
 script = '''
 set -eux # o pipefail
 
+ls
+
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
+ls
+
 cd source
+
+ls
 
 ./configure --prefix=/usr
 
