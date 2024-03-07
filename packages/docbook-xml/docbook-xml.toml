@@ -447,52 +447,52 @@ cd ..
 
 xmlcatalog --noout --add "rewriteSystem" \
            "https://cdn.docbook.org/release/xsl-nons/1.79.2" \
-           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
     $OUT/etc/xml/catalog
 
 xmlcatalog --noout --add "rewriteURI" \
            "https://cdn.docbook.org/release/xsl-nons/1.79.2" \
-           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
     $OUT/etc/xml/catalog
 
 xmlcatalog --noout --add "rewriteSystem" \
            "https://cdn.docbook.org/release/xsl-nons/current" \
-           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
     $OUT/etc/xml/catalog
 
 xmlcatalog --noout --add "rewriteURI" \
            "https://cdn.docbook.org/release/xsl-nons/current" \
-           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
     $OUT/etc/xml/catalog
 
 xmlcatalog --noout --add "rewriteSystem" \
            "http://docbook.sourceforge.net/release/xsl/current" \
-           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
     $OUT/etc/xml/catalog
 
 xmlcatalog --noout --add "rewriteURI" \
            "http://docbook.sourceforge.net/release/xsl/current" \
-           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
     $OUT/etc/xml/catalog
 
 xmlcatalog --noout --add "rewriteSystem" \
            "http://docbook.sf.net/release/xsl/current" \
-           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
     $OUT/etc/xml/catalog
 
 xmlcatalog --noout --add "rewriteURI" \
            "http://docbook.sf.net/release/xsl/current" \
-           "/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2" \
     $OUT/etc/xml/catalog
 
 # xmlcatalog --noout --add "rewriteSystem" \
 #            "http://docbook.sourceforge.net/release/xsl/<version>" \
-#            "/usr/share/xml/docbook/xsl-stylesheets-<version>" \
+#            "file:///usr/share/xml/docbook/xsl-stylesheets-<version>" \
 #     $OUT/etc/xml/catalog
 
 # xmlcatalog --noout --add "rewriteURI" \
 #            "http://docbook.sourceforge.net/release/xsl/<version>" \
-#            "/usr/share/xml/docbook/xsl-stylesheets-<version>" \
+#            "file:///usr/share/xml/docbook/xsl-stylesheets-<version>" \
 #     $OUT/etc/xml/catalog
 
 
@@ -501,32 +501,32 @@ xmlcatalog --noout --add "rewriteURI" \
 
 xmlcatalog --noout --add "rewriteSystem" \
            "http://docbook.sourceforge.net/release/xsl/1.79.2" \
-           "/usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
     $OUT/etc/xml/catalog &&
 
 xmlcatalog --noout --add "rewriteURI" \
            "http://docbook.sourceforge.net/release/xsl/1.79.2" \
-           "/usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
     $OUT/etc/xml/catalog &&
 
 xmlcatalog --noout --add "rewriteSystem" \
            "http://docbook.sourceforge.net/release/xsl/current" \
-           "/usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
     $OUT/etc/xml/catalog &&
 
 xmlcatalog --noout --add "rewriteURI" \
            "http://docbook.sourceforge.net/release/xsl/current" \
-           "/usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
     $OUT/etc/xml/catalog
 
 xmlcatalog --noout --add "rewriteSystem" \
            "http://docbook2x.sf.net/latest/xslt/man/docbook.xsl" \
-           "/usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
     $OUT/etc/xml/catalog &&
 
 xmlcatalog --noout --add "rewriteURI" \
            "http://docbook2x.sf.net/latest/xslt/man/docbook.xsl" \
-           "/usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
     $OUT/etc/xml/catalog
 
 '''
