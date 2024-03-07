@@ -1,11 +1,11 @@
 [package]
 name = 'glib'
-version = '2.76.4'
+version = '2.78.4'
 description = ''
 license = ''
 
 [[source]]
-source = 'https://download.gnome.org/sources/glib/2.76/glib-2.76.4.tar.xz'
+source = 'https://download.gnome.org/sources/glib/2.78/glib-2.78.4.tar.xz'
 
 [build]
 script = '''
@@ -15,7 +15,15 @@ cd glib-*
 
 export PATH=$PATH:/usr/lib/python3.11/site-packages/bin
 
-meson _build --prefix /usr
-ninja -C _build
-DESTDIR=$OUT ninja -C _build install
+mkdir build
+cd build
+
+meson setup ..            \
+      --prefix=/usr       \
+      --buildtype=release \
+      -Dman=true
+
+ninja
+
+DESTDIR=$OUT ninja install
 '''
