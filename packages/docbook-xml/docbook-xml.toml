@@ -520,13 +520,13 @@ xmlcatalog --noout --add "rewriteURI" \
     $OUT/etc/xml/catalog
 
 xmlcatalog --noout --add "rewriteSystem" \
-           "http://docbook2x.sf.net/latest/xslt/man/docbook.xsl" \
-           "file:///usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
+           "http://docbook2x.sf.net/latest/xslt/man" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-1.79.2/manpages" \
     $OUT/etc/xml/catalog &&
 
 xmlcatalog --noout --add "rewriteURI" \
-           "http://docbook2x.sf.net/latest/xslt/man/docbook.xsl" \
-           "file:///usr/share/xml/docbook/xsl-stylesheets-1.79.2" \
+           "http://docbook2x.sf.net/latest/xslt/man" \
+           "file:///usr/share/xml/docbook/xsl-stylesheets-1.79.2/manpages" \
     $OUT/etc/xml/catalog
 
 '''
