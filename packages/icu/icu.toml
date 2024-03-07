@@ -5,27 +5,19 @@ description = ''
 license = ''
 
 [[source]]
-source = 'https://github.com/unicode-org/icu/releases/download/release-74-2/icu4c-74_2-src.zip'
+source = 'https://github.com/unicode-org/icu.git'
+git_ref = 'release-74-2'
 
 [build]
 script = '''
 set -eux # o pipefail
 
-ls
+mkdir icu4c-build
+cd icu4c-build
 
-cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+../icu4c/source/runConfigureICU Linux --prefix=/usr
 
-ls
-
-cd source
-
-ls
-
-# replace #! /bin/sh with #! /bin/bash in configure
-sed -i '1s/#! \/bin\/sh/#! \/bin\/bash/' configure
-
-./configure --prefix=/usr
-
-make -j$(nproc)
+make
 make DESTDIR=$OUT install
+
 '''
