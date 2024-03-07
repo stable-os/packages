@@ -1,0 +1,26 @@
+[package]
+name = 'harfbuzz'
+version = '8.3.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup ..            \
+      --prefix=/usr       \
+      --buildtype=release \
+      -Dgraphite2=enabled
+
+ninja
+DESTDIR=$OUT ninja install
+'''

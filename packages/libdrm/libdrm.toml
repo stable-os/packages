@@ -1,0 +1,27 @@
+[package]
+name = 'libdrm'
+version = '2.5.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.savannah.gnu.org/releases/attr/attr-2.5.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=$XORG_PREFIX \
+            --buildtype=release   \
+            -Dudev=true           \
+            -Dvalgrind=disabled   \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

@@ -79,7 +79,8 @@ umask 022
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/x86_64-pc-linux-gnu/bin/:/usr/lib/python3.11/site-packages/bin/:/usr/local/bin/
 PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/local/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig
 ACLOCAL_PATH=/usr/share/aclocal
-export PKG_CONFIG_PATH PATH ACLOCAL_PATH
+XORG_PREFIX=/usr
+export PKG_CONFIG_PATH PATH ACLOCAL_PATH XORG_PREFIX
 
 EOF
 

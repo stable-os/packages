@@ -228,17 +228,32 @@ jobs:
               # - cmocka
               # - pycodestyle
               # - pyflakes
-              - bootc
-              - gtk+
-              - libogg
-              - libvorbis
+              # - bootc
+              - gtk+3
+              # - libogg
+              # - libvorbis
               - libcanberra
-              - cairo
-              - libpng
-              - pixman
-              - docbook-xsl
-              - fontconfig
-              - freetype
+              # - cairo
+              # - libpng
+              # - pixman
+              # - docbook-xsl
+              # - fontconfig
+              # - freetype
+              - fribidi
+              - harfbuzz
+              - gobject-introspection
+              - graphite2
+              - icu
+              - pango
+              - libepoxy
+              - mesa
+              - xorg-libraries
+              - libdrm
+              - mako
+              - libjpeg-turbo
+              - shared-mime-info
+              - gdk-pixbuf
+              - gsettings-desktop-schemas
             container: ['ghcr.io/stable-os/stable-os-build:latest'] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:

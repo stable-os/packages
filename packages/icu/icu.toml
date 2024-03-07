@@ -1,0 +1,22 @@
+[package]
+name = 'icu'
+version = '74.2'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/unicode-org/icu/releases/download/release-74-2/icu4c-74_2-src.zip'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+ls
+
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

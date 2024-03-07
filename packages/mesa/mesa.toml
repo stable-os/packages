@@ -1,0 +1,31 @@
+[package]
+name = 'mesa'
+version = '24.0.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://mesa.freedesktop.org/archive/mesa-24.0.1.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup                   \
+      --prefix=$XORG_PREFIX   \
+      --buildtype=release     \
+      -Dplatforms=x11,wayland \
+      -Dgallium-drivers=auto  \
+      -Dvulkan-drivers=auto   \
+      -Dvalgrind=disabled     \
+      -Dlibunwind=disabled    \
+      ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
