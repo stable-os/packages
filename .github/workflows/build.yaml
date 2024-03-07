@@ -188,7 +188,7 @@ jobs:
               # - jinja2
               # - markupsafe
               # - xmlto
-              # - docbook-xml
+              - docbook-xml
               # - unzip
               # - docbook-xsl-nons
               # - libcap-ng
