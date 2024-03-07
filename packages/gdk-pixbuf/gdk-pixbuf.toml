@@ -19,7 +19,8 @@ cd build
 meson setup ..            \
       --prefix=/usr       \
       --buildtype=release \
-      --wrap-mode=nofallback
+      --wrap-mode=nofallback \
+      -Dman=false
 
 ninja
 DESTDIR=$OUT ninja install
