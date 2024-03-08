@@ -11,6 +11,8 @@ source = ''
 script = '''
 set -eux # o pipefail
 
+XORG_PREFIX=/usr
+
 cat > lib-7.md5 << "EOF"
 12344cd74a1eb25436ca6e6a2cf93097  xtrans-1.5.0.tar.xz
 1b9bc39366eab2cc7b018907df715f34  libX11-1.8.7.tar.xz
