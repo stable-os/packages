@@ -12,6 +12,8 @@ script = '''
 set -eux # o pipefail
 
 XORG_PREFIX=/usr
+XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
 
 cat > lib-7.md5 << "EOF"
 12344cd74a1eb25436ca6e6a2cf93097  xtrans-1.5.0.tar.xz
