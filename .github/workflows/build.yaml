@@ -325,6 +325,7 @@ jobs:
           working-directory: packages/${{ matrix.package }}
           env:
               PACKAGE: ${{ matrix.package }}
+              XORG_PREFIX: /usr
 
         - name: List files in the package
           run: tar -tvf out.tar.gz
