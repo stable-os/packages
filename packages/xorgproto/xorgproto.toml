@@ -13,10 +13,12 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
+mkdir build
+cd build
+
 meson setup --prefix=$XORG_PREFIX ..
 
 ninja
-
 DESTDIR=$OUT ninja install
 
 mv -v $OUT/$XORG_PREFIX/share/doc/xorgproto{,-2023.2}
