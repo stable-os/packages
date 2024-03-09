@@ -20,7 +20,8 @@ make DESTDIR=$OUT install
 # DESTDIR is broken for xcb-proto, so we need to move the files manually to the correct location
 # check if ${OUT}ORG_PREFIX exists
 if [ -d "${OUT}ORG_PREFIX" ]; then
-  mv ${OUT}ORG_PREFIX/* $OUT
+  mkdir -pv $OUT/usr
+  mv ${OUT}ORG_PREFIX/* $OUT/usr
   rmdir ${OUT}ORG_PREFIX
 fi
 '''
