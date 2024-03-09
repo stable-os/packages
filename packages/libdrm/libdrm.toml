@@ -5,7 +5,7 @@ description = ''
 license = ''
 
 [[source]]
-source = 'https://download.savannah.gnu.org/releases/attr/attr-2.5.1.tar.gz'
+source = 'https://dri.freedesktop.org/libdrm/libdrm-2.4.120.tar.xz'
 
 [build]
 script = '''
