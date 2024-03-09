@@ -15,6 +15,10 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 mkdir -pv $OUT/usr/lib/python3.11/site-packages
 
-pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+pip3 wheel -w dist --no-build-isolation --no-cache-dir $PWD
 pip3 install --no-index --find-links=dist --no-cache-dir --no-user --target=$OUT/usr/lib/python3.11/site-packages Mako
+
+# remove all folders that aren't mako from $OUT/usr/lib/python3.11/site-packages/
+find $OUT/usr/lib/python3.11/site-packages/ -mindepth 1 -maxdepth 1 -type d -not -name 'mako' -exec rm -rf {} \;
+ls -l $OUT/usr/lib/python3.11/site-packages/
 '''
