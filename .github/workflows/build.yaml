@@ -334,6 +334,10 @@ jobs:
         - name: List files in the package
           run: tar -tvf out.tar.gz
 
+        - name: Fail if there are less than 3 files in the package
+          run: test $(tar -tvf out.tar.gz | wc -l) -gt 3
+          shell: bash
+
         - name: Prepare OSTree repository
           run: mkdir /tmp/build-repo && ostree --repo=/tmp/build-repo init --mode=bare-user
 
