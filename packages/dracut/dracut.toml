@@ -1,12 +1,13 @@
 [package]
 name = 'dracut'
-version = '059'
+version = '060'
 description = 'The Bourne Again SHell'
 license = 'GPL-3.0-or-later'
 
 [[source]]
 source = 'https://github.com/dracutdevs/dracut.git'
-git_ref = '059'
+# commit followed release process but isn't tagged, see https://github.com/dracutdevs/dracut/discussions/2584
+git_ref = '856e7ac'
 
 [build]
 script = '''
