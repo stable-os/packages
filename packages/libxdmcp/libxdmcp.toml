@@ -1,0 +1,20 @@
+[package]
+name = 'libxdmcp'
+version = '1.1.4'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.x.org/pub/individual/lib/libXdmcp-1.1.4.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure $XORG_CONFIG --docdir=/usr/share/doc/libXdmcp-1.1.4
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

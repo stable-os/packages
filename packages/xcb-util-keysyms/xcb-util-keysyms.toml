@@ -1,0 +1,20 @@
+[package]
+name = 'xcb-util-keysyms'
+version = '0.4.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://xcb.freedesktop.org/dist/xcb-util-keysyms-0.4.1.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure $XORG_CONFIG
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

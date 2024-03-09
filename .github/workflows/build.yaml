@@ -254,6 +254,20 @@ jobs:
               - shared-mime-info
               - gdk-pixbuf
               - gsettings-desktop-schemas
+              - util-macros
+              - xorgproto
+              - libxau
+              - libxdcmp
+              - xcb-proto
+              - libxcb
+              - libxcvt
+              - xcb-util
+              - xcb-util-image
+              - xcb-util-keysyms
+              - xcb-util-renderutil
+              - xcb-util-wm
+              - xcb-util-cursor
+              - xbitmaps
             container: ['ghcr.io/stable-os/stable-os-build:latest'] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:

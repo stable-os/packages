@@ -1,0 +1,19 @@
+[package]
+name = 'util-macros'
+version = '1.20.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.x.org/pub/individual/util/util-macros-1.20.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure $XORG_CONFIG
+
+make DESTDIR=$OUT install
+'''

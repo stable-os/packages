@@ -1,0 +1,20 @@
+[package]
+name = 'xcb-util-wm'
+version = '0.4.2'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://xcb.freedesktop.org/dist/xcb-util-wm-0.4.2.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure $XORG_CONFIG
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

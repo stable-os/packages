@@ -1,0 +1,22 @@
+[package]
+name = 'libxcb'
+version = '1.16'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://xorg.freedesktop.org/archive/individual/lib/libxcb-1.16.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure $XORG_CONFIG      \
+            --without-doxygen \
+            --docdir='${datadir}'/doc/libxcb-1.16
+
+LC_ALL=en_US.UTF-8 make -j$(nproc)
+make DESTDIR=$OUT install
+'''
