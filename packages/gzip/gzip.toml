@@ -11,8 +11,7 @@ source = 'https://ftp.gnu.org/gnu/gzip/gzip-1.13.tar.gz'
 script = '''
 set -eux # o pipefail
 
-ls
-cd gzip-1.13
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 ./configure --prefix=/usr
 

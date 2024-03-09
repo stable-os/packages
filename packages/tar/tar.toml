@@ -11,8 +11,7 @@ source = 'https://ftp.gnu.org/gnu/tar/tar-1.35.tar.xz'
 script = '''
 set -eux # o pipefail
 
-ls
-cd tar-1.35
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 export FORCE_UNSAFE_CONFIGURE=1
 

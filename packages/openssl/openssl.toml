@@ -11,8 +11,7 @@ source = 'https://www.openssl.org/source/openssl-3.2.0.tar.gz'
 script = '''
 set -eux # o pipefail
 
-ls
-cd openssl-3.2.0
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 ./config --prefix=/usr         \
          --openssldir=/etc/ssl \

@@ -11,8 +11,7 @@ source = 'https://curl.se/download/curl-8.4.0.tar.gz'
 script = '''
 set -eux # o pipefail
 
-ls
-cd curl-8.4.0
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 ./configure --prefix=/usr                           \
             --disable-static                        \

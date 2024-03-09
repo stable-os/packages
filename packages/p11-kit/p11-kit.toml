@@ -11,8 +11,7 @@ source = 'https://github.com/p11-glue/p11-kit/releases/download/0.25.3/p11-kit-0
 script = '''
 set -eux # o pipefail
 
-ls
-cd p11-kit-0.25.3
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 sed '20,$ d' -i trust/trust-extract-compat &&
 

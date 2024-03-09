@@ -11,8 +11,7 @@ source = 'https://ftp.gnu.org/gnu/gawk/gawk-5.3.0.tar.xz'
 script = '''
 set -eux # o pipefail
 
-ls
-cd gawk-5.3.0
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 sed -i 's/extras//' Makefile.in
 

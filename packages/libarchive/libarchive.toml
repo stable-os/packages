@@ -11,7 +11,7 @@ source = 'https://github.com/libarchive/libarchive/releases/download/v3.7.1/liba
 script = '''
 set -eux # o pipefail
 
-cd libarchive-*
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 ./configure --prefix=/usr --disable-static
 make -j$(nproc)

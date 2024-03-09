@@ -11,8 +11,7 @@ source = 'https://download.savannah.gnu.org/releases/acl/acl-2.3.1.tar.xz'
 script = '''
 set -eux # o pipefail
 
-ls
-cd acl-2.3.1
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 ./configure --prefix=/usr         \
             --disable-static      \

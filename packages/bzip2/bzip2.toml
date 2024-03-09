@@ -11,8 +11,7 @@ source = 'https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz'
 script = '''
 set -eux # o pipefail
 
-ls
-cd bzip2-1.0.8
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
 
