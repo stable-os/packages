@@ -6,7 +6,7 @@ license = 'GPL-3.0-or-later'
 
 [[source]]
 source = 'https://github.com/dracutdevs/dracut.git'
-git_ref = 'main'
+git_ref = 'master'
 # commit followed release process but isn't tagged, see https://github.com/dracutdevs/dracut/discussions/2584
 git_commit = '856e7ac'
 
