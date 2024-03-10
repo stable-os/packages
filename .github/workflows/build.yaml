@@ -89,7 +89,7 @@ jobs:
               # - linux-api-headers
               - pkg-builder
               # - grub
-              - bash
+              # - bash
               # - glibc
               # - coreutils
               # - systemd
@@ -166,7 +166,7 @@ jobs:
               # - vim
               # - xmlparser
               # - zstd
-              - glib
+              # - glib
               # - libarchive
               # - libpgpme
               # - libgpg-error
@@ -188,7 +188,7 @@ jobs:
               # - jinja2
               # - markupsafe
               # - xmlto
-              - docbook-xml
+              # - docbook-xml
               # - unzip
               # - docbook-xsl-nons
               # - libcap-ng
@@ -202,7 +202,7 @@ jobs:
               # - libuv
               # - nghttp2
               # - elfutils
-              - dracut
+              # - dracut
               # - ostree-ext-cli
               # - rsync
               # - libisoburn
@@ -232,45 +232,47 @@ jobs:
               - gtk+3
               # - libogg
               # - libvorbis
-              - libcanberra
+              # - libcanberra
               # - cairo
               # - libpng
               # - pixman
               # - docbook-xsl
               # - fontconfig
               # - freetype
-              - fribidi
-              - harfbuzz
-              - gobject-introspection
-              - graphite2
-              - icu
-              - pango
+              # - fribidi
+              # - harfbuzz
+              # - gobject-introspection
+              # - graphite2
+              # - icu
+              # - pango
               - libepoxy
               - mesa
-              - xorg-libraries
-              - libdrm
-              - mako
-              - libjpeg-turbo
-              - shared-mime-info
-              - gdk-pixbuf
-              - gsettings-desktop-schemas
-              - util-macros
-              - xorgproto
-              - libxau
+              # - xorg-libraries
+              # - libdrm
+              # - mako
+              # - libjpeg-turbo
+              # - shared-mime-info
+              # - gdk-pixbuf
+              # - gsettings-desktop-schemas
+              # - util-macros
+              # - xorgproto
+              # - libxau
               - libxdcmp
-              - xcb-proto
-              - libxcb
-              - libxcvt
-              - xcb-util
+              # - xcb-proto
+              # - libxcb
+              # - libxcvt
+              # - xcb-util
               - xcb-util-image
-              - xcb-util-keysyms
-              - xcb-util-renderutil
-              - xcb-util-wm
+              # - xcb-util-keysyms
+              # - xcb-util-renderutil
+              # - xcb-util-wm
               - xcb-util-cursor
-              - xbitmaps
-              - xkeyboardconfig
+              # - xbitmaps
+              # - xkeyboardconfig
               - libxkbcommon
-              - glslang
+              # - glslang
+              - wayland
+              - wayland-protocols
             container: ['ghcr.io/stable-os/stable-os-build:latest'] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:

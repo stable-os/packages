@@ -1,0 +1,23 @@
+[package]
+name = 'wayland-protocols'
+version = '1.33.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.33/downloads/wayland-protocols-1.33.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr --buildtype=release
+
+ninja
+DESTDIR=$OUT ninja install
+'''
