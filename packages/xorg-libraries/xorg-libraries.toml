@@ -15,7 +15,9 @@ XORG_PREFIX=/usr
 XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
     --localstatedir=/var --disable-static"
 
-mkdir -pv $OUT$XORG_PREFIX/{lib,share} 
+mkdir -pv $OUT$XORG_PREFIX/{lib,share}
+# is needed for libx11
+cp /usr/lib/libXau.la $OUT$XORG_PREFIX/lib
 
 cat > lib-7.md5 << "EOF"
 12344cd74a1eb25436ca6e6a2cf93097  xtrans-1.5.0.tar.xz
