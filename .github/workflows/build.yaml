@@ -233,7 +233,7 @@ jobs:
               # - libogg
               # - libvorbis
               # - libcanberra
-              # - cairo
+              - cairo
               # - libpng
               # - pixman
               # - docbook-xsl
@@ -248,7 +248,7 @@ jobs:
               - libepoxy
               - mesa
               # - xorg-libraries
-              # - libdrm
+              - libdrm
               # - mako
               # - libjpeg-turbo
               # - shared-mime-info
