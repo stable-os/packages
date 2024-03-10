@@ -61,7 +61,7 @@ md5sum -c ../lib-7.md5
 for package in $(grep -v '^#' ../lib-7.md5 | awk '{print $2}')
 do
   # copy and overwrite every file rom $OUT to /
-  cp -fv $OUT/* /
+  cp -frv $OUT/* /
   
   packagedir=${package%.tar.?z*}
   echo "Building $packagedir"
