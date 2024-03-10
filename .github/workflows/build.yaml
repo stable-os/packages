@@ -202,7 +202,7 @@ jobs:
               # - libuv
               # - nghttp2
               # - elfutils
-              # - dracut
+              - dracut
               # - ostree-ext-cli
               # - rsync
               # - libisoburn
