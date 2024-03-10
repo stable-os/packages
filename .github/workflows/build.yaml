@@ -87,7 +87,7 @@ jobs:
               # - ostree
               # - which
               # - linux-api-headers
-              # - pkg-builder
+              - pkg-builder
               # - grub
               - bash
               # - glibc
