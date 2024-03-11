@@ -6,18 +6,74 @@ license = ''
 
 [[source]]
 source = 'https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.6/llvm-17.0.6.src.tar.xz'
+destination = '/llvm'
+
+[[source]]
+source = 'https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-17.src.tar.xz'
+destination = '/cmake'
+
+[[source]]
+source = 'https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party-17.src.tar.xz'
+destination = '/third-party'
+
+[[source]]
+source = 'https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.6/clang-17.0.6.src.tar.xz'
+destination = '/clang'
+
+[[source]]
+source = 'https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.6/compiler-rt-17.0.6.src.tar.xz'
+destination = '/compiler-rt'
 
 [build]
 script = '''
 set -eux # o pipefail
 
-cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+find .
 
-./configure --prefix=/usr     \
-            --disable-static  \
-            --sysconfdir=/etc \
-            --docdir=/usr/share/doc/attr-2.5.1
+cd llvm
 
-make -j$(nproc)
-make DESTDIR=$OUT install
+# fix cmake and third-party directories
+sed '/LLVM_COMMON_CMAKE_UTILS/s@../cmake@llvm-cmake-17.src@'          \
+    -i CMakeLists.txt                                                 &&
+sed '/LLVM_THIRD_PARTY_DIR/s@../third-party@llvm-third-party-17.src@' \
+    -i cmake/modules/HandleLLVMOptions.cmake
+
+# move clang
+mv ../clang tools/clang
+
+# install compiler-rt
+mv ../compiler-rt projects/compiler-rt
+sed '/^set(LLVM_COMMON_CMAKE_UTILS/d'                   \
+    -i projects/compiler-rt/CMakeLists.txt
+
+# fix python version in scripts
+grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'
+
+# enable SSP in clang
+wget https://www.linuxfromscratch.org/patches/blfs/12.1/clang-17-enable_default_ssp-1.patch -o ../clang-17-enable_default_ssp-1.patch
+patch -Np2 -d tools/clang <../clang-17-enable_default_ssp-1.patch
+
+# fix broken test in compiler-rt
+sed 's/clang_dfsan/& -fno-stack-protector/' \
+    -i projects/compiler-rt/test/dfsan/origin_unaligned_memtrans.c
+
+# build llvm
+mkdir build
+cd build
+
+CC=gcc CXX=g++                              \
+cmake -DCMAKE_INSTALL_PREFIX=/usr           \
+      -DLLVM_ENABLE_FFI=ON                  \
+      -DCMAKE_BUILD_TYPE=Release            \
+      -DLLVM_BUILD_LLVM_DYLIB=ON            \
+      -DLLVM_LINK_LLVM_DYLIB=ON             \
+      -DLLVM_ENABLE_RTTI=ON                 \
+      -DLLVM_TARGETS_TO_BUILD="host;AMDGPU" \
+      -DLLVM_BINUTILS_INCDIR=/usr/include   \
+      -DLLVM_INCLUDE_BENCHMARKS=OFF         \
+      -DCLANG_DEFAULT_PIE_ON_LINUX=ON       \
+      -Wno-dev -G Ninja ..
+
+ninja -j$(nproc)
+DESTDIR=$OUT ninja install
 '''
