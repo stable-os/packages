@@ -229,7 +229,7 @@ jobs:
               # - pycodestyle
               # - pyflakes
               # - bootc
-              - gtk+3
+              - gtk3
               # - libogg
               # - libvorbis
               # - libcanberra

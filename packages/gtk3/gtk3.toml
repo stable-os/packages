@@ -1,5 +1,5 @@
 [package]
-name = 'gtk+3'
+name = 'gtk3'
 version = '3.24.38'
 description = ''
 license = ''
