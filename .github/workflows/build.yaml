@@ -362,6 +362,8 @@ jobs:
 
         steps:
 
+        - run: mkdir -pv /var/tmp
+
         - name: Download CA certificates
           run: /usr/sbin/make-ca -g
           # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
