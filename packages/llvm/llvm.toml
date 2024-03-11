@@ -64,8 +64,9 @@ sed '/^set(LLVM_COMMON_CMAKE_UTILS/d'                   \
 grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'
 
 # enable SSP in clang
-wget https://www.linuxfromscratch.org/patches/blfs/12.1/clang-17-enable_default_ssp-1.patch -o ../clang-17-enable_default_ssp-1.patch
-patch -Np2 -d tools/clang <../clang-17-enable_default_ssp-1.patch
+# gives the error: patch: **** Only garbage was found in the patch input.
+# wget https://www.linuxfromscratch.org/patches/blfs/12.1/clang-17-enable_default_ssp-1.patch -o ../clang-17-enable_default_ssp-1.patch
+# patch -Np2 -d tools/clang <../clang-17-enable_default_ssp-1.patch
 
 # fix broken test in compiler-rt
 sed 's/clang_dfsan/& -fno-stack-protector/' \
