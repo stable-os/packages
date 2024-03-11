@@ -28,9 +28,21 @@ destination = '/compiler-rt'
 script = '''
 set -eux # o pipefail
 
+wget https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.6/llvm-17.0.6.src.tar.xz
+wget https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-17.src.tar.xz
+wget https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party-17.src.tar.xz
+wget https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.6/clang-17.0.6.src.tar.xz
+wget https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.6/compiler-rt-17.0.6.src.tar.xz
+
+tar -xf llvm-17.0.6.src.tar.xz
+
 find .
 
-cd llvm
+cd llvm-17.0.6.src
+
+# extract cmake and third-party
+tar -xf ../llvm-cmake-17.src.tar.xz
+tar -xf ../llvm-third-party-17.src.tar.xz
 
 # fix cmake and third-party directories
 sed '/LLVM_COMMON_CMAKE_UTILS/s@../cmake@llvm-cmake-17.src@'          \
@@ -38,11 +50,13 @@ sed '/LLVM_COMMON_CMAKE_UTILS/s@../cmake@llvm-cmake-17.src@'          \
 sed '/LLVM_THIRD_PARTY_DIR/s@../third-party@llvm-third-party-17.src@' \
     -i cmake/modules/HandleLLVMOptions.cmake
 
-# move clang
-mv ../clang tools/clang
+# install clang
+tar -xf ../clang-17.0.6.src.tar.xz -C tools &&
+mv tools/clang-17.0.6.src tools/clang
 
 # install compiler-rt
-mv ../compiler-rt projects/compiler-rt
+tar -xf ../compiler-rt-17.0.6.src.tar.xz -C projects    &&
+mv projects/compiler-rt-17.0.6.src projects/compiler-rt &&
 sed '/^set(LLVM_COMMON_CMAKE_UTILS/d'                   \
     -i projects/compiler-rt/CMakeLists.txt
 
