@@ -13,8 +13,8 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
-mkdir build
-cd build
+mkdir bld
+cd bld
 
 meson setup --prefix=/usr --buildtype=release ..
 
