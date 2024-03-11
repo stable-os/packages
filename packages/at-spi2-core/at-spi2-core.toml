@@ -1,0 +1,26 @@
+[package]
+name = 'at-spi2-core'
+version = '2.50.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/at-spi2-core/2.50/at-spi2-core-2.50.1.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup ..            \
+      --prefix=/usr       \
+      --buildtype=release \
+      -Dsystemd_user_dir=/tmp
+
+ninja
+DESTDIR=$OUT ninja install
+'''
