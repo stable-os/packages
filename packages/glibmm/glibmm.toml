@@ -1,0 +1,23 @@
+[package]
+name = 'glibmm'
+version = '2.66.5'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.5.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir bld
+cd bld
+
+meson setup --prefix=/usr --buildtype=release ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
