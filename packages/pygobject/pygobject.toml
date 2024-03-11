@@ -1,0 +1,23 @@
+[package]
+name = 'pygobject'
+version = '3.46.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/pygobject/3.46/pygobject-3.46.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd    build
+
+meson setup --prefix=/usr --buildtype=release ..
+ninja
+
+ninja DESTDIR=$OUT install
+'''

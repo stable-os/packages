@@ -1,0 +1,31 @@
+[package]
+name = 'gnome-online-accounts'
+version = '0.6.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/gnome-video-effects/0.6/gnome-video-effects-0.6.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup                                           \
+      --prefix=/usr                                   \
+      --buildtype=release                             \
+      -Dkerberos=true                                 \
+      ..
+
+# TODO: Add Google client id and secret
+#      -Dgoogle_client_secret= \
+#      -Dgoogle_client_id= \
+
+ninja
+DESTDIR=$OUT ninja install
+'''

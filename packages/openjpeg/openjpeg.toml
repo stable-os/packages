@@ -1,0 +1,25 @@
+[package]
+name = 'openjpeg'
+version = '2.5.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/uclouvain/openjpeg/archive/v2.5.0/openjpeg-2.5.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+cmake -DCMAKE_BUILD_TYPE=Release \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DBUILD_STATIC_LIBS=OFF ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

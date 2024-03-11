@@ -1,0 +1,30 @@
+[package]
+name = 'krb5'
+version = '2.5.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.savannah.gnu.org/releases/attr/attr-2.5.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+cd src
+
+sed -i -e '/eq 0/{N;s/12 //}'    plugins/kdb/db2/libdb2/test/run.test
+
+./configure --prefix=/usr            \
+            --sysconfdir=/etc        \
+            --localstatedir=/var/lib \
+            --runstatedir=/run       \
+            --with-system-et         \
+            --with-system-ss         \
+            --with-system-verto=no   \
+            --enable-dns-for-realm
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

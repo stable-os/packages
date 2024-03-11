@@ -87,7 +87,7 @@ jobs:
               # - ostree
               # - which
               # - linux-api-headers
-              - pkg-builder
+              # - pkg-builder
               # - grub
               # - bash
               # - glibc
@@ -229,11 +229,11 @@ jobs:
               # - pycodestyle
               # - pyflakes
               # - bootc
-              - gtk3
+              # - gtk3
               # - libogg
               # - libvorbis
               # - libcanberra
-              - cairo
+              # - cairo
               # - libpng
               # - pixman
               # - docbook-xsl
@@ -245,10 +245,10 @@ jobs:
               # - graphite2
               # - icu
               # - pango
-              - libepoxy
-              - mesa
+              # - libepoxy
+              # - mesa
               # - xorg-libraries
-              - libdrm
+              # - libdrm
               # - mako
               # - libjpeg-turbo
               # - shared-mime-info
@@ -262,23 +262,102 @@ jobs:
               # - libxcb
               # - libxcvt
               # - xcb-util
-              - xcb-util-image
+              # - xcb-util-image
               # - xcb-util-keysyms
               # - xcb-util-renderutil
               # - xcb-util-wm
-              - xcb-util-cursor
+              # - xcb-util-cursor
               # - xbitmaps
               # - xkeyboardconfig
-              - libxkbcommon
+              # - libxkbcommon
               # - glslang
-              - wayland
-              - wayland-protocols
-              - atkmm
-              - at-spi2-core
-              - libsigc
-              - mm-common
-              - glibmm
-              - llvm
+              # - wayland
+              # - wayland-protocols
+              # - atkmm
+              # - at-spi2-core
+              # - libsigc
+              # - mm-common
+              # - glibmm
+              # - llvm
+              - appstream
+              - boost
+              - evolution-data-server
+              - exempi
+              - exiv2
+              - gcr3
+              - gcr4
+              - geocode-glib
+              - gexiv2
+              - gjs
+              - glib-networking
+              - glu
+              - gnome-autoar
+              - gnome-backgrounds
+              - gnome-desktop
+              - gnome-menus
+              - gnome-online-accounts
+              - gnome-video-effects
+              - gnutls
+              - graphene
+              - grilo
+              - gsound
+              - gst-plugins-bad
+              - gst-plugins-base
+              - gstreamer
+              - gtk4
+              - iso-codes
+              - itstool
+              - json-glib
+              - krb5
+              - libadwaita
+              - libedit
+              - libgcrypt
+              - libgdata
+              - libgee
+              - libgtop
+              - libgudev
+              - libgweather
+              - libical
+              - libidn2
+              - libpeas
+              - libpsl
+              - libseccomp
+              - libsecret
+              - libshumate
+              - libsoup3
+              - libtiff
+              - libunistring
+              - libwebp
+              - libwnck
+              - libwpe
+              - libxmlb
+              - little-cms2
+              - nettle
+              - nspr
+              - nss
+              - openjpeg
+              - pipewire
+              - pycairo
+              - pygobject
+              - rest
+              - ruby
+              - sdl12-compat
+              - sdl2
+              - six
+              - spidermonkey
+              - sqlite
+              - totem-pl-parser
+              - tracker
+              - tracker-miners
+              - unifdef
+              - vala
+              - vte
+              - webkitgtk
+              - wpebackend-fdo
+              - xdg-desktop-portal
+              - xdg-desktop-portal-gnome
+              - xdg-desktop-portal-gtk
+              - yelp-xsl
             container: ['ghcr.io/stable-os/stable-os-build:latest'] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
         steps:

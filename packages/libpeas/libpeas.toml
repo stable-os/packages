@@ -1,0 +1,26 @@
+[package]
+name = 'libpeas'
+version = '1.36.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/pygobject/pycairo/releases/download/v1.26.0/pycairo-1.26.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd    build
+
+meson setup --prefix=/usr          \
+            --buildtype=release    \
+            --wrap-mode=nofallback \
+            ..
+ninja
+
+ninja DESTDIR=$OUT install
+'''

@@ -1,0 +1,23 @@
+[package]
+name = 'gexiv2'
+version = '0.14.2'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/gexiv2/0.14/gexiv2-0.14.2.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr --buildtype=release ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

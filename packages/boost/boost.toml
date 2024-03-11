@@ -1,0 +1,19 @@
+[package]
+name = 'boost'
+version = '1.84.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/boostorg/boost/releases/download/boost-1.84.0/boost-1.84.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./bootstrap.sh --prefix=/usr --with-python=python3
+./b2 stage -j$(nproc) threading=multi link=shared
+./b2 install threading=multi link=shared destdir=$OUT
+'''

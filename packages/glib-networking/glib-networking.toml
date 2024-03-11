@@ -1,0 +1,27 @@
+[package]
+name = 'glib-networking'
+version = '2.78.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/glib-networking/2.78/glib-networking-2.78.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup            \
+   --prefix=/usr       \
+   --buildtype=release \
+   -Dlibproxy=disabled \
+   ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

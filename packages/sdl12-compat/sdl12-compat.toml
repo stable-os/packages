@@ -1,0 +1,26 @@
+[package]
+name = 'sdl12-compat'
+version = '1.2.68'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/libsdl-org/sdl12-compat/archive/refs/tags/release-1.2.68/sdl12-compat-release-1.2.68.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_BUILD_TYPE=RELEASE  \
+      ..
+
+ninja
+DESTDIR=$OUT ninja install
+rm -vf $OUT/usr/lib/libSDLmain.a
+'''

@@ -1,0 +1,27 @@
+[package]
+name = 'gnome-autoar'
+version = '0.4.4'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/gnome-autoar/0.4/gnome-autoar-0.4.4.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -Dvapi=true         \
+            -Dtests=true        \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

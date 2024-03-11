@@ -1,0 +1,18 @@
+[package]
+name = 'unifdef'
+version = '2.12'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://dotat.at/prog/unifdef/unifdef-2.12.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+make
+make DESTDIR=$OUT prefix=/usr install
+'''

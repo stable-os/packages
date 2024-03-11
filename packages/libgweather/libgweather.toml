@@ -1,0 +1,26 @@
+[package]
+name = 'libgweather'
+version = '4.4.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/libgweather/4.4/libgweather-4.4.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -Dgtk_doc=false     \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

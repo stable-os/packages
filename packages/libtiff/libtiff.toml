@@ -1,0 +1,24 @@
+[package]
+name = 'libtiff'
+version = '4.6.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.osgeo.org/libtiff/tiff-4.6.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir libtiff-build
+cd libtiff-build
+
+cmake -DCMAKE_INSTALL_DOCDIR=/usr/share/doc/libtiff-4.6.0 \
+      -DCMAKE_INSTALL_PREFIX=/usr -G Ninja ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

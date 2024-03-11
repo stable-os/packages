@@ -1,0 +1,20 @@
+[package]
+name = 'itstool'
+version = '2.0.7'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://files.itstool.org/itstool/itstool-2.0.7.tar.bz2'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+PYTHON=/usr/bin/python3 ./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

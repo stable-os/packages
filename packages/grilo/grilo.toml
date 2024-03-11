@@ -1,0 +1,23 @@
+[package]
+name = 'grilo'
+version = '0.3.16'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/grilo/0.3/grilo-0.3.16.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+meson setup --prefix=/usr          \
+            --buildtype=release    \
+            -Denable-gtk-doc=false \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

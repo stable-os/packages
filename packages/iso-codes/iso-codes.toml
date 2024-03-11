@@ -1,0 +1,20 @@
+[package]
+name = 'iso-codes'
+version = '4.16.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://ftp.debian.org/debian/pool/main/i/iso-codes/iso-codes_4.16.0.orig.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

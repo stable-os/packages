@@ -1,0 +1,28 @@
+[package]
+name = 'gstreamer'
+version = '1.22.10'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.22.10.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson  setup ..            \
+       --prefix=/usr       \
+       --buildtype=release \
+       -Dgst_debug=false   \
+       -Dpackage-origin=https://github.com/stable-os/packages \
+       -Dpackage-name="GStreamer 1.22.10"
+
+ninja
+DESTDIR=$OUT ninja install
+'''

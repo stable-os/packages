@@ -1,0 +1,62 @@
+[package]
+name = 'appstream'
+version = '1.0.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.freedesktop.org/software/appstream/releases/AppStream-1.0.1.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -Dapidocs=false     \
+            -Dstemming=false    ..
+
+ninja
+DESTDIR=$OUT ninja install
+
+# TODO: Fix this
+
+install -vdm755 $OUT/usr/share/metainfo &&
+cat > $OUT/usr/share/metainfo/from.appstream.file.xml << EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="operating-system">
+  <id>from.appstream.file</id>
+  <name>From AppStream file</name>
+  <summary>From AppStream file</summary>
+  <description>
+    <p>
+      From AppStream file
+    </p>
+  </description>
+  <url type="homepage">https://github.com/stable-os</url>
+  <metadata_license></metadata_license>
+  <developer id='linuxfromscratch.org'>
+    <name>From AppStream file</name>
+  </developer>
+
+  <releases>
+    <release version="12.2" type="development" date="2024-09-01">
+      <description>
+        <p>From AppStream file</p>
+      </description>
+    </release>
+
+    <release version="12.1" type="stable" date="2024-03-01">
+      <description>
+        <p>From AppStream file</p>
+      </description>
+    </release>
+  </releases>
+</component>
+EOF
+'''

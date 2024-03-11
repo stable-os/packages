@@ -1,0 +1,23 @@
+[package]
+name = 'vte'
+version = '0.74.2'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://gitlab.gnome.org/GNOME/vte/-/archive/0.74.2/vte-0.74.2.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr --buildtype=release ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

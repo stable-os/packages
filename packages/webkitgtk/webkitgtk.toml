@@ -1,0 +1,65 @@
+[package]
+name = 'webkitgtk'
+version = '2.42.5'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://webkitgtk.org/releases/webkitgtk-2.42.5.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+# GTK 3 version
+cmake -DCMAKE_BUILD_TYPE=Release  \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_SKIP_RPATH=ON       \
+      -DPORT=GTK                  \
+      -DLIB_INSTALL_DIR=/usr/lib  \
+      -DUSE_LIBHYPHEN=OFF         \
+      -DENABLE_GAMEPAD=OFF        \
+      -DENABLE_MINIBROWSER=ON     \
+      -DENABLE_DOCUMENTATION=OFF  \
+      -DUSE_WOFF2=OFF             \
+      -DUSE_GTK4=OFF              \
+      -DUSE_WPE_RENDERER=ON       \
+      -DUSE_JPEGXL=OFF            \
+      -DENABLE_BUBBLEWRAP_SANDBOX=ON \
+      -Wno-dev -G Ninja ..
+
+ninja
+DESTDIR=$OUT ninja install
+
+# Clean up GTK 3 build files
+cd ..
+rm -rf build
+mkdir build
+cd build
+
+# GTK 4 version
+cmake -DCMAKE_BUILD_TYPE=Release  \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_SKIP_RPATH=ON       \
+      -DPORT=GTK                  \
+      -DLIB_INSTALL_DIR=/usr/lib  \
+      -DUSE_LIBHYPHEN=OFF         \
+      -DENABLE_GAMEPAD=OFF        \
+      -DENABLE_MINIBROWSER=ON     \
+      -DENABLE_DOCUMENTATION=OFF  \
+      -DUSE_WOFF2=OFF             \
+      -DUSE_GTK4=ON               \
+      -DUSE_JPEGXL=OFF            \
+      -DUSE_WPE_RENDERER=ON       \
+      -DENABLE_BUBBLEWRAP_SANDBOX=ON \
+      -Wno-dev -G Ninja ..
+
+
+ninja
+DESTDIR=$OUT ninja install
+'''

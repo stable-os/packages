@@ -1,0 +1,22 @@
+[package]
+name = 'gnome-menus'
+version = '3.36.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.savannah.gnu.org/releases/attr/attr-2.5.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --disable-static
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

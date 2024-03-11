@@ -1,0 +1,27 @@
+[package]
+name = 'geocode-glib'
+version = '3.26.4'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.4.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix /usr           \
+            --buildtype=release     \
+            -Denable-gtk-doc=false  \
+            -Dsoup2=false           \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

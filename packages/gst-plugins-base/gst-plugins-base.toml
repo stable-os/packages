@@ -1,0 +1,28 @@
+[package]
+name = 'gst-plugins-base'
+version = '1.22.10'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.22.10.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson  setup ..               \
+       --prefix=/usr          \
+       --buildtype=release    \
+       --wrap-mode=nodownload \
+       -Dpackage-origin=https://github.com/stable-os/packages \
+       -Dpackage-name="GStreamer 1.22.10"
+
+ninja
+DESTDIR=$OUT ninja install
+'''

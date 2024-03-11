@@ -1,0 +1,32 @@
+# Netscape still living on
+
+[package]
+name = 'nspr'
+version = '4.35'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://archive.mozilla.org/pub/nspr/releases/v4.35/src/nspr-4.35.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+ls -l
+
+cd nspr
+
+sed -i '/^RELEASE/s|^|#|' pr/src/misc/Makefile.in
+sed -i 's|$(LIBRARY) ||'  config/rules.mk
+
+./configure --prefix=/usr   \
+            --with-mozilla  \
+            --with-pthreads \
+            $([ $(uname -m) = x86_64 ] && echo --enable-64bit)
+
+make
+make DESTDIR=$OUT install
+'''

@@ -1,0 +1,36 @@
+[package]
+name = 'spidermonkey'
+version = '115.7.0esr'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://archive.mozilla.org/pub/firefox/releases/115.7.0esr/source/firefox-115.7.0esr.source.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+for i in $(find -name six.py); do
+  ln -sfv /usr/lib/python3.12/site-packages/six.py $i;
+done
+
+mkdir obj
+cd    obj
+
+../js/src/configure --prefix=/usr            \
+                    --disable-debug-symbols  \
+                    --disable-jemalloc       \
+                    --enable-readline        \
+                    --enable-rust-simd       \
+                    --with-intl-api          \
+                    --with-system-icu        \
+                    --with-system-zlib
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+rm -v $OUT/usr/lib/libjs_static.ajs
+sed -i '/@NSPR_CFLAGS@/d' $OUT/usr/bin/js115-config
+'''

@@ -1,0 +1,26 @@
+[package]
+name = 'tracker'
+version = '3.6.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/tracker/3.6/tracker-3.6.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -Dman=false         \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

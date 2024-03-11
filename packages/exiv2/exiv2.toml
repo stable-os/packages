@@ -1,0 +1,29 @@
+[package]
+name = 'exiv2'
+version = '0.28.2'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/Exiv2/exiv2/archive/v0.28.2/exiv2-0.28.2.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr  \
+      -DCMAKE_BUILD_TYPE=Release   \
+      -DEXIV2_ENABLE_VIDEO=yes     \
+      -DEXIV2_ENABLE_WEBREADY=yes  \
+      -DEXIV2_ENABLE_CURL=yes      \
+      -DEXIV2_BUILD_SAMPLES=no     \
+      -G "Unix Makefiles" ..
+
+make
+make DESTDIR=$OUT install
+'''

@@ -1,0 +1,23 @@
+[package]
+name = 'little-cms2'
+version = '2.14'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/mm2/Little-CMS/releases/download/lcms2.14/lcms2-2.14.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+sed '/BufferSize < TagSize/,+1 s/goto Error/TagSize = BufferSize/' \
+    -i src/cmsio0.c
+
+./configure --prefix=/usr --disable-static
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

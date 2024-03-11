@@ -1,0 +1,29 @@
+[package]
+name = 'libsoup3'
+version = '3.4.4'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/libsoup/3.4/libsoup-3.4.4.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr          \
+            --buildtype=release    \
+            -Dvapi=enabled         \
+            -Dgssapi=disabled      \
+            -Dsysprof=disabled     \
+            --wrap-mode=nofallback \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

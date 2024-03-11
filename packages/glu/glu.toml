@@ -1,0 +1,28 @@
+[package]
+name = 'glu'
+version = '9.0.3'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://archive.mesa3d.org/glu/glu-9.0.3.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup ..              \
+      --prefix=$XORG_PREFIX \
+      -Dgl_provider=gl      \
+      --buildtype=release
+
+ninja
+DESTDIR=$OUT ninja install
+
+rm -vf $OUT/usr/lib/libGLU.a
+'''

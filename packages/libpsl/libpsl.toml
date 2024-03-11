@@ -1,0 +1,23 @@
+[package]
+name = 'libpsl'
+version = '0.21.5'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/rockdaboot/libpsl/releases/download/0.21.5/libpsl-0.21.5.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr --buildtype=release ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
