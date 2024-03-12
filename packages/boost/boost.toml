@@ -13,8 +13,8 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
-./bootstrap.sh --prefix=/usr --with-python=python3
+./bootstrap.sh --prefix=/usr --with-python=python3 --libdir=$OUT/usr/lib --includedir=$OUT/usr/include 
 ./b2 stage -j$(nproc) threading=multi link=shared
 find ./stage
-./b2 install threading=multi link=shared libdir=$OUT/usr/lib includedir=$OUT/usr/include 
+./b2 install threading=multi link=shared
 '''
