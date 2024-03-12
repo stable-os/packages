@@ -21,7 +21,7 @@ meson setup --prefix=/usr          \
             --wrap-mode=nodownload \
             -Dgtk_doc=false        \
             ..
-ninja
 
-ninja DESTDIR=$OUT install
+ninja
+DESTDIR=$OUT ninja install
 '''
