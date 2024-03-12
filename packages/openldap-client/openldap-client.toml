@@ -18,7 +18,7 @@ set -eux # o pipefail
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 wget https://www.linuxfromscratch.org/patches/blfs/12.1/openldap-2.6.7-consolidated-1.patch
-patch -Np1 -i ../openldap-2.6.7-consolidated-1.patch
+patch -Np1 -i ./openldap-2.6.7-consolidated-1.patch
 autoconf
 
 ./configure --prefix=/usr        \
