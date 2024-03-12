@@ -1,0 +1,22 @@
+[package]
+name = 'enchant2'
+version = '2.6.7'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/AbiWord/enchant/releases/download/v2.6.7/enchant-2.6.7.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir /usr/share/doc/enchant-2.6.7
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
