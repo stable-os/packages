@@ -17,7 +17,7 @@ mkdir build
 cd    build
 
 meson setup --prefix=/usr --buildtype=release ..
-ninja
 
-ninja DESTDIR=$OUT install
+ninja
+DESTDIR=$OUT ninja install
 '''
