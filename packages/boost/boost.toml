@@ -15,5 +15,6 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 ./bootstrap.sh --prefix=/usr --with-python=python3
 ./b2 stage -j$(nproc) threading=multi link=shared
-./b2 install threading=multi link=shared destdir=$OUT
+find ./stage
+./b2 install threading=multi link=shared libdir=$OUT/usr/lib includedir=$OUT/usr/include 
 '''
