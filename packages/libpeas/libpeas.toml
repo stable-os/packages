@@ -20,7 +20,7 @@ meson setup --prefix=/usr          \
             --buildtype=release    \
             --wrap-mode=nofallback \
             ..
-ninja
 
-ninja DESTDIR=$OUT install
+ninja
+DESTDIR=$OUT ninja install
 '''
