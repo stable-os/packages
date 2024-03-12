@@ -1,0 +1,23 @@
+[package]
+name = 'bubblewrap'
+version = '0.8.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/containers/bubblewrap/releases/download/v0.8.0/bubblewrap-0.8.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr --buildtype=release ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
