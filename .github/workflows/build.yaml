@@ -1,485 +1,482 @@
 name: Package build test
 
 on:
-    push:
-    schedule:
-        # every day
-        - cron: '0 0 * * *'
-    workflow_dispatch: 
+  push:
+  schedule:
+    # every day
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
-    # build_pkg_builder:
-    #     runs-on: ubuntu-latest
+  # build_pkg_builder:
+  #     runs-on: ubuntu-latest
 
-    #     steps:
-    #     - run: sudo apt-get update && sudo apt-get install -y libssl-dev
-    #     - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  #     steps:
+  #     - run: sudo apt-get update && sudo apt-get install -y libssl-dev
+  #     - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-    #     - uses: actions/checkout@v2
-    #       with:
-    #         submodules: recursive
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         submodules: recursive
 
-    #     - name: Cache
-    #       id: cache-pkg-builder-target
-    #       uses: actions/cache@v3
-    #       with:
-    #         path: util/pkg-builder/target/
-    #         key: ${{ runner.os }}-pkg-builder-target
+  #     - name: Cache
+  #       id: cache-pkg-builder-target
+  #       uses: actions/cache@v3
+  #       with:
+  #         path: util/pkg-builder/target/
+  #         key: ${{ runner.os }}-pkg-builder-target
 
-    #     - run: $HOME/.cargo/bin/cargo build --release
-    #       working-directory: util/pkg-builder
-    #     # upload the binary as an artifact
-    #     - uses: actions/upload-artifact@v2
-    #       with:
-    #         name: pkg-builder
-    #         path: util/pkg-builder/target/release/pkg-builder
-    
-    # build_ostree_ext_cli:
-    #     runs-on: ubuntu-latest
-    #     # needs to run in the most recent version of Ubuntu to ensure that the ostree version is new enough
-    #     container: ubuntu:rolling
+  #     - run: $HOME/.cargo/bin/cargo build --release
+  #       working-directory: util/pkg-builder
+  #     # upload the binary as an artifact
+  #     - uses: actions/upload-artifact@v2
+  #       with:
+  #         name: pkg-builder
+  #         path: util/pkg-builder/target/release/pkg-builder
 
-    #     steps:
+  # build_ostree_ext_cli:
+  #     runs-on: ubuntu-latest
+  #     # needs to run in the most recent version of Ubuntu to ensure that the ostree version is new enough
+  #     container: ubuntu:rolling
 
-    #     - run: apt-get update && apt-get install -y libssl-dev ostree libostree-1-1 libostree-dev git curl build-essential
-    #     - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  #     steps:
 
-    #     - uses: actions/checkout@v2
-    #       with:
-    #         repository: 'ostreedev/ostree-rs-ext'
-    #         path: 'ostree-rs-ext'
-        
-    #     - name: Cache
-    #       id: cache-ostree-rs-ext-target
-    #       uses: actions/cache@v3
-    #       with:
-    #         path: ostree-rs-ext/target/
-    #         key: ${{ runner.os }}-ostree-rs-ext-target
+  #     - run: apt-get update && apt-get install -y libssl-dev ostree libostree-1-1 libostree-dev git curl build-essential
+  #     - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-    #     - run: $HOME/.cargo/bin/cargo build --release
-    #       working-directory: ostree-rs-ext
-    #     - run: ls ostree-rs-ext/target/release
-    #     # upload the binary as an artifact
-    #     - uses: actions/upload-artifact@v2
-    #       with:
-    #         name: ostree-ext-cli
-    #         path: ostree-rs-ext/target/release/ostree-ext-cli
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         repository: 'ostreedev/ostree-rs-ext'
+  #         path: 'ostree-rs-ext'
 
-    build:
-        runs-on: ubuntu-latest
-        # needs: [build_pkg_builder, build_ostree_ext_cli]
-        # needs to run in the most recent version of Ubuntu to ensure that the ostree version is new enough
-        container: ${{ matrix.container }}
+  #     - name: Cache
+  #       id: cache-ostree-rs-ext-target
+  #       uses: actions/cache@v3
+  #       with:
+  #         path: ostree-rs-ext/target/
+  #         key: ${{ runner.os }}-ostree-rs-ext-target
 
-        permissions:
-          packages: write
-          contents: read
+  #     - run: $HOME/.cargo/bin/cargo build --release
+  #       working-directory: ostree-rs-ext
+  #     - run: ls ostree-rs-ext/target/release
+  #     # upload the binary as an artifact
+  #     - uses: actions/upload-artifact@v2
+  #       with:
+  #         name: ostree-ext-cli
+  #         path: ostree-rs-ext/target/release/ostree-ext-cli
 
-        strategy:
-          fail-fast: false
-          matrix:
-            package:
-              # - flit-core
-              # - wheel
-              # - ninja
-              # - meson
-              # - asciidoc
-              # - ostree
-              # - which
-              # - linux-api-headers
-              # - pkg-builder
-              - grub
-              # - bash
-              # - glibc
-              # - coreutils
-              # - systemd
-              # - selinux
-              # - libcap
-              # - libpcre2
-              # - ncurses
-              # - gcc
-              # - gmp
-              # - mpc
-              # - mpfr
-              # - git
-              # - tar
-              # - zlib
-              # - gzip
-              # - curl
-              # - openssl
-              # - p11-kit
-              # - make-ca
-              # - sed
-              # - grep
-              # - gawk
-              # - readline
-              # - libffi
-              # - libtasn1
-              # - findutils
-              # - bzip2
-              # - xz
-              # - binutils
-              # - acl
-              # - attr
-              # - autoconf
-              # - automake
-              # - bc
-              # - bison
-              # - check
-              # - dejagnu
-              # - diffutils
-              # - e2fsprogs
-              # - expat
-              # - expect
-              # - file
-              # - flex
-              # - gdbm
-              # - gettext
-              # - gperf
-              # - groff
-              # - iana-etc
-              # - intltool
-              # - iproute2
-              # - kbd
-              # - kmod
-              # - less
-              # - libelf
-              # - libpipeline
-              # - libtool
-              # - libxcrypt
-              # - m4
-              # - make
-              # - mandb
-              # - manpages
-              # - patch
-              # - perl
-              # - pkgconf
-              # - procps
-              # - psmisc
-              # - python3
-              # - shadow
-              # - sysklogd
-              # - tcl
-              # - texinfo
-              # - timezonedata
-              # - utillinux
-              # - vim
-              # - xmlparser
-              # - zstd
-              # - glib
-              # - libarchive
-              # - libpgpme
-              # - libgpg-error
-              # - avahi
-              # - dbus
-              # - libassuan
-              # - skopeo
-              # - lvm2
-              # - wget
-              - essential-files
-              # - libdaemon
-              # - libaio
-              # - libxslt
-              # - libxml2
-              # - audit
-              # - swig
-              # - fuse
-              # - pam
-              # - jinja2
-              # - markupsafe
-              # - xmlto
-              # - docbook-xml
-              # - unzip
-              # - docbook-xsl-nons
-              # - libcap-ng
-              # - docbook2x
-              # - xmlsax
-              # - xmlsaxbase
-              # - xmlnamespacesupport
-              # - cpio
-              # - dwarves
-              # - cmake
-              # - libuv
-              # - nghttp2
-              # - elfutils
-              # - dracut
-              # - ostree-ext-cli
-              # - rsync
-              # - libisoburn
-              # - libisofs
-              # - libburn
-              # - squashfs-tools
-              # - netplan
-              # - libyaml
-              # - bash-completion
-              # - pytest
-              # - iniconfig
-              # - hatchling
-              # - pathspec
-              # - pluggy
-              # - packaging
-              # - trove-classifiers
-              # - editables
-              # - hatch-vcs
-              # - setuptools-scm
-              # - coverage
-              # - cffi
-              # - pycparser
-              # - cmocka
-              # - pycodestyle
-              # - pyflakes
-              # - bootc
-              # - gtk3
-              # - libogg
-              # - libvorbis
-              # - libcanberra
-              # - cairo
-              # - libpng
-              # - pixman
-              # - docbook-xsl
-              # - fontconfig
-              # - freetype
-              # - fribidi
-              # - harfbuzz
-              # - gobject-introspection
-              # - graphite2
-              # - icu
-              # - pango
-              # - libepoxy
-              # - mesa
-              # - xorg-libraries
-              # - libdrm
-              # - mako
-              # - libjpeg-turbo
-              # - shared-mime-info
-              # - gdk-pixbuf
-              # - gsettings-desktop-schemas
-              # - util-macros
-              # - xorgproto
-              # - libxau
-              - libxdcmp
-              # - xcb-proto
-              # - libxcb
-              # - libxcvt
-              # - xcb-util
-              # - xcb-util-image
-              # - xcb-util-keysyms
-              # - xcb-util-renderutil
-              # - xcb-util-wm
-              # - xcb-util-cursor
-              # - xbitmaps
-              # - xkeyboardconfig
-              # - libxkbcommon
-              # - glslang
-              # - wayland
-              # - wayland-protocols
-              # - atkmm
-              # - at-spi2-core
-              # - libsigc
-              # - mm-common
-              # - glibmm
-              # - llvm
-              - appstream
-              - boost
-              - evolution-data-server
-              - exempi
-              - exiv2
-              - gcr3
-              - gcr4
-              - geocode-glib
-              - gexiv2
-              - gjs
-              - glib-networking
-              - glu
-              - gnome-autoar
-              - gnome-backgrounds
-              - gnome-desktop
-              - gnome-menus
-              - gnome-online-accounts
-              - gnome-video-effects
-              - gnutls
-              - graphene
-              - grilo
-              - gsound
-              - gst-plugins-bad
-              - gst-plugins-base
-              - gstreamer
-              - gtk4
-              - iso-codes
-              - itstool
-              - json-glib
-              - krb5
-              - libadwaita
-              - libedit
-              - libgcrypt
-              - libgdata
-              - libgee
-              - libgtop
-              - libgudev
-              - libgweather
-              - libical
-              - libidn2
-              - libpeas
-              - libpsl
-              - libseccomp
-              - libsecret
-              - libshumate
-              - libsoup3
-              - libtiff
-              - libunistring
-              - libwebp
-              - libwnck
-              - libwpe
-              - libxmlb
-              - little-cms2
-              - nettle
-              - nspr
-              - nss
-              - openjpeg
-              - pipewire
-              - pycairo
-              - pygobject
-              - rest
-              - ruby
-              - sdl12-compat
-              - sdl2
-              - six
-              - spidermonkey
-              - sqlite
-              - totem-pl-parser
-              - tracker
-              - tracker-miners
-              - unifdef
-              - vala
-              - vte
-              - webkitgtk
-              - wpebackend-fdo
-              - xdg-desktop-portal
-              - xdg-desktop-portal-gnome
-              - xdg-desktop-portal-gtk
-              - yelp-xsl
-            container: ['ghcr.io/stable-os/stable-os-build:latest'] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
+  build:
+    runs-on: ubuntu-latest
+    # needs: [build_pkg_builder, build_ostree_ext_cli]
+    # needs to run in the most recent version of Ubuntu to ensure that the ostree version is new enough
+    container: ${{ matrix.container }}
 
-        steps:
+    permissions:
+      packages: write
+      contents: read
 
-        - run: mkdir -pv /var/tmp
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          # - flit-core
+          # - wheel
+          # - ninja
+          # - meson
+          # - asciidoc
+          # - ostree
+          # - which
+          # - linux-api-headers
+          # - pkg-builder
+          - grub
+          # - bash
+          # - glibc
+          # - coreutils
+          # - systemd
+          # - selinux
+          # - libcap
+          # - libpcre2
+          # - ncurses
+          # - gcc
+          # - gmp
+          # - mpc
+          # - mpfr
+          # - git
+          # - tar
+          # - zlib
+          # - gzip
+          # - curl
+          # - openssl
+          # - p11-kit
+          # - make-ca
+          # - sed
+          # - grep
+          # - gawk
+          # - readline
+          # - libffi
+          # - libtasn1
+          # - findutils
+          # - bzip2
+          # - xz
+          # - binutils
+          # - acl
+          # - attr
+          # - autoconf
+          # - automake
+          # - bc
+          # - bison
+          # - check
+          # - dejagnu
+          # - diffutils
+          # - e2fsprogs
+          # - expat
+          # - expect
+          # - file
+          # - flex
+          # - gdbm
+          # - gettext
+          # - gperf
+          # - groff
+          # - iana-etc
+          # - intltool
+          # - iproute2
+          # - kbd
+          # - kmod
+          # - less
+          # - libelf
+          # - libpipeline
+          # - libtool
+          # - libxcrypt
+          # - m4
+          # - make
+          # - mandb
+          # - manpages
+          # - patch
+          # - perl
+          # - pkgconf
+          # - procps
+          # - psmisc
+          # - python3
+          # - shadow
+          # - sysklogd
+          # - tcl
+          # - texinfo
+          # - timezonedata
+          # - utillinux
+          # - vim
+          # - xmlparser
+          # - zstd
+          # - glib
+          # - libarchive
+          # - libpgpme
+          # - libgpg-error
+          # - avahi
+          # - dbus
+          # - libassuan
+          # - skopeo
+          # - lvm2
+          # - wget
+          - essential-files
+          # - libdaemon
+          # - libaio
+          # - libxslt
+          # - libxml2
+          # - audit
+          # - swig
+          # - fuse
+          # - pam
+          # - jinja2
+          # - markupsafe
+          # - xmlto
+          # - docbook-xml
+          # - unzip
+          # - docbook-xsl-nons
+          # - libcap-ng
+          # - docbook2x
+          # - xmlsax
+          # - xmlsaxbase
+          # - xmlnamespacesupport
+          # - cpio
+          # - dwarves
+          # - cmake
+          # - libuv
+          # - nghttp2
+          # - elfutils
+          # - dracut
+          # - ostree-ext-cli
+          # - rsync
+          # - libisoburn
+          # - libisofs
+          # - libburn
+          # - squashfs-tools
+          # - netplan
+          # - libyaml
+          # - bash-completion
+          # - pytest
+          # - iniconfig
+          # - hatchling
+          # - pathspec
+          # - pluggy
+          # - packaging
+          # - trove-classifiers
+          # - editables
+          # - hatch-vcs
+          # - setuptools-scm
+          # - coverage
+          # - cffi
+          # - pycparser
+          # - cmocka
+          # - pycodestyle
+          # - pyflakes
+          # - bootc
+          # - gtk3
+          # - libogg
+          # - libvorbis
+          # - libcanberra
+          # - cairo
+          # - libpng
+          # - pixman
+          # - docbook-xsl
+          # - fontconfig
+          # - freetype
+          # - fribidi
+          # - harfbuzz
+          # - gobject-introspection
+          # - graphite2
+          # - icu
+          # - pango
+          # - libepoxy
+          # - mesa
+          # - xorg-libraries
+          # - libdrm
+          # - mako
+          # - libjpeg-turbo
+          # - shared-mime-info
+          # - gdk-pixbuf
+          # - gsettings-desktop-schemas
+          # - util-macros
+          # - xorgproto
+          # - libxau
+          - libxdcmp
+          # - xcb-proto
+          # - libxcb
+          # - libxcvt
+          # - xcb-util
+          # - xcb-util-image
+          # - xcb-util-keysyms
+          # - xcb-util-renderutil
+          # - xcb-util-wm
+          # - xcb-util-cursor
+          # - xbitmaps
+          # - xkeyboardconfig
+          # - libxkbcommon
+          # - glslang
+          # - wayland
+          # - wayland-protocols
+          # - atkmm
+          # - at-spi2-core
+          # - libsigc
+          # - mm-common
+          # - glibmm
+          # - llvm
+          # - appstream
+          # - boost
+          - evolution-data-server
+          # - exempi
+          - exiv2
+          - gcr3
+          - gcr4
+          # - geocode-glib
+          - gexiv2
+          - gjs
+          # - glib-networking
+          # - glu
+          # - gnome-autoar
+          # - gnome-backgrounds
+          # - gnome-desktop
+          # - gnome-menus
+          - gnome-online-accounts
+          # - gnome-video-effects
+          # - gnutls
+          # - graphene
+          - grilo
+          # - gsound
+          # - gst-plugins-bad
+          # - gst-plugins-base
+          # - gstreamer
+          # - gtk4
+          # - iso-codes
+          # - itstool
+          # - json-glib
+          - krb5
+          # - libadwaita
+          - libedit
+          # - libgcrypt
+          - libgdata
+          # - libgee
+          # - libgtop
+          # - libgudev
+          - libgweather
+          # - libical
+          # - libidn2
+          - libpeas
+          # - libpsl
+          # - libseccomp
+          # - libsecret
+          - libshumate
+          # - libsoup3
+          # - libtiff
+          # - libunistring
+          # - libwebp
+          - libwnck
+          # - libwpe
+          # - libxmlb
+          # - little-cms2
+          # - nettle
+          # - nspr
+          - nss
+          - openjpeg
+          # - pipewire
+          - pycairo
+          - pygobject
+          # - rest
+          # - ruby
+          - sdl12-compat
+          # - sdl2
+          # - six
+          - spidermonkey
+          # - sqlite
+          # - totem-pl-parser
+          - tracker
+          - tracker-miners
+          # - unifdef
+          # - vala
+          # - vte
+          - webkitgtk
+          # - wpebackend-fdo
+          - xdg-desktop-portal
+          - xdg-desktop-portal-gnome
+          - xdg-desktop-portal-gtk
+          # - yelp-xsl
+          - brotli
+        container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
-        - name: Download CA certificates
-          run: /usr/sbin/make-ca -g
-          # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
-        - name: Install pip
-          run: python -m ensurepip
-          # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
-        
-        - name: x86_64 level
-          run: git clone https://github.com/HenrikBengtsson/x86-64-level.git && ./x86-64-level/x86-64-level
-          # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+    steps:
+      - run: mkdir -pv /var/tmp
 
-        # - name: Install dependencies
-        #   run: sed -i 's/^# deb-src/deb-src/' /etc/apt/sources.list && apt-get update && apt-get install -y linux-headers-6.5.0-9-generic skopeo gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl autoconf automake gettext texinfo wget libpam0g-dev libpam0g python3-jinja2 python3-pip file libghc-bzlib-dev libreadline-dev libmpfr-dev libmpc-dev libssl-dev libcurl4-openssl-dev asciidoc docbook2x p11-kit libtasn1-6-dev cmake libtasn1-bin dejagnu libtool libtool-bin liblzma-dev liblzma5 libgpg-error-dev libassuan-dev libgdbm-dev libdaemon-dev dbus libdbus-1-dev libbtrfs-dev libdevmapper-dev libgpgme-dev go-md2man libaio-dev flit flex tcl-dev
-        #   if: matrix.container == 'ubuntu:rolling'
-        # - run: apt-get build-dep ostree -y
-        #   if: matrix.container == 'ubuntu:rolling' && matrix.package == 'ostree'
-        # - run: apt-get install -y --no-install-recommends --no-install-suggests bison flex gawk gcc gettext make libaudit-dev libbz2-dev libcap-dev libcap-ng-dev libcunit1-dev libglib2.0-dev libpcre2-dev pkgconf python3 systemd xmlto
-        #   if: matrix.container == 'ubuntu:rolling' && matrix.package == 'selinux'
-        # - name: Install Docker
-        #   run: curl -fsSL https://get.docker.com | sh
-        #   if: matrix.container == 'ubuntu:rolling'
-        - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+      - name: Download CA certificates
+        run: /usr/sbin/make-ca -g
+        # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+      - name: Install pip
+        run: python -m ensurepip
+        # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
 
-        - uses: actions/checkout@v2
+      - name: x86_64 level
+        run: git clone https://github.com/HenrikBengtsson/x86-64-level.git && ./x86-64-level/x86-64-level
+        # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
 
-        # - name: Login to GitHub Container Registry
-        #   uses: docker/login-action@v1
-        #   with:
-        #     registry: ghcr.io
-        #     username: ${{ github.actor }}
-        #     password: ${{ secrets.GITHUB_TOKEN }}
-        #   if: matrix.container == 'ubuntu:rolling'
+      # - name: Install dependencies
+      #   run: sed -i 's/^# deb-src/deb-src/' /etc/apt/sources.list && apt-get update && apt-get install -y linux-headers-6.5.0-9-generic skopeo gawk bison meson ninja-build gperf libcap-dev autopoint ostree libostree-1-1 libostree-dev git build-essential curl autoconf automake gettext texinfo wget libpam0g-dev libpam0g python3-jinja2 python3-pip file libghc-bzlib-dev libreadline-dev libmpfr-dev libmpc-dev libssl-dev libcurl4-openssl-dev asciidoc docbook2x p11-kit libtasn1-6-dev cmake libtasn1-bin dejagnu libtool libtool-bin liblzma-dev liblzma5 libgpg-error-dev libassuan-dev libgdbm-dev libdaemon-dev dbus libdbus-1-dev libbtrfs-dev libdevmapper-dev libgpgme-dev go-md2man libaio-dev flit flex tcl-dev
+      #   if: matrix.container == 'ubuntu:rolling'
+      # - run: apt-get build-dep ostree -y
+      #   if: matrix.container == 'ubuntu:rolling' && matrix.package == 'ostree'
+      # - run: apt-get install -y --no-install-recommends --no-install-suggests bison flex gawk gcc gettext make libaudit-dev libbz2-dev libcap-dev libcap-ng-dev libcunit1-dev libglib2.0-dev libpcre2-dev pkgconf python3 systemd xmlto
+      #   if: matrix.container == 'ubuntu:rolling' && matrix.package == 'selinux'
+      # - name: Install Docker
+      #   run: curl -fsSL https://get.docker.com | sh
+      #   if: matrix.container == 'ubuntu:rolling'
+      - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-        - name: Login to GitHub Container Registry with Skopeo
-          run: echo ${{ secrets.GITHUB_TOKEN }} | skopeo login ghcr.io --username ${{ github.actor }} --password-stdin
-          # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+      - uses: actions/checkout@v2
 
-        # download the pkg-builder binary from the previous job
-        # - uses: actions/download-artifact@v2
-        #   with:
-        #     name: pkg-builder
-        #     path: pkg-builder
-        # - uses: actions/download-artifact@v2
-        #   with:
-        #     name: ostree-ext-cli
-        #     path: ostree-ext-cli
+      # - name: Login to GitHub Container Registry
+      #   uses: docker/login-action@v1
+      #   with:
+      #     registry: ghcr.io
+      #     username: ${{ github.actor }}
+      #     password: ${{ secrets.GITHUB_TOKEN }}
+      #   if: matrix.container == 'ubuntu:rolling'
+      - name: Login to GitHub Container Registry with Skopeo
+        run: echo ${{ secrets.GITHUB_TOKEN }} | skopeo login ghcr.io --username ${{ github.actor }} --password-stdin
+        # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
 
-        # - run: chmod +x pkg-builder/pkg-builder ./ostree-ext-cli/ostree-ext-cli
+      # download the pkg-builder binary from the previous job
+      # - uses: actions/download-artifact@v2
+      #   with:
+      #     name: pkg-builder
+      #     path: pkg-builder
+      # - uses: actions/download-artifact@v2
+      #   with:
+      #     name: ostree-ext-cli
+      #     path: ostree-ext-cli
 
-        - run: pkg-builder $PACKAGE.toml ../../out.tar.gz
-          working-directory: packages/${{ matrix.package }}
-          env:
-              PACKAGE: ${{ matrix.package }}
-              XORG_PREFIX: /usr
-              XORG_CONFIG: --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
-              PKG_CONFIG_PATH: /usr/lib/x86_64-linux-gnu/pkgconfig:/usr/local/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig
+      # - run: chmod +x pkg-builder/pkg-builder ./ostree-ext-cli/ostree-ext-cli
 
-        - name: List files in the package
-          run: tar -tvf out.tar.gz
+      - run: pkg-builder $PACKAGE.toml ../../out.tar.gz
+        working-directory: packages/${{ matrix.package }}
+        env:
+          PACKAGE: ${{ matrix.package }}
+          XORG_PREFIX: /usr
+          XORG_CONFIG: --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
+          PKG_CONFIG_PATH: /usr/lib/x86_64-linux-gnu/pkgconfig:/usr/local/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig
 
-        - name: Fail if there are less than 3 files in the package
-          run: test $(tar -tvf out.tar.gz | wc -l) -gt 3
-          shell: bash
+      - name: List files in the package
+        run: tar -tvf out.tar.gz
 
-        - name: Prepare OSTree repository
-          run: mkdir /tmp/build-repo && ostree --repo=/tmp/build-repo init --mode=bare-user
+      - name: Fail if there are less than 3 files in the package
+        run: test $(tar -tvf out.tar.gz | wc -l) -gt 3
+        shell: bash
 
-        - name: Import package
-          run: ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/${{ matrix.package }} --tree=tar=out.tar.gz
+      - name: Prepare OSTree repository
+        run: mkdir /tmp/build-repo && ostree --repo=/tmp/build-repo init --mode=bare-user
 
-        # - name: Export as OCI image and push to GitHub Container Registry
-        #   run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
-        #   if: matrix.container == 'ubuntu:rolling'
+      - name: Import package
+        run: ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/${{ matrix.package }} --tree=tar=out.tar.gz
 
-        - name: Export as OCI image and push to GitHub Container Registry
-          run: /usr/bin/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m)-builtonstableos:latest
-          # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+      # - name: Export as OCI image and push to GitHub Container Registry
+      #   run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
+      #   if: matrix.container == 'ubuntu:rolling'
+      - name: Export as OCI image and push to GitHub Container Registry
+        run: /usr/bin/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m)-builtonstableos:latest
+        # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
 
-    build_kernel:
-        runs-on: ubuntu-latest
-        # needs: [build_pkg_builder, build_ostree_ext_cli]
+  build_kernel:
+    runs-on: ubuntu-latest
+    # needs: [build_pkg_builder, build_ostree_ext_cli]
 
-        permissions:
-          packages: write
-          contents: read
+    permissions:
+      packages: write
+      contents: read
 
-        steps:
+    steps:
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 4112
+          swap-size-mb: 1024
+          remove-dotnet: "true"
+          remove-android: "true"
+          remove-haskell: "true"
+          remove-codeql: "true"
+          build-mount-path: "/containertmpdir"
 
-        - name: Maximize build space
-          uses: easimon/maximize-build-space@master
-          with:
-            root-reserve-mb: 4112
-            swap-size-mb: 1024
-            remove-dotnet: 'true'
-            remove-android: 'true'
-            remove-haskell: 'true'
-            remove-codeql: 'true'
-            build-mount-path: '/containertmpdir'
+      - name: Tell Docker to use the container directory
+        run: "echo \"{ \\\"data-root\\\": \\\"/containertmpdir\\\" }\" | sudo tee /etc/docker/daemon.json"
 
-        - name: Tell Docker to use the container directory
-          run: "echo \"{ \\\"data-root\\\": \\\"/containertmpdir\\\" }\" | sudo tee /etc/docker/daemon.json"
-        
-        - run: cat /etc/docker/daemon.json
-        
-        - name: Restart Docker
-          run: sudo systemctl restart docker 
+      - run: cat /etc/docker/daemon.json
 
-        - run: journalctl -xeu docker.service
+      - name: Restart Docker
+        run: sudo systemctl restart docker
 
-        - run: sudo ls /containertmpdir
+      - run: journalctl -xeu docker.service
 
-        - uses: actions/checkout@v2
+      - run: sudo ls /containertmpdir
 
-        - run: chmod +x build_kernel.sh
+      - uses: actions/checkout@v2
 
-        - run: sudo docker run --rm -e GHCRTOKEN=${{ secrets.GITHUB_TOKEN }} -e ACTOR=${{ github.actor }} -v ./build_kernel.sh:/build_kernel.sh ghcr.io/stable-os/stable-os-build:latest bash -c "chmod +x /build_kernel.sh && /build_kernel.sh"
+      - run: chmod +x build_kernel.sh
 
-        # - name: List files in the package
-        #   run: tar -tvf /containertmpdir/out.tar.gz
+      - run: sudo docker run --rm -e GHCRTOKEN=${{ secrets.GITHUB_TOKEN }} -e ACTOR=${{ github.actor }} -v ./build_kernel.sh:/build_kernel.sh ghcr.io/stable-os/stable-os-build:latest bash -c "chmod +x /build_kernel.sh && /build_kernel.sh"
+
+    # - name: List files in the package
+    #   run: tar -tvf /containertmpdir/out.tar.gz

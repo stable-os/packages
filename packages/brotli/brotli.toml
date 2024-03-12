@@ -1,0 +1,35 @@
+[package]
+name = 'broli'
+version = '1.1.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/google/brotli/archive/v1.1.0/brotli-1.1.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_BUILD_TYPE=Release  \
+      ..
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+# python bindings
+cd ..
+sed "/c\/.*\.[ch]'/d;\
+     /include_dirs=\[/\
+     i libraries=['brotlicommon','brotlidec','brotlienc']," \
+    -i setup.py
+pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+mkdir -pv $OUT/usr/lib/python3.11/site-packages
+pip3 install --no-index --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist --no-cache-dir --no-user Brotli
+'''
