@@ -88,7 +88,7 @@ jobs:
               # - which
               # - linux-api-headers
               # - pkg-builder
-              # - grub
+              - grub
               # - bash
               # - glibc
               # - coreutils
