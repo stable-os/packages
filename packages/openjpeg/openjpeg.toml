@@ -20,6 +20,6 @@ cmake -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_INSTALL_PREFIX=/usr \
       -DBUILD_STATIC_LIBS=OFF ..
 
-ninja
-DESTDIR=$OUT ninja install
+make
+make DESTDIR=$OUT install
 '''
