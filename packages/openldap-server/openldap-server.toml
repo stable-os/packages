@@ -1,0 +1,58 @@
+# ! INCOMPATIBLE WITH openldap-client !
+# This has the nessecary stuff for hosting an LDAP server.
+# openldap-client only has the ldap client tools, libraries and headers.
+
+[package]
+name = 'openldap'
+version = '2.6.7'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.7.tgz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+wget https://www.linuxfromscratch.org/patches/blfs/12.1/openldap-2.6.7-consolidated-1.patch
+patch -Np1 -i ../openldap-2.6.7-consolidated-1.patch
+autoconf
+
+./configure --prefix=/usr         \
+            --sysconfdir=/etc     \
+            --localstatedir=/var  \
+            --libexecdir=/usr/lib \
+            --disable-static      \
+            --disable-debug       \
+            --with-tls=openssl    \
+            --with-cyrus-sasl     \
+            --without-systemd     \
+            --enable-dynamic      \
+            --enable-crypt        \
+            --enable-spasswd      \
+            --enable-slapd        \
+            --enable-modules      \
+            --enable-rlookups     \
+            --enable-backends=mod \
+            --disable-sql         \
+            --disable-wt          \
+            --enable-overlays=mod
+
+make depend
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+sed -e "s/\.la/.so/" -i $OUT/etc/openldap/slapd.{conf,ldif}{,.default}
+install -v -dm700 -o ldap -g ldap $OUT/var/lib/openldap
+
+install -v -dm700 -o ldap -g ldap $OUT/etc/openldap/slapd.d
+chmod   -v    640     $OUT/etc/openldap/slapd.{conf,ldif}
+chown   -v  root:ldap $OUT/etc/openldap/slapd.{conf,ldif}
+
+install -v -dm755 $OUT/usr/share/doc/openldap-2.6.7
+cp      -vfr      doc/{drafts,rfc,guide} \
+                  $OUT/usr/share/doc/openldap-2.6.7
+'''
