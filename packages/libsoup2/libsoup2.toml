@@ -1,0 +1,28 @@
+[package]
+name = 'libsoup2'
+version = '2.74.3'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/libsoup/2.74/libsoup-2.74.3.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -Dvapi=enabled      \
+            -Dgssapi=disabled   \
+            -Dsysprof=disabled  \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
