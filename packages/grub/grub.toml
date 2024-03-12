@@ -23,6 +23,6 @@ set -eux # o pipefail
 make -j$(nproc)
 make DESTDIR=$OUT install
 
-mkdir -p $OUT/usr/share/bash-completion/
+mkdir -p $OUT/usr/share/bash-completion/completions
 mv -v $OUT/etc/bash_completion.d/grub $OUT/usr/share/bash-completion/completions
 '''
