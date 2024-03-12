@@ -5,7 +5,7 @@ description = ''
 license = ''
 
 [[source]]
-source = 'https://download.savannah.gnu.org/releases/attr/attr-2.5.1.tar.gz'
+source = 'https://kerberos.org/dist/krb5/1.21/krb5-1.21.2.tar.gz'
 
 [build]
 script = '''
