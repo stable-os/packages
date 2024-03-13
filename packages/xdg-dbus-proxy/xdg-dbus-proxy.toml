@@ -1,0 +1,23 @@
+[package]
+name = 'xdg-dbus-proxy'
+version = '0.1.5'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/flatpak/xdg-dbus-proxy/releases/download/0.1.5/xdg-dbus-proxy-0.1.5.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr --buildtype=release ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
