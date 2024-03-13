@@ -5,7 +5,7 @@ description = ''
 license = ''
 
 [[source]]
-source = 'https://download.savannah.gnu.org/releases/attr/attr-2.5.1.tar.gz'
+source = 'https://archive.mozilla.org/pub/security/nss/releases/NSS_3_98_RTM/src/nss-3.98.tar.gz'
 
 [build]
 script = '''
@@ -15,8 +15,8 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 ls -l
 
-#wget https://www.linuxfromscratch.org/patches/blfs/12.1/nss-3.98-standalone-1.patch
-#patch -Np1 -i ./nss-3.98-standalone-1.patch
+wget https://www.linuxfromscratch.org/patches/blfs/12.1/nss-3.98-standalone-1.patch
+patch -Np1 -i ./nss-3.98-standalone-1.patch
 
 cd nss
 
