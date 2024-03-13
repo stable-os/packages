@@ -1,0 +1,28 @@
+[package]
+name = 'libaom'
+version = '3.8.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://storage.googleapis.com/aom-releases/libaom-3.8.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_BUILD_TYPE=Release  \
+      -DBUILD_SHARED_LIBS=1       \
+      -DENABLE_DOCS=no            \
+      -G Ninja ..
+
+ninja
+DESTDIR=$OUT ninja install
+rm -v $OUT/usr/lib/libaom.a
+'''

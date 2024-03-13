@@ -1,0 +1,27 @@
+[package]
+name = 'libavif'
+version = '1.0.4'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/AOMediaCodec/libavif/archive/v1.0.4/libavif-1.0.4.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_BUILD_TYPE=Release  \
+      -DAVIF_CODEC_AOM=ON         \
+      -DAVIF_BUILD_GDK_PIXBUF=ON  \
+      -G Ninja ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
