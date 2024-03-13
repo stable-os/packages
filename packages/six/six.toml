@@ -18,5 +18,5 @@ ls -l
 mkdir -pv $OUT/usr/lib/python3.11/site-packages
 
 pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-pip3 install --no-index  --no-cache-dir --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist six
+pip3 install --no-index --no-cache-dir --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist six
 '''

@@ -343,7 +343,7 @@ jobs:
           # - ruby
           # - sdl12-compat
           # - sdl2
-          # - six
+          - six
           - spidermonkey
           # - sqlite
           # - totem-pl-parser
