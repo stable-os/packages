@@ -16,16 +16,17 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 mkdir build
 cd    build
 
-cmake -DCMAKE_INSTALL_PREFIX=/usr    \
-      -DSYSCONF_INSTALL_DIR=/etc     \
-      -DENABLE_VALA_BINDINGS=ON      \
-      -DENABLE_INSTALLED_TESTS=ON    \
-      -DWITH_OPENLDAP=OFF            \
-      -DWITH_KRB5=OFF                \
-      -DENABLE_INTROSPECTION=ON      \
-      -DENABLE_GTK_DOC=OFF           \
-      -DWITH_LIBDB=OFF               \
+cmake -DCMAKE_INSTALL_PREFIX=/usr            \
+      -DSYSCONF_INSTALL_DIR=/etc             \
+      -DENABLE_VALA_BINDINGS=ON              \
+      -DENABLE_INSTALLED_TESTS=ON            \
+      -DWITH_OPENLDAP=OFF                    \
+      -DWITH_KRB5=OFF                        \
+      -DENABLE_INTROSPECTION=ON              \
+      -DENABLE_GTK_DOC=OFF                   \
+      -DWITH_LIBDB=OFF                       \
       -DWITH_NSPR_INCLUDES=/usr/include/nspr \
+      -DWITH_NSS_INCLUDES=/usr/include/nss   \
       -Wno-dev -G Ninja ..
 
 ninja
