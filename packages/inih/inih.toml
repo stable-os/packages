@@ -1,0 +1,23 @@
+[package]
+name = 'inih'
+version = '58'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/benhoyt/inih/archive/r58/inih-r58.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr --buildtype=release ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
