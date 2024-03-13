@@ -1,0 +1,20 @@
+[package]
+name = 'libgrss'
+version = '0.7.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/libgrss/0.7/libgrss-0.7.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr --disable-static
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
