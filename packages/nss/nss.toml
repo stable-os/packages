@@ -30,6 +30,8 @@ make BUILD_OPT=1                      \
 
 cd ../dist
 
+mkdir -pv $OUT/usr/{lib,include/nss,bin,lib/pkgconfig}
+
 install -v -m755 Linux*/lib/*.so              $OUT/usr/lib
 install -v -m644 Linux*/lib/{*.chk,libcrmf.a} $OUT/usr/lib
 
