@@ -19,7 +19,6 @@ cd build
 meson setup                                           \
       --prefix=/usr                                   \
       --buildtype=release                             \
-      -Dkerberos=true                                 \
       ..
 
 # TODO: Add Google client id and secret
