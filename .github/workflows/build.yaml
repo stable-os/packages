@@ -284,8 +284,8 @@ jobs:
           - evolution-data-server
           # - exempi
           - exiv2
-          - gcr3
-          - gcr4
+          # - gcr3
+          # - gcr4
           # - geocode-glib
           - gexiv2
           - gjs
@@ -295,11 +295,11 @@ jobs:
           # - gnome-backgrounds
           # - gnome-desktop
           # - gnome-menus
-          - gnome-online-accounts
+          # - gnome-online-accounts
           # - gnome-video-effects
           # - gnutls
           # - graphene
-          - grilo
+          # - grilo
           # - gsound
           # - gst-plugins-bad
           # - gst-plugins-base
@@ -308,7 +308,7 @@ jobs:
           # - iso-codes
           # - itstool
           # - json-glib
-          - krb5
+          # - krb5
           # - libadwaita
           - libedit
           # - libgcrypt
@@ -316,14 +316,14 @@ jobs:
           # - libgee
           # - libgtop
           # - libgudev
-          - libgweather
+          # - libgweather
           # - libical
           # - libidn2
-          - libpeas
+          # - libpeas
           # - libpsl
           # - libseccomp
           # - libsecret
-          - libshumate
+          # - libshumate
           # - libsoup3
           # - libtiff
           # - libunistring
@@ -334,44 +334,44 @@ jobs:
           # - little-cms2
           # - nettle
           # - nspr
-          - nss
-          - openjpeg
+          # - nss
+          # - openjpeg
           # - pipewire
-          - pycairo
-          - pygobject
+          # - pycairo
+          # - pygobject
           # - rest
           # - ruby
-          - sdl12-compat
+          # - sdl12-compat
           # - sdl2
           # - six
           - spidermonkey
           # - sqlite
           # - totem-pl-parser
-          - tracker
+          # - tracker
           - tracker-miners
           # - unifdef
           # - vala
           # - vte
           - webkitgtk
           # - wpebackend-fdo
-          - xdg-desktop-portal
-          - xdg-desktop-portal-gnome
-          - xdg-desktop-portal-gtk
+          # - xdg-desktop-portal
+          # - xdg-desktop-portal-gnome
+          # - xdg-desktop-portal-gtk
           # - yelp-xsl
-          - brotli
-          - gnupg
-          - libksba
-          - npth
-          - openldap-client
+          # - brotli
+          # - gnupg
+          # - libksba
+          # - npth
+          # - openldap-client
           - openldap-server
-          - libsoup2
-          - enchant2
-          - bubblewrap
-          - openssh
-          - libgrss
-          - libaom
-          - libavif
-          - yasm
+          # - libsoup2
+          # - enchant2
+          # - bubblewrap
+          # - openssh
+          # - libgrss
+          # - libaom
+          # - libavif
+          # - yasm
           - libusb
           - upower
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
