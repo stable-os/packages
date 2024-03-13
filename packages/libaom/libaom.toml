@@ -13,8 +13,8 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
-mkdir build
-cd build
+mkdir aom-build
+cd aom-build
 
 cmake -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_BUILD_TYPE=Release  \
