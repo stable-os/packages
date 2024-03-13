@@ -23,6 +23,9 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr \
 make -j$(nproc)
 make DESTDIR=$OUT install
 
+# install to the current container for the python bindings
+make install
+
 # python bindings
 cd ..
 sed "/c\/.*\.[ch]'/d;\
