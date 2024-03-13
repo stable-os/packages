@@ -20,7 +20,7 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_BUILD_TYPE=RELEASE  \
       ..
 
-ninja
-DESTDIR=$OUT ninja install
+make
+make DESTDIR=$OUT install
 rm -vf $OUT/usr/lib/libSDLmain.a
 '''
