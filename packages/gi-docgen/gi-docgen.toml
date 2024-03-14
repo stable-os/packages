@@ -1,0 +1,22 @@
+[package]
+name = 'gi-docgen'
+version = '2023.3'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://files.pythonhosted.org/packages/source/g/gi-docgen/gi-docgen-2023.3.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+ls -l
+
+mkdir -pv $OUT/usr/lib/python3.11/site-packages
+
+pip3 wheel -w dist --no-build-isolation --no-deps $PWD
+pip3 install --no-index --target=$OUT/usr/lib/python3.11/site-packages --find-links=dist gi-docgen
+'''
