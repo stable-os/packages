@@ -283,11 +283,11 @@ jobs:
           # - boost
           - evolution-data-server
           # - exempi
-          - exiv2
+          # - exiv2
           # - gcr3
           # - gcr4
           # - geocode-glib
-          - gexiv2
+          # - gexiv2
           - gjs
           # - glib-networking
           # - glu
@@ -295,7 +295,7 @@ jobs:
           # - gnome-backgrounds
           # - gnome-desktop
           # - gnome-menus
-          # - gnome-online-accounts
+          - gnome-online-accounts
           # - gnome-video-effects
           # - gnutls
           # - graphene
@@ -343,8 +343,8 @@ jobs:
           # - ruby
           # - sdl12-compat
           # - sdl2
-          - six
-          - spidermonkey
+          # - six
+          # - spidermonkey
           # - sqlite
           # - totem-pl-parser
           # - tracker
@@ -352,7 +352,7 @@ jobs:
           # - unifdef
           # - vala
           # - vte
-          - webkitgtk
+          # - webkitgtk
           # - wpebackend-fdo
           # - xdg-desktop-portal
           # - xdg-desktop-portal-gnome
@@ -375,11 +375,11 @@ jobs:
           # - libusb
           # - upower
           # - xdg-dbus-proxy
-          - inih
-          - markdown
-          - pygments
-          - typogrify
-          - smartypants
+          # - inih
+          # - markdown
+          # - pygments
+          # - typogrify
+          # - smartypants
           - gi-docgen
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
