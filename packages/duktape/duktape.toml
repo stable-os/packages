@@ -1,0 +1,19 @@
+[package]
+name = 'duktape'
+version = '2.7.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://duktape.org/duktape-2.7.0.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+sed -i 's/-Os/-O2/' Makefile.sharedlibrary
+make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr
+make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr DESTDIR=$OUT install
+'''

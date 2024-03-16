@@ -16,6 +16,8 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 sed -e 's@/desktop/ibus@/org/freedesktop/ibus@g' \
     -i data/dconf/org.freedesktop.ibus.gschema.xml
 
+SAVE_DIST_FILES=1 NOCONFIGURE=1 ./autogen.sh
+
 PYTHON=python3                     \
 ./configure --prefix=/usr          \
             --sysconfdir=/etc      \
