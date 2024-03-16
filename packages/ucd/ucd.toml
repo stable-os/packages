@@ -12,5 +12,5 @@ script = '''
 set -eux # o pipefail
 
 mkdir -p $OUT/usr/share/unicode/ucd
-mv $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1) $OUT/usr/share/unicode/ucd
+mv $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)/* $OUT/usr/share/unicode/ucd
 '''

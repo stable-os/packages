@@ -410,7 +410,7 @@ jobs:
           # - dconf-editor
           # - libgusb
           # - libqmi
-          # - ucd
+          - ucd
           - libevdev
           - libinput
           - mtdev
