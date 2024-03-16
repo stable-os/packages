@@ -30,5 +30,5 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr            \
       -Wno-dev -G Ninja ..
 
 ninja
-ninja DESTDIR=$OUT install
+DESTDIR=$OUT ninja install
 '''
