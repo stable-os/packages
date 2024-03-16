@@ -14,5 +14,5 @@ set -eux # o pipefail
 ls -lha
 
 mkdir -pv $OUT/usr/share/unicode
-mv UCD $OUT/usr/share/unicode/ucd
+mv ./* $OUT/usr/share/unicode/ucd
 '''
