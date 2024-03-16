@@ -1,0 +1,26 @@
+[package]
+name = 'cups'
+version = '2.5.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/OpenPrinting/cups/releases/download/v2.4.7/cups-2.4.7-source.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --libdir=/usr/lib            \
+            --with-rundir=/run/cups      \
+            --with-system-groups=lpadmin \
+            --with-docdir=/usr/share/cups/doc-2.4.7
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+
+mkdir -pv $OUT/etc/cups
+echo "ServerName /run/cups/cups.sock" > $OUT/etc/cups/client.conf
+'''

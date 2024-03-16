@@ -1,0 +1,26 @@
+[package]
+name = 'xwayland'
+version = '23.2.4'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.x.org/pub/individual/xserver/xwayland-23.2.4.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=$XORG_PREFIX         \
+            --buildtype=release           \
+            -Dxkb_output_dir=/var/lib/xkb \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
