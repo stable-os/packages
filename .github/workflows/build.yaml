@@ -257,7 +257,7 @@ jobs:
           # - util-macros
           # - xorgproto
           # - libxau
-          - libxdmcp
+          # - libxdmcp
           # - xcb-proto
           # - libxcb
           # - libxcvt
@@ -295,7 +295,7 @@ jobs:
           # - gnome-backgrounds
           # - gnome-desktop
           # - gnome-menus
-          - gnome-online-accounts
+          # - gnome-online-accounts
           # - gnome-video-effects
           # - gnutls
           # - graphene
@@ -382,33 +382,34 @@ jobs:
           # - smartypants
           - gi-docgen
           - accountsservice
-          - alsa-lib
-          - attrs
+          # - alsa-lib
+          # - attrs
           - colord
-          - dconf
+          # - dconf
           - flatpak
           - gdm
           - geoclue
-          - gnome-session
+          # - gnome-session
           - gnome-settings-daemon
           - gnome-shell
           - ibus
-          - keyutils
-          - libei
-          - libhandy
-          - libnotify
-          - libsndfile
+          # - keyutils
+          # - libei
+          # - libhandy
+          # - libnotify
+          # - libsndfile
           - modemmanager
           - mutter
-          - notification-daemon
-          - polkit
+          # - notification-daemon
+          # - polkit
           - pulseaudio
-          - sassc
-          - startup-notification
-          - duktape
-          - libmbim
+          # - sassc
+          # - startup-notification
+          # - duktape
+          # - libmbim
           - dconf-editor
-          - libgusb
+          # - libgusb
+          - libqmi
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
     steps:

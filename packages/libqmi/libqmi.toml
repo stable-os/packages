@@ -1,0 +1,20 @@
+[package]
+name = 'libqmi'
+version = '1.30.8'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.freedesktop.org/software/libqmi/libqmi-1.30.8.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+PYTHON=python3 ./configure --prefix=/usr --disable-static
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

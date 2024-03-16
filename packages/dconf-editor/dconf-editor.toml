@@ -13,6 +13,9 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
+echo "echo fake update-desktop-database ran" > /usr/bin/update-desktop-database
+chmod +x /usr/bin/update-desktop-database
+
 mkdir build &&
 cd    build &&
 
