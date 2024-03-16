@@ -1,0 +1,23 @@
+[package]
+name = 'libei'
+version = '1.2.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://gitlab.freedesktop.org/libinput/libei/-/archive/1.2.1/libei-1.2.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr --buildtype=release -Dtests=disabled ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

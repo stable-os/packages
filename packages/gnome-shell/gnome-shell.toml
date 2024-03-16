@@ -1,0 +1,26 @@
+[package]
+name = 'gnome-shell'
+version = '45.4'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/gnome-shell/45/gnome-shell-45.4.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -Dtests=false       \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

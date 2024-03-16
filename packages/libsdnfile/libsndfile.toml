@@ -1,0 +1,21 @@
+[package]
+name = 'libsndfile'
+version = '1.2.2'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr    \
+            --docdir=/usr/share/doc/libsndfile-1.2.2
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

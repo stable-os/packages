@@ -1,0 +1,26 @@
+[package]
+name = 'modemmanager'
+version = '1.18.12'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.freedesktop.org/software/ModemManager/ModemManager-1.18.12.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr                 \
+            --sysconfdir=/etc             \
+            --localstatedir=/var          \
+            --disable-static              \
+            --disable-maintainer-mode     \
+            --with-systemd-journal        \
+            --with-systemd-suspend-resume
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

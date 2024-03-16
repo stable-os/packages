@@ -1,0 +1,18 @@
+[package]
+name = 'keyutils'
+version = '1.6.3'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/snapshot/keyutils-1.6.3.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+make
+make NO_ARLIB=1 LIBDIR=/usr/lib BINDIR=/usr/bin SBINDIR=/usr/sbin DESTDIR=$OUT install
+'''

@@ -88,7 +88,7 @@ jobs:
           # - which
           # - linux-api-headers
           # - pkg-builder
-          - grub
+          # - grub
           # - bash
           # - glibc
           # - coreutils
@@ -232,7 +232,7 @@ jobs:
           # - gtk3
           # - libogg
           # - libvorbis
-          - libcanberra
+          # - libcanberra
           # - cairo
           # - libpng
           # - pixman
@@ -281,14 +281,14 @@ jobs:
           # - llvm
           # - appstream
           # - boost
-          - evolution-data-server
+          # - evolution-data-server
           # - exempi
           # - exiv2
           # - gcr3
           # - gcr4
           # - geocode-glib
           # - gexiv2
-          - gjs
+          # - gjs
           # - glib-networking
           # - glu
           # - gnome-autoar
@@ -312,7 +312,7 @@ jobs:
           # - libadwaita
           - libedit
           # - libgcrypt
-          - libgdata
+          # - libgdata
           # - libgee
           # - libgtop
           # - libgudev
@@ -328,7 +328,7 @@ jobs:
           # - libtiff
           # - libunistring
           # - libwebp
-          - libwnck
+          # - libwnck
           # - libwpe
           # - libxmlb
           # - little-cms2
@@ -381,6 +381,30 @@ jobs:
           # - typogrify
           # - smartypants
           - gi-docgen
+          - accountsservice
+          - alsa-lib
+          - attrs
+          - colord
+          - dconf
+          - flatpak
+          - gdm
+          - geoclue
+          - gnome-session
+          - gnome-settings-daemon
+          - gnome-shell
+          - ibus
+          - keyutils
+          - libei
+          - libhandy
+          - libnotify
+          - libsdnfile
+          - modemmanager
+          - mutter
+          - notification-daemon
+          - polkit
+          - pulseaudio
+          - sassc
+          - startup-notification
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
     steps:

@@ -1,0 +1,30 @@
+[package]
+name = 'ibus'
+version = '1.5.29'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/ibus/ibus/archive/refs/tags/1.5.29/ibus-1.5.29.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+sed -e 's@/desktop/ibus@/org/freedesktop/ibus@g' \
+    -i data/dconf/org.freedesktop.ibus.gschema.xml
+
+PYTHON=python3                     \
+./configure --prefix=/usr          \
+            --sysconfdir=/etc      \
+            --disable-python2      \
+            --disable-appindicator \
+            --disable-gtk2         \
+            --disable-emoji-dict   \
+            --enable-wayland
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
