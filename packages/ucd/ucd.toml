@@ -11,6 +11,8 @@ source = 'https://www.unicode.org/Public/zipped/15.1.0/UCD.zip'
 script = '''
 set -eux # o pipefail
 
+ls -lha
+
 mkdir -pv $OUT/usr/share/unicode
 mv UCD $OUT/usr/share/unicode/ucd
 '''
