@@ -13,7 +13,7 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
-./configure --prefix=/usr     \
+LIBS="-lncursesw" ./configure --prefix=/usr     \
             --disable-static  \
             --sysconfdir=/etc \
             LIBS="-lncursesw"

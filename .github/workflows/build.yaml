@@ -232,7 +232,7 @@ jobs:
           # - gtk3
           # - libogg
           # - libvorbis
-          # - libcanberra
+          - libcanberra
           # - cairo
           # - libpng
           # - pixman
