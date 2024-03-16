@@ -1,0 +1,29 @@
+[package]
+name = 'libinput'
+version = '1.25.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.25.0/libinput-1.25.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup --prefix=$XORG_PREFIX    \
+            --buildtype=release      \
+            -Ddebug-gui=false        \
+            -Dtests=false            \
+            -Dlibwacom=false         \
+            -Dudev-dir=/usr/lib/udev \
+            ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

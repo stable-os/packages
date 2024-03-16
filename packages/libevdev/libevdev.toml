@@ -1,0 +1,26 @@
+[package]
+name = 'libevdev'
+version = '1.13.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.freedesktop.org/software/libevdev/libevdev-1.13.1.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup ..                 \
+      --prefix=$XORG_PREFIX    \
+      --buildtype=release      \
+      -Ddocumentation=disabled
+
+ninja
+DESTDIR=$OUT ninja install
+'''

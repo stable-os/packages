@@ -384,11 +384,11 @@ jobs:
           - accountsservice
           # - alsa-lib
           # - attrs
-          - colord
+          # - colord
           # - dconf
           - flatpak
           - gdm
-          - geoclue
+          # - geoclue
           # - gnome-session
           - gnome-settings-daemon
           - gnome-shell
@@ -398,19 +398,22 @@ jobs:
           # - libhandy
           # - libnotify
           # - libsndfile
-          - modemmanager
+          # - modemmanager
           - mutter
           # - notification-daemon
           # - polkit
-          - pulseaudio
+          # - pulseaudio
           # - sassc
           # - startup-notification
           # - duktape
           # - libmbim
-          - dconf-editor
+          # - dconf-editor
           # - libgusb
-          - libqmi
-          - ucd
+          # - libqmi
+          # - ucd
+          - libevdev
+          - libinput
+          - mtdev
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
     steps:
