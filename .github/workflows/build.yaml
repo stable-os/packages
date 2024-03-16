@@ -257,7 +257,7 @@ jobs:
           # - util-macros
           # - xorgproto
           # - libxau
-          - libxdcmp
+          - libxdmcp
           # - xcb-proto
           # - libxcb
           # - libxcvt
