@@ -13,6 +13,6 @@ set -eux # o pipefail
 
 ls -lha
 
-mkdir -pv $OUT/usr/share/unicode
+mkdir -pv $OUT/usr/share/unicode/ucd
 mv ./* $OUT/usr/share/unicode/ucd
 '''
