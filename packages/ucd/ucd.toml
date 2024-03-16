@@ -11,6 +11,6 @@ source = 'https://www.unicode.org/Public/zipped/15.1.0/UCD.zip'
 script = '''
 set -eux # o pipefail
 
-mkdir -p $OUT/usr/share/unicode/ucd
-mv $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)/* $OUT/usr/share/unicode/ucd
+mkdir -pv $OUT/usr/share/unicode
+mv UCD $OUT/usr/share/unicode/ucd
 '''
