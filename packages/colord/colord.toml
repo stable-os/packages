@@ -7,6 +7,18 @@ license = ''
 [[source]]
 source = 'https://www.freedesktop.org/software/colord/releases/colord-1.4.7.tar.xz'
 
+[[user]]
+id = 71
+gid = 71
+name = 'Color Daemon'
+login = 'colord'
+home = '/var/lib/colord'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 71
+name = 'colord'
+
 [build]
 script = '''
 set -eux # o pipefail

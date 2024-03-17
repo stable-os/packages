@@ -7,6 +7,18 @@ license = ''
 [[source]]
 source = 'https://github.com/NetworkConfiguration/dhcpcd/releases/download/v10.0.6/dhcpcd-10.0.6.tar.xz'
 
+[[user]]
+id = 52
+gid = 52
+name = 'dhcpcd Daemon'
+login = 'dhcpcd'
+home = '/var/lib/dhcpcd'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 52
+name = 'dhcpcd'
+
 [build]
 script = '''
 set -eux # o pipefail
@@ -22,4 +34,8 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 make -j$(nproc)
 make DESTDIR=$OUT install
+
+# dhcpcd home dir
+install  -v -m700 -d $OUT/var/lib/dhcpcd
+chown    -v 52:52 /var/lib/dhcpcd
 '''

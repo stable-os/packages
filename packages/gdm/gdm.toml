@@ -7,6 +7,18 @@ license = ''
 [[source]]
 source = 'https://download.gnome.org/sources/gdm/45/gdm-45.0.1.tar.xz'
 
+[[user]]
+id = 21
+gid = 21
+name = 'GDM Daemon'
+login = 'gdm'
+home = '/var/lib/gdm'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 21
+name = 'gdm'
+
 [build]
 script = '''
 set -eux # o pipefail

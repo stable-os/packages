@@ -7,6 +7,22 @@ license = ''
 [[source]]
 source = 'https://github.com/OpenPrinting/cups/releases/download/v2.4.7/cups-2.4.7-source.tar.gz'
 
+[[user]]
+id = 9
+gid = 9
+name = 'Print Service Daemon'
+login = 'lp'
+home = '/var/lib/gdm'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 9
+name = 'lp'
+
+[[group]]
+id = 19
+name = 'lpadmin'
+
 [build]
 script = '''
 set -eux # o pipefail

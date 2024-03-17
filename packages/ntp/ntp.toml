@@ -7,6 +7,18 @@ license = ''
 [[source]]
 source = 'https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.8p17.tar.gz'
 
+[[user]]
+id = 87
+gid = 87
+name = 'Network Time Protocol Daemon'
+login = 'ntp'
+home = '/var/lib/ntp'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 87
+name = 'ntp'
+
 [build]
 script = '''
 set -eux # o pipefail
@@ -22,4 +34,7 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 make -j$(nproc)
 make DESTDIR=$OUT install
+
+# ntp daemon home dir
+install -v -o 87 -g 87 -d $OUT/var/lib/ntp
 '''

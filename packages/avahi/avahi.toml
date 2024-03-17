@@ -7,6 +7,22 @@ license = ''
 [[source]]
 source = 'https://github.com/lathiat/avahi/releases/download/v0.8/avahi-0.8.tar.gz'
 
+[[user]]
+id = 84
+gid = 84
+name = 'Avahi Daemon'
+login = 'avahi'
+home = '/run/avahi-daemon'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 84
+name = 'avahi'
+
+[[group]]
+id = 86
+name = 'netdev'
+
 [build]
 script = '''
 set -eux # o pipefail

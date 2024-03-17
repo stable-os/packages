@@ -7,6 +7,18 @@ license = ''
 [[source]]
 source = 'https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.6p1.tar.gz'
 
+[[user]]
+id = 50
+gid = 50
+name = 'sshd daemon'
+login = 'sshd'
+home = '/var/lib/sshd'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 50
+name = 'sshd'
+
 [build]
 script = '''
 set -eux # o pipefail
@@ -22,4 +34,7 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 make -j$(nproc)
 make DESTDIR=$OUT install
+
+# sshd home dir
+install -v -g sys -m700 -d $OUT/var/lib/sshd
 '''

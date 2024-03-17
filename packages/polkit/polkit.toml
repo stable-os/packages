@@ -7,6 +7,18 @@ license = ''
 [[source]]
 source = 'https://gitlab.freedesktop.org/polkit/polkit/-/archive/124/polkit-124.tar.gz'
 
+[[user]]
+id = 27
+gid = 27
+name = 'PolicyKit Daemon'
+login = 'polkitd'
+home = '/etc/polkit-1'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 27
+name = 'polkitd'
+
 [build]
 script = '''
 set -eux # o pipefail
