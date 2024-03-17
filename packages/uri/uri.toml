@@ -1,0 +1,19 @@
+[package]
+name = 'uri'
+version = '5.27'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.cpan.org/authors/id/O/OA/OALDERS/URI-5.27.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+perl Makefile.PL
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

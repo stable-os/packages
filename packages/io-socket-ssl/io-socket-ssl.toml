@@ -1,0 +1,19 @@
+[package]
+name = 'io-socket-ssl'
+version = '2.085'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.085.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+yes | perl Makefile.PL
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

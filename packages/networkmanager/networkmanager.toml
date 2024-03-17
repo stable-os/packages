@@ -1,0 +1,62 @@
+[package]
+name = 'networkmanager'
+version = '1.44.2'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://download.gnome.org/sources/NetworkManager/1.44/NetworkManager-1.44.2.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+CXXFLAGS+="-O2 -fPIC"            \
+meson setup ..                   \
+      --prefix=/usr              \
+      --buildtype=release        \
+      -Dnmtui=true               \
+      -Dovs=false                \
+      -Dppp=false                \
+      -Dqt=false                 \
+      -Dsession_tracking=systemd
+
+ninja
+DESTDIR=$OUT ninja install
+
+mkdir -pv $OUT/etc/NetworkManager/conf.d
+
+cat >> $OUT/etc/NetworkManager/NetworkManager.conf << "EOF"
+[main]
+plugins=keyfile
+EOF
+
+cat > $OUT/etc/NetworkManager/conf.d/polkit.conf << "EOF"
+[main]
+auth-polkit=true
+EOF
+
+cat > $OUT/etc/NetworkManager/conf.d/dhcp.conf << "EOF"
+[main]
+dhcp=dhcpcd
+EOF
+
+cat > $OUT/etc/NetworkManager/conf.d/no-dns-update.conf << "EOF"
+[main]
+dns=none
+EOF
+
+mkdir $OUT/usr/share/polkit-1/rules.d
+cat > $OUT/usr/share/polkit-1/rules.d/org.freedesktop.NetworkManager.rules << "EOF"
+polkit.addRule(function(action, subject) {
+    if (action.id.indexOf("org.freedesktop.NetworkManager.") == 0 && subject.isInGroup("netdev")) {
+        return polkit.Result.YES;
+    }
+});
+EOF
+'''

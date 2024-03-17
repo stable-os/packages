@@ -1,0 +1,19 @@
+[package]
+name = 'net-ssleay'
+version = '1.92'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://cpan.metacpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.92.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+yes '' | perl Makefile.PL
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
