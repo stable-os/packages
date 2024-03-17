@@ -387,19 +387,19 @@ jobs:
           # - colord
           # - dconf
           # - flatpak
-          - gdm
+          # - gdm
           # - geoclue
           # - gnome-session
           - gnome-settings-daemon
           - gnome-shell
-          - ibus
+          # - ibus
           # - keyutils
           # - libei
           # - libhandy
           # - libnotify
           # - libsndfile
           # - modemmanager
-          - mutter
+          # - mutter
           # - notification-daemon
           # - polkit
           # - pulseaudio
@@ -410,28 +410,29 @@ jobs:
           # - dconf-editor
           # - libgusb
           # - libqmi
-          - ucd
+          # - ucd
           # - libevdev
           # - libinput
           # - mtdev
           # - pyparsing
           # - libwacom
-          - cups
-          - xwayland
-          - libtirpc
-          - dhcpcd
+          # - cups
+          # - xwayland
+          # - libtirpc
+          # - dhcpcd
           - gpm
-          - io-socket-ssl
-          - iptables
-          - libndp
-          - net-ssleay
+          # - io-socket-ssl
+          # - iptables
+          # - libndp
+          # - net-ssleay
           - networkmanager
           - newt
-          - ntp
-          - popt
-          - slang
-          - uri
+          # - ntp
+          # - popt
+          # - slang
+          # - uri
           - wpa_supplicant
+          - libnl
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
     steps:
