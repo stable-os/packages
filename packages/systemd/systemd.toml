@@ -8,6 +8,118 @@ license = 'GPL-2.0'
 source = 'https://github.com/systemd/systemd-stable.git'
 git_ref = 'v254-stable'
 
+[[group]]
+id = 23
+name = 'systemd-journal'
+
+[[user]]
+id = 73
+gid = 73
+name = 'systemd Journal Gateway'
+login = 'systemd-journal-gateway'
+home = '/'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 73
+name = 'systemd-journal-gateway'
+
+[[user]]
+id = 74
+gid = 74
+name = 'systemd Journal Remote'
+login = 'systemd-journal-remote'
+home = '/'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 74
+name = 'systemd-journal-remote'
+
+[[user]]
+id = 75
+gid = 75
+name = 'systemd Journal Upload'
+login = 'systemd-journal-upload'
+home = '/'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 75
+name = 'systemd-journal-upload'
+
+[[user]]
+id = 76
+gid = 76
+name = 'systemd Network Management'
+login = 'systemd-network'
+home = '/'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 76
+name = 'systemd-network'
+
+[[user]]
+id = 77
+gid = 77
+name = 'systemd Resolver'
+login = 'systemd-resolve'
+home = '/'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 77
+name = 'systemd-resolve'
+
+[[user]]
+id = 78
+gid = 78
+name = 'systemd Time Synchronization'
+login = 'systemd-timesync'
+home = '/'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 78
+name = 'systemd-timesync'
+
+[[user]]
+id = 79
+gid = 79
+name = 'systemd Core Dumper'
+login = 'systemd-coredump'
+home = '/'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 79
+name = 'systemd-coredump'
+
+[[user]]
+id = 80
+gid = 80
+name = 'UUID Generation Daemon'
+login = 'uuidd'
+home = '/dev/null'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 80
+name = 'uuidd'
+
+[[user]]
+id = 81
+gid = 81
+name = 'systemd Out Of Memory Daemon'
+login = 'systemd-oom'
+home = '/'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 81
+login = 'systemd-oom'
+
 [build]
 script = '''
 set -eux # o pipefail

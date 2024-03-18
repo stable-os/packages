@@ -7,6 +7,18 @@ license = ''
 [[source]]
 source = 'https://dbus.freedesktop.org/releases/dbus/dbus-1.14.8.tar.xz'
 
+[[user]]
+id = 18
+gid = 18
+name = 'D-Bus Message Daemon'
+login = 'messagebus'
+home = '/run/dbus'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 18
+name = 'messagebus'
+
 [build]
 script = '''
 set -eux # o pipefail

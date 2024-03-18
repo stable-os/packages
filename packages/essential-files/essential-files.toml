@@ -8,6 +8,126 @@ license = 'GPL-3.0-or-later'
 source = 'https://github.com/stable-os/packages.git'
 git_ref = 'main'
 
+[[user]]
+id = 0
+gid = 0
+name = 'Administrator (root)'
+login = 'root'
+home = '/root'
+shell = '/usr/bin/bash'
+
+[[user]]
+id = 1
+gid = 1
+name = 'bin'
+login = 'bin'
+home = '/dev/null'
+shell = '/usr/bin/false'
+
+[[user]]
+id = 6
+gid = 6
+name = 'Daemon User'
+login = 'daemon'
+home = '/dev/null'
+shell = '/usr/bin/false'
+
+[[user]]
+id = 65543
+gid = 65543
+name = 'Unprivileged User'
+login = 'nobody'
+home = '/dev/null'
+shell = '/usr/bin/false'
+
+[[group]]
+id = 0
+name = "root"
+
+[[group]]
+id = 1
+name = "bin"
+
+[[group]]
+id = 2
+name = "sys"
+
+[[group]]
+id = 3
+name = "kmem"
+
+[[group]]
+id = 4
+name = "tape"
+
+[[group]]
+id = 5
+name = "tty"
+
+[[group]]
+id = 6
+name = "daemon"
+
+[[group]]
+id = 7
+name = "floppy"
+
+[[group]]
+id = 8
+name = "disk"
+
+[[group]]
+id = 9
+name = "lp"
+
+[[group]]
+id = 10
+name = "dialout"
+
+[[group]]
+id = 11
+name = "audio"
+
+[[group]]
+id = 12
+name = "video"
+
+[[group]]
+id = 13
+name = "utmp"
+
+[[group]]
+id = 15
+name = "cdrom"
+
+[[group]]
+id = 16
+name = "adm"
+
+[[group]]
+id = 24
+name = "input"
+
+[[group]]
+id = 34
+name = "mail"
+
+[[group]]
+id = 61
+name = "kvm"
+
+[[group]]
+id = 97
+name = "wheel"
+
+[[group]]
+id = 999
+name = "users"
+
+[[group]]
+id = 65534
+name = "nogroup"
+
 [build]
 script = '''
 set -eux # o pipefail
