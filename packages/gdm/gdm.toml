@@ -10,7 +10,7 @@ source = 'https://download.gnome.org/sources/gdm/45/gdm-45.0.1.tar.xz'
 [[user]]
 id = 21
 gid = 21
-name = 'GDM Daemon'
+name = 'GNOME Display Manager Daemon'
 login = 'gdm'
 home = '/var/lib/gdm'
 shell = '/usr/bin/false'
