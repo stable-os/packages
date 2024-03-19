@@ -88,6 +88,7 @@ auth            required        pam_unix.so
 account         required        pam_access.so
 password        required        pam_unix.so
 session         required        pam_unix.so
+session         optional        pam_systemd.so
 EOF
 
 
