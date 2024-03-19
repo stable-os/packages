@@ -157,7 +157,7 @@ jobs:
           # - procps
           # - psmisc
           # - python3
-          # - shadow
+          - shadow
           # - sysklogd
           # - tcl
           # - texinfo
