@@ -253,7 +253,7 @@ jobs:
           # - libjpeg-turbo
           # - shared-mime-info
           # - gdk-pixbuf
-          # - gsettings-desktop-schemas
+          - gsettings-desktop-schemas
           # - util-macros
           # - xorgproto
           # - libxau
