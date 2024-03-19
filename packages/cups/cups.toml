@@ -12,7 +12,7 @@ id = 9
 gid = 9
 name = 'Print Service Daemon'
 login = 'lp'
-home = '/var/lib/gdm'
+home = '/var/spool/cups'
 shell = '/usr/bin/false'
 
 [[group]]
