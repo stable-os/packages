@@ -181,7 +181,7 @@ jobs:
           # - libaio
           # - libxslt
           # - libxml2
-          # - audit
+          - audit
           # - swig
           # - fuse
           # - pam

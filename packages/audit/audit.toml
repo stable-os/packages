@@ -1,11 +1,11 @@
 [package]
 name = 'audit'
-version = '3.1.2'
+version = '4.0.1'
 description = ''
 license = ''
 
 [[source]]
-source = 'https://github.com/linux-audit/audit-userspace/archive/refs/tags/v3.1.2.tar.gz'
+source = 'https://github.com/linux-audit/audit-userspace/archive/refs/tags/v4.0.1.tar.gz'
 
 [build]
 script = '''
@@ -14,8 +14,12 @@ set -eux # o pipefail
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 ./autogen.sh
-./configure --prefix=/usr --with-gnu-ld --disable-zos-remote --disable-static --sysconfdir=/etc
+./configure --prefix=/usr --with-gnu-ld --disable-zos-remote --disable-static --sysconfdir=/etc \
+    --with-python3=yes --enable-gssapi-krb5=yes --with-libcap-ng=yes
 
 make -j$(nproc)
 make DESTDIR=$OUT install
+
+mkdir $OUT/etc/audit/rules.d
+cp $OUT/usr/share/audit-rules/{10-base-config.rules,30-stig.rules,31-privileged.rules,99-finalize.rules} $OUT/etc/audit/rules.d
 '''
