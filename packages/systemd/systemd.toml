@@ -124,9 +124,6 @@ login = 'systemd-oom'
 script = '''
 set -eux # o pipefail
 
-sed -i -e 's/GROUP="render"/GROUP="video"/' \
-       -e 's/GROUP="sgx", //' rules.d/50-udev-default.rules.in
-
 meson setup build/            \
       --prefix=/usr           \
       --buildtype=release     \

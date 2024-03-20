@@ -97,12 +97,24 @@ id = 13
 name = "utmp"
 
 [[group]]
+id = 14
+name = "dailout"
+
+[[group]]
 id = 15
 name = "cdrom"
 
 [[group]]
 id = 16
 name = "adm"
+
+[[group]]
+id = 17
+name = "render"
+
+[[group]]
+id = 20
+name = "sgx"
 
 [[group]]
 id = 24
