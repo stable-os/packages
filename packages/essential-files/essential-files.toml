@@ -146,7 +146,7 @@ set -eux # o pipefail
 
 mkdir -pv $OUT/etc/ $OUT/var/log
 
-touch $OUT/ect/{passwd,group}
+touch $OUT/etc/{passwd,group}
 
 # TODO: Add a way to specify the hostname on new systems, installer or oobe?
 
