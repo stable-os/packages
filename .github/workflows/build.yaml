@@ -434,8 +434,9 @@ jobs:
           # - wpa_supplicant
           # - libnl
           # - mobile-broadband-provider-info
-          - catatonit
-          - go
+          # - catatonit
+          # - go
+          - authselect
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
     steps:
