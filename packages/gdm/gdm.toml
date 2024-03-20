@@ -40,4 +40,94 @@ meson setup ..            \
 
 ninja
 DESTDIR=$OUT ninja install
+
+mkdir -pv $OUT/etc/pam.d
+
+cat > $OUT/etc/pam.d/gdm-autologin << "EOF"
+#%PAM-1.0
+auth       [success=ok default=1] pam_gdm.so
+-auth      optional    pam_gnome_keyring.so
+auth       sufficient  pam_permit.so
+account    required    pam_nologin.so
+account    include     system-auth
+password   include     system-auth
+session    required    pam_selinux.so close
+session    required    pam_loginuid.so
+session    required    pam_selinux.so open
+session    optional    pam_keyinit.so force revoke
+session    required    pam_namespace.so
+session    include     system-auth
+session    optional    pam_gnome_keyring.so auto_start
+session    include     postlogin
+EOF
+
+cat > $OUT/etc/pam.d/gdm-fingerprint << "EOF"
+auth        substack      fingerprint-auth
+auth        include       postlogin
+
+account     required      pam_nologin.so
+account     include       fingerprint-auth
+
+password    include       fingerprint-auth
+
+session     required      pam_selinux.so close
+session     required      pam_loginuid.so
+session     required      pam_selinux.so open
+session     optional      pam_keyinit.so force revoke
+session     required      pam_namespace.so
+session     include       fingerprint-auth
+session     include       postlogin
+EOF
+
+cat > $OUT/etc/pam.d/gdm-launch-environment << "EOF"
+#%PAM-1.0
+auth       required    pam_env.so
+auth       required    pam_permit.so
+auth       include     postlogin
+account    required    pam_permit.so
+password   required    pam_permit.so
+session    optional    pam_keyinit.so force revoke
+session    include     system-auth
+session    include     postlogin
+EOF
+
+cat > $OUT/etc/pam.d/gdm-password << "EOF"
+auth     [success=done ignore=ignore default=bad] pam_selinux_permit.so
+auth        substack      password-auth
+auth        optional      pam_gnome_keyring.so
+auth        include       postlogin
+
+account     required      pam_nologin.so
+account     include       password-auth
+
+password    substack       password-auth
+-password   optional       pam_gnome_keyring.so use_authtok
+
+session     required      pam_selinux.so close
+session     required      pam_loginuid.so
+session     required      pam_selinux.so open
+session     optional      pam_keyinit.so force revoke
+session     required      pam_namespace.so
+session     include       password-auth
+session     optional      pam_gnome_keyring.so auto_start
+session     include       postlogin
+EOF
+
+cat > $OUT/etc/pam.d/gdm-smartcard << "EOF"
+auth        substack      smartcard-auth
+auth        include       postlogin
+
+account     required      pam_nologin.so
+account     include       smartcard-auth
+
+password    include       smartcard-auth
+
+session     required      pam_selinux.so close
+session     required      pam_loginuid.so
+session     required      pam_selinux.so open
+session     optional      pam_keyinit.so force revoke
+session     required      pam_namespace.so
+session     include       smartcard-auth
+session     include       postlogin
+EOF
 '''
