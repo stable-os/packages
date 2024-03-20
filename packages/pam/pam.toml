@@ -33,14 +33,6 @@ account   required    pam_unix.so
 # End /etc/pam.d/system-account
 EOF
 
-cat > $OUT/etc/pam.d/system-auth << "EOF"
-# Begin /etc/pam.d/system-auth
-
-auth      required    pam_unix.so
-
-# End /etc/pam.d/system-auth
-EOF
-
 cat > $OUT/etc/pam.d/system-session << "EOF"
 # Begin /etc/pam.d/system-session
 
@@ -113,3 +105,11 @@ EOF
 make -j$(nproc)
 make DESTDIR=$OUT install
 '''
+
+# cat > $OUT/etc/pam.d/system-auth << "EOF"
+# # Begin /etc/pam.d/system-auth
+#
+# auth      required    pam_unix.so
+#
+# # End /etc/pam.d/system-auth
+# EOF
