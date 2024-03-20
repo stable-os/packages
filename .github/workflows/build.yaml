@@ -166,7 +166,7 @@ jobs:
           # - vim
           # - xmlparser
           # - zstd
-          # - glib
+          - glib
           # - libarchive
           # - libpgpme
           # - libgpg-error

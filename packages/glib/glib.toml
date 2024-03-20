@@ -1,11 +1,11 @@
 [package]
 name = 'glib'
-version = '2.78.4'
+version = '2.79.3'
 description = ''
 license = ''
 
 [[source]]
-source = 'https://download.gnome.org/sources/glib/2.78/glib-2.78.4.tar.xz'
+source = 'https://download.gnome.org/sources/glib/2.79/glib-2.79.3.tar.xz'
 
 [build]
 script = '''
