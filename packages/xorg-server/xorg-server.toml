@@ -1,0 +1,27 @@
+[package]
+name = 'xorg-server'
+version = '21.1.11'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.x.org/pub/individual/xserver/xorg-server-21.1.11.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson setup ..              \
+      --prefix=$XORG_PREFIX \
+      --localstatedir=/var  \
+      -Dglamor=true         \
+      -Dxkb_output_dir=/var/lib/xkb
+
+ninja
+DESTDIR=$OUT ninja install
+'''
