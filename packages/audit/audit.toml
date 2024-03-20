@@ -20,6 +20,9 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 make -j$(nproc)
 make DESTDIR=$OUT install
 
-mkdir $OUT/etc/audit/rules.d
+mkdir -pv $OUT/etc/audit/rules.d
 cp $OUT/usr/share/audit-rules/{10-base-config.rules,30-stig.rules,31-privileged.rules,99-finalize.rules} $OUT/etc/audit/rules.d
+
+# audit-rules.service will fail without this directory exisiting due to a rule in 30-stig.rules
+mkdir -pv $OUT/etc/sudoers.d
 '''
