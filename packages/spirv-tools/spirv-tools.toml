@@ -14,18 +14,12 @@ set -eux # o pipefail
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
 cd external
-git clone https://github.com/KhronosGroup/SPIRV-Headers.git
-find .
+# this needs to specify the output directory due to case sensitivity
+git clone https://github.com/KhronosGroup/SPIRV-Headers.git spirv-headers
 cd ..
 
 mkdir build
 cd build
-
-mkdir external
-cd external
-# this needs to specify the output directory due to case sensitivity
-git clone https://github.com/KhronosGroup/SPIRV-Headers.git spirv-headers
-cd ..
 
 cmake -G Ninja ..
 
