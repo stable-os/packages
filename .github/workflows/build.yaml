@@ -442,6 +442,35 @@ jobs:
           - xorg-applications
           - xorg-video-fbdev
           - xorg-video-vesa
+          - xorg-input-acecad
+          - xorg-input-aiptek
+          - xorg-input-calcomp
+          - xorg-input-citron
+          - xorg-input-digitaledge
+          - xorg-input-dmc
+          - xorg-input-dynapro
+          - xorg-input-elo2300
+          - xorg-input-elographics
+          - xorg-input-evdev
+          - xorg-input-fpit
+          - xorg-input-hyperpen
+          - xorg-input-jamstudio
+          - xorg-input-joystick
+          - xorg-input-keyboard
+          - xorg-input-libinput
+          - xorg-input-magellan
+          - xorg-input-microtouch
+          - xorg-input-mouse
+          - xorg-input-mutouch
+          - xorg-input-palmax
+          - xorg-input-penmount
+          - xorg-input-spaceorb
+          - xorg-input-summa
+          - xorg-input-synaptics
+          - xorg-input-tek4957
+          - xorg-input-ur98
+          - xorg-input-vmmouse
+          - xorg-input-void
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
     steps:

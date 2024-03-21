@@ -1,0 +1,22 @@
+[package]
+name = 'xorg-input-elographics'
+version = '1.4.4'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.x.org/archive/individual/driver/xf86-input-elographics-1.4.4.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr     \
+            --disable-static  \
+            --sysconfdir=/etc
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

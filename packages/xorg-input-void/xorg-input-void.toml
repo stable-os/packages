@@ -1,0 +1,22 @@
+[package]
+name = 'xorg-input-void'
+version = '1.4.2'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.x.org/archive/individual/driver/xf86-input-void-1.4.2.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr     \
+            --disable-static  \
+            --sysconfdir=/etc
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''

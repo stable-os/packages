@@ -1,0 +1,22 @@
+[package]
+name = 'xorg-input-acecad'
+version = '1.5.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://www.x.org/archive/individual/driver/xf86-input-acecad-1.5.0.tar.bz2'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+./configure --prefix=/usr     \
+            --disable-static  \
+            --sysconfdir=/etc
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
