@@ -23,7 +23,8 @@ cd build
 
 mkdir external
 cd external
-git clone https://github.com/KhronosGroup/SPIRV-Headers.git
+# this needs to specify the output directory due to case sensitivity
+git clone https://github.com/KhronosGroup/SPIRV-Headers.git spirv-headers
 cd ..
 
 cmake -G Ninja ..
