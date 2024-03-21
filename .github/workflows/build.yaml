@@ -246,7 +246,7 @@ jobs:
           # - icu
           # - pango
           # - libepoxy
-          # - mesa
+          - mesa
           # - xorg-libraries
           # - libdrm
           # - mako
