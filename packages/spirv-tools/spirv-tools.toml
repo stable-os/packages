@@ -21,6 +21,11 @@ cd ..
 mkdir build
 cd build
 
+mkdir external
+cd external
+git clone https://github.com/KhronosGroup/SPIRV-Headers.git
+cd ..
+
 cmake -G Ninja ..
 
 ninja
