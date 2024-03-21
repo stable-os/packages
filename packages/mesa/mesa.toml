@@ -20,8 +20,8 @@ meson setup                   \
       --prefix=$XORG_PREFIX   \
       --buildtype=release     \
       -Dplatforms=x11,wayland \
-      -Dgallium-drivers=auto  \
-      -Dvulkan-drivers=auto   \
+      -Dgallium-drivers=all   \
+      -Dvulkan-drivers=all    \
       -Dvalgrind=disabled     \
       -Dlibunwind=disabled    \
       ..
