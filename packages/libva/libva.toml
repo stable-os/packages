@@ -1,0 +1,23 @@
+[package]
+name = 'libva'
+version = '2.20.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/intel/libva/releases/download/2.20.0/libva-2.20.0.tar.bz2'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+meson -Dprefix=/usr -Dlibdir=/usr/lib/x86_64-linux-gnu ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''

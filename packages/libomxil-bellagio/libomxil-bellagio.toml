@@ -1,0 +1,24 @@
+[package]
+name = 'libomxil-bellagio'
+version = '0.9.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/felipec/libomxil-bellagio/archive/refs/tags/0.9.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+autoreconf -i
+
+./configure --prefix=/usr     \
+            --disable-static  \
+            --sysconfdir=/etc
+
+make -j$(nproc)
+make DESTDIR=$OUT install
+'''
