@@ -435,7 +435,7 @@ jobs:
           # - libnl
           # - mobile-broadband-provider-info
           # - catatonit
-          # - go
+          - go
           # - authselect
           # - xorg-server
           # - xorg-fonts
