@@ -1,0 +1,23 @@
+[package]
+name = 'libclc'
+version = '2.5.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.2/libclc-18.1.2.src.tar.xz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=$OUT -DCMAKE_BUILD_TYPE=Release ..
+
+ninja -j$(nproc)
+DESTDIR=$OUT ninja install
+'''

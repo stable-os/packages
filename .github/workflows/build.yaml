@@ -475,7 +475,7 @@ jobs:
           # - xorg-video-amdgpu
           # - xorg-video-apm
           # - xorg-video-ark
-          - xorg-video-ast
+          # - xorg-video-ast
           # - xorg-video-ati
           # - xorg-video-chips
           # - xorg-video-cirrus
@@ -497,7 +497,7 @@ jobs:
           - xorg-video-newport
           # - xorg-video-nouveau
           - xorg-video-nsc
-          - xorg-video-nv
+          # - xorg-video-nv
           - xorg-video-omap
           # - xorg-video-openchrome
           # - xorg-video-opentegra
@@ -533,8 +533,9 @@ jobs:
           # - xorg-video-xgi
           - xorg-video-xgixp
           - podman
-          - btrfs-progs
-          - lzo
+          # - btrfs-progs
+          # - lzo
+          - libclc
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
     steps:
