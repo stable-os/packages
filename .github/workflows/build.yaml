@@ -471,6 +471,67 @@ jobs:
           - xorg-input-ur98
           - xorg-input-vmmouse
           - xorg-input-void
+          - xorg-video-amd
+          - xorg-video-amdgpu
+          - xorg-video-apm
+          - xorg-video-ark
+          - xorg-video-ast
+          - xorg-video-ati
+          - xorg-video-chips
+          - xorg-video-cirrus
+          - xorg-video-cyrix
+          - xorg-video-dummy
+          - xorg-video-freedreno
+          - xorg-video-geode
+          - xorg-video-glint
+          - xorg-video-i128
+          - xorg-video-i740
+          - xorg-video-i810
+          - xorg-video-impact
+          - xorg-video-imstt
+          - xorg-video-intel
+          - xorg-video-mach64
+          - xorg-video-mga
+          - xorg-video-modesetting
+          - xorg-video-neomagic
+          - xorg-video-newport
+          - xorg-video-nouveau
+          - xorg-video-nsc
+          - xorg-video-nv
+          - xorg-video-omap
+          - xorg-video-openchrome
+          - xorg-video-opentegra
+          - xorg-video-qxl
+          - xorg-video-r128
+          - xorg-video-radeonhd
+          - xorg-video-rendition
+          - xorg-video-s3
+          - xorg-video-s3virge
+          - xorg-video-savage
+          - xorg-video-siliconmotion
+          - xorg-video-sis
+          - xorg-video-sisusb
+          - xorg-video-sunbw2
+          - xorg-video-suncg14
+          - xorg-video-suncg3
+          - xorg-video-suncg6
+          - xorg-video-sunffb
+          - xorg-video-sunleo
+          - xorg-video-suntcx
+          - xorg-video-tdfx
+          - xorg-video-tga
+          - xorg-video-trident
+          - xorg-video-tseng
+          - xorg-video-v4l
+          - xorg-video-vboxvideo
+          - xorg-video-vermilion
+          - xorg-video-vga
+          - xorg-video-via
+          - xorg-video-vmware
+          - xorg-video-voodoo
+          - xorg-video-wsfb
+          - xorg-video-xgi
+          - xorg-video-xgixp
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
     steps:
