@@ -1,0 +1,23 @@
+[package]
+name = 'spirv-tools'
+version = '2023.2'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/v2023.2.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+cmake -G Ninja ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
