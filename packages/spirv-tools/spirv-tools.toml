@@ -23,7 +23,10 @@ cd ../..
 mkdir build
 cd build
 
-cmake -G Ninja ..
+cmake -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_BUILD_TYPE=Release  \
+      -G Ninja \
+      ..
 
 ninja
 DESTDIR=$OUT ninja install
