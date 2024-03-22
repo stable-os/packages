@@ -1,0 +1,25 @@
+[package]
+name = 'liveconf'
+version = '1.0.0'
+description = ''
+license = ''
+
+[[source]]
+source = ''
+
+[build]
+script = '''
+set -eux # o pipefail
+
+# some utility configurations for stuff like podman specifically for the live environment
+
+mkdir -pv $OUT/etc/containers/
+
+# can't use overlay because the live environment is running on an overlay
+cat <<EOF > $OUT/etc/containers/storage.conf
+[storage]
+driver = "vfs"
+runroot = "/tmp/podmanrunroot"
+graphroot = "/tmp/podmangraphroot"
+EOF
+'''

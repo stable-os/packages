@@ -1,0 +1,18 @@
+[package]
+name = 'netavark'
+version = '1.10.3'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/containers/netavark/releases/download/v1.10.3/netavark.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+make
+make DESTDIR=$OUT install
+'''
