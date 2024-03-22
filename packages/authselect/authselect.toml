@@ -14,7 +14,7 @@ set -eux # o pipefail
 
 autoreconf -iv
 
-./configure --prefix=/usr --enable-silent-rules
+./configure --prefix=/usr --sysconfdir=/etc --enable-silent-rules
 
 make -j$(nproc)
 make DESTDIR=$OUT install

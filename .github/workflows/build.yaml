@@ -436,7 +436,7 @@ jobs:
           # - mobile-broadband-provider-info
           # - catatonit
           # - go
-          # - authselect
+          - authselect
           # - xorg-server
           # - xorg-fonts
           # - xorg-applications
