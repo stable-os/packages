@@ -1,0 +1,26 @@
+[package]
+name = 'protobuf'
+version = '26.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/protocolbuffers/protobuf/releases/download/v26.0/protobuf-26.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_BUILD_TYPE=Release  \
+      -G Ninja                    \
+      ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
