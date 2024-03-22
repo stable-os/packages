@@ -82,7 +82,7 @@ jobs:
           # - flit-core
           # - wheel
           # - ninja
-          # - meson
+          - meson
           # - asciidoc
           # - ostree
           # - which

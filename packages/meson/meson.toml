@@ -1,11 +1,11 @@
 [package]
 name = 'meson'
-version = '1.2.1'
+version = '1.4.0'
 description = 'meson'
 license = ''
 
 [[source]]
-source = 'https://github.com/mesonbuild/meson/releases/download/1.2.1/meson-1.2.1.tar.gz'
+source = 'https://github.com/mesonbuild/meson/releases/download/1.4.0/meson-1.4.0.tar.gz'
 
 [build]
 script = '''
