@@ -16,6 +16,8 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 mkdir build
 cd build
 
+export PATH=$PATH:$HOME/.cargo/bin
+
 meson setup                   \
       --prefix=$XORG_PREFIX   \
       --buildtype=release     \
@@ -30,3 +32,5 @@ meson setup                   \
 ninja
 DESTDIR=$OUT ninja install
 '''
+
+# TODO: Split mesa subprojects (such as nouveau) into separate packages
