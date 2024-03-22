@@ -11,6 +11,8 @@ source = 'https://github.com/mozilla/cbindgen/archive/v0.26.0/cbindgen-0.26.0.ta
 script = '''
 set -eux # o pipefail
 
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
 $HOME/.cargo/bin/cargo build --release
 mkdir -p $OUT/usr/bin
 cp target/release/cbindgen $OUT/usr/bin
