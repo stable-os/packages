@@ -1,0 +1,17 @@
+[package]
+name = 'bindgen'
+version = '0.69.4'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/rust-lang/rust-bindgen/archive/refs/tags/v0.69.4.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+$HOME/.cargo/bin/cargo build --release
+mkdir -p $OUT/usr/bin
+cp target/release/bindgen $OUT/usr/bin
+'''

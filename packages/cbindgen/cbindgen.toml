@@ -1,0 +1,17 @@
+[package]
+name = 'cbindgen'
+version = '0.26.0'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/mozilla/cbindgen/archive/v0.26.0/cbindgen-0.26.0.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+$HOME/.cargo/bin/cargo build --release
+mkdir -p $OUT/usr/bin
+cp target/release/cbindgen $OUT/usr/bin
+'''
