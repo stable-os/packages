@@ -16,7 +16,7 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 mkdir build
 cd build
 
-cmake -DCMAKE_INSTALL_PREFIX=$OUT   \
+cmake -DCMAKE_INSTALL_PREFIX=/usr   \
     -DCMAKE_BUILD_TYPE=Release      \
     -DLIBCLC_TARGETS_TO_BUILD="amdgcn--,amdgcn--amdhsa,clspv--,clspv64--,r600--,nvptx--,nvptx64--,nvptx--nvidiacl,nvptx64--nvidiacl" \
     -G Ninja                        \
