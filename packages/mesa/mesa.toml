@@ -24,6 +24,7 @@ meson setup                   \
       -Dvulkan-drivers=all    \
       -Dvalgrind=disabled     \
       -Dlibunwind=disabled    \
+      -Dopencl-spirv=disabled \
       ..
 
 ninja
