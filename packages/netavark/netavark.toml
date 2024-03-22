@@ -5,7 +5,7 @@ description = ''
 license = ''
 
 [[source]]
-source = 'https://github.com/containers/netavark/releases/download/v1.10.3/netavark.gz'
+source = 'https://github.com/containers/netavark/archive/refs/tags/v1.10.3.tar.gz'
 
 [build]
 script = '''
