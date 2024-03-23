@@ -1,0 +1,50 @@
+[package]
+name = 'linux-mini'
+version = '6.4.12'
+description = 'The Linux kernel, with most modules removed to save space'
+license = ''
+
+[[source]]
+source = 'https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.4.12.tar.xz'
+
+# TODO: Create subpackages so this workaround is not needed
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+git clone --depth 1 https://github.com/stable-os/packages.git ../packaging_repo_data
+find ../packaging_repo_data
+cp ../packaging_repo_data/packages/linux-mini/x86_64.config .config
+
+# make mrproper
+
+make -j$(nproc)
+make DESTDIR=$OUT INSTALL_MOD_PATH=$OUT modules_install
+
+mkdir -pv $OUT/boot $OUT/usr/share/doc
+
+cp -iv arch/x86/boot/bzImage $OUT/boot/vmlinuz-6.4.12-lfs-12.0
+cp -iv System.map $OUT/boot/System.map-6.4.12
+cp -iv .config $OUT/boot/config-6.4.12
+cp -r Documentation -T $OUT/usr/share/doc/linux-6.4.12
+
+# need to delete the generated files before finish packaging to avoid
+# running out of disk space
+make mrproper
+
+install -v -m755 -d $OUT/etc/modprobe.d
+cat > $OUT/etc/modprobe.d/usb.conf << "EOF"
+# Begin /etc/modprobe.d/usb.conf
+
+install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true
+install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
+
+# End /etc/modprobe.d/usb.conf
+EOF
+
+# Remove documentation (saves 44mb)
+rm -rf $OUT/usr
+'''

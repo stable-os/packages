@@ -9,7 +9,7 @@ mkdir /var/tmp
 mkdir /tmp/packages && git clone https://github.com/stable-os/packages.git /tmp/packages
 cd /tmp/packages
 
-pkg-builder packages/linux/linux.toml /tmp/out.tar.gz
+pkg-builder packages/linux/$1.toml /tmp/out.tar.gz
 
 echo Created package, creating build repository
 
@@ -28,4 +28,4 @@ mkdir /tmp
 
 echo Imported package, exporting as OCI image
 
-ostree-ext-cli container encapsulate --repo=/build-repo stable-os/$(uname -m)/linux docker://ghcr.io/stable-os/package-linux-$(uname -m)-builtonstableos:latest
+ostree-ext-cli container encapsulate --repo=/build-repo stable-os/$(uname -m)/linux docker://ghcr.io/stable-os/package-$1-$(uname -m)-builtonstableos:latest

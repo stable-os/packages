@@ -1,0 +1,1652 @@
+ 40K	./postflash/usr/share/doc/linux-6.4.12/accounting
+ 20K	./postflash/usr/share/doc/linux-6.4.12/power/powercap
+ 32K	./postflash/usr/share/doc/linux-6.4.12/power/regulator
+356K	./postflash/usr/share/doc/linux-6.4.12/power
+ 48K	./postflash/usr/share/doc/linux-6.4.12/infiniband
+104K	./postflash/usr/share/doc/linux-6.4.12/kernel-hacking
+148K	./postflash/usr/share/doc/linux-6.4.12/crypto
+8.0K	./postflash/usr/share/doc/linux-6.4.12/PCI/endpoint/function/binding
+8.0K	./postflash/usr/share/doc/linux-6.4.12/PCI/endpoint/function
+ 80K	./postflash/usr/share/doc/linux-6.4.12/PCI/endpoint
+200K	./postflash/usr/share/doc/linux-6.4.12/PCI
+ 56K	./postflash/usr/share/doc/linux-6.4.12/cdrom
+ 20K	./postflash/usr/share/doc/linux-6.4.12/mhi
+ 88K	./postflash/usr/share/doc/linux-6.4.12/tools/rtla
+ 36K	./postflash/usr/share/doc/linux-6.4.12/tools/rv
+128K	./postflash/usr/share/doc/linux-6.4.12/tools
+104K	./postflash/usr/share/doc/linux-6.4.12/staging
+ 12K	./postflash/usr/share/doc/linux-6.4.12/gpu/dp-mst
+4.0K	./postflash/usr/share/doc/linux-6.4.12/gpu/bridge
+ 52K	./postflash/usr/share/doc/linux-6.4.12/gpu/rfc
+420K	./postflash/usr/share/doc/linux-6.4.12/gpu/amdgpu/display
+464K	./postflash/usr/share/doc/linux-6.4.12/gpu/amdgpu
+804K	./postflash/usr/share/doc/linux-6.4.12/gpu
+4.0K	./postflash/usr/share/doc/linux-6.4.12/nvme
+116K	./postflash/usr/share/doc/linux-6.4.12/trace/coresight
+ 48K	./postflash/usr/share/doc/linux-6.4.12/trace/postprocess
+ 48K	./postflash/usr/share/doc/linux-6.4.12/trace/rv
+912K	./postflash/usr/share/doc/linux-6.4.12/trace
+324K	./postflash/usr/share/doc/linux-6.4.12/powerpc
+ 88K	./postflash/usr/share/doc/linux-6.4.12/livepatch
+276K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/pm
+ 28K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/acpi
+ 72K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/blockdev/drbd
+132K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/blockdev
+ 56K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/nfs
+144K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/sysctl
+156K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/hw-vuln
+192K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/cgroup-v1
+136K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/laptops
+ 20K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/thermal
+ 36K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/aoe
+ 68K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/LSM
+ 60K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/kdump
+ 12K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/namespaces
+ 68K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/cifs
+ 72K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/mm/damon
+292K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/mm
+ 12K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/auxdisplay
+ 88K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/perf
+280K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/device-mapper
+ 28K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/gpio
+804K	./postflash/usr/share/doc/linux-6.4.12/admin-guide/media
+4.1M	./postflash/usr/share/doc/linux-6.4.12/admin-guide
+ 24K	./postflash/usr/share/doc/linux-6.4.12/security/tpm
+ 12K	./postflash/usr/share/doc/linux-6.4.12/security/secrets
+108K	./postflash/usr/share/doc/linux-6.4.12/security/keys
+248K	./postflash/usr/share/doc/linux-6.4.12/security
+152K	./postflash/usr/share/doc/linux-6.4.12/images
+ 36K	./postflash/usr/share/doc/linux-6.4.12/input/joydev
+220K	./postflash/usr/share/doc/linux-6.4.12/input/devices
+388K	./postflash/usr/share/doc/linux-6.4.12/input
+ 60K	./postflash/usr/share/doc/linux-6.4.12/target
+ 68K	./postflash/usr/share/doc/linux-6.4.12/timers
+ 48K	./postflash/usr/share/doc/linux-6.4.12/maintainer
+1.2M	./postflash/usr/share/doc/linux-6.4.12/hwmon
+8.0K	./postflash/usr/share/doc/linux-6.4.12/scsi/scsi_transport_srp
+780K	./postflash/usr/share/doc/linux-6.4.12/scsi
+ 12K	./postflash/usr/share/doc/linux-6.4.12/networking/mac80211_hwsim
+124K	./postflash/usr/share/doc/linux-6.4.12/networking/dsa
+ 20K	./postflash/usr/share/doc/linux-6.4.12/networking/caif
+212K	./postflash/usr/share/doc/linux-6.4.12/networking/devlink
+ 32K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/wifi/intel
+ 44K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/wifi
+ 48K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/can/ctu
+4.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/can/freescale
+ 68K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/can
+ 16K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/fddi
+8.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/appletalk
+ 12K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/qlogic
+ 24K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/atm
+ 36K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/hamradio
+184K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/intel
+ 12K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/dlink
+8.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/huawei
+ 12K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/amazon
+ 16K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/marvell
+ 16K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/altera
+8.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/google
+8.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/microsoft
+ 12K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/toshiba
+ 96K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/mellanox/mlx5
+ 96K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/mellanox
+4.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/amd
+ 16K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/chelsio
+8.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/neterion
+ 16K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/netronome
+ 60K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/freescale/dpaa2
+ 76K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/freescale
+4.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/dec
+8.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/wangxun
+ 20K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/stmicro
+4.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/smsc
+ 24K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/cirrus
+ 28K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/3com
+ 16K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/aquantia
+8.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/pensando
+ 44K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/ti
+8.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet/davicom
+660K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/ethernet
+ 16K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/cable
+8.0K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/cellular/qualcomm
+ 12K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/cellular
+ 16K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers/wwan
+916K	./postflash/usr/share/doc/linux-6.4.12/networking/device_drivers
+3.0M	./postflash/usr/share/doc/linux-6.4.12/networking
+ 16K	./postflash/usr/share/doc/linux-6.4.12/litmus-tests/locking
+8.0K	./postflash/usr/share/doc/linux-6.4.12/litmus-tests/atomic
+8.0K	./postflash/usr/share/doc/linux-6.4.12/litmus-tests/rcu
+ 36K	./postflash/usr/share/doc/linux-6.4.12/litmus-tests
+ 12K	./postflash/usr/share/doc/linux-6.4.12/sphinx-static
+208K	./postflash/usr/share/doc/linux-6.4.12/locking
+ 28K	./postflash/usr/share/doc/linux-6.4.12/rust
+ 76K	./postflash/usr/share/doc/linux-6.4.12/driver-api/pm
+ 20K	./postflash/usr/share/doc/linux-6.4.12/driver-api/early-userspace
+ 20K	./postflash/usr/share/doc/linux-6.4.12/driver-api/mmc
+ 16K	./postflash/usr/share/doc/linux-6.4.12/driver-api/pci
+ 28K	./postflash/usr/share/doc/linux-6.4.12/driver-api/acpi
+4.0K	./postflash/usr/share/doc/linux-6.4.12/driver-api/firmware/efi
+ 72K	./postflash/usr/share/doc/linux-6.4.12/driver-api/firmware
+ 16K	./postflash/usr/share/doc/linux-6.4.12/driver-api/memory-devices
+ 12K	./postflash/usr/share/doc/linux-6.4.12/driver-api/hte
+ 48K	./postflash/usr/share/doc/linux-6.4.12/driver-api/soundwire
+ 52K	./postflash/usr/share/doc/linux-6.4.12/driver-api/tty
+8.0K	./postflash/usr/share/doc/linux-6.4.12/driver-api/xilinx
+ 52K	./postflash/usr/share/doc/linux-6.4.12/driver-api/rapidio
+ 20K	./postflash/usr/share/doc/linux-6.4.12/driver-api/virtio
+ 20K	./postflash/usr/share/doc/linux-6.4.12/driver-api/cxl
+ 88K	./postflash/usr/share/doc/linux-6.4.12/driver-api/driver-model
+ 76K	./postflash/usr/share/doc/linux-6.4.12/driver-api/thermal
+ 36K	./postflash/usr/share/doc/linux-6.4.12/driver-api/mei
+ 24K	./postflash/usr/share/doc/linux-6.4.12/driver-api/phy
+ 40K	./postflash/usr/share/doc/linux-6.4.12/driver-api/surface_aggregator/clients
+124K	./postflash/usr/share/doc/linux-6.4.12/driver-api/surface_aggregator
+ 64K	./postflash/usr/share/doc/linux-6.4.12/driver-api/dmaengine
+272K	./postflash/usr/share/doc/linux-6.4.12/driver-api/usb
+ 52K	./postflash/usr/share/doc/linux-6.4.12/driver-api/nvdimm
+4.0K	./postflash/usr/share/doc/linux-6.4.12/driver-api/backlight
+ 24K	./postflash/usr/share/doc/linux-6.4.12/driver-api/80211
+ 28K	./postflash/usr/share/doc/linux-6.4.12/driver-api/fpga
+ 24K	./postflash/usr/share/doc/linux-6.4.12/driver-api/nfc
+ 20K	./postflash/usr/share/doc/linux-6.4.12/driver-api/i3c
+ 32K	./postflash/usr/share/doc/linux-6.4.12/driver-api/md
+ 40K	./postflash/usr/share/doc/linux-6.4.12/driver-api/mtd
+ 36K	./postflash/usr/share/doc/linux-6.4.12/driver-api/iio
+132K	./postflash/usr/share/doc/linux-6.4.12/driver-api/gpio
+ 16K	./postflash/usr/share/doc/linux-6.4.12/driver-api/pldmfw
+ 20K	./postflash/usr/share/doc/linux-6.4.12/driver-api/serial
+ 48K	./postflash/usr/share/doc/linux-6.4.12/driver-api/media/drivers/ccs
+248K	./postflash/usr/share/doc/linux-6.4.12/driver-api/media/drivers
+520K	./postflash/usr/share/doc/linux-6.4.12/driver-api/media
+2.7M	./postflash/usr/share/doc/linux-6.4.12/driver-api
+268K	./postflash/usr/share/doc/linux-6.4.12/fb
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/core/tracehook
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/core/jump-labels
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/core/thread-info-in-task
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/core/cBPF-JIT
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/core/generic-idle-thread
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/core/eBPF-JIT
+ 24K	./postflash/usr/share/doc/linux-6.4.12/features/core
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/locking/queued-rwlocks
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/locking/cmpxchg-local
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/locking/lockdep
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/locking/queued-spinlocks
+ 16K	./postflash/usr/share/doc/linux-6.4.12/features/locking
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/io/dma-contiguous
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/io
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/sched/membarrier-sync-core
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/sched/numa-balancing
+8.0K	./postflash/usr/share/doc/linux-6.4.12/features/sched
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/time/arch-tick-broadcast
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/time/irq-time-acct
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/time/clockevents
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/time/virt-cpuacct
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/time/context-tracking
+ 20K	./postflash/usr/share/doc/linux-6.4.12/features/time
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/vm/TLB
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/vm/ioremap_prot
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/vm/huge-vmap
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/vm/THP
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/vm/PG_uncached
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/vm/ELF-ASLR
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/vm/pte_special
+ 28K	./postflash/usr/share/doc/linux-6.4.12/features/vm
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/scripts
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/seccomp/seccomp-filter
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/seccomp
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/perf/perf-regs
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/perf/kprobes-event
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/perf/perf-stackdump
+ 12K	./postflash/usr/share/doc/linux-6.4.12/features/perf
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/uprobes
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/optprobes
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/user-ret-profiler
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/kretprobes
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/kmemleak
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/stackprotector
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/kgdb
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/kprobes
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/kcov
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/debug-vm-pgtable
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/kprobes-on-ftrace
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/KASAN
+4.0K	./postflash/usr/share/doc/linux-6.4.12/features/debug/gcov-profile-all
+ 52K	./postflash/usr/share/doc/linux-6.4.12/features/debug
+180K	./postflash/usr/share/doc/linux-6.4.12/features
+108K	./postflash/usr/share/doc/linux-6.4.12/i2c/busses
+4.0K	./postflash/usr/share/doc/linux-6.4.12/i2c/muxes
+320K	./postflash/usr/share/doc/linux-6.4.12/i2c
+ 56K	./postflash/usr/share/doc/linux-6.4.12/netlink/specs
+ 96K	./postflash/usr/share/doc/linux-6.4.12/netlink
+204K	./postflash/usr/share/doc/linux-6.4.12/scheduler
+4.0K	./postflash/usr/share/doc/linux-6.4.12/firmware_class
+184K	./postflash/usr/share/doc/linux-6.4.12/kbuild
+188K	./postflash/usr/share/doc/linux-6.4.12/s390
+ 48K	./postflash/usr/share/doc/linux-6.4.12/netlabel
+ 80K	./postflash/usr/share/doc/linux-6.4.12/doc-guide
+ 28K	./postflash/usr/share/doc/linux-6.4.12/cpu-freq
+100K	./postflash/usr/share/doc/linux-6.4.12/leds
+328K	./postflash/usr/share/doc/linux-6.4.12/ABI/stable
+120K	./postflash/usr/share/doc/linux-6.4.12/ABI/obsolete
+2.7M	./postflash/usr/share/doc/linux-6.4.12/ABI/testing
+ 56K	./postflash/usr/share/doc/linux-6.4.12/ABI/removed
+3.2M	./postflash/usr/share/doc/linux-6.4.12/ABI
+ 40K	./postflash/usr/share/doc/linux-6.4.12/loongarch
+ 48K	./postflash/usr/share/doc/linux-6.4.12/virt/uml
+ 36K	./postflash/usr/share/doc/linux-6.4.12/virt/hyperv
+ 12K	./postflash/usr/share/doc/linux-6.4.12/virt/coco
+ 28K	./postflash/usr/share/doc/linux-6.4.12/virt/kvm/s390
+132K	./postflash/usr/share/doc/linux-6.4.12/virt/kvm/x86
+ 24K	./postflash/usr/share/doc/linux-6.4.12/virt/kvm/arm
+100K	./postflash/usr/share/doc/linux-6.4.12/virt/kvm/devices
+636K	./postflash/usr/share/doc/linux-6.4.12/virt/kvm
+ 20K	./postflash/usr/share/doc/linux-6.4.12/virt/acrn
+772K	./postflash/usr/share/doc/linux-6.4.12/virt
+ 20K	./postflash/usr/share/doc/linux-6.4.12/firmware-guide/acpi/apei
+ 24K	./postflash/usr/share/doc/linux-6.4.12/firmware-guide/acpi/dsd
+208K	./postflash/usr/share/doc/linux-6.4.12/firmware-guide/acpi
+212K	./postflash/usr/share/doc/linux-6.4.12/firmware-guide
+ 16K	./postflash/usr/share/doc/linux-6.4.12/mips
+272K	./postflash/usr/share/doc/linux-6.4.12/usb
+ 28K	./postflash/usr/share/doc/linux-6.4.12/isdn
+ 36K	./postflash/usr/share/doc/linux-6.4.12/accel/qaic
+ 48K	./postflash/usr/share/doc/linux-6.4.12/accel
+ 64K	./postflash/usr/share/doc/linux-6.4.12/spi
+208K	./postflash/usr/share/doc/linux-6.4.12/RCU/Design/Data-Structures
+568K	./postflash/usr/share/doc/linux-6.4.12/RCU/Design/Memory-Ordering
+224K	./postflash/usr/share/doc/linux-6.4.12/RCU/Design/Expedited-Grace-Periods
+188K	./postflash/usr/share/doc/linux-6.4.12/RCU/Design/Requirements
+1.2M	./postflash/usr/share/doc/linux-6.4.12/RCU/Design
+1.5M	./postflash/usr/share/doc/linux-6.4.12/RCU
+ 84K	./postflash/usr/share/doc/linux-6.4.12/watchdog
+4.0K	./postflash/usr/share/doc/linux-6.4.12/nvdimm
+ 36K	./postflash/usr/share/doc/linux-6.4.12/fpga
+4.0K	./postflash/usr/share/doc/linux-6.4.12/sphinx/templates
+148K	./postflash/usr/share/doc/linux-6.4.12/sphinx
+ 52K	./postflash/usr/share/doc/linux-6.4.12/arch/m68k
+ 20K	./postflash/usr/share/doc/linux-6.4.12/arch/parisc
+100K	./postflash/usr/share/doc/linux-6.4.12/arch/ia64
+ 28K	./postflash/usr/share/doc/linux-6.4.12/arch/xtensa
+ 16K	./postflash/usr/share/doc/linux-6.4.12/arch/openrisc
+ 28K	./postflash/usr/share/doc/linux-6.4.12/arch/sh
+ 12K	./postflash/usr/share/doc/linux-6.4.12/arch/x86/i386
+ 56K	./postflash/usr/share/doc/linux-6.4.12/arch/x86/x86_64
+432K	./postflash/usr/share/doc/linux-6.4.12/arch/x86
+ 12K	./postflash/usr/share/doc/linux-6.4.12/arch/arc
+104K	./postflash/usr/share/doc/linux-6.4.12/arch/sparc/oradax
+128K	./postflash/usr/share/doc/linux-6.4.12/arch/sparc
+ 12K	./postflash/usr/share/doc/linux-6.4.12/arch/nios2
+832K	./postflash/usr/share/doc/linux-6.4.12/arch
+ 28K	./postflash/usr/share/doc/linux-6.4.12/mm/damon
+408K	./postflash/usr/share/doc/linux-6.4.12/mm
+ 24K	./postflash/usr/share/doc/linux-6.4.12/pcmcia
+124K	./postflash/usr/share/doc/linux-6.4.12/hid
+ 12K	./postflash/usr/share/doc/linux-6.4.12/core-api/wrappers
+ 32K	./postflash/usr/share/doc/linux-6.4.12/core-api/irq
+600K	./postflash/usr/share/doc/linux-6.4.12/core-api
+ 12K	./postflash/usr/share/doc/linux-6.4.12/arm/pxa
+ 28K	./postflash/usr/share/doc/linux-6.4.12/arm/sa1100
+4.0K	./postflash/usr/share/doc/linux-6.4.12/arm/google
+ 24K	./postflash/usr/share/doc/linux-6.4.12/arm/nwfpe
+ 20K	./postflash/usr/share/doc/linux-6.4.12/arm/samsung
+8.0K	./postflash/usr/share/doc/linux-6.4.12/arm/keystone
+ 56K	./postflash/usr/share/doc/linux-6.4.12/arm/stm32
+4.0K	./postflash/usr/share/doc/linux-6.4.12/arm/vfp
+4.0K	./postflash/usr/share/doc/linux-6.4.12/arm/sunxi
+4.0K	./postflash/usr/share/doc/linux-6.4.12/arm/spear
+ 12K	./postflash/usr/share/doc/linux-6.4.12/arm/sti
+ 32K	./postflash/usr/share/doc/linux-6.4.12/arm/omap
+376K	./postflash/usr/share/doc/linux-6.4.12/arm
+8.0K	./postflash/usr/share/doc/linux-6.4.12/userspace-api/accelerators
+ 64K	./postflash/usr/share/doc/linux-6.4.12/userspace-api/netlink
+8.0K	./postflash/usr/share/doc/linux-6.4.12/userspace-api/ebpf
+ 76K	./postflash/usr/share/doc/linux-6.4.12/userspace-api/ioctl
+ 60K	./postflash/usr/share/doc/linux-6.4.12/userspace-api/media/drivers
+384K	./postflash/usr/share/doc/linux-6.4.12/userspace-api/media/dvb
+2.7M	./postflash/usr/share/doc/linux-6.4.12/userspace-api/media/v4l
+112K	./postflash/usr/share/doc/linux-6.4.12/userspace-api/media/mediactl
+136K	./postflash/usr/share/doc/linux-6.4.12/userspace-api/media/rc
+116K	./postflash/usr/share/doc/linux-6.4.12/userspace-api/media/cec
+3.7M	./postflash/usr/share/doc/linux-6.4.12/userspace-api/media
+3.9M	./postflash/usr/share/doc/linux-6.4.12/userspace-api
+ 36K	./postflash/usr/share/doc/linux-6.4.12/riscv
+ 20K	./postflash/usr/share/doc/linux-6.4.12/dev-tools/kunit/api
+120K	./postflash/usr/share/doc/linux-6.4.12/dev-tools/kunit
+388K	./postflash/usr/share/doc/linux-6.4.12/dev-tools
+104K	./postflash/usr/share/doc/linux-6.4.12/sound/designs
+ 92K	./postflash/usr/share/doc/linux-6.4.12/sound/hd-audio
+ 72K	./postflash/usr/share/doc/linux-6.4.12/sound/soc
+160K	./postflash/usr/share/doc/linux-6.4.12/sound/cards
+152K	./postflash/usr/share/doc/linux-6.4.12/sound/kernel-api
+664K	./postflash/usr/share/doc/linux-6.4.12/sound
+ 52K	./postflash/usr/share/doc/linux-6.4.12/bpf/libbpf
+524K	./postflash/usr/share/doc/linux-6.4.12/bpf
+ 16K	./postflash/usr/share/doc/linux-6.4.12/iio
+8.0K	./postflash/usr/share/doc/linux-6.4.12/peci
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/spmi
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/power/avs
+ 88K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/power/reset
+288K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/power/supply
+528K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/power
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/infiniband
+ 84K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/misc
+ 68K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/cpufreq
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/serio
+340K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mmc
+188K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/crypto
+468K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/pci
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/firmware/xilinx
+ 76K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/firmware
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/dvfs
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soundwire
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/staging/iio/adc
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/staging/iio
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/staging
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/gpu/host1x
+ 72K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/gpu
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/nvme
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/net/ieee802154
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/net/pcs
+104K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/net/can
+136K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/net/dsa
+ 88K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/net/wireless
+ 36K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/net/nfc
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/net/bluetooth
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/net/pse-pd
+1.3M	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/net
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/powerpc/opal
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/powerpc/4xx
+136K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/powerpc/fsl
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/powerpc/nintendo
+200K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/powerpc
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mux
+ 40K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/cache
+1.4M	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/pinctrl
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/virtio
+ 56K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/opp
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/sifive
+212K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/pwm
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/board
+ 56K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/reserved-memory
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/ptp
+264K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/remoteproc
+ 56K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/cpu
+488K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/interrupt-controller
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/security/tpm
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/security
+212K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/input/touchscreen
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/input/rmi4
+608K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/input
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/hwinfo
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/goldfish
+136K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mailbox
+ 52K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/imx
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/intel
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/xilinx
+ 36K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/socionext
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/amlogic
+ 96K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/qcom
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/fsl/cpm_qe/cpm
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/fsl/cpm_qe/qe
+ 80K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/fsl/cpm_qe
+116K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/fsl
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/rockchip
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/samsung
+ 32K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/mediatek
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/microchip
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/dove
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/bcm
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/aspeed
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/litex
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/renesas
+ 48K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc/ti
+492K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/soc
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/hwmon/pmbus
+284K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/hwmon
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/scsi
+ 44K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/ufs
+188K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/reset
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/fuse
+312K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/timer
+360K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/i2c
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/devfreq/event
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/devfreq
+244K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/thermal
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/openrisc/opencores
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/openrisc
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/regmap
+132K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/bus
+668K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/regulator
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/pmem
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/slimbus
+ 92K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/interconnect
+840K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/phy
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/leds/irled
+ 72K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/leds/backlight
+344K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/leds
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mips/loongson
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mips/img
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mips/lantiq
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mips/pic32
+ 32K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mips/cavium
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mips/ingenic
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mips/brcm
+124K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mips
+512K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/usb
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/gnss
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/siox
+400K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/spi
+272K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/watchdog
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/sram
+ 88K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iommu
+ 92K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/fpga
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/x86
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/chrome
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/hwlock
+336K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/rtc
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/i3c
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/connector
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/xillybus
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/dma/xilinx
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/dma/ti
+308K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/dma
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/auxdisplay
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/exynos
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/imx
+404K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/panel
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/tilcdc
+252K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/bridge
+ 44K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/rockchip
+ 36K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/samsung
+ 96K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/mediatek
+108K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/tegra
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/hisilicon
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/connector
+264K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/msm
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/xlnx
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/sprd
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/armada
+ 56K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/ti
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display/atmel
+1.7M	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/display
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/pps
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/counter
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/apple
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/firmware
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/ux500
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/nxp
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/socionext
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/calxeda
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/amlogic
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/apm
+104K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/marvell
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/altera
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/vt8500
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/rockchip
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/samsung
+132K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/mediatek
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/keystone
+ 52K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/tegra
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/stm32
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/sunxi
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/hisilicon/controller
+ 36K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/hisilicon
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/freescale
+ 64K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/bcm
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/msm
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/aspeed
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/cpu-enable-method
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/npcm
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/sprd
+ 52K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/omap
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/mstar
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/mrvl
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm/ti
+1.2M	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arm
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/eeprom
+ 64K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mtd/partitions
+308K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mtd
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/csky
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/arc
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/timestamp
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/nvmem/layouts
+156K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/nvmem
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/riscv
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/ipmi
+132K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/ata
+ 48K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/perf
+1.7M	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/sound
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/cdc
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/potentiometer
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/impedance-analyzer
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/potentiostat
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/multiplexer
+ 32K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/frequency
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/humidity
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/addac
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/health
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/afe
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/pressure
+ 36K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/imu
+ 80K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/accel
+ 32K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/magnetometer
+440K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/adc
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/amplifiers
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/gyroscope
+ 48K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/proximity
+116K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/light
+172K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/dac
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/filter
+ 44K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/temperature
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/resolver
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio/chemical
+1.2M	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/iio
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/dsp
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/peci
+ 16K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/memory-controllers/fsl
+ 44K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/memory-controllers/ddr
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/memory-controllers/ti
+312K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/memory-controllers
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/hsi
+448K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/gpio
+784K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/mfd
+104K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/rng
+ 20K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/w1
+260K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/serial
+8.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/clock/sifive
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/clock/st
+ 12K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/clock/ti/davinci
+ 68K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/clock/ti
+1.6M	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/clock
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/edac
+ 48K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/extcon
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/nios2
+ 24K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/media/xilinx
+328K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/media/i2c
+4.0K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/media/spi
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/media/cec
+988K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/media
+ 28K	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings/fsi
+ 24M	./postflash/usr/share/doc/linux-6.4.12/devicetree/bindings
+ 24M	./postflash/usr/share/doc/linux-6.4.12/devicetree
+192K	./postflash/usr/share/doc/linux-6.4.12/translations/ko_KR
+100K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT/kernel-hacking
+ 12K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT/admin-guide
+4.0K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT/maintainer
+4.0K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT/networking
+ 52K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT/doc-guide
+ 16K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT/core-api
+4.0K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT/riscv
+4.0K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT/devicetree/bindings
+4.0K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT/devicetree
+544K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT/process
+752K	./postflash/usr/share/doc/linux-6.4.12/translations/it_IT
+164K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_TW/admin-guide
+ 28K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_TW/cpu-freq
+ 60K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_TW/arm64
+ 44K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_TW/filesystems
+344K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_TW/process
+692K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_TW
+124K	./postflash/usr/share/doc/linux-6.4.12/translations/ja_JP
+ 28K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/accounting
+ 32K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/power
+ 44K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/infiniband
+ 36K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/kernel-hacking
+ 76K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/PCI
+ 12K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/staging
+ 52K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/video4linux
+ 60K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/admin-guide/mm/damon
+ 76K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/admin-guide/mm
+296K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/admin-guide
+ 36K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/maintainer
+ 20K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/locking
+ 28K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/rust
+ 36K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/driver-api/gpio
+ 44K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/driver-api
+116K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/scheduler
+ 60K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/doc-guide
+ 28K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/cpu-freq
+ 40K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/loongarch
+ 20K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/virt/acrn
+ 40K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/virt
+ 16K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/mips
+ 16K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/arch/parisc
+ 12K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/arch/openrisc
+ 32K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/arch
+ 20K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/mm/damon
+204K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/mm
+ 28K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/core-api/irq
+372K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/core-api
+ 16K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/arm
+8.0K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/userspace-api/accelerators
+8.0K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/userspace-api/ebpf
+ 48K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/userspace-api
+ 20K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/riscv
+ 60K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/dev-tools
+ 12K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/sound/hd-audio
+ 16K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/sound
+ 12K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/iio
+8.0K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/peci
+ 52K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/devicetree
+ 60K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/arm64
+ 44K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/filesystems
+348K	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN/process
+2.3M	./postflash/usr/share/doc/linux-6.4.12/translations/zh_CN
+4.0K	./postflash/usr/share/doc/linux-6.4.12/translations/sp_SP/wrappers
+196K	./postflash/usr/share/doc/linux-6.4.12/translations/sp_SP/process
+364K	./postflash/usr/share/doc/linux-6.4.12/translations/sp_SP
+4.3M	./postflash/usr/share/doc/linux-6.4.12/translations
+104K	./postflash/usr/share/doc/linux-6.4.12/misc-devices
+256K	./postflash/usr/share/doc/linux-6.4.12/arm64
+ 36K	./postflash/usr/share/doc/linux-6.4.12/w1/slaves
+ 24K	./postflash/usr/share/doc/linux-6.4.12/w1/masters
+ 80K	./postflash/usr/share/doc/linux-6.4.12/w1
+ 40K	./postflash/usr/share/doc/linux-6.4.12/fault-injection
+ 88K	./postflash/usr/share/doc/linux-6.4.12/filesystems/nfs
+ 36K	./postflash/usr/share/doc/linux-6.4.12/filesystems/spufs
+192K	./postflash/usr/share/doc/linux-6.4.12/filesystems/ext4
+ 20K	./postflash/usr/share/doc/linux-6.4.12/filesystems/smb
+ 84K	./postflash/usr/share/doc/linux-6.4.12/filesystems/caching
+2.0M	./postflash/usr/share/doc/linux-6.4.12/filesystems
+644K	./postflash/usr/share/doc/linux-6.4.12/process
+144K	./postflash/usr/share/doc/linux-6.4.12/block
+ 64M	./postflash/usr/share/doc/linux-6.4.12
+ 64M	./postflash/usr/share/doc
+ 64M	./postflash/usr/share
+ 64M	./postflash/usr
+ 21M	./postflash/boot
+4.0K	./postflash/etc/modprobe.d
+4.0K	./postflash/etc/pkgs
+ 16K	./postflash/etc
+276K	./postflash/lib/modules/6.4.12/kernel/crypto/asymmetric_keys
+2.0M	./postflash/lib/modules/6.4.12/kernel/crypto/async_tx
+ 15M	./postflash/lib/modules/6.4.12/kernel/crypto
+6.7M	./postflash/lib/modules/6.4.12/kernel/net/ax25
+ 12M	./postflash/lib/modules/6.4.12/kernel/net/batman-adv
+3.6M	./postflash/lib/modules/6.4.12/kernel/net/9p
+1.7M	./postflash/lib/modules/6.4.12/kernel/net/ieee802154/6lowpan
+6.0M	./postflash/lib/modules/6.4.12/kernel/net/ieee802154
+2.5M	./postflash/lib/modules/6.4.12/kernel/net/can/j1939
+5.9M	./postflash/lib/modules/6.4.12/kernel/net/can
+1.7M	./postflash/lib/modules/6.4.12/kernel/net/mpls
+ 13M	./postflash/lib/modules/6.4.12/kernel/net/tipc
+988K	./postflash/lib/modules/6.4.12/kernel/net/llc
+2.0M	./postflash/lib/modules/6.4.12/kernel/net/appletalk
+1.9M	./postflash/lib/modules/6.4.12/kernel/net/core
+5.7M	./postflash/lib/modules/6.4.12/kernel/net/vmw_vsock
+2.1M	./postflash/lib/modules/6.4.12/kernel/net/8021q
+8.6M	./postflash/lib/modules/6.4.12/kernel/net/ceph
+7.9M	./postflash/lib/modules/6.4.12/kernel/net/6lowpan
+7.0M	./postflash/lib/modules/6.4.12/kernel/net/atm
+ 11M	./postflash/lib/modules/6.4.12/kernel/net/bridge/netfilter
+ 27M	./postflash/lib/modules/6.4.12/kernel/net/bridge
+4.6M	./postflash/lib/modules/6.4.12/kernel/net/mac802154
+532K	./postflash/lib/modules/6.4.12/kernel/net/handshake
+2.1M	./postflash/lib/modules/6.4.12/kernel/net/802
+ 15M	./postflash/lib/modules/6.4.12/kernel/net/dsa
+412K	./postflash/lib/modules/6.4.12/kernel/net/nsh
+572K	./postflash/lib/modules/6.4.12/kernel/net/dns_resolver
+1.0M	./postflash/lib/modules/6.4.12/kernel/net/mptcp
+500K	./postflash/lib/modules/6.4.12/kernel/net/xdp
+ 36M	./postflash/lib/modules/6.4.12/kernel/net/sched
+4.0M	./postflash/lib/modules/6.4.12/kernel/net/rose
+ 16M	./postflash/lib/modules/6.4.12/kernel/net/netfilter/ipset
+ 16M	./postflash/lib/modules/6.4.12/kernel/net/netfilter/ipvs
+119M	./postflash/lib/modules/6.4.12/kernel/net/netfilter
+916K	./postflash/lib/modules/6.4.12/kernel/net/key
+ 15M	./postflash/lib/modules/6.4.12/kernel/net/rxrpc
+ 12M	./postflash/lib/modules/6.4.12/kernel/net/ipv4/netfilter
+ 29M	./postflash/lib/modules/6.4.12/kernel/net/ipv4
+920K	./postflash/lib/modules/6.4.12/kernel/net/rfkill
+1.7M	./postflash/lib/modules/6.4.12/kernel/net/qrtr
+4.1M	./postflash/lib/modules/6.4.12/kernel/net/tls
+1.3M	./postflash/lib/modules/6.4.12/kernel/net/xfrm
+6.5M	./postflash/lib/modules/6.4.12/kernel/net/sunrpc/auth_gss
+9.1M	./postflash/lib/modules/6.4.12/kernel/net/sunrpc/xprtrdma
+ 31M	./postflash/lib/modules/6.4.12/kernel/net/sunrpc
+ 19M	./postflash/lib/modules/6.4.12/kernel/net/wireless
+1.6M	./postflash/lib/modules/6.4.12/kernel/net/nfc/hci
+2.8M	./postflash/lib/modules/6.4.12/kernel/net/nfc/nci
+9.2M	./postflash/lib/modules/6.4.12/kernel/net/nfc
+2.0M	./postflash/lib/modules/6.4.12/kernel/net/bluetooth/rfcomm
+1.3M	./postflash/lib/modules/6.4.12/kernel/net/bluetooth/bnep
+1.2M	./postflash/lib/modules/6.4.12/kernel/net/bluetooth/hidp
+ 22M	./postflash/lib/modules/6.4.12/kernel/net/bluetooth
+ 11M	./postflash/lib/modules/6.4.12/kernel/net/smc
+4.7M	./postflash/lib/modules/6.4.12/kernel/net/l2tp
+ 17M	./postflash/lib/modules/6.4.12/kernel/net/sctp
+3.9M	./postflash/lib/modules/6.4.12/kernel/net/netrom
+552K	./postflash/lib/modules/6.4.12/kernel/net/psample
+1.8M	./postflash/lib/modules/6.4.12/kernel/net/ipv6/ila
+ 14M	./postflash/lib/modules/6.4.12/kernel/net/ipv6/netfilter
+ 23M	./postflash/lib/modules/6.4.12/kernel/net/ipv6
+ 36M	./postflash/lib/modules/6.4.12/kernel/net/mac80211
+412K	./postflash/lib/modules/6.4.12/kernel/net/ife
+ 15M	./postflash/lib/modules/6.4.12/kernel/net/rds
+2.4M	./postflash/lib/modules/6.4.12/kernel/net/hsr
+8.3M	./postflash/lib/modules/6.4.12/kernel/net/openvswitch
+1.3M	./postflash/lib/modules/6.4.12/kernel/net/kcm
+555M	./postflash/lib/modules/6.4.12/kernel/net
+868K	./postflash/lib/modules/6.4.12/kernel/drivers/tee
+9.3M	./postflash/lib/modules/6.4.12/kernel/drivers/power/supply
+9.3M	./postflash/lib/modules/6.4.12/kernel/drivers/power
+ 10M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/sw/rxe
+6.9M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/sw/rdmavt
+5.1M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/sw/siw
+ 22M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/sw
+ 34M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/core
+7.3M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/cxgb4
+7.7M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/mlx4
+3.9M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/bnxt_re
+3.9M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/erdma
+3.2M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/ocrdma
+ 18M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/mlx5
+ 18M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/qib
+4.7M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/vmw_pvrdma
+2.9M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/mana
+ 33M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/hfi1
+3.1M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/qedr
+9.7M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/mthca
+4.6M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/usnic
+ 12M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/irdma
+2.6M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw/efa
+134M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/hw
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/ulp/opa_vnic
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/ulp/srpt
+5.5M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/ulp/ipoib
+5.4M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/ulp/rtrs
+2.4M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/ulp/iser
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/ulp/isert
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/ulp/srp
+ 19M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband/ulp
+210M	./postflash/lib/modules/6.4.12/kernel/drivers/infiniband
+884K	./postflash/lib/modules/6.4.12/kernel/drivers/powercap
+3.2M	./postflash/lib/modules/6.4.12/kernel/drivers/misc/cardreader
+148K	./postflash/lib/modules/6.4.12/kernel/drivers/misc/echo
+2.3M	./postflash/lib/modules/6.4.12/kernel/drivers/misc/sgi-xp
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/misc/ibmasm
+304K	./postflash/lib/modules/6.4.12/kernel/drivers/misc/mei/pxp
+416K	./postflash/lib/modules/6.4.12/kernel/drivers/misc/mei/hdcp
+5.9M	./postflash/lib/modules/6.4.12/kernel/drivers/misc/mei
+712K	./postflash/lib/modules/6.4.12/kernel/drivers/misc/mchp_pci1xxxx
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/misc/bcm-vk
+444K	./postflash/lib/modules/6.4.12/kernel/drivers/misc/altera-stapl
+1.8M	./postflash/lib/modules/6.4.12/kernel/drivers/misc/vmw_vmci
+564K	./postflash/lib/modules/6.4.12/kernel/drivers/misc/cb710
+2.4M	./postflash/lib/modules/6.4.12/kernel/drivers/misc/sgi-gru
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/misc/eeprom
+380K	./postflash/lib/modules/6.4.12/kernel/drivers/misc/uacce
+856K	./postflash/lib/modules/6.4.12/kernel/drivers/misc/lis3lv02d
+584K	./postflash/lib/modules/6.4.12/kernel/drivers/misc/pvpanic
+ 30M	./postflash/lib/modules/6.4.12/kernel/drivers/misc
+2.2M	./postflash/lib/modules/6.4.12/kernel/drivers/cpufreq
+2.4M	./postflash/lib/modules/6.4.12/kernel/drivers/xen/xen-pciback
+576K	./postflash/lib/modules/6.4.12/kernel/drivers/xen/xenfs
+6.0M	./postflash/lib/modules/6.4.12/kernel/drivers/xen
+2.7M	./postflash/lib/modules/6.4.12/kernel/drivers/hwtracing/intel_th
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/hwtracing/stm
+4.6M	./postflash/lib/modules/6.4.12/kernel/drivers/hwtracing
+6.3M	./postflash/lib/modules/6.4.12/kernel/drivers/mmc/core
+ 10M	./postflash/lib/modules/6.4.12/kernel/drivers/mmc/host
+ 17M	./postflash/lib/modules/6.4.12/kernel/drivers/mmc
+584K	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/intel/qat/qat_4xxx
+544K	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/intel/qat/qat_dh895xcc
+536K	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/intel/qat/qat_c3xxx
+528K	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/intel/qat/qat_c62xvf
+8.4M	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/intel/qat/qat_common
+540K	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/intel/qat/qat_c62x
+528K	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/intel/qat/qat_dh895xccvf
+528K	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/intel/qat/qat_c3xxxvf
+ 12M	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/intel/qat
+ 12M	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/intel
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/virtio
+5.0M	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/ccp
+1.8M	./postflash/lib/modules/6.4.12/kernel/drivers/crypto/chelsio
+ 22M	./postflash/lib/modules/6.4.12/kernel/drivers/crypto
+360K	./postflash/lib/modules/6.4.12/kernel/drivers/pci/hotplug
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/pci/controller
+580K	./postflash/lib/modules/6.4.12/kernel/drivers/pci/switch
+364K	./postflash/lib/modules/6.4.12/kernel/drivers/pci/pcie
+3.2M	./postflash/lib/modules/6.4.12/kernel/drivers/pci
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/acpi/nfit
+340K	./postflash/lib/modules/6.4.12/kernel/drivers/acpi/apei
+520K	./postflash/lib/modules/6.4.12/kernel/drivers/acpi/dptf
+6.1M	./postflash/lib/modules/6.4.12/kernel/drivers/acpi
+620K	./postflash/lib/modules/6.4.12/kernel/drivers/firmware/cirrus
+344K	./postflash/lib/modules/6.4.12/kernel/drivers/firmware/efi/test
+344K	./postflash/lib/modules/6.4.12/kernel/drivers/firmware/efi
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/firmware
+3.4M	./postflash/lib/modules/6.4.12/kernel/drivers/video/backlight
+3.4M	./postflash/lib/modules/6.4.12/kernel/drivers/video
+3.7M	./postflash/lib/modules/6.4.12/kernel/drivers/ssb
+4.9M	./postflash/lib/modules/6.4.12/kernel/drivers/soundwire
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/tty/ipwireless
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/tty/serial/8250
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/tty/serial/jsm
+3.7M	./postflash/lib/modules/6.4.12/kernel/drivers/tty/serial
+7.9M	./postflash/lib/modules/6.4.12/kernel/drivers/tty
+5.8M	./postflash/lib/modules/6.4.12/kernel/drivers/staging/rtl8192e/rtl8192e
+ 12M	./postflash/lib/modules/6.4.12/kernel/drivers/staging/rtl8192e
+2.8M	./postflash/lib/modules/6.4.12/kernel/drivers/staging/qlge
+ 28M	./postflash/lib/modules/6.4.12/kernel/drivers/staging/rtl8723bs
+ 11M	./postflash/lib/modules/6.4.12/kernel/drivers/staging/rtl8712
+3.2M	./postflash/lib/modules/6.4.12/kernel/drivers/staging/media/ipu3
+3.2M	./postflash/lib/modules/6.4.12/kernel/drivers/staging/media
+ 57M	./postflash/lib/modules/6.4.12/kernel/drivers/staging
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/gud
+500K	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/panel
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/udl
+3.8M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/virtio
+2.7M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/ttm
+4.0M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/mgag200
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/bridge/analogix
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/bridge
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/vboxvideo
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/vkms
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/i2c
+5.5M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/tests
+ 12M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/gma500
+976K	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/scheduler
+932K	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/hyperv
+3.8M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/qxl
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/solomon
+194M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/nouveau
+358M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/amd/amdgpu
+358M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/amd
+2.6M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/tiny
+576K	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/vgem
+2.8M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/ast
+3.3M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/display
+ 51M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/radeon
+153M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/i915
+ 13M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm/vmwgfx
+826M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu/drm
+826M	./postflash/lib/modules/6.4.12/kernel/drivers/gpu
+7.1M	./postflash/lib/modules/6.4.12/kernel/drivers/nvme/host
+7.6M	./postflash/lib/modules/6.4.12/kernel/drivers/nvme/target
+344K	./postflash/lib/modules/6.4.12/kernel/drivers/nvme/common
+ 15M	./postflash/lib/modules/6.4.12/kernel/drivers/nvme
+4.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ieee802154
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/pcs
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/mdio
+976K	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/slcan
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/ctucanfd
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/peak_canfd
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/usb/peak_usb
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/usb/kvaser_usb
+6.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/usb
+4.4M	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/spi/mcp251xfd
+5.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/spi
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/m_can
+2.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/dev
+608K	./postflash/lib/modules/6.4.12/kernel/drivers/net/can/ifi_canfd
+ 22M	./postflash/lib/modules/6.4.12/kernel/drivers/net/can
+5.4M	./postflash/lib/modules/6.4.12/kernel/drivers/net/bonding
+4.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/hamradio
+4.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ppp
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ipvlan
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/thunderbolt
+3.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/vxlan
+1.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/dsa/hirschmann
+1.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/dsa/realtek
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/net/dsa/xrs700x
+9.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/dsa/mv88e6xxx
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/dsa/qca
+3.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/dsa/b53
+ 25M	./postflash/lib/modules/6.4.12/kernel/drivers/net/dsa
+3.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/hyperv
+508K	./postflash/lib/modules/6.4.12/kernel/drivers/net/mctp
+4.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/realtek
+5.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/igc
+5.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/igb
+3.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/fm10k
+3.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/e1000
+ 30M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/ice
+ 11M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/i40e
+4.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/iavf
+ 12M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/ixgbe
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/igbvf
+2.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/ixgbevf
+7.4M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel/e1000e
+ 88M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/intel
+664K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/xircom
+4.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/sun
+744K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/adi
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/natsemi
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/dlink
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/xilinx
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/amazon/ena
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/amazon
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/atheros/atlx
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/atheros/alx
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/atheros/atl1c
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/atheros/atl1e
+7.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/atheros
+804K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/fungible/funcore
+3.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/fungible/funeth
+4.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/fungible
+4.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/qlogic/qede
+3.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/qlogic/netxen
+ 18M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/qlogic/qed
+9.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/qlogic/qlcnic
+ 36M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/qlogic
+2.4M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/marvell/octeon_ep
+7.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/marvell/prestera
+ 13M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/marvell
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/qualcomm/rmnet
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/qualcomm
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/altera
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/sis
+3.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/brocade/bna
+3.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/brocade
+4.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/google/gve
+4.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/google
+2.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/microsoft/mana
+2.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/microsoft
+ 11M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/sfc/siena
+8.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/sfc/falcon
+ 39M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/sfc
+9.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/broadcom/bnxt
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/broadcom/genet
+ 11M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/broadcom/bnx2x
+ 30M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/broadcom
+2.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/8390
+4.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/cisco/enic
+4.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/cisco
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/myricom/myri10ge
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/myricom
+584K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/rdc
+2.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/engleder
+ 16M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/mellanox/mlx4
+131M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/mellanox/mlx5/core
+131M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/mellanox/mlx5
+ 35M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/mellanox/mlxsw
+640K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/mellanox/mlxfw
+182M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/mellanox
+3.4M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/emulex/benet
+3.4M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/emulex
+2.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/amd/pds_core
+6.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/amd/xgbe
+ 12M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/amd
+ 17M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/chelsio/cxgb4
+5.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/chelsio/cxgb3
+908K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/chelsio/inline_crypto/ch_ktls
+716K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/chelsio/inline_crypto/ch_ipsec
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/chelsio/inline_crypto
+988K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/chelsio/libcxgb
+4.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/chelsio/cxgb
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/chelsio/cxgb4vf
+ 31M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/chelsio
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/nvidia
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/via
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/neterion
+ 27M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/netronome/nfp
+ 27M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/netronome
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/wiznet
+6.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/dec/tulip
+6.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/dec
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/wangxun/txgbe
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/wangxun/ngbe
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/wangxun/libwx
+4.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/wangxun
+864K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/agere
+780K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/tehuti
+616K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/silan
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/micrel
+ 10M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/stmicro/stmmac
+ 10M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/stmicro
+2.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/smsc
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/rocker
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/cadence
+844K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/alteon
+2.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/3com
+556K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/vertexcom
+7.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/aquantia/atlantic
+7.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/aquantia
+5.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/pensando/ionic
+5.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/pensando
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/asix
+688K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/adaptec
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/packetengines
+892K	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet/ti
+577M	./postflash/lib/modules/6.4.12/kernel/drivers/net/ethernet
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/phy/mscc
+ 22M	./postflash/lib/modules/6.4.12/kernel/drivers/net/phy
+ 23M	./postflash/lib/modules/6.4.12/kernel/drivers/net/usb
+3.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/team
+ 26M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtw89
+4.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtl8xxxu
+ 23M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtw88
+2.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtl818x/rtl8187
+3.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtl818x/rtl8180
+5.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtl818x
+4.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8723be
+4.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8192de
+5.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8723ae
+3.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8192ce
+5.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8821ae
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8192c
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8723com
+4.4M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8192se
+4.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8192cu
+4.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8192ee
+4.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8188ee
+4.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi/btcoexist
+ 57M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek/rtlwifi
+116M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/realtek
+3.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/zydas/zd1211rw
+3.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/zydas
+ 23M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/intel/iwlwifi/mvm
+9.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/intel/iwlwifi/dvm
+ 46M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/intel/iwlwifi
+8.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/intel/iwlegacy
+ 55M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/intel
+6.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/quantenna/qtnfmac
+6.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/quantenna
+ 20M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/marvell/mwifiex
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/marvell/libertas_tf
+ 22M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/marvell
+5.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/rsi
+ 13M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/broadcom/b43
+900K	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bca
+900K	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw
+900K	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/wcc
+ 15M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac
+436K	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/broadcom/brcm80211/brcmutil
+9.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/broadcom/brcm80211/brcmsmac
+ 25M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/broadcom/brcm80211
+6.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/broadcom/b43legacy
+ 45M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/broadcom
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/legacy
+5.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/mediatek/mt76/mt7915
+5.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/mediatek/mt76/mt7603
+4.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/mediatek/mt76/mt76x0
+5.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/mediatek/mt76/mt7996
+8.4M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/mediatek/mt76/mt7921
+7.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/mediatek/mt76/mt76x2
+9.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/mediatek/mt76/mt7615
+ 61M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/mediatek/mt76
+6.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/mediatek/mt7601u
+ 68M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/mediatek
+3.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/intersil/p54
+3.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/intersil
+6.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/st/cw1200
+6.7M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/st
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/virtual
+ 15M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ralink/rt2x00
+ 15M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ralink
+ 16M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath/ath11k
+9.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath/wil6210
+ 13M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath/ath12k
+4.6M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath/carl9170
+ 25M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath/ath9k
+956K	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath/ar5523
+8.2M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath/ath6kl
+ 17M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath/ath10k
+3.0M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath/wcn36xx
+8.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath/ath5k
+108M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ath
+4.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ti/wl18xx
+3.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ti/wl12xx
+8.9M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ti/wlcore
+6.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ti/wl1251
+ 22M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless/ti
+481M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireless
+780K	./postflash/lib/modules/6.4.12/kernel/drivers/net/slip
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/vmxnet3
+5.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/netdevsim
+5.8M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wireguard
+5.5M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wwan/iosm
+5.1M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wwan/t7xx
+ 12M	./postflash/lib/modules/6.4.12/kernel/drivers/net/wwan
+2.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/fjes
+2.3M	./postflash/lib/modules/6.4.12/kernel/drivers/net/xen-netback
+1.2G	./postflash/lib/modules/6.4.12/kernel/drivers/net
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/char/hw_random
+4.0M	./postflash/lib/modules/6.4.12/kernel/drivers/char/tpm
+660K	./postflash/lib/modules/6.4.12/kernel/drivers/char/mwave
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/char/xillybus
+5.7M	./postflash/lib/modules/6.4.12/kernel/drivers/char/ipmi
+ 15M	./postflash/lib/modules/6.4.12/kernel/drivers/char
+876K	./postflash/lib/modules/6.4.12/kernel/drivers/mux
+4.2M	./postflash/lib/modules/6.4.12/kernel/drivers/pinctrl/intel
+4.7M	./postflash/lib/modules/6.4.12/kernel/drivers/pinctrl
+2.6M	./postflash/lib/modules/6.4.12/kernel/drivers/virtio
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/pwm
+5.3M	./postflash/lib/modules/6.4.12/kernel/drivers/hv
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/ptp
+860K	./postflash/lib/modules/6.4.12/kernel/drivers/vdpa/ifcvf
+2.7M	./postflash/lib/modules/6.4.12/kernel/drivers/vdpa/mlx5
+480K	./postflash/lib/modules/6.4.12/kernel/drivers/vdpa/virtio_pci
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/vdpa/vdpa_user
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/vdpa/vdpa_sim
+464K	./postflash/lib/modules/6.4.12/kernel/drivers/vdpa/alibaba
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/vdpa/solidrun
+8.6M	./postflash/lib/modules/6.4.12/kernel/drivers/vdpa
+8.6M	./postflash/lib/modules/6.4.12/kernel/drivers/input/misc
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/input/serio
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/input/tablet
+ 19M	./postflash/lib/modules/6.4.12/kernel/drivers/input/touchscreen
+4.1M	./postflash/lib/modules/6.4.12/kernel/drivers/input/rmi4
+296K	./postflash/lib/modules/6.4.12/kernel/drivers/input/tests
+5.0M	./postflash/lib/modules/6.4.12/kernel/drivers/input/mouse
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/input/gameport
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/input/joystick/iforce
+ 10M	./postflash/lib/modules/6.4.12/kernel/drivers/input/joystick
+3.4M	./postflash/lib/modules/6.4.12/kernel/drivers/input/keyboard
+ 57M	./postflash/lib/modules/6.4.12/kernel/drivers/input
+3.5M	./postflash/lib/modules/6.4.12/kernel/drivers/cxl/core
+5.5M	./postflash/lib/modules/6.4.12/kernel/drivers/cxl
+4.1M	./postflash/lib/modules/6.4.12/kernel/drivers/atm
+3.0M	./postflash/lib/modules/6.4.12/kernel/drivers/target/iscsi/cxgbit
+ 10M	./postflash/lib/modules/6.4.12/kernel/drivers/target/iscsi
+664K	./postflash/lib/modules/6.4.12/kernel/drivers/target/sbp
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/target/tcm_fc
+504K	./postflash/lib/modules/6.4.12/kernel/drivers/target/loopback
+368K	./postflash/lib/modules/6.4.12/kernel/drivers/target/tcm_remote
+ 22M	./postflash/lib/modules/6.4.12/kernel/drivers/target
+608K	./postflash/lib/modules/6.4.12/kernel/drivers/soc/qcom
+184K	./postflash/lib/modules/6.4.12/kernel/drivers/soc/nuvoton
+792K	./postflash/lib/modules/6.4.12/kernel/drivers/soc
+ 13M	./postflash/lib/modules/6.4.12/kernel/drivers/hwmon/pmbus
+ 76M	./postflash/lib/modules/6.4.12/kernel/drivers/hwmon
+5.5M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/mpt3sas
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/smartpqi
+2.6M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/fcoe
+4.0M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/csiostor
+3.6M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/pm8001
+3.8M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/snic
+2.8M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/mpi3mr
+7.2M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/elx
+ 17M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/qla2xxx
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/bnx2i
+3.6M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/bnx2fc
+5.3M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/aic7xxx
+3.9M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/aacraid
+3.6M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/esas2r
+ 16M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/lpfc
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/arcmsr
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/mvsas
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/cxgbi/cxgb4i
+960K	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/cxgbi/cxgb3i
+3.3M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/cxgbi
+2.8M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/be2iscsi
+4.3M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/qedf
+8.1M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/qla4xxx
+9.3M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/bfa
+3.6M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/qedi
+3.7M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/megaraid
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/device_handler
+1.8M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/sym53c8xx_2
+5.0M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/isci
+3.5M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/libfc
+3.9M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/libsas
+4.0M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi/fnic
+171M	./postflash/lib/modules/6.4.12/kernel/drivers/scsi
+5.0M	./postflash/lib/modules/6.4.12/kernel/drivers/ufs/core
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/ufs/host
+6.3M	./postflash/lib/modules/6.4.12/kernel/drivers/ufs
+4.2M	./postflash/lib/modules/6.4.12/kernel/drivers/firewire
+7.6M	./postflash/lib/modules/6.4.12/kernel/drivers/thunderbolt
+228K	./postflash/lib/modules/6.4.12/kernel/drivers/reset
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/surface/aggregator
+6.2M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/surface
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/mellanox
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/x86-android-tablets
+612K	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/intel/uncore-frequency
+504K	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/intel/wmi
+1.8M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/intel/int3472
+848K	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/intel/ifs
+952K	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/intel/pmt
+524K	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/intel/atomisp2
+896K	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/intel/telemetry
+264K	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/intel/int1092
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/intel/speed_select_if
+ 13M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/intel
+832K	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/hp
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/dell/dell-wmi-sysman
+5.2M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/dell
+976K	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/amd/pmf
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86/amd
+ 44M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/x86
+7.6M	./postflash/lib/modules/6.4.12/kernel/drivers/platform/chrome
+ 60M	./postflash/lib/modules/6.4.12/kernel/drivers/platform
+3.0M	./postflash/lib/modules/6.4.12/kernel/drivers/bcma
+ 11M	./postflash/lib/modules/6.4.12/kernel/drivers/i2c/busses
+772K	./postflash/lib/modules/6.4.12/kernel/drivers/i2c/algos
+748K	./postflash/lib/modules/6.4.12/kernel/drivers/i2c/muxes
+ 15M	./postflash/lib/modules/6.4.12/kernel/drivers/i2c
+224K	./postflash/lib/modules/6.4.12/kernel/drivers/devfreq
+3.9M	./postflash/lib/modules/6.4.12/kernel/drivers/thermal/intel/int340x_thermal
+6.0M	./postflash/lib/modules/6.4.12/kernel/drivers/thermal/intel
+6.0M	./postflash/lib/modules/6.4.12/kernel/drivers/thermal
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/bus/mhi/host
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/bus/mhi
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/bus
+4.7M	./postflash/lib/modules/6.4.12/kernel/drivers/message/fusion
+4.7M	./postflash/lib/modules/6.4.12/kernel/drivers/message
+7.4M	./postflash/lib/modules/6.4.12/kernel/drivers/regulator
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/vfio/pci/mlx5
+3.7M	./postflash/lib/modules/6.4.12/kernel/drivers/vfio/pci
+600K	./postflash/lib/modules/6.4.12/kernel/drivers/vfio/mdev
+6.7M	./postflash/lib/modules/6.4.12/kernel/drivers/vfio
+3.2M	./postflash/lib/modules/6.4.12/kernel/drivers/leds/trigger
+244K	./postflash/lib/modules/6.4.12/kernel/drivers/leds/rgb
+864K	./postflash/lib/modules/6.4.12/kernel/drivers/leds/flash
+9.5M	./postflash/lib/modules/6.4.12/kernel/drivers/leds
+820K	./postflash/lib/modules/6.4.12/kernel/drivers/virt/nitro_enclaves
+404K	./postflash/lib/modules/6.4.12/kernel/drivers/virt/coco/sev-guest
+304K	./postflash/lib/modules/6.4.12/kernel/drivers/virt/coco/efi_secret
+280K	./postflash/lib/modules/6.4.12/kernel/drivers/virt/coco/tdx-guest
+988K	./postflash/lib/modules/6.4.12/kernel/drivers/virt/coco
+960K	./postflash/lib/modules/6.4.12/kernel/drivers/virt/vboxguest
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/virt/acrn
+4.1M	./postflash/lib/modules/6.4.12/kernel/drivers/virt
+624K	./postflash/lib/modules/6.4.12/kernel/drivers/usb/misc/sisusbvga
+7.7M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/misc
+384K	./postflash/lib/modules/6.4.12/kernel/drivers/usb/core
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/host
+3.3M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/atm
+3.2M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/usbip
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/cdns3
+240K	./postflash/lib/modules/6.4.12/kernel/drivers/usb/roles
+788K	./postflash/lib/modules/6.4.12/kernel/drivers/usb/image
+408K	./postflash/lib/modules/6.4.12/kernel/drivers/usb/phy
+8.0M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/storage
+328K	./postflash/lib/modules/6.4.12/kernel/drivers/usb/common
+560K	./postflash/lib/modules/6.4.12/kernel/drivers/usb/typec/altmodes
+812K	./postflash/lib/modules/6.4.12/kernel/drivers/usb/typec/tipd
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/typec/tcpm
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/typec/mux
+2.2M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/typec/ucsi
+ 10M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/typec
+2.3M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/class
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/dwc3
+ 21M	./postflash/lib/modules/6.4.12/kernel/drivers/usb/serial
+ 63M	./postflash/lib/modules/6.4.12/kernel/drivers/usb
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/gnss
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/ntb/hw/intel
+484K	./postflash/lib/modules/6.4.12/kernel/drivers/ntb/hw/mscc
+600K	./postflash/lib/modules/6.4.12/kernel/drivers/ntb/hw/idt
+464K	./postflash/lib/modules/6.4.12/kernel/drivers/ntb/hw/amd
+380K	./postflash/lib/modules/6.4.12/kernel/drivers/ntb/hw/epf
+2.9M	./postflash/lib/modules/6.4.12/kernel/drivers/ntb/hw
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/ntb/test
+5.3M	./postflash/lib/modules/6.4.12/kernel/drivers/ntb
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/accel/qaic
+ 15M	./postflash/lib/modules/6.4.12/kernel/drivers/accel/habanalabs
+3.4M	./postflash/lib/modules/6.4.12/kernel/drivers/accel/ivpu
+ 20M	./postflash/lib/modules/6.4.12/kernel/drivers/accel
+4.5M	./postflash/lib/modules/6.4.12/kernel/drivers/spi
+ 10M	./postflash/lib/modules/6.4.12/kernel/drivers/watchdog
+6.5M	./postflash/lib/modules/6.4.12/kernel/drivers/nvdimm
+3.8M	./postflash/lib/modules/6.4.12/kernel/drivers/vhost
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/iommu/iommufd
+456K	./postflash/lib/modules/6.4.12/kernel/drivers/iommu/amd
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/iommu
+7.7M	./postflash/lib/modules/6.4.12/kernel/drivers/fpga
+996K	./postflash/lib/modules/6.4.12/kernel/drivers/nfc/nxp-nci
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/nfc/st21nfca
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/nfc/pn544
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/nfc/microread
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/nfc/pn533
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/nfc/nfcmrvl
+9.5M	./postflash/lib/modules/6.4.12/kernel/drivers/nfc
+ 21M	./postflash/lib/modules/6.4.12/kernel/drivers/bluetooth
+ 20M	./postflash/lib/modules/6.4.12/kernel/drivers/rtc
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/md/persistent-data
+6.4M	./postflash/lib/modules/6.4.12/kernel/drivers/md/bcache
+ 31M	./postflash/lib/modules/6.4.12/kernel/drivers/md
+532K	./postflash/lib/modules/6.4.12/kernel/drivers/dca
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/pcmcia
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/hid/amd-sfh-hid
+3.2M	./postflash/lib/modules/6.4.12/kernel/drivers/hid/intel-ish-hid
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/hid/surface-hid
+964K	./postflash/lib/modules/6.4.12/kernel/drivers/hid/i2c-hid
+ 66M	./postflash/lib/modules/6.4.12/kernel/drivers/hid
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/dma/ioat
+424K	./postflash/lib/modules/6.4.12/kernel/drivers/dma/xilinx
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/dma/dw-edma
+320K	./postflash/lib/modules/6.4.12/kernel/drivers/dma/dw
+3.9M	./postflash/lib/modules/6.4.12/kernel/drivers/dma/idxd
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/dma/ptdma
+9.3M	./postflash/lib/modules/6.4.12/kernel/drivers/dma
+2.3M	./postflash/lib/modules/6.4.12/kernel/drivers/auxdisplay
+856K	./postflash/lib/modules/6.4.12/kernel/drivers/pps/clients
+856K	./postflash/lib/modules/6.4.12/kernel/drivers/pps
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/counter
+296K	./postflash/lib/modules/6.4.12/kernel/drivers/dax/hmem
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/dax
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/uio
+3.7M	./postflash/lib/modules/6.4.12/kernel/drivers/mtd/ubi
+232K	./postflash/lib/modules/6.4.12/kernel/drivers/mtd/chips
+3.6M	./postflash/lib/modules/6.4.12/kernel/drivers/mtd/nand/raw
+4.6M	./postflash/lib/modules/6.4.12/kernel/drivers/mtd/nand
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/mtd/devices
+5.1M	./postflash/lib/modules/6.4.12/kernel/drivers/mtd/spi-nor
+ 17M	./postflash/lib/modules/6.4.12/kernel/drivers/mtd
+792K	./postflash/lib/modules/6.4.12/kernel/drivers/nvmem/layouts
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/nvmem
+ 23M	./postflash/lib/modules/6.4.12/kernel/drivers/ata
+5.6M	./postflash/lib/modules/6.4.12/kernel/drivers/accessibility/speakup
+5.6M	./postflash/lib/modules/6.4.12/kernel/drivers/accessibility
+916K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/orientation
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/potentiometer
+500K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/trigger
+408K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/potentiostat
+504K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/test
+272K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/multiplexer
+384K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/frequency
+2.2M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/humidity
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/addac
+448K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/position
+404K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/health
+300K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/afe
+5.0M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/gyro
+3.1M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/pressure
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/imu/bno055
+2.2M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/imu/inv_mpu6050
+2.4M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/imu/inv_icm42600
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/imu/bmi160
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/imu/st_lsm6dsx
+ 11M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/imu
+5.5M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/accel
+836K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/common/cros_ec_sensors
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/common/st_sensors
+916K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/common/hid-sensors
+3.4M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/common
+4.2M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/magnetometer
+9.6M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/adc
+356K	./postflash/lib/modules/6.4.12/kernel/drivers/iio/amplifiers
+3.1M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/proximity
+ 10M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/light
+3.6M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/dac
+3.5M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/temperature
+2.4M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/chemical
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/iio/buffer
+ 78M	./postflash/lib/modules/6.4.12/kernel/drivers/iio
+836K	./postflash/lib/modules/6.4.12/kernel/drivers/memstick/core
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/memstick/host
+2.8M	./postflash/lib/modules/6.4.12/kernel/drivers/memstick
+6.8M	./postflash/lib/modules/6.4.12/kernel/drivers/gpio
+300K	./postflash/lib/modules/6.4.12/kernel/drivers/clk/xilinx
+1.8M	./postflash/lib/modules/6.4.12/kernel/drivers/clk
+7.0M	./postflash/lib/modules/6.4.12/kernel/drivers/mfd
+2.2M	./postflash/lib/modules/6.4.12/kernel/drivers/base/regmap
+2.2M	./postflash/lib/modules/6.4.12/kernel/drivers/base
+3.7M	./postflash/lib/modules/6.4.12/kernel/drivers/w1/slaves
+788K	./postflash/lib/modules/6.4.12/kernel/drivers/w1/masters
+6.1M	./postflash/lib/modules/6.4.12/kernel/drivers/w1
+7.3M	./postflash/lib/modules/6.4.12/kernel/drivers/edac
+752K	./postflash/lib/modules/6.4.12/kernel/drivers/block/zram
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/block/null_blk
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/block/aoe
+876K	./postflash/lib/modules/6.4.12/kernel/drivers/block/xen-blkback
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/block/rnbd
+8.9M	./postflash/lib/modules/6.4.12/kernel/drivers/block/drbd
+960K	./postflash/lib/modules/6.4.12/kernel/drivers/block/mtip32xx
+ 24M	./postflash/lib/modules/6.4.12/kernel/drivers/block
+2.7M	./postflash/lib/modules/6.4.12/kernel/drivers/parport
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/extcon
+352K	./postflash/lib/modules/6.4.12/kernel/drivers/media/mmc/siano
+352K	./postflash/lib/modules/6.4.12/kernel/drivers/media/mmc
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/intel/ipu3
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/intel
+7.8M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/ivtv
+1.7M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/ngene
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/ttpci
+7.0M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/mantis
+7.5M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/cx23885
+ 11M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/cx18
+6.8M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/cx88
+812K	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/b2c2
+6.8M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/saa7134
+892K	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/smipcie
+1.4M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/tw686x
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/netup_unidvb
+3.2M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/ddbridge
+6.3M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/bt8xx
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/saa7146
+612K	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/pt1
+512K	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/pluto2
+5.2M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/saa7164
+572K	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/dm1105
+4.4M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci/solo6x10
+ 79M	./postflash/lib/modules/6.4.12/kernel/drivers/media/pci
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/media/radio/si470x
+7.3M	./postflash/lib/modules/6.4.12/kernel/drivers/media/radio
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/media/dvb-core
+1.1M	./postflash/lib/modules/6.4.12/kernel/drivers/media/dvb-frontends/drx39xyj
+ 53M	./postflash/lib/modules/6.4.12/kernel/drivers/media/dvb-frontends
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/media/firewire
+452K	./postflash/lib/modules/6.4.12/kernel/drivers/media/platform/cadence
+452K	./postflash/lib/modules/6.4.12/kernel/drivers/media/platform
+500K	./postflash/lib/modules/6.4.12/kernel/drivers/media/i2c/et8ek8
+2.3M	./postflash/lib/modules/6.4.12/kernel/drivers/media/i2c/cx25840
+1.3M	./postflash/lib/modules/6.4.12/kernel/drivers/media/i2c/s5c73m3
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/media/i2c/ccs
+ 64M	./postflash/lib/modules/6.4.12/kernel/drivers/media/i2c
+8.4M	./postflash/lib/modules/6.4.12/kernel/drivers/media/test-drivers/vivid
+2.5M	./postflash/lib/modules/6.4.12/kernel/drivers/media/test-drivers/vimc
+772K	./postflash/lib/modules/6.4.12/kernel/drivers/media/test-drivers/vicodec
+2.1M	./postflash/lib/modules/6.4.12/kernel/drivers/media/test-drivers/visl
+ 14M	./postflash/lib/modules/6.4.12/kernel/drivers/media/test-drivers
+ 16M	./postflash/lib/modules/6.4.12/kernel/drivers/media/tuners
+460K	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/siano
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/hdpvr
+5.7M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/cx231xx
+4.2M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/uvc
+3.0M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/pwc
+ 18M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/dvb-usb
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/stk1160
+500K	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/b2c2
+744K	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/s2255
+556K	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/ttusb-budget
+7.0M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/pvrusb2
+5.0M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/em28xx
+3.4M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/go7007
+2.8M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/au0828
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/gspca/stv06xx
+1.9M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/gspca/gl860
+2.6M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/gspca/m5602
+ 31M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/gspca
+ 10M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/dvb-usb-v2
+1.0M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/ttusb-dec
+2.0M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/as102
+1.2M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb/usbtv
+100M	./postflash/lib/modules/6.4.12/kernel/drivers/media/usb
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/media/common/siano
+2.4M	./postflash/lib/modules/6.4.12/kernel/drivers/media/common/b2c2
+356K	./postflash/lib/modules/6.4.12/kernel/drivers/media/common/v4l2-tpg
+2.6M	./postflash/lib/modules/6.4.12/kernel/drivers/media/common/saa7146
+3.4M	./postflash/lib/modules/6.4.12/kernel/drivers/media/common/videobuf2
+ 12M	./postflash/lib/modules/6.4.12/kernel/drivers/media/common
+928K	./postflash/lib/modules/6.4.12/kernel/drivers/media/spi
+9.2M	./postflash/lib/modules/6.4.12/kernel/drivers/media/v4l2-core
+1.5M	./postflash/lib/modules/6.4.12/kernel/drivers/media/mc
+ 16M	./postflash/lib/modules/6.4.12/kernel/drivers/media/rc/keymaps
+ 27M	./postflash/lib/modules/6.4.12/kernel/drivers/media/rc
+1.6M	./postflash/lib/modules/6.4.12/kernel/drivers/media/cec/core
+388K	./postflash/lib/modules/6.4.12/kernel/drivers/media/cec/platform/seco
+332K	./postflash/lib/modules/6.4.12/kernel/drivers/media/cec/platform/cec-gpio
+720K	./postflash/lib/modules/6.4.12/kernel/drivers/media/cec/platform
+412K	./postflash/lib/modules/6.4.12/kernel/drivers/media/cec/i2c
+420K	./postflash/lib/modules/6.4.12/kernel/drivers/media/cec/usb/pulse8
+360K	./postflash/lib/modules/6.4.12/kernel/drivers/media/cec/usb/rainshadow
+780K	./postflash/lib/modules/6.4.12/kernel/drivers/media/cec/usb
+3.5M	./postflash/lib/modules/6.4.12/kernel/drivers/media/cec
+394M	./postflash/lib/modules/6.4.12/kernel/drivers/media
+3.8G	./postflash/lib/modules/6.4.12/kernel/drivers
+216K	./postflash/lib/modules/6.4.12/kernel/virt/lib
+216K	./postflash/lib/modules/6.4.12/kernel/virt
+6.9M	./postflash/lib/modules/6.4.12/kernel/arch/x86/crypto
+ 33M	./postflash/lib/modules/6.4.12/kernel/arch/x86/kvm
+2.6M	./postflash/lib/modules/6.4.12/kernel/arch/x86/events/intel
+364K	./postflash/lib/modules/6.4.12/kernel/arch/x86/events/amd
+3.4M	./postflash/lib/modules/6.4.12/kernel/arch/x86/events
+444K	./postflash/lib/modules/6.4.12/kernel/arch/x86/kernel/cpu/mce
+444K	./postflash/lib/modules/6.4.12/kernel/arch/x86/kernel/cpu
+444K	./postflash/lib/modules/6.4.12/kernel/arch/x86/kernel
+ 43M	./postflash/lib/modules/6.4.12/kernel/arch/x86
+ 43M	./postflash/lib/modules/6.4.12/kernel/arch
+1.1M	./postflash/lib/modules/6.4.12/kernel/lib/crypto
+1.3M	./postflash/lib/modules/6.4.12/kernel/lib/kunit
+616K	./postflash/lib/modules/6.4.12/kernel/lib/lz4
+476K	./postflash/lib/modules/6.4.12/kernel/lib/math
+176K	./postflash/lib/modules/6.4.12/kernel/lib/reed_solomon
+ 19M	./postflash/lib/modules/6.4.12/kernel/lib
+464K	./postflash/lib/modules/6.4.12/kernel/mm/kfence
+820K	./postflash/lib/modules/6.4.12/kernel/mm
+ 50M	./postflash/lib/modules/6.4.12/kernel/fs/xfs
+4.7M	./postflash/lib/modules/6.4.12/kernel/fs/orangefs
+3.4M	./postflash/lib/modules/6.4.12/kernel/fs/9p
+3.7M	./postflash/lib/modules/6.4.12/kernel/fs/erofs
+5.5M	./postflash/lib/modules/6.4.12/kernel/fs/jfs
+ 17M	./postflash/lib/modules/6.4.12/kernel/fs/nfsd
+1.3M	./postflash/lib/modules/6.4.12/kernel/fs/befs
+2.1M	./postflash/lib/modules/6.4.12/kernel/fs/nfs/blocklayout
+1.2M	./postflash/lib/modules/6.4.12/kernel/fs/nfs/filelayout
+1.5M	./postflash/lib/modules/6.4.12/kernel/fs/nfs/flexfilelayout
+ 38M	./postflash/lib/modules/6.4.12/kernel/fs/nfs
+ 11M	./postflash/lib/modules/6.4.12/kernel/fs/ubifs
+ 10M	./postflash/lib/modules/6.4.12/kernel/fs/nls
+ 10M	./postflash/lib/modules/6.4.12/kernel/fs/ceph
+ 16M	./postflash/lib/modules/6.4.12/kernel/fs/f2fs
+2.6M	./postflash/lib/modules/6.4.12/kernel/fs/ufs
+5.0M	./postflash/lib/modules/6.4.12/kernel/fs/fuse
+2.0M	./postflash/lib/modules/6.4.12/kernel/fs/sysv
+2.6M	./postflash/lib/modules/6.4.12/kernel/fs/exfat
+7.6M	./postflash/lib/modules/6.4.12/kernel/fs/reiserfs
+2.5M	./postflash/lib/modules/6.4.12/kernel/fs/fscache
+1.2M	./postflash/lib/modules/6.4.12/kernel/fs/vboxsf
+5.7M	./postflash/lib/modules/6.4.12/kernel/fs/ntfs3
+ 10M	./postflash/lib/modules/6.4.12/kernel/fs/gfs2
+284K	./postflash/lib/modules/6.4.12/kernel/fs/ext4
+552K	./postflash/lib/modules/6.4.12/kernel/fs/pstore
+2.1M	./postflash/lib/modules/6.4.12/kernel/fs/affs
+7.1M	./postflash/lib/modules/6.4.12/kernel/fs/lockd
+8.3M	./postflash/lib/modules/6.4.12/kernel/fs/nilfs2
+3.4M	./postflash/lib/modules/6.4.12/kernel/fs/hfs
+6.2M	./postflash/lib/modules/6.4.12/kernel/fs/dlm
+2.9M	./postflash/lib/modules/6.4.12/kernel/fs/overlayfs
+292K	./postflash/lib/modules/6.4.12/kernel/fs/smb/common
+ 28M	./postflash/lib/modules/6.4.12/kernel/fs/smb/client
+ 28M	./postflash/lib/modules/6.4.12/kernel/fs/smb
+528K	./postflash/lib/modules/6.4.12/kernel/fs/romfs
+3.6M	./postflash/lib/modules/6.4.12/kernel/fs/udf
+1.9M	./postflash/lib/modules/6.4.12/kernel/fs/netfs
+3.4M	./postflash/lib/modules/6.4.12/kernel/fs/cachefiles
+3.1M	./postflash/lib/modules/6.4.12/kernel/fs/ecryptfs
+3.2M	./postflash/lib/modules/6.4.12/kernel/fs/fat
+6.2M	./postflash/lib/modules/6.4.12/kernel/fs/jffs2
+1.7M	./postflash/lib/modules/6.4.12/kernel/fs/minix
+516K	./postflash/lib/modules/6.4.12/kernel/fs/nfs_common
+ 17M	./postflash/lib/modules/6.4.12/kernel/fs/afs
+2.5M	./postflash/lib/modules/6.4.12/kernel/fs/coda
+1.1M	./postflash/lib/modules/6.4.12/kernel/fs/zonefs
+2.7M	./postflash/lib/modules/6.4.12/kernel/fs/ocfs2/cluster
+604K	./postflash/lib/modules/6.4.12/kernel/fs/ocfs2/dlmfs
+4.9M	./postflash/lib/modules/6.4.12/kernel/fs/ocfs2/dlm
+ 28M	./postflash/lib/modules/6.4.12/kernel/fs/ocfs2
+4.7M	./postflash/lib/modules/6.4.12/kernel/fs/hfsplus
+346M	./postflash/lib/modules/6.4.12/kernel/fs
+1.0M	./postflash/lib/modules/6.4.12/kernel/sound/xen
+1.6M	./postflash/lib/modules/6.4.12/kernel/sound/pci/ac97
+3.5M	./postflash/lib/modules/6.4.12/kernel/sound/pci/asihpi
+3.8M	./postflash/lib/modules/6.4.12/kernel/sound/pci/ctxfi
+3.6M	./postflash/lib/modules/6.4.12/kernel/sound/pci/oxygen
+576K	./postflash/lib/modules/6.4.12/kernel/sound/pci/ali5451
+664K	./postflash/lib/modules/6.4.12/kernel/sound/pci/vx222
+2.3M	./postflash/lib/modules/6.4.12/kernel/sound/pci/au88x0
+1.6M	./postflash/lib/modules/6.4.12/kernel/sound/pci/pcxhr
+516K	./postflash/lib/modules/6.4.12/kernel/sound/pci/riptide
+ 15M	./postflash/lib/modules/6.4.12/kernel/sound/pci/hda
+8.8M	./postflash/lib/modules/6.4.12/kernel/sound/pci/echoaudio
+5.4M	./postflash/lib/modules/6.4.12/kernel/sound/pci/emu10k1
+6.6M	./postflash/lib/modules/6.4.12/kernel/sound/pci/ice1712
+868K	./postflash/lib/modules/6.4.12/kernel/sound/pci/ymfpci
+1.1M	./postflash/lib/modules/6.4.12/kernel/sound/pci/lola
+556K	./postflash/lib/modules/6.4.12/kernel/sound/pci/nm256
+1.0M	./postflash/lib/modules/6.4.12/kernel/sound/pci/trident
+2.3M	./postflash/lib/modules/6.4.12/kernel/sound/pci/rme9652
+836K	./postflash/lib/modules/6.4.12/kernel/sound/pci/lx6464es
+512K	./postflash/lib/modules/6.4.12/kernel/sound/pci/korg1212
+1.3M	./postflash/lib/modules/6.4.12/kernel/sound/pci/ca0106
+1.7M	./postflash/lib/modules/6.4.12/kernel/sound/pci/cs46xx
+1.2M	./postflash/lib/modules/6.4.12/kernel/sound/pci/mixart
+ 76M	./postflash/lib/modules/6.4.12/kernel/sound/pci
+872K	./postflash/lib/modules/6.4.12/kernel/sound/drivers/pcsp
+1.4M	./postflash/lib/modules/6.4.12/kernel/sound/drivers/opl3
+1.3M	./postflash/lib/modules/6.4.12/kernel/sound/drivers/vx
+564K	./postflash/lib/modules/6.4.12/kernel/sound/drivers/mpu401
+6.6M	./postflash/lib/modules/6.4.12/kernel/sound/drivers
+1.7M	./postflash/lib/modules/6.4.12/kernel/sound/core/seq/oss
+5.1M	./postflash/lib/modules/6.4.12/kernel/sound/core/seq
+2.4M	./postflash/lib/modules/6.4.12/kernel/sound/core/oss
+ 16M	./postflash/lib/modules/6.4.12/kernel/sound/core
+636K	./postflash/lib/modules/6.4.12/kernel/sound/isa/sb
+636K	./postflash/lib/modules/6.4.12/kernel/sound/isa
+1.6M	./postflash/lib/modules/6.4.12/kernel/sound/virtio
+776K	./postflash/lib/modules/6.4.12/kernel/sound/hda/ext
+4.4M	./postflash/lib/modules/6.4.12/kernel/sound/hda
+5.2M	./postflash/lib/modules/6.4.12/kernel/sound/soc/intel/avs/boards
+ 11M	./postflash/lib/modules/6.4.12/kernel/sound/soc/intel/avs
+2.1M	./postflash/lib/modules/6.4.12/kernel/sound/soc/intel/atom/sst
+3.3M	./postflash/lib/modules/6.4.12/kernel/sound/soc/intel/atom
+5.1M	./postflash/lib/modules/6.4.12/kernel/sound/soc/intel/skylake
+2.0M	./postflash/lib/modules/6.4.12/kernel/sound/soc/intel/catpt
+2.5M	./postflash/lib/modules/6.4.12/kernel/sound/soc/intel/common
+ 20M	./postflash/lib/modules/6.4.12/kernel/sound/soc/intel/boards
+ 44M	./postflash/lib/modules/6.4.12/kernel/sound/soc/intel
+772K	./postflash/lib/modules/6.4.12/kernel/sound/soc/adi
+ 76M	./postflash/lib/modules/6.4.12/kernel/sound/soc/codecs
+1.1M	./postflash/lib/modules/6.4.12/kernel/sound/soc/amd/yc
+1.5M	./postflash/lib/modules/6.4.12/kernel/sound/soc/amd/vangogh
+1.1M	./postflash/lib/modules/6.4.12/kernel/sound/soc/amd/renoir
+1.1M	./postflash/lib/modules/6.4.12/kernel/sound/soc/amd/raven
+1.1M	./postflash/lib/modules/6.4.12/kernel/sound/soc/amd/ps
+324K	./postflash/lib/modules/6.4.12/kernel/sound/soc/amd/rpl
+2.6M	./postflash/lib/modules/6.4.12/kernel/sound/soc/amd/acp
+ 11M	./postflash/lib/modules/6.4.12/kernel/sound/soc/amd
+812K	./postflash/lib/modules/6.4.12/kernel/sound/soc/generic
+ 12M	./postflash/lib/modules/6.4.12/kernel/sound/soc/sof/intel
+380K	./postflash/lib/modules/6.4.12/kernel/sound/soc/sof/xtensa
+3.6M	./postflash/lib/modules/6.4.12/kernel/sound/soc/sof/amd
+ 27M	./postflash/lib/modules/6.4.12/kernel/sound/soc/sof
+167M	./postflash/lib/modules/6.4.12/kernel/sound/soc
+2.3M	./postflash/lib/modules/6.4.12/kernel/sound/firewire/fireface
+1.9M	./postflash/lib/modules/6.4.12/kernel/sound/firewire/fireworks
+3.1M	./postflash/lib/modules/6.4.12/kernel/sound/firewire/dice
+3.1M	./postflash/lib/modules/6.4.12/kernel/sound/firewire/motu
+1.8M	./postflash/lib/modules/6.4.12/kernel/sound/firewire/digi00x
+1.8M	./postflash/lib/modules/6.4.12/kernel/sound/firewire/tascam
+2.5M	./postflash/lib/modules/6.4.12/kernel/sound/firewire/bebob
+2.1M	./postflash/lib/modules/6.4.12/kernel/sound/firewire/oxfw
+ 21M	./postflash/lib/modules/6.4.12/kernel/sound/firewire
+1.3M	./postflash/lib/modules/6.4.12/kernel/sound/i2c/other
+1.9M	./postflash/lib/modules/6.4.12/kernel/sound/i2c
+524K	./postflash/lib/modules/6.4.12/kernel/sound/usb/misc
+340K	./postflash/lib/modules/6.4.12/kernel/sound/usb/bcd2000
+1.4M	./postflash/lib/modules/6.4.12/kernel/sound/usb/6fire
+1.5M	./postflash/lib/modules/6.4.12/kernel/sound/usb/caiaq
+580K	./postflash/lib/modules/6.4.12/kernel/sound/usb/hiface
+1.4M	./postflash/lib/modules/6.4.12/kernel/sound/usb/usx2y
+2.8M	./postflash/lib/modules/6.4.12/kernel/sound/usb/line6
+ 15M	./postflash/lib/modules/6.4.12/kernel/sound/usb
+1.5M	./postflash/lib/modules/6.4.12/kernel/sound/synth/emux
+1.6M	./postflash/lib/modules/6.4.12/kernel/sound/synth
+540K	./postflash/lib/modules/6.4.12/kernel/sound/x86
+314M	./postflash/lib/modules/6.4.12/kernel/sound
+328K	./postflash/lib/modules/6.4.12/kernel/kernel/trace
+380K	./postflash/lib/modules/6.4.12/kernel/kernel/locking
+132K	./postflash/lib/modules/6.4.12/kernel/kernel/time
+952K	./postflash/lib/modules/6.4.12/kernel/kernel/rcu
+412K	./postflash/lib/modules/6.4.12/kernel/kernel/bpf/preload
+412K	./postflash/lib/modules/6.4.12/kernel/kernel/bpf
+6.9M	./postflash/lib/modules/6.4.12/kernel/kernel
+5.0G	./postflash/lib/modules/6.4.12/kernel
+5.0G	./postflash/lib/modules/6.4.12
+5.0G	./postflash/lib/modules
+5.0G	./postflash/lib
+5.1G	./postflash
+6.7G	.
