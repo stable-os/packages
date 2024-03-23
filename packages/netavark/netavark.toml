@@ -22,6 +22,8 @@ make
 
 # make DESTDIR=$OUT PREFIX=/usr install
 
+find .
+
 mkdir -pv $OUT/usr/libexec/podman
 cp target/release/netavark $OUT/usr/libexec/podman/netavark
 cp target/release/netavark-dhcp-proxy-client $OUT/usr/libexec/podman/netavark-dhcp-proxy-client
