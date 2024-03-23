@@ -29,7 +29,7 @@ cp bin/netavark $OUT/usr/libexec/podman/netavark
 cp bin/netavark-dhcp-proxy-client $OUT/usr/libexec/podman/netavark-dhcp-proxy-client
 
 mkdir -pv $OUT/etc/systemd/system/
-install -m 644 ./contrib/systemd/system/netavark-dhcp-proxy.socket $OUT/etc/systemd/system/netavark-dhcp-proxy.socket
-install -m 644 ./contrib/systemd/system/netavark-dhcp-proxy.service $OUT/etc/systemd/system/netavark-dhcp-proxy.service
-install -m 644 ./contrib/systemd/system/netavark-firewalld-reload.service $OUT/etc/systemd/system/netavark-firewalld-reload.service
+cp ./contrib/systemd/system/netavark-dhcp-proxy.socket $OUT/etc/systemd/system/netavark-dhcp-proxy.socket
+cp ./contrib/systemd/system/netavark-dhcp-proxy.service $OUT/etc/systemd/system/netavark-dhcp-proxy.service
+cp ./contrib/systemd/system/netavark-firewalld-reload.service $OUT/etc/systemd/system/netavark-firewalld-reload.service
 '''
