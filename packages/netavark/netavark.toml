@@ -30,6 +30,6 @@ cp bin/netavark-dhcp-proxy-client $OUT/usr/libexec/podman/netavark-dhcp-proxy-cl
 
 mkdir -pv $OUT/etc/systemd/system/
 cp ./contrib/systemd/system/netavark-dhcp-proxy.socket $OUT/etc/systemd/system/netavark-dhcp-proxy.socket
-cp ./contrib/systemd/system/netavark-dhcp-proxy.service $OUT/etc/systemd/system/netavark-dhcp-proxy.service
-cp ./contrib/systemd/system/netavark-firewalld-reload.service $OUT/etc/systemd/system/netavark-firewalld-reload.service
+cp ./contrib/systemd/system/netavark-dhcp-proxy.service.in $OUT/etc/systemd/system/netavark-dhcp-proxy.service
+cp ./contrib/systemd/system/netavark-firewalld-reload.service.in $OUT/etc/systemd/system/netavark-firewalld-reload.service
 '''
