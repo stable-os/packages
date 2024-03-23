@@ -16,11 +16,10 @@ cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 mkdir build
 cd build
 
-export ABSL_ROOT_DIR=/usr/include
-
 cmake -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_BUILD_TYPE=Release  \
       -Dprotobuf_BUILD_TESTS=OFF  \
+      -DABSL_ROOT_DIR=/usr/include/absl \
       -G Ninja                    \
       ..
 
