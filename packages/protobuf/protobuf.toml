@@ -24,7 +24,7 @@ cd build
 cmake -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_BUILD_TYPE=Release  \
       -Dprotobuf_BUILD_TESTS=OFF  \
-      -DABSL_ROOT_DIR=../abseil-cpp/absl \
+      -DABSL_ROOT_DIR=abseil-cpp/absl \
       -G Ninja                    \
       ..
 
