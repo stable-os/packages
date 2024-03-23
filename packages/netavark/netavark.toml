@@ -20,5 +20,5 @@ make
 # remove trailing / from $OUT
 OUT=${OUT%/}
 
-make DESTDIR=$OUT install
+make DESTDIR=$OUT PREFIX=/usr install
 '''
