@@ -13,13 +13,17 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
+wget https://github.com/abseil/abseil-cpp/releases/download/20240116.1/abseil-cpp-20240116.1.tar.gz
+tar -xvf abseil-cpp-20240116.1.tar.gz
+mv abseil-cpp-* abseil-cpp
+
 mkdir build
 cd build
 
 cmake -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_BUILD_TYPE=Release  \
       -Dprotobuf_BUILD_TESTS=OFF  \
-      -DABSL_ROOT_DIR=/usr/include/absl \
+      -DABSL_ROOT_DIR=../abseil-cpp \
       -G Ninja                    \
       ..
 
