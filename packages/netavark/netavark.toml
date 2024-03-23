@@ -18,7 +18,15 @@ export PATH=$PATH:$HOME/.cargo/bin
 make
 
 # remove trailing / from $OUT
-OUT=${OUT%/}
+# OUT=${OUT%/}
 
-make DESTDIR=$OUT PREFIX=/usr install
+# make DESTDIR=$OUT PREFIX=/usr install
+
+mkdir -pv $OUT/usr/libexec/podman
+cp target/release/netavark $OUT/usr/libexec/podman/netavark
+cp target/release/netavark-dhcp-proxy-client $OUT/usr/libexec/podman/netavark-dhcp-proxy-client
+
+install -m 644 contrib/systemd/system/netavark-dhcp-proxy.socket $OUT/etc/systemd/system/netavark-dhcp-proxy.socket
+install -m 644 contrib/systemd/system/netavark-dhcp-proxy.service $OUT/etc/systemd/system/netavark-dhcp-proxy.service
+install -m 644 contrib/systemd/system/netavark-firewalld-reload.service $OUT/etc/systemd/system/netavark-firewalld-reload.service
 '''
