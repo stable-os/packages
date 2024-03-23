@@ -25,8 +25,8 @@ make
 find .
 
 mkdir -pv $OUT/usr/libexec/podman
-cp target/release/netavark $OUT/usr/libexec/podman/netavark
-cp target/release/netavark-dhcp-proxy-client $OUT/usr/libexec/podman/netavark-dhcp-proxy-client
+cp bin/netavark $OUT/usr/libexec/podman/netavark
+cp bin/netavark-dhcp-proxy-client $OUT/usr/libexec/podman/netavark-dhcp-proxy-client
 
 install -m 644 contrib/systemd/system/netavark-dhcp-proxy.socket $OUT/etc/systemd/system/netavark-dhcp-proxy.socket
 install -m 644 contrib/systemd/system/netavark-dhcp-proxy.service $OUT/etc/systemd/system/netavark-dhcp-proxy.service
