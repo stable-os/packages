@@ -1,0 +1,26 @@
+[package]
+name = 'abseil'
+version = '20240116.1'
+description = ''
+license = ''
+
+[[source]]
+source = 'https://github.com/abseil/abseil-cpp/releases/download/20240116.1/abseil-cpp-20240116.1.tar.gz'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_BUILD_TYPE=Release  \
+      -G Ninja                    \
+      ..
+
+ninja
+DESTDIR=$OUT ninja install
+'''
