@@ -13,6 +13,11 @@ set -eux # o pipefail
 
 cd $(find . -maxdepth 1 -type d | sort | head -n 2 | tail -n 1)
 
+// Removes malicious test files that are part of a backdoor
+// https://www.openwall.com/lists/oss-security/2024/03/29/4
+rm tests/files/{bad-3-corrupt_lzma2.xz,bad-dict_size.lzma,good-2cat.xz,good-large_compressed.lzma}
+rm tests/files/{good-small_compressed.lzma,good-1-riscv-lzma2-1.xz,good-1-riscv-lzma2-2.xz}
+
 ./configure --prefix=/usr    \
             --disable-static \
             --docdir=/usr/share/doc/xz-5.4.4
