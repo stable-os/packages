@@ -127,6 +127,7 @@ set -eux # o pipefail
 meson setup build/            \
       --prefix=/usr           \
       --buildtype=release     \
+      -Dfirstboot=false       \
       -Ddefault-dnssec=no     \
       -Dinstall-tests=false   \
       -Dldconfig=false        \
