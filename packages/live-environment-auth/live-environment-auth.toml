@@ -1,0 +1,23 @@
+[package]
+name = 'live-environment-auth'
+version = '0.1.0'
+description = 'PAM config files for the live environment'
+license = 'GPL-3.0-or-later'
+
+[[source]]
+source = 'https://github.com/stable-os/packages.git'
+git_ref = 'main'
+
+[build]
+script = '''
+set -eux # o pipefail
+
+mkdir -pv $OUT/etc/pam.d
+
+cat > $OUT/etc/pam.d/login << EOF
+auth        requisite   pam_permit.so
+account     requisite   pam_permit.so
+password    required    pam_deny.so
+session     required    pam_permit.so
+EOF
+'''
