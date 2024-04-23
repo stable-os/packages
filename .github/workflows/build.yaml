@@ -624,6 +624,7 @@ jobs:
       - name: Handle packages
         run: |
           for file in out/*; do
+            printf "Handling package %s\n" "$file"
             if [ -f "$file" ]; then
               // remove .tar.gz from the file name
               stripped_file=$(echo $file | sed 's/.tar.gz//')
