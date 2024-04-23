@@ -9,7 +9,7 @@ mkdir /var/tmp
 mkdir /tmp/packages && git clone https://github.com/stable-os/packages.git /tmp/packages
 cd /tmp/packages
 
-pkg-builder packages/$1/$1.toml /tmp/out.tar.gz
+pkg-builder packages/$1/$1.toml /tmp/out
 
 echo Created package, creating build repository
 
@@ -17,15 +17,48 @@ cd /
 
 mkdir /build-repo && ostree --repo=/build-repo init --mode=bare-user
 
-echo Created build repository, importing package
+echo Created build repository, importing packages
 
-ostree --repo=/build-repo commit -b stable-os/$(uname -m)/linux --tree=tar=/tmp/out.tar.gz
+# loop through all packages in the /tmp/out directory
+for file in /tmp/out/*; do
+  if [ -f "$file" ]; then
+    stripped_file=$(basename $file .tar.gz)
 
-echo Cleaning up to save disk space
+    echo "==================================================="
+    echo "Handling sub-package $stripped_file"
+    echo "==================================================="
 
-rm -rf /tmp
-mkdir /tmp
+    # Check if there are less than 3 files in the package
+    if [ $(tar -tvf $file | wc -l) -lt 3 ]; then
+      echo "Package $file has less than 3 files"
+      exit 1
+    fi
 
-echo Imported package, exporting as OCI image
+    echo "==================================================="
+    echo "Uploading sub-package $stripped_file"
+    echo "==================================================="
 
-ostree-ext-cli container encapsulate --repo=/build-repo stable-os/$(uname -m)/linux docker://ghcr.io/stable-os/package-$1-$(uname -m)-builtonstableos:latest
+    # Import the package
+    ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/$stripped_file --tree=tar=$file
+
+    # Export the package as OCI image and push to GitHub Container Registry
+    /usr/bin/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/$stripped_file docker://ghcr.io/${{ github.repository_owner }}/package-$stripped_file-$(uname -m)-builtonstableos:latest
+
+    echo "==================================================="
+    echo "Finished sub-package $file"
+    echo "==================================================="
+
+    ostree --repo=/build-repo pull-local $file
+  fi
+done
+
+# ostree --repo=/build-repo commit -b stable-os/$(uname -m)/linux --tree=tar=/tmp/out.tar.gz
+
+# echo Cleaning up to save disk space
+
+# rm -rf /tmp
+# mkdir /tmp
+
+# echo Imported package, exporting as OCI image
+
+# ostree-ext-cli container encapsulate --repo=/build-repo stable-os/$(uname -m)/linux docker://ghcr.io/stable-os/package-$1-$(uname -m)-builtonstableos:latest
