@@ -39,16 +39,14 @@ for file in /tmp/out/*; do
     echo "==================================================="
 
     # Import the package
-    ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/$stripped_file --tree=tar=$file
+    ostree --repo=/build-repo commit -b stable-os/$(uname -m)/$stripped_file --tree=tar=$file
 
     # Export the package as OCI image and push to GitHub Container Registry
-    /usr/bin/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/$stripped_file docker://ghcr.io/${{ github.repository_owner }}/package-$stripped_file-$(uname -m)-builtonstableos:latest
+    /usr/bin/ostree-ext-cli container encapsulate --repo=/build-repo stable-os/$(uname -m)/$stripped_file docker://ghcr.io/${{ github.repository_owner }}/package-$stripped_file-$(uname -m)-builtonstableos:latest
 
     echo "==================================================="
-    echo "Finished sub-package $file"
+    echo "Finished sub-package $stripped_file"
     echo "==================================================="
-
-    ostree --repo=/build-repo pull-local $file
   fi
 done
 
