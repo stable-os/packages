@@ -626,14 +626,14 @@ jobs:
           for file in out/*; do
             printf "Handling package %s\n" "$file"
             if [ -f "$file" ]; then
-              // remove .tar.gz from the file name
+              # remove .tar.gz from the file name
               stripped_file=$(basename $file .tar.gz)
 
               echo "==================================================="
               echo "Handling sub-package $stripped_file"
               echo "==================================================="
 
-              // Check if there are less than 3 files in the package
+              # Check if there are less than 3 files in the package
               if [ $(tar -tvf $file | wc -l) -lt 3 ]; then
                 echo "Package $file has less than 3 files"
                 exit 1
@@ -643,10 +643,10 @@ jobs:
               echo "Uploading sub-package $stripped_file"
               echo "==================================================="
 
-              // Import the package
+              # Import the package
               ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/$stripped_file --tree=tar=$file
 
-              // Export the package as OCI image and push to GitHub Container Registry
+              # Export the package as OCI image and push to GitHub Container Registry
               /usr/bin/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/$stripped_file docker://ghcr.io/${{ github.repository_owner }}/package-$stripped_file-$(uname -m)-builtonstableos:latest
 
               echo "==================================================="
