@@ -4,6 +4,194 @@ version = '6.4.12'
 description = ''
 license = ''
 
+[[subpackage]]
+name = 'linux-man'
+description = 'Linux kernel documentation'
+files = ['/usr/share/doc/linux-*']
+
+[[subpackage]]
+name = 'linux-sound'
+description = 'Linux kernel sound modules'
+files = ['/lib/modules/6.4.12/kernel/sound']
+
+[[subpackage]]
+name = 'linux-fs-xfs'
+description = 'Linux kernel XFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/xfs']
+
+[[subpackage]]
+name = 'linux-fs-nfs'
+description = 'Linux kernel NFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/nfs']
+
+[[subpackage]]
+name = 'linux-fs-ocfs2'
+description = 'Linux kernel OCFS2 filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/ocfs2']
+
+[[subpackage]]
+name = 'linux-fs-smb'
+description = 'Linux kernel SMB filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/smb']
+
+[[subpackage]]
+name = 'linux-fs-nfsd'
+description = 'Linux kernel NFS server support'
+files = ['/lib/modules/6.4.12/kernel/fs/nfsd']
+
+[[subpackage]]
+name = 'linux-fs-afs'
+description = 'Linux kernel AFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/afs']
+
+[[subpackage]]
+name = 'linux-fs-f2fs'
+description = 'Linux kernel F2FS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/f2fs']
+
+[[subpackage]]
+name = 'linux-fs-ubifs'
+description = 'Linux kernel UBIFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/ubifs']
+
+[[subpackage]]
+name = 'linux-fs-gfs2'
+description = 'Linux kernel GFS2 filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/gfs2']
+
+[[subpackage]]
+name = 'linux-fs-ceph'
+description = 'Linux kernel Ceph filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/ceph']
+
+[[subpackage]]
+name = 'linux-fs-nilfs2'
+description = 'Linux kernel NILFS2 filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/nilfs2']
+
+[[subpackage]]
+name = 'linux-fs-reiserfs'
+description = 'Linux kernel ReiserFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/reiserfs']
+
+[[subpackage]]
+name = 'linux-fs-jffs2'
+description = 'Linux kernel JFFS2 filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/jffs2']
+
+[[subpackage]]
+name = 'linux-fs-ntfs3'
+description = 'Linux kernel NTFS3 filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/ntfs3']
+
+[[subpackage]]
+name = 'linux-fs-jfs'
+description = 'Linux kernel JFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/jfs']
+
+[[subpackage]]
+name = 'linux-fs-fuse'
+description = 'Linux kernel FUSE filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/fuse']
+
+[[subpackage]]
+name = 'linux-fs-orangefs'
+description = 'Linux kernel OrangeFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/orangefs']
+
+[[subpackage]]
+name = 'linux-fs-hfsplus'
+description = 'Linux kernel HFS+ filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/hfsplus']
+
+[[subpackage]]
+name = 'linux-fs-erofs'
+description = 'Linux kernel EROFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/erofs']
+
+[[subpackage]]
+name = 'linux-fs-udf'
+description = 'Linux kernel UDF filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/udf']
+
+[[subpackage]]
+name = 'linux-fs-hfs'
+description = 'Linux kernel HFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/hfs']
+
+[[subpackage]]
+name = 'linux-fs-9p'
+description = 'Linux kernel 9P filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/9p']
+
+[[subpackage]]
+name = 'linux-fs-ecryptfs'
+description = 'Linux kernel eCryptFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/ecryptfs']
+
+[[subpackage]]
+name = 'linux-fs-overlayfs'
+description = 'Linux kernel OverlayFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/overlayfs']
+
+[[subpackage]]
+name = 'linux-fs-ufs'
+description = 'Linux kernel UFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/ufs']
+
+[[subpackage]]
+name = 'linux-fs-exfat'
+description = 'Linux kernel exFAT filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/exfat']
+
+[[subpackage]]
+name = 'linux-fs-coda'
+description = 'Linux kernel Coda filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/coda']
+
+[[subpackage]]
+name = 'linux-fs-affs'
+description = 'Linux kernel AFFS filesystem support'
+files = ['/lib/modules/6.4.12/kernel/fs/affs']
+
+[[subpackage]]
+name = 'linux-net-bluetooth'
+description = 'Linux kernel Bluetooth networking support'
+files = ['/lib/modules/6.4.12/kernel/net/bluetooth']
+
+[[subpackage]]
+name = 'linux-net-wlan'
+description = 'Linux kernel WLAN networking support'
+files = [
+    '/lib/modules/6.4.12/kernel/net/mac80211',
+    '/lib/modules/6.4.12/kernel/net/wireless',
+]
+
+[[subpackage]]
+name = 'linux-driver-net-ethernet'
+description = 'Linux kernel ethernet drivers'
+files = ['/lib/modules/6.4.12/kernel/drivers/net/ethernet']
+
+[[subpackage]]
+name = 'linux-driver-net-wireless'
+description = 'Linux kernel wireless drivers'
+files = ['/lib/modules/6.4.12/kernel/drivers/net/wireless']
+
+[[subpackage]]
+name = 'linux-driver-gpu'
+description = 'Linux kernel GPU drivers'
+files = ['/lib/modules/6.4.12/kernel/drivers/gpu']
+
+[[subpackage]]
+name = 'linux-driver-media'
+description = 'Linux kernel media drivers'
+files = ['/lib/modules/6.4.12/kernel/drivers/media']
+
+[[subpackage]]
+name = 'linux-driver-infiniband'
+description = 'Linux kernel infiniband drivers'
+files = ['/lib/modules/6.4.12/kernel/drivers/infiniband']
+
 [[source]]
 source = 'https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.4.12.tar.xz'
 
