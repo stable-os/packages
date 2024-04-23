@@ -82,12 +82,12 @@ jobs:
           # - flit-core
           # - wheel
           # - ninja
-          - meson
+          # - meson
           # - asciidoc
           # - ostree
           # - which
           # - linux-api-headers
-          # - pkg-builder
+          - pkg-builder
           # - grub
           # - bash
           # - glibc
@@ -246,7 +246,7 @@ jobs:
           # - icu
           # - pango
           # - libepoxy
-          - mesa
+          # - mesa
           # - xorg-libraries
           # - libdrm
           # - mako
@@ -310,7 +310,7 @@ jobs:
           # - json-glib
           # - krb5
           # - libadwaita
-          - libedit
+          # - libedit
           # - libgcrypt
           # - libgdata
           # - libgee
@@ -363,7 +363,7 @@ jobs:
           # - libksba
           # - npth
           # - openldap-client
-          - openldap-server
+          # - openldap-server
           # - libsoup2
           # - enchant2
           # - bubblewrap
@@ -380,7 +380,7 @@ jobs:
           # - pygments
           # - typogrify
           # - smartypants
-          - gi-docgen
+          # - gi-docgen
           # - accountsservice
           # - alsa-lib
           # - attrs
@@ -420,7 +420,7 @@ jobs:
           # - xwayland
           # - libtirpc
           # - dhcpcd
-          - gpm
+          # - gpm
           # - io-socket-ssl
           # - iptables
           # - libndp
@@ -436,7 +436,7 @@ jobs:
           # - mobile-broadband-provider-info
           # - catatonit
           # - go
-          - authselect
+          # - authselect
           # - xorg-server
           # - xorg-fonts
           # - xorg-applications
@@ -536,7 +536,7 @@ jobs:
           # - btrfs-progs
           # - lzo
           # - libclc
-          - libomxil-bellagio
+          # - libomxil-bellagio
           # - libvdpau
           # - libva
           # - spirv-tools
@@ -547,11 +547,11 @@ jobs:
           # - conmon
           # - crun
           # - yajl2
-          - liveconf
-          - netavark
-          - protobuf
-          - abseil
-          - live-environment-auth
+          # - liveconf
+          # - netavark
+          # - protobuf
+          # - abseil
+          # - live-environment-auth
         container: ["ghcr.io/stable-os/stable-os-build:latest"] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
     steps:
