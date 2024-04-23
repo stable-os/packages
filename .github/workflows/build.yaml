@@ -553,7 +553,7 @@ jobs:
           # - abseil
           # - live-environment-auth
         container: [
-            "ghcr.io/stable-os/stable-os-build@sha256:54185e9e1fbe89a40da64e3724268c57a2b79c7dfc9578180a1c0326025b93fe",
+            "ghcr.io/stable-os/stable-os-build@sha256:362c663c989af8d641a274a4a19c12737765fd657fc3ba240b55ea1a5c3f2c94",
           ] #['ghcr.io/stable-os/stable-os-buildkit@sha256:24baccd1b90ba252d02366963a3ec992be13d18decbbce91c783ee443b61c39e'] # ['ubuntu:rolling', 'ghcr.io/stable-os/stable-os-build:latest']
 
     steps:
@@ -607,7 +607,7 @@ jobs:
 
       # - run: chmod +x pkg-builder/pkg-builder ./ostree-ext-cli/ostree-ext-cli
 
-      - run: pkg-builder $PACKAGE.toml ../../out.tar.gz
+      - run: pkg-builder $PACKAGE.toml ../../out
         working-directory: packages/${{ matrix.package }}
         env:
           PACKAGE: ${{ matrix.package }}
@@ -615,25 +615,48 @@ jobs:
           XORG_CONFIG: --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
           PKG_CONFIG_PATH: /usr/lib/x86_64-linux-gnu/pkgconfig:/usr/local/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig
 
-      - name: List files in the package
-        run: tar -tvf out.tar.gz
-
-      - name: Fail if there are less than 3 files in the package
-        run: test $(tar -tvf out.tar.gz | wc -l) -gt 3
-        shell: bash
-
       - name: Prepare OSTree repository
         run: mkdir /tmp/build-repo && ostree --repo=/tmp/build-repo init --mode=bare-user
 
-      - name: Import package
-        run: ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/${{ matrix.package }} --tree=tar=out.tar.gz
+      - name: List subpackages
+        run: ls -l out
 
-      # - name: Export as OCI image and push to GitHub Container Registry
-      #   run: ./ostree-ext-cli/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m):latest
-      #   if: matrix.container == 'ubuntu:rolling'
-      - name: Export as OCI image and push to GitHub Container Registry
-        run: /usr/bin/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/${{ matrix.package }} docker://ghcr.io/${{ github.repository_owner }}/package-${{ matrix.package }}-$(uname -m)-builtonstableos:latest
-        # if: matrix.container == 'ghcr.io/stable-os/stable-os-build:latest' || matrix.container == 'ghcr.io/stable-os/stable-os-buildkit:latest'
+      - name: Handle packages
+        run: |
+          for file in out/*; do
+            if [ -f "$file" ]; then
+              // remove .tar.gz from the file name
+              stripped_file=$(echo $file | sed 's/.tar.gz//')
+
+              echo "==================================================="
+              echo "Handling sub-package $stripped_file"
+              echo "==================================================="
+
+              // unpack the package
+              mkdir $stripped_file
+              tar -xzf $file -C $stripped_file
+
+              // Check if there are less than 3 files in the package
+              if [ $(tar -tvf $file | wc -l) -lt 3 ]; then
+                echo "Package $file has less than 3 files"
+                exit 1
+              fi
+
+              echo "==================================================="
+              echo "Uploading sub-package $stripped_file"
+              echo "==================================================="
+
+              // Import the package
+              ostree --repo=/tmp/build-repo commit -b stable-os/$(uname -m)/$stripped_file --tree=tar=$file
+
+              // Export the package as OCI image and push to GitHub Container Registry
+              /usr/bin/ostree-ext-cli container encapsulate --repo=/tmp/build-repo stable-os/$(uname -m)/$stripped_file docker://ghcr.io/${{ github.repository_owner }}/package-$stripped_file-$(uname -m)-builtonstableos:latest
+
+              echo "==================================================="
+              echo "Finished sub-package $file"
+              echo "==================================================="
+            fi
+          done
 
   build_kernel:
     runs-on: ubuntu-latest
