@@ -633,10 +633,6 @@ jobs:
               echo "Handling sub-package $stripped_file"
               echo "==================================================="
 
-              // unpack the package
-              mkdir $stripped_file
-              tar -xzf $file -C $stripped_file
-
               // Check if there are less than 3 files in the package
               if [ $(tar -tvf $file | wc -l) -lt 3 ]; then
                 echo "Package $file has less than 3 files"
