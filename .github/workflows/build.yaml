@@ -627,7 +627,7 @@ jobs:
             printf "Handling package %s\n" "$file"
             if [ -f "$file" ]; then
               // remove .tar.gz from the file name
-              stripped_file=$(echo $file | sed 's/.tar.gz//')
+              stripped_file=$(basename $file .tar.gz)
 
               echo "==================================================="
               echo "Handling sub-package $stripped_file"
